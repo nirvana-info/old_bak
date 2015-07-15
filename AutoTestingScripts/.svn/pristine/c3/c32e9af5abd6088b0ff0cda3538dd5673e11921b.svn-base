@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Table type ="pushrequest">
+<Name>Testcase_001.tc</Name>
+<Parameters>
+    <Parameter
+      name ="Parameter1"   
+      key ="website address"        
+      address ="" 
+      type ="boolean" 
+      value ="http://192.168.0.20:8080/mailinglists/login.aspx"
+    />
+
+    <Parameter
+      name ="Parameter2"
+      key ="Account"
+      address ="LoginEmail"
+      type ="string"
+      value ="christie.duan@nirvana-info.com"
+    />
+
+    <Parameter
+      name ="Parameter3"
+      key ="Password"
+      address ="LoginPassword"
+      type ="string"
+      value ="123456"
+    />
+
+
+    <Parameter
+      name ="Parameter4"
+      key ="Submit Button"
+      address ="login_submit"
+      type ="string"
+      value =""
+    />
+
+    <Parameter
+      name ="Parameter5"
+      key ="Datasource"
+      address ="ctl00_ctl00_uxContent_uxContent_rbListType_1"
+      type ="boollean"
+      value = "True"
+    />
+
+    <Parameter
+      name ="Parameter6"
+      key ="Submit Button"
+      address ="ctl00_ctl00_uxContent_uxContent_BottomBtNex"
+      type ="boollean"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter7"
+      key ="Selected by Area(s)?"
+      address ="geo_type_city"
+      type ="boollean"
+      value = "True"
+    />
+  
+</Parameters>
+</Table>
+
+
+
+

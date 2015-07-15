@@ -1,0 +1,13 @@
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\obj\Debug\ResolveAssemblyReference.cache
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.exe.config
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.exe
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.pdb
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\Interop.SHDocVw.dll
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\nunit.framework.dll
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\WatiN.Core.dll
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\WatiN.Core.xml
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\obj\Debug\MaiaRegression.exe
+E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\obj\Debug\MaiaRegression.pdb
+E:\build\AutoTestingScripts\ZeccoMaia\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.exe.config
+E:\build\AutoTestingScripts\ZeccoMaia\MaiaRegression\MaiaRegression\obj\Debug\MaiaRegression.exe
+E:\build\AutoTestingScripts\ZeccoMaia\MaiaRegression\MaiaRegression\obj\Debug\MaiaRegression.pdb

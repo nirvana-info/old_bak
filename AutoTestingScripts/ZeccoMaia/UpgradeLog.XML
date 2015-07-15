@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MaiaRegression">
+</Property><Property Name="Solution File" Value="E:\build\AutoTestingScripts\ZeccoMaia\MaiaRegression.sln">
+</Property><Property Name="User Options File" Value="E:\build\AutoTestingScripts\ZeccoMaia\MaiaRegression.suo">
+</Property><Property Name="Date" Value="Wednesday, March 18, 2009">
+</Property><Property Name="Time" Value="10:53 AM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MaiaRegression.sln" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MaiaRegression.suo" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression.suo">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\MaiaRegression.csproj" Description="Project file successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\MaiaRegression.csproj">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\App01_HomePage\SignIn.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\App01_HomePage\SignIn.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\App01_HomePage\SignOut.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\App01_HomePage\SignOut.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\App02_QuotesAndResearch\OptionsAnalytics.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\App02_QuotesAndResearch\OptionsAnalytics.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\App02_QuotesAndResearch\Quotes.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\App02_QuotesAndResearch\Quotes.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\PublicPara.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\PublicPara.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Tasks\Scenario001_UserLoginOut.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Tasks\Scenario001_UserLoginOut.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Tasks\Scenario002_Quotes.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Tasks\Scenario002_Quotes.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Tasks\Scenario003_OptionAnalytics.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Tasks\Scenario003_OptionAnalytics.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\TestCases\02-Quotes&amp;Research\Check003_Quotes.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\TestCases\02-Quotes&amp;Research\Check003_Quotes.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Appobjects\TestBase.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Appobjects\TestBase.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\TestCases\01-HomePage\Check001_SignIn.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\TestCases\01-HomePage\Check001_SignIn.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\TestCases\01-HomePage\Check002_SignOut.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\TestCases\01-HomePage\Check002_SignOut.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\TestCases\02-Quotes&amp;Research\Check004_OptionsAnalytics.cs" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\TestCases\02-Quotes&amp;Research\Check004_OptionsAnalytics.cs">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\App.config" Description="File successfully backed up as E:\build\AutoTestingScripts\ZeccoMaia\Backup\MaiaRegression\App.config">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\MaiaRegression.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MaiaRegression" Source="MaiaRegression\MaiaRegression.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MaiaRegression.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="MaiaRegression.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="MaiaRegression" Source="MaiaRegression\MaiaRegression.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

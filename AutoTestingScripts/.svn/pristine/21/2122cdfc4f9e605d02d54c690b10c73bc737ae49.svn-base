@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABBA678B-059F-4D88-860B-BE4B843DB92D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SalesLeads360</RootNamespace>
+    <AssemblyName>SalesLeads360</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WatiN.Core, Version=2.0.10.928, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\WatiN\WatiN-2.0.10.928-net-2.0\bin\WatiN.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appshare\App01_HomePage\Manualzipcode.cs" />
+    <Compile Include="Appshare\App01_HomePage\NCOAOrder.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderGeoZipUpload.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderPaymentInfo.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSearchResults.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectCity.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectDemo_Consumer.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectDemo_Business.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectDemo_Occupant.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectDemo_NewHomeowner.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectDemo_NewMover.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectGeoType.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectMapRadius.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectScf.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectState.cs" />
+    <Compile Include="Appshare\App01_HomePage\OrderSelectZipRadius.cs" />
+    <Compile Include="Appshare\App01_HomePage\Reseller.cs" />
+    <Compile Include="Appshare\App01_HomePage\SaveCount.cs" />
+    <Compile Include="Appshare\App01_HomePage\Selectleadstype.cs" />
+    <Compile Include="Appshare\App01_HomePage\Selectsitmap.cs" />
+    <Compile Include="Appshare\App01_HomePage\Selectorderpath.cs" />
+    <Compile Include="Appshare\App01_HomePage\specialtylists.cs" />
+    <Compile Include="Appshare\App01_HomePage\UserLogin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Appshare\PublicPara.cs" />
+    <Compile Include="Appshare\TestBase.cs" />
+    <Compile Include="Task\NCOA\NCOA_Register.cs" />
+    <Compile Include="Task\NCOA\NCOA_Unregister.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T001_ConsumerLeads_EnterZipCode.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T002_ConsumerLeads_mapradius.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T003_ConsumerLeads_ZipRadius.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T004_ConsumerLeads_selectcity.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T005_ConsumerLeads_selectcounty.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T006_ConsumerLeads_selectstate.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T007_ConsumerLeads_EnterScfCode.cs" />
+    <Compile Include="Task\Register\T001_ConsumerLeads\T008_ConsumerLeads_upload.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T001_BusinessLeads_EnterZipCode.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T002_BusinessLeads_mapradius.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T003_BusinessLeads_ZipRadius.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T004_BusinessLeads_selectcity.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T005_BusinessLeads_selectcounty.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T006_BusinessLeads_selectstate.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T007_BusinessLeads_EnterScfCode.cs" />
+    <Compile Include="Task\Register\T002_BusinessLeads\T008_BusinessLeads_upload.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T001_OccupantList_EnterZipCode.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T002_OccupantList_mapradius.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T003_OccupantList_ZipRadius.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T004_OccupantList_selectcity.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T005_OccupantList_selectcounty.cs" />
+    <Compile Include="Task\Register\T003_OccupantList\T006_OccupantList_upload.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T001_NewHomeownerList_EnterZipCode.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T002_NewHomeownerList_mapradius.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T003_NewHomeownerList_ZipRadius.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T004_NewHomeownerList_selectcity.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T005_NewHomeownerList_selectcounty.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T006_NewHomeownerList_selectstate.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T007_NewHomeownerList_EnterScfCode.cs" />
+    <Compile Include="Task\Register\T004_NewHomeownerList\T008_NewHomeownerList_upload.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T001_NewMoverList_EnterZipCode.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T002_NewMoverList_mapradius.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T003_NewMoverList_ZipRadius.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T004_NewMoverList_selectcity.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T005_NewMoverList_selectcounty.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T006_NewMoverList_selectstate.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T007_NewMoverList_EnterScfCode.cs" />
+    <Compile Include="Task\Register\T005_NewMoverList\T008_NewMoverList_upload.cs" />
+    <Compile Include="Task\Register\T006_SpecialtyList\T001_SpecialtyList.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T001_ConsumerLeads_SavedCount.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T002_BusinessLeads_SavedCount.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T003_OccupantList_SavedCount.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T005_NewMoverList_SavedCount.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T006_SpecialtyList_SavedCount.cs" />
+    <Compile Include="Task\Register\T007_SaveCount\T004_NewHomeownerList_SavedCount.cs" />
+    <Compile Include="Task\Reseller\01_Reseller_ConsumerOrder.cs" />
+    <Compile Include="Task\Reseller\02_Reseller_BusinessOrder.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T001_ConsumerLeads_EnterZipCode.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T002_ConsumerLeads_mapradius.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T003_ConsumerLeads_ZipRadius.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T004_ConsumerLeads_selectcity.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T005_ConsumerLeads_selectcounty.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T006_ConsumerLeads_selectstate.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T007_ConsumerLeads_EnterScfCode.cs" />
+    <Compile Include="Task\UnRegister\T001_ConsumerLeads\T008_ConsumerLeads_upload.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T001_BusinessLeads_EnterZipCode.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T002_BusinessLeads_mapradius.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T003_BusinessLeads_ZipRadius.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T004_BusinessLeads_selectcity.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T005_BusinessLeads_selectcounty.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T006_BusinessLeads_selectstate.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T007_BusinessLeads_EnterScfCode.cs" />
+    <Compile Include="Task\UnRegister\T002_BusinessLeads\T008_BusinessLeads_upload.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T001_OccupantList_EnterZipCode.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T002_OccupantList_mapradius.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T003_OccupantList_ZipRadius.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T004_OccupantList_selectcity.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T005_OccupantList_selectcounty.cs" />
+    <Compile Include="Task\UnRegister\T003_OccupantList\T006_OccupantList_upload.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T001_NewHomeownerList_EnterZipCode.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T002_NewHomeownerList_mapradius.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T003_NewHomeownerList_ZipRadius.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T004_NewHomeownerList_selectcity.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T005_NewHomeownerList_selectcounty.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T006_NewHomeownerList_selectstate.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T007_NewHomeownerList_EnterScfCode.cs" />
+    <Compile Include="Task\UnRegister\T004_NewHomeownerList\T008_NewHomeownerList_upload.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T001_NewMoverList_EnterZipCode.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T002_NewMoverList_mapradius.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T003_NewMoverList_ZipRadius.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T004_NewMoverList_selectcity.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T005_NewMoverList_selectcounty.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T006_NewMoverList_selectstate.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T007_NewMoverList_EnterScfCode.cs" />
+    <Compile Include="Task\UnRegister\T005_NewMoverList\T008_NewMoverList_upload.cs" />
+    <Compile Include="Task\UnRegister\T006_SpecialtyList\T001_SpecialtyList.cs" />
+    <Compile Include="Task\UnRegister\T007_SaveCount\T001_ConsumerLeads_SavedCount.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

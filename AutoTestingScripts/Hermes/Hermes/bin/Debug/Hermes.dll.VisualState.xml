@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="true">
+  <TopNode>[0-1015]D:\Maia Auto\Hermes\Hermes\bin\Debug\Hermes.dll</TopNode>
+  <SelectedNode>[0-1010]Hermes.TestCases.Options.T03_Options_BuyButterfly</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1015]D:\Maia Auto\Hermes\Hermes\bin\Debug\Hermes.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1016]Hermes" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1017]Hermes.TestCases" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1007]Hermes.TestCases.Options" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1008]Hermes.TestCases.Options.T01_Options_BuyCallPut" />
+                    <Node UniqueName="[0-1009]Hermes.TestCases.Options.T02_Options_BuyCallPutLimitCancel" />
+                    <Node UniqueName="[0-1010]Hermes.TestCases.Options.T03_Options_BuyButterfly" />
+                    <Node UniqueName="[0-1011]Hermes.TestCases.Options.T04_Options_BuySpread" />
+                    <Node UniqueName="[0-1012]Hermes.TestCases.Options.T05_Options_History" />
+                    <Node UniqueName="[0-1013]Hermes.TestCases.Options.T06_Options_DailyDisplay" />
+                    <Node UniqueName="[0-1014]Hermes.TestCases.Options.T07_Options_AdvancedOrder" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1000]Hermes.TestCases.Stocks" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1001]Hermes.TestCases.Stocks.T01_Stocks_Buy" />
+                    <Node UniqueName="[0-1002]Hermes.TestCases.Stocks.T02_Stocks_BuyLimit" />
+                    <Node UniqueName="[0-1003]Hermes.TestCases.Stocks.T03_Stocks_Sell" />
+                    <Node UniqueName="[0-1004]Hermes.TestCases.Stocks.T04_Stocks_Short" />
+                    <Node UniqueName="[0-1005]Hermes.TestCases.Stocks.T05_Stocks_Cover" />
+                    <Node UniqueName="[0-1006]Hermes.TestCases.Stocks.T06_Stocks_CheckTabs" />
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

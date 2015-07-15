@@ -1,0 +1,199 @@
+﻿<HTML xmlns:html="http://www.w3.org/Profiles/XHTML-transitional"><HEAD><style type="text/css">
+			body {
+				font:normal 68% verdana,arial,helvetica;
+				color:#000000;
+			}
+
+			span.covered {
+				background: #00df00;
+				border:#9c9c9c 1px solid;
+			}
+			span.uncovered {
+				background: #df0000;
+				border-top:#9c9c9c 1px solid;
+				border-bottom:#9c9c9c 1px solid;
+				border-right:#9c9c9c 1px solid;
+				}
+			span.ignored {
+				background: #ffff00;
+				border-top:#9c9c9c 1px solid;
+				border-bottom:#9c9c9c 1px solid;
+				border-right:#9c9c9c 1px solid;
+			}
+
+			td {
+				FONT-SIZE: 68%;
+				BORDER-BOTTOM: #dcdcdc 1px solid;
+				BORDER-RIGHT: #dcdcdc 1px solid;
+			}
+			p {
+				line-height:1.5em;
+				margin-top:0.5em;
+				margin-bottom:1.0em;
+			}
+			h1 {
+				MARGIN: 0px 0px 5px;
+				FONT: 165% verdana,arial,helvetica;
+			}
+			h2 {
+				MARGIN-TOP: 1em;
+				MARGIN-BOTTOM: 0.5em;
+				FONT: bold 125% verdana,arial,helvetica;
+			}
+			h3 {
+				MARGIN-BOTTOM: 0.5em;
+				FONT: bold 115% verdana,arial,helvetica;
+			}
+			h4 {
+				MARGIN-BOTTOM: 0.5em;
+				FONT: bold 100% verdana,arial,helvetica;
+			}
+			h5 {
+				MARGIN-BOTTOM: 0.5em;
+				FONT: bold 100% verdana,arial,helvetica
+			}
+			h6 {
+				MARGIN-BOTTOM: 0.5em;
+				FONT: bold 100% verdana,arial,helvetica
+			}
+			.Error {
+				font-weight:bold;
+			}
+			.Failure {
+				font-weight:bold;
+				color:red;
+			}
+			.Ignored {
+				font-weight:bold;
+			}
+			.FailureDetail {
+				font-size: -1;
+				padding-left: 2.0em;
+				background:#cdcdcd;
+			}
+			.Pass {
+				padding-left:2px;
+			}
+			.TableHeader {
+				background: #efefef;
+				color: #000;
+				font-weight: bold;
+				horizontal-align: center;
+			}
+			a:visited {
+				color: #0000ff;
+			}
+			a {
+				color: #0000ff;
+			}
+			a:active {
+				color: #800000;
+			}
+			a.summarie {
+				color:#000;
+				text-decoration: none;
+			}
+			a.summarie:active {
+				color:#000;
+				text-decoration: none;
+			}
+			a.summarie:visited {
+				color:#000;
+				text-decoration: none;
+			}
+			.description {
+				margin-top:1px;
+				padding:3px;
+				background-color:#dcdcdc;
+				color:#000;
+				font-weight:normal;
+			}
+			.method{
+				color:#000;
+				font-weight:normal;
+				padding-left:5px;
+			}
+			a.method{
+				text-decoration: none;
+				color:#000;
+				font-weight:normal;
+				padding-left:5px;
+			}
+			a.Failure {
+				font-weight:bold;
+				color:red;
+				text-decoration: none;
+			}
+			a.Failure:visited {
+				font-weight:bold;
+				color:red;
+				text-decoration: none;
+			}
+			a.Failure:active {
+				font-weight:bold;
+				color:red;
+				text-decoration: none;
+			}
+			a.error {
+				font-weight:bold;
+				color:red;
+			}
+			a.error:visited {
+				font-weight:bold;
+				color:red;
+			}
+			a.error:active {
+				font-weight:bold;
+				color:red;
+				/*text-decoration: none;
+				padding-left:5px;*/
+			}
+			a.ignored {
+				font-weight:bold;
+				text-decoration: none;
+				padding-left:5px;
+			}
+			a.ignored:visited {
+				font-weight:bold;
+				text-decoration: none;
+				padding-left:5px;
+			}
+			a.ignored:active {
+				font-weight:bold;
+				text-decoration: none;
+				padding-left:5px;
+			}
+	  </style><script language="JavaScript">
+	  function Toggle(id) {
+	  var element = document.getElementById(id);
+
+		 if ( element.style.display == "none" )
+			element.style.display = "block";
+		 else
+			element.style.display = "none";
+	  }
+
+	  function ToggleImage(id) {
+	  var element = document.getElementById(id);
+
+		 if ( element.innerText   == "-" )
+			element.innerText   = "+";
+		 else
+			element.innerText = "-";
+	  }
+	</script></HEAD><body text="#000000" bgColor="#ffffff"><a name="#top"></a><h1 xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><span>Unit Tests Results</span> - </h1><hr size="1" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"></hr><h2 xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">Summary</h2><table border="0" cellpadding="2" cellspacing="0" width="95%" style="border: #dcdcdc 1px solid;" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><tr valign="top" class="TableHeader"><td width="50px"><b>Pass</b></td><td width="70px"><b>Fail</b></td><td width="70px"><b>Error</b></td><td colspan="2"><b>Success Rate</b></td><td width="5%" nowrap="nowrap"><b>Elapsed Time(s)</b></td></tr><tr valign="top" class="Failure"><td>10</td><td>3</td><td>0</td><td nowrap="nowrap" width="70px">76.92 %</td><td><span class="covered" style="width:154px"></span><span class="uncovered" style="width:46px"></span></td><td>85.078</td></tr></table><span xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">Note</span>: <i xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">failures</i> <span xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">are anticipated and checked for with assertions while</span> <i xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">errors</i> <span xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts">are unanticipated.</span><hr size="1" width="95%" align="left"></hr><h2>TestSuite Summary</h2><table border="0" cellpadding="2" cellspacing="0" width="95%"><tr class="TableHeader" valign="top" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="75%" colspan="3"><b>Name</b></td><td width="5%"><b>Pass</b></td><td width="5%"><b>Fail</b></td><td width="5%"><b>Error</b></td><td width="5%" nowrap="nowrap"><b>Elapsed Time(s)</b></td></tr><tr valign="top" class="Failure"><td width="25%"><a href="#ADAAAAAAA" class="Failure">Check01_AgentUser</a></td><td nowrap="nowrap" width="6%" align="right"><b>76.92 %</b></td><td width="20%" height="9px"><span class="covered" style="width:154px"></span><span class="uncovered" style="width:46px"></span></td><td>10</td><td>0</td><td>3</td><td>85.063</td></tr></table><hr size="1" width="95%" align="left"></hr><a name="#ADAAAAAAA"></a><h3>TestSuite Check01_AgentUser</h3><table border="0" cellpadding="1" cellspacing="1" width="95%"><tr class="TableHeader" valign="top" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="85%" colspan="2"><b>Name</b></td><td width="10%"><b>Status</b></td><td width="5%" nowrap="nowrap"><b>Elapsed Time(s)</b></td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_01_Login</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>2.078</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_02_OrderNewLeadsByCities</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>18.000</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_03_SubscriptionByTopZips</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>19.141</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_04_FollowUp</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>11.547</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_05_UploadList</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>12.406</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_06_UploadedListReport</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>2.328</td></tr><tr valign="top" class="Failure" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%"> <a title="Show/Hide message error" href="javascript:Toggle('AEGAAAAAAAA')" class="error">Check01_07_SplitList</a></td><td width="65%" style="padding-left:3px" height="9px"><span class="uncovered" style="width:200px"></span></td><td>Failure</td><td>10.250</td></tr><tr style="display: block;" id="AEGAAAAAAAA" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td colspan="4" class="FailureDetail">WatiN.Core.Exceptions.ElementNotFoundException : Could not find IMG or INPUT (image) element tag matching criteria: Attribute 'id' with value 'ctl00_MainContentHolder_gvLists_ctl02_ibViewList' at http://192.168.0.20/ProPlsA/WebUI/default.aspx?eGotoPage=L1Byb3NwZWN0b3JQbHVzL2xlYWQvTGVhZF9Ib21lLmFzcHg=   at WatiN.Core.Element.get_NativeElement()
+   at WatiN.Core.Element.GetAttributeValue(String attributeName)
+   at WatiN.Core.Element.get_Enabled()
+   at WatiN.Core.Element.ClickNoWait()
+   at PPlusSystemTesting.Check01_AgentUser.Check01_07_SplitList() in E:\build\AutoTestingScripts\StateFarm\PPlusSystemTesting\Check01_AgentUser.cs:line 353
+</td></tr><tr valign="top" class="Failure" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%"> <a title="Show/Hide message error" href="javascript:Toggle('AEFAAAAAAAA')" class="error">Check01_08_MergeList</a></td><td width="65%" style="padding-left:3px" height="9px"><span class="uncovered" style="width:200px"></span></td><td>Failure</td><td>0.250</td></tr><tr style="display: block;" id="AEFAAAAAAAA" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td colspan="4" class="FailureDetail">System.Runtime.InteropServices.COMException : 由于该控件目前不可见、未启用或其类型不允许，因此无法将焦点移向它。   at System.RuntimeType.ForwardCallToInvokeMember(String memberName, BindingFlags flags, Object target, Int32[] aWrapperTypes, MessageData&amp; msgData)
+   at mshtml.DispHTMLBaseElement.focus()
+   at WatiN.Core.InternetExplorer.IEElement.SetFocus()
+   at WatiN.Core.Element.Focus()
+   at WatiN.Core.TextField.TypeAppendClearText(String value, Boolean append, Boolean clear)
+   at WatiN.Core.TextField.TypeText(String value)
+   at PPlusSystemTesting.Check01_AgentUser.Check01_08_MergeList() in E:\build\AutoTestingScripts\StateFarm\PPlusSystemTesting\Check01_AgentUser.cs:line 377
+</td></tr><tr valign="top" class="Failure" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%"> <a title="Show/Hide message error" href="javascript:Toggle('AEEAAAAAAAA')" class="error">Check01_09_DeactiveList</a></td><td width="65%" style="padding-left:3px" height="9px"><span class="uncovered" style="width:200px"></span></td><td>Failure</td><td>8.031</td></tr><tr style="display: block;" id="AEEAAAAAAAA" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td colspan="4" class="FailureDetail">  Expected: False
+  But was:  True
+   at PPlusSystemTesting.Check01_AgentUser.Check01_09_DeactiveList() in E:\build\AutoTestingScripts\StateFarm\PPlusSystemTesting\Check01_AgentUser.cs:line 397
+</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_10_DeleteLeads</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>0.000</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_11_ChangeListName</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>0.000</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_12_CleanOCR</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>0.000</td></tr><tr valign="top" class="Pass" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:nunit2report="urn:my-scripts"><td width="20%" class="method"> Check01_13_PrintCallingList</td><td width="65%" style="padding-left:3px" height="9px"><span class="covered" style="width:200px"></span></td><td>Pass</td><td>0.000</td></tr></table><a href="#top">Back to top</a><hr size="1" width="95%" align="left"></hr></body></HTML>

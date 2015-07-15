@@ -1,0 +1,19 @@
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.pdb
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\nmock.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\nunit.core.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\nunit.framework.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.Core.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.IntegrationTests.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.UnitTests.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.Core.pdb
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.UnitTests.pdb
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\ThoughtWorks.Selenium.IntegrationTests.pdb
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\obj\Debug\ResolveAssemblyReference.cache
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\obj\Debug\YinJiaRegressionTestingProject.dll
+D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\obj\Debug\YinJiaRegressionTestingProject.pdb
+D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll
+D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.pdb
+D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\obj\Debug\ResolveAssemblyReference.cache
+D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\obj\Debug\YinJiaRegressionTestingProject.dll
+D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\obj\Debug\YinJiaRegressionTestingProject.pdb

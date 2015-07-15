@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA33839E-2509-4FFE-83A1-A9EF0B7609AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SL360Test_Iris</RootNamespace>
+    <AssemblyName>SL360Test_Iris</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.3.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WatiN.Core, Version=2.0.10.928, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\WatiN\WatiN-2.0.10.928-net-2.0\bin\WatiN.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ShareFuncs\Login.cs" />
+    <Compile Include="ShareFuncs\FileOpts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicPara.cs" />
+    <Compile Include="ShareFuncs\DataSource.cs" />
+    <Compile Include="ShareFuncs\PlaceOrder.cs" />
+    <Compile Include="ShareFuncs\SelectAudience.cs" />
+    <Compile Include="ShareFuncs\SelectAreas.cs" />
+    <Compile Include="Testbase.cs" />
+    <Compile Include="Testcase_code.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Testcases\Occ Lead\Testcase_data03_001.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_002.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_003.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_004.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_006.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_007.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_008.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_009.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_010.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_011.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_003.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_004.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_005.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_006.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_007.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_008.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_009.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_010.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_011.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_001.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_003.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_004.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_005.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_006.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_007.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_009.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_010.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_011.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_008.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_009.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_010.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_011.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_001.xml" />
+    <Content Include="Testcases\Consumer Lead\Testcase_data01_002.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_002.xml" />
+    <Content Include="Testcases\Business Lead\Testcase_data02_008.xml" />
+    <Content Include="Testcases\Occ Lead\Testcase_data03_005.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_001.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_002.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_003.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_004.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_005.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_006.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_007.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_008.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_009.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_010.xml" />
+    <Content Include="Testcases\Homeowner Lead\Testcase_data04_011.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_001.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_002.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_003.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_004.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_005.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_006.xml" />
+    <Content Include="Testcases\Mover Lead\Testcase_data05_007.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

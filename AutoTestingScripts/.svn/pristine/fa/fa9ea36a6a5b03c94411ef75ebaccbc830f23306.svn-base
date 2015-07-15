@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1029]D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll</TopNode>
+  <SelectedNode>[0-1008]YinJiaRegressionTestingProject.门店调配.A001_自营补货申请</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1029]D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1030]YinJiaRegressionTestingProject" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1022]YinJiaRegressionTestingProject.采购">
+              <Nodes>
+                <Node UniqueName="[0-1023]YinJiaRegressionTestingProject.采购.Step01集团采购申请" />
+                <Node UniqueName="[0-1024]YinJiaRegressionTestingProject.采购.Step02集团采购计划" />
+                <Node UniqueName="[0-1025]YinJiaRegressionTestingProject.采购.Step03集采订单" />
+                <Node UniqueName="[0-1026]YinJiaRegressionTestingProject.采购.Step04收货" />
+                <Node UniqueName="[0-1027]YinJiaRegressionTestingProject.采购.Step05入库检配" />
+                <Node UniqueName="[0-1028]YinJiaRegressionTestingProject.采购.Step06收货" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1000]YinJiaRegressionTestingProject.零售" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1001]YinJiaRegressionTestingProject.零售.R001_会员管理" />
+                <Node UniqueName="[0-1002]YinJiaRegressionTestingProject.零售.R002_新建储蓄卡以及冲值" />
+                <Node UniqueName="[0-1003]YinJiaRegressionTestingProject.零售.R003_零售收银_储值卡" />
+                <Node UniqueName="[0-1004]YinJiaRegressionTestingProject.零售.R004_零售收银_现金" />
+                <Node UniqueName="[0-1005]YinJiaRegressionTestingProject.零售.R005_零售退货" />
+                <Node UniqueName="[0-1006]YinJiaRegressionTestingProject.零售.R006_零售换货" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1007]YinJiaRegressionTestingProject.门店调配" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1008]YinJiaRegressionTestingProject.门店调配.A001_自营补货申请" />
+                <Node UniqueName="[0-1009]YinJiaRegressionTestingProject.门店调配.A002_自营补货申请处理" />
+                <Node UniqueName="[0-1010]YinJiaRegressionTestingProject.门店调配.A003_自营补货分货生成调拨计划" />
+                <Node UniqueName="[0-1011]YinJiaRegressionTestingProject.门店调配.A004_自营补货编辑调拨计划" />
+                <Node UniqueName="[0-1012]YinJiaRegressionTestingProject.门店调配.A005_自营补货调拨计划审批" />
+                <Node UniqueName="[0-1013]YinJiaRegressionTestingProject.门店调配.A006_自营补货生成发货单" />
+                <Node UniqueName="[0-1014]YinJiaRegressionTestingProject.门店调配.A007_自营退货申请" />
+                <Node UniqueName="[0-1015]YinJiaRegressionTestingProject.门店调配.A008_自营退货申请处理" />
+                <Node UniqueName="[0-1016]YinJiaRegressionTestingProject.门店调配.A009_自营退货分货生成调拨计划" />
+                <Node UniqueName="[0-1017]YinJiaRegressionTestingProject.门店调配.A010_自营退货编辑调拨计划" />
+                <Node UniqueName="[0-1018]YinJiaRegressionTestingProject.门店调配.A011_自营退货调拨计划审核" />
+                <Node UniqueName="[0-1019]YinJiaRegressionTestingProject.门店调配.A012_自营退货生成发货单" />
+                <Node UniqueName="[0-1020]YinJiaRegressionTestingProject.门店调配.A013_自营退货发货单配货" />
+                <Node UniqueName="[0-1021]YinJiaRegressionTestingProject.门店调配.A014_自营退货收货" />
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

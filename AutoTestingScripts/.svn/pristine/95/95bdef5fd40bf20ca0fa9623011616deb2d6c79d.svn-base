@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="F:\AutoTestingScripts\ZhongJin\zjsteel\zjsteel\bin\Debug\zjsteel.dll" total="1" failures="0" not-run="0" date="2009-06-15" time="18:12:28">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="E:\binupdate\binupdate\bin" machine-name="NIAVANA-BOBBY" user="bobby" user-domain="NIAVANA-BOBBY" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="F:\AutoTestingScripts\ZhongJin\zjsteel\zjsteel\bin\Debug\zjsteel.dll" success="True" time="57.655" asserts="0">
+    <results>
+      <test-suite name="zjsteel" success="True" time="57.655" asserts="0">
+        <results>
+          <test-suite name="task" success="True" time="57.640" asserts="0">
+            <results>
+              <test-suite name="T002_3rdorder" success="True" time="57.640" asserts="0">
+                <results>
+                  <test-suite name="T001_3rdfullpayment" success="True" time="57.609" asserts="0">
+                    <results>
+                      <test-case name="zjsteel.task.T002_3rdorder.T001_3rdfullpayment.T01_Check_3rdorder_fullpayment" executed="True" success="True" time="54.419" asserts="41" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\bin\Debug\SL360Test_Iris.nunit" total="1" failures="1" not-run="0" date="2010-08-04" time="18:10:48">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.3603" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\bin\Debug" machine-name="KELLAND" user="Administrator" user-domain="KELLAND" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\bin\Debug\SL360Test_Iris.nunit" success="False" time="93.032" asserts="0">
+    <results>
+      <test-suite name="E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\bin\Debug\SL360Test_Iris.dll" success="False" time="93.016" asserts="0">
+        <results>
+          <test-suite name="SL360Test_Iris" success="False" time="93.016" asserts="0">
+            <results>
+              <test-suite name="Testcase_CumstomLead" success="False" time="92.985" asserts="0">
+                <results>
+                  <test-case name="SL360Test_Iris.Testcase_CumstomLead.Testcase_01_008" executed="True" success="False" time="91.157" asserts="1">
+                    <failure>
+                      <message><![CDATA[WatiN.Core.Exceptions.TimeoutException : Timeout while waiting 80 seconds for document to contain text 'Select Target Areas - Instructions'.]]></message>
+                      <stack-trace><![CDATA[   at WatiN.Core.UtilityClasses.TryFuncUntilTimeOut.ThrowTimeOutException(Exception lastException, String message)
+   at WatiN.Core.UtilityClasses.TryFuncUntilTimeOut.HandleTimeOut()
+   at WatiN.Core.UtilityClasses.TryFuncUntilTimeOut.Try[T](DoFunc`1 func)
+   at WatiN.Core.Document.WaitUntilContainsText(String text, Int32 timeOut)
+   at WatiN.Core.Document.WaitUntilContainsText(String text)
+   at SL360Test_Iris.SelectAreas.AreaTypeSelect(Testbase test) in E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\ShareFuncs\SelectAreas.cs:line 23
+   at SL360Test_Iris.Testcase_CumstomLead.TestcaseProcess() in E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\Testcase_code.cs:line 425
+   at SL360Test_Iris.Testcase_CumstomLead.Testcase_01_008() in E:\My Document\Visual Studio 2008\Projects\SL360Test_Iris\SL360Test_Iris\Testcase_code.cs:line 73
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

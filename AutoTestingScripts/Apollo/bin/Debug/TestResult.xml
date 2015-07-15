@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Maia Auto\Apollo\bin\Debug\Apollo.dll" total="1" failures="1" not-run="0" date="2011-11-16" time="16:26:26">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="D:\Maia Auto\Apollo\bin\Debug" machine-name="JESSICA-XP1" user="jelly.yu" user-domain="NIRVANA-INFO" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\Maia Auto\Apollo\bin\Debug\Apollo.dll" success="False" time="286.497" asserts="0">
+    <results>
+      <test-suite name="Apollo" success="False" time="286.497" asserts="0">
+        <results>
+          <test-suite name="TestCases" success="False" time="286.497" asserts="0">
+            <results>
+              <test-suite name="Stocks_Module_1" success="False" time="286.466" asserts="0">
+                <results>
+                  <test-case name="Apollo.TestCases.Stocks_Module_1.T01_Stocks_Buy6Market" executed="True" success="False" time="252.761" asserts="1">
+                    <failure>
+                      <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                      <stack-trace><![CDATA[   at Apollo.TestCases.Stocks_Module_1.T01_Stocks_Buy6Market() in D:\Maia Auto\Apollo\TestCases\Stocks_Module_1.cs:line 25
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

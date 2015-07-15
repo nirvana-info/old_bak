@@ -1,0 +1,17 @@
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\obj\Debug\ResolveAssemblyReference.cache
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll.config
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.pdb
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\Interop.SHDocVw.dll
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\nunit.framework.dll
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\WatiN.Core.dll
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\WatiN.Core.xml
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\nunit.framework.xml
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\obj\Debug\SalesLeads360.dll
+F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\obj\Debug\SalesLeads360.pdb
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll.config
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.pdb
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\obj\Debug\ResolveAssemblyReference.cache
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\obj\Debug\SalesLeads360.dll
+E:\build\AutoTestingScripts\SalesLeads360\SalesLeads360\obj\Debug\SalesLeads360.pdb

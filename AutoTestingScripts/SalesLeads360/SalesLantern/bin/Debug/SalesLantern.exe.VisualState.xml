@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1017]E:\AutomationTesting\Watin\SalesLantern\SalesLantern\bin\Debug\SalesLantern.exe</TopNode>
+  <SelectedNode>[0-1015]SalesLantern.Program</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1017]E:\AutomationTesting\Watin\SalesLantern\SalesLantern\bin\Debug\SalesLantern.exe" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1018]SalesLantern" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1004]SalesLantern.Check01_RegisterUser_OrderLeads" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1005]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_01_Login" />
+                <Node UniqueName="[0-1006]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_02_OrderConsumerLeads_IndividualZipCodes" />
+                <Node UniqueName="[0-1007]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_03_OrderConsumerLeads_ChooseCities" />
+                <Node UniqueName="[0-1008]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_04_OrderConsumerLeads_ChooseCounties" />
+                <Node UniqueName="[0-1009]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_05_OrderConsumerLeads_ChooseStates" />
+                <Node UniqueName="[0-1010]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_06_OrderConsumerLeads_SCFCodes" />
+                <Node UniqueName="[0-1011]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_07_OrderBusinessLeads_MapAddress" />
+                <Node UniqueName="[0-1012]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_08_OrderOccupantLists_ChooseCities" />
+                <Node UniqueName="[0-1013]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_09_OrderNewHomeownerLists_PromoCode" />
+                <Node UniqueName="[0-1014]SalesLantern.Check01_RegisterUser_OrderLeads.Check01_10_OrderNewMoverLists_Cities" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1000]SalesLantern.Check02_View_MyLeads" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1001]SalesLantern.Check02_View_MyLeads.Check3_AddSubscription_38" />
+                <Node UniqueName="[0-1002]SalesLantern.Check02_View_MyLeads.Check3_AddSubscription_39" />
+                <Node UniqueName="[0-1003]SalesLantern.Check02_View_MyLeads.Check3_AddSubscription_40" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1015]SalesLantern.Program" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1016]SalesLantern.Program.placeConsumerOrderCRMExp" />
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

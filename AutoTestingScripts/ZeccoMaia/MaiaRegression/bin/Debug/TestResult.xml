@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Maia Auto\MaiaRegression\bin\Debug\MaiaRegression.dll" total="1" failures="0" not-run="0" date="2012-01-10" time="17:09:53">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="D:\Maia Auto\MaiaRegression\bin\Debug" machine-name="JESSICA-XP1" user="jelly.yu" user-domain="NIRVANA-INFO" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\Maia Auto\MaiaRegression\bin\Debug\MaiaRegression.dll" success="True" time="190.441" asserts="0">
+    <results>
+      <test-suite name="MaiaRegression" success="True" time="190.441" asserts="0">
+        <results>
+          <test-suite name="Tasks" success="True" time="190.441" asserts="0">
+            <results>
+              <test-suite name="Spring1_2" success="True" time="190.441" asserts="0">
+                <results>
+                  <test-suite name="S003_ViewProfile_Module" success="True" time="190.410" asserts="0">
+                    <results>
+                      <test-case name="MaiaRegression.Tasks.Spring1_2.S003_ViewProfile_Module.T02_NavigateToOwnProfilePageFromScreenName" executed="True" success="True" time="145.556" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

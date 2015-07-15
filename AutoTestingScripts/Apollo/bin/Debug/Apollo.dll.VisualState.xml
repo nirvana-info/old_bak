@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="true">
+  <TopNode>[0-1059]D:\Maia Auto\Apollo\bin\Debug\Apollo.dll</TopNode>
+  <SelectedNode>[0-1021]Apollo.TestCases.Stocks_Module_1.T01_Stocks_Buy6Market</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1059]D:\Maia Auto\Apollo\bin\Debug\Apollo.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1060]Apollo" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1061]Apollo.TestCases" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1051]Apollo.TestCases.AdvancedOrder_Module_1">
+                  <Nodes>
+                    <Node UniqueName="[0-1052]Apollo.TestCases.AdvancedOrder_Module_1.T01_Advanced_OCO_2Stock" />
+                    <Node UniqueName="[0-1053]Apollo.TestCases.AdvancedOrder_Module_1.T02_Advanced_OCO_StockOption" />
+                    <Node UniqueName="[0-1054]Apollo.TestCases.AdvancedOrder_Module_1.T03_Advanced_OCO_2Option" />
+                    <Node UniqueName="[0-1055]Apollo.TestCases.AdvancedOrder_Module_1.T04_Advanced_OTO_StockStock" />
+                    <Node UniqueName="[0-1056]Apollo.TestCases.AdvancedOrder_Module_1.T05_Advanced_OTO_StockOption" />
+                    <Node UniqueName="[0-1057]Apollo.TestCases.AdvancedOrder_Module_1.T06_Advanced_OTO_OptionStock" />
+                    <Node UniqueName="[0-1058]Apollo.TestCases.AdvancedOrder_Module_1.T07_Advanced_OTO_OptionOption" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1049]Apollo.TestCases.MutualFunds_Module_1">
+                  <Nodes>
+                    <Node UniqueName="[0-1050]Apollo.TestCases.MutualFunds_Module_1.T01_MutualFunds_Buy" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1041]Apollo.TestCases.Options_Module_1">
+                  <Nodes>
+                    <Node UniqueName="[0-1042]Apollo.TestCases.Options_Module_1.T01_Options_Buy6CallPutMarket" />
+                    <Node UniqueName="[0-1043]Apollo.TestCases.Options_Module_1.T02_Options_Sell1CallPutLimit" />
+                    <Node UniqueName="[0-1044]Apollo.TestCases.Options_Module_1.T03_Options_Sell1CallPutStop" />
+                    <Node UniqueName="[0-1045]Apollo.TestCases.Options_Module_1.T04_Options_Sell1CallPutStopLimit" />
+                    <Node UniqueName="[0-1046]Apollo.TestCases.Options_Module_1.T05_Options_Sell1CallPutTrailingStopDollar" />
+                    <Node UniqueName="[0-1047]Apollo.TestCases.Options_Module_1.T06_Options_Sell1CallPutTrailingStopPercent" />
+                    <Node UniqueName="[0-1048]Apollo.TestCases.Options_Module_1.T07_Options_History" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1028]Apollo.TestCases.Options_Module_2">
+                  <Nodes>
+                    <Node UniqueName="[0-1029]Apollo.TestCases.Options_Module_2.T01_Options_Buy1ButterflyMarket" />
+                    <Node UniqueName="[0-1030]Apollo.TestCases.Options_Module_2.T02_Options_Buy2CalendarMarket" />
+                    <Node UniqueName="[0-1031]Apollo.TestCases.Options_Module_2.T03_Options_Buy2CollarMarket" />
+                    <Node UniqueName="[0-1032]Apollo.TestCases.Options_Module_2.T04_Options_Buy2CondorMarket" />
+                    <Node UniqueName="[0-1033]Apollo.TestCases.Options_Module_2.T05_Options_Buy2CoveredMarket" />
+                    <Node UniqueName="[0-1034]Apollo.TestCases.Options_Module_2.T06_Options_Buy2DiagonalMarket" />
+                    <Node UniqueName="[0-1035]Apollo.TestCases.Options_Module_2.T07_Options_Buy2IronButterflyMarket" />
+                    <Node UniqueName="[0-1036]Apollo.TestCases.Options_Module_2.T08_Options_Buy2IronCondorMarket" />
+                    <Node UniqueName="[0-1037]Apollo.TestCases.Options_Module_2.T09_Options_Buy2RatioMarket" />
+                    <Node UniqueName="[0-1038]Apollo.TestCases.Options_Module_2.T10_Options_Buy2SpreadMarket" />
+                    <Node UniqueName="[0-1039]Apollo.TestCases.Options_Module_2.T11_Options_Buy2StraddleMarket" />
+                    <Node UniqueName="[0-1040]Apollo.TestCases.Options_Module_2.T12_Options_Buy2StrangleMarket" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1007]Apollo.TestCases.Options_Module_3">
+                  <Nodes>
+                    <Node UniqueName="[0-1008]Apollo.TestCases.Options_Module_3.T01_Options_Sell1ButterflyLimit" />
+                    <Node UniqueName="[0-1009]Apollo.TestCases.Options_Module_3.T02_Options_Sell1CalendarLimit" />
+                    <Node UniqueName="[0-1010]Apollo.TestCases.Options_Module_3.T03_Options_Sell1CollarLimit" />
+                    <Node UniqueName="[0-1011]Apollo.TestCases.Options_Module_3.T04_Options_Sell1CondorLimit" />
+                    <Node UniqueName="[0-1012]Apollo.TestCases.Options_Module_3.T05_Options_Sell1CoveredLimit" />
+                    <Node UniqueName="[0-1013]Apollo.TestCases.Options_Module_3.T06_Options_Sell1DiagonalLimit" />
+                    <Node UniqueName="[0-1014]Apollo.TestCases.Options_Module_3.T07_Options_Sell1IronButterflyLimit" />
+                    <Node UniqueName="[0-1015]Apollo.TestCases.Options_Module_3.T08_Options_Sell1IronCondorLimit" />
+                    <Node UniqueName="[0-1016]Apollo.TestCases.Options_Module_3.T09_Options_Sell1RatioLimit" />
+                    <Node UniqueName="[0-1017]Apollo.TestCases.Options_Module_3.T10_Options_Sell1SpreadLimit" />
+                    <Node UniqueName="[0-1018]Apollo.TestCases.Options_Module_3.T11_Options_Sell1StraddleLimit" />
+                    <Node UniqueName="[0-1019]Apollo.TestCases.Options_Module_3.T12_Options_Sell1StrangleLimit" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1020]Apollo.TestCases.Stocks_Module_1" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1021]Apollo.TestCases.Stocks_Module_1.T01_Stocks_Buy6Market" />
+                    <Node UniqueName="[0-1022]Apollo.TestCases.Stocks_Module_1.T02_Stocks_Sell1Limit" />
+                    <Node UniqueName="[0-1023]Apollo.TestCases.Stocks_Module_1.T03_Stocks_Sell1Stop" />
+                    <Node UniqueName="[0-1024]Apollo.TestCases.Stocks_Module_1.T04_Stocks_Sell1StopLimit" />
+                    <Node UniqueName="[0-1025]Apollo.TestCases.Stocks_Module_1.T05_Stocks_Sell1TrailingStopDollar" />
+                    <Node UniqueName="[0-1026]Apollo.TestCases.Stocks_Module_1.T06_Stocks_Sell1TrailingStopPercent" />
+                    <Node UniqueName="[0-1027]Apollo.TestCases.Stocks_Module_1.T07_Stocks_CheckTabs" />
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1000]Apollo.TestCases.Stocks_Module_2">
+                  <Nodes>
+                    <Node UniqueName="[0-1001]Apollo.TestCases.Stocks_Module_2.T01_Stocks_Short6Market" />
+                    <Node UniqueName="[0-1002]Apollo.TestCases.Stocks_Module_2.T02_Stocks_Cover1Limit" />
+                    <Node UniqueName="[0-1003]Apollo.TestCases.Stocks_Module_2.T03_Stocks_Cover1Stop" />
+                    <Node UniqueName="[0-1004]Apollo.TestCases.Stocks_Module_2.T04_Stocks_Cover1StopLimit" />
+                    <Node UniqueName="[0-1005]Apollo.TestCases.Stocks_Module_2.T05_Stocks_Cover1TrailingStopDollar" />
+                    <Node UniqueName="[0-1006]Apollo.TestCases.Stocks_Module_2.T06_Stocks_Cover1TrailingStopPercent" />
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

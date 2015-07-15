@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1026]F:\AutoTestingScripts\ZhongJin\zjsteel\zjsteel\bin\Debug\zjsteel.dll</TopNode>
+  <SelectedNode>[0-1000]zjsteel.task.T002_3rdorder.T001_3rdfullpayment</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1026]F:\AutoTestingScripts\ZhongJin\zjsteel\zjsteel\bin\Debug\zjsteel.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1027]zjsteel" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1028]zjsteel.task" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1032]zjsteel.task.T001_2ndorder">
+                  <Nodes>
+                    <Node UniqueName="[0-1008]zjsteel.task.T001_2ndorder.T001_fullpayment">
+                      <Nodes>
+                        <Node UniqueName="[0-1009]zjsteel.task.T001_2ndorder.T001_fullpayment.T01_Check_2ndorder_fullpayment" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1018]zjsteel.task.T001_2ndorder.T002_halfpayment">
+                      <Nodes>
+                        <Node UniqueName="[0-1019]zjsteel.task.T001_2ndorder.T002_halfpayment.T01_Check_2ndorder_halfpayment" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1024]zjsteel.task.T001_2ndorder.test">
+                      <Nodes>
+                        <Node UniqueName="[0-1025]zjsteel.task.T001_2ndorder.test.T01_test" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1022]zjsteel.task.T001_2ndorder.test1" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1023]zjsteel.task.T001_2ndorder.test1.T01_test" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1029]zjsteel.task.T002_3rdorder" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1000]zjsteel.task.T002_3rdorder.T001_3rdfullpayment" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1001]zjsteel.task.T002_3rdorder.T001_3rdfullpayment.T01_Check_3rdorder_fullpayment" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1016]zjsteel.task.T002_3rdorder.T002_3rdhalfpayment" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1017]zjsteel.task.T002_3rdorder.T002_3rdhalfpayment.T01_Check_3rdorder_halfpayment" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1006]zjsteel.task.T002_3rdorder.T003_package" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1007]zjsteel.task.T002_3rdorder.T003_package.T01_Check_3rdorder_package" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1034]zjsteel.task.T003_delivergoods">
+                  <Nodes>
+                    <Node UniqueName="[0-1014]zjsteel.task.T003_delivergoods.T001_delivergoods" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1015]zjsteel.task.T003_delivergoods.T001_delivergoods.T01_Check_delivergoods" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1035]zjsteel.task.T004_discount">
+                  <Nodes>
+                    <Node UniqueName="[0-1020]zjsteel.task.T004_discount.T001_discount" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1021]zjsteel.task.T004_discount.T001_discount.T01_Check_discount" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1031]zjsteel.task.T005_tradebycredit">
+                  <Nodes>
+                    <Node UniqueName="[0-1004]zjsteel.task.T005_tradebycredit.T001_tradebycredit" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1005]zjsteel.task.T005_tradebycredit.T001_tradebycredit.T01_Check_tradebycredit" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1033]zjsteel.task.T006_bargaining">
+                  <Nodes>
+                    <Node UniqueName="[0-1010]zjsteel.task.T006_bargaining.T001_bargaining" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1011]zjsteel.task.T006_bargaining.T001_bargaining.T01_Check_bargaining" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+                <Node UniqueName="[0-1030]zjsteel.task.T007_insufficientmoney">
+                  <Nodes>
+                    <Node UniqueName="[0-1002]zjsteel.task.T007_insufficientmoney.T001_insufficientmoney" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1003]zjsteel.task.T007_insufficientmoney.T001_insufficientmoney.T01_Check_insufficientmoney" />
+                      </Nodes>
+                    </Node>
+                    <Node UniqueName="[0-1012]zjsteel.task.T007_insufficientmoney.T002_salesourcefail" Expanded="true">
+                      <Nodes>
+                        <Node UniqueName="[0-1013]zjsteel.task.T007_insufficientmoney.T002_salesourcefail.T01_Check_salesourcefail" />
+                      </Nodes>
+                    </Node>
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

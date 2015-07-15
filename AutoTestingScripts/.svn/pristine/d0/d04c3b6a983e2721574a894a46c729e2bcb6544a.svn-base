@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Table type ="pushrequest">
+  <Name>Testcase_01_001.tc</Name>
+  <Parameters>
+    <Parameter
+      name ="Parameter1"
+      key ="website address"
+      address =""
+      type ="boolean"
+      value ="http://192.168.0.20:8080/mailinglists/login.aspx"
+    />
+
+    <Parameter
+      name ="Parameter2"
+      key ="Account"
+      address ="LoginEmail"
+      type ="string"
+      value ="christie.duan@nirvana-info.com"
+    />
+
+    <Parameter
+      name ="Parameter3"
+      key ="Password"
+      address ="LoginPassword"
+      type ="string"
+      value ="123456"
+    />
+
+
+    <Parameter
+      name ="Parameter4"
+      key ="Submit Button"
+      address ="login_submit"
+      type ="string"
+      value =""
+    />
+
+    <Parameter
+      name ="Parameter5"
+      key ="DatasourcePage_Index"
+      address =""
+      type ="string"
+      value = "Welcome"
+    />
+
+    <Parameter
+      name ="Parameter6"
+      key ="Datasource"
+      address ="ctl00_ctl00_uxContent_uxContent_rbListType_1"
+      type ="boollean"
+      value = "True"
+    />
+
+    <Parameter
+      name ="Parameter7"
+      key ="Next1"
+      address =""
+      type ="boollean"
+      value = "Next"
+    />
+
+    <Parameter
+      name ="Parameter8"
+      key ="ByAreaPage_Index"
+      address =""
+      type ="boollean"
+      value = "Select Target Areas - Instructions"
+    />
+
+    <Parameter
+      name ="Parameter9"
+      key ="SelectAreaType"
+      address ="geo_type_state"
+      type ="boollean"
+      value = "True"
+    />
+
+    <Parameter
+      name ="Parameter10"
+      key ="Next2"
+      address ="Next"
+      type ="boollean"
+      value = ""
+      />
+
+    <Parameter
+      name ="Parameter11"
+      key ="ByStatePage_Index"
+      address =""
+      type ="string"
+      value = "Step 1: Select Target Area(s) - State"
+     />
+
+    <Parameter
+      name ="Parameter19"
+      key ="State"
+      address ="geo_state_left"
+      type ="string"
+      value = "CO"
+    />
+
+    <Parameter
+      name ="Parameter15"
+      key ="Next3"
+      address ="Next"
+      type ="boollean"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter16"
+      key ="ByAudiencePage_Index"
+      address =""
+      type ="string"
+      value = "Step 2: Define Target Audience"
+    />
+
+    <Parameter
+      name ="Parameter17"
+      key ="Select All?"
+      address ="demo_selectall"
+      type ="boolean"
+      value = "False"
+    />
+
+    <Parameter
+     name ="Parameter18"
+     key ="Select Demo1"
+     address ="Demographic Options"
+     type ="string"
+     value = ""
+    />
+
+    <Parameter
+      name ="Parameter19"
+      key ="Demo_Category1"
+      address ="demo_options_category"
+      type ="string"
+      value = "Fax_Flag"
+    />
+
+    <Parameter
+       name ="Parameter23"
+       key ="Demo_Variable1"
+       address ="demo_options_variables"
+       type ="string"
+       value = "Y"
+    />
+
+    <Parameter
+      name ="Parameter24"
+      key ="Include phone number?"
+      address ="demo_po_available"
+      type ="string"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter25"
+      key ="Supression"
+      address ="demo_suppression_radio_none"
+      type ="string"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter26"
+      key ="Next4"
+      address ="Next"
+      type ="boollean"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter27"
+      key ="CountAndQuotePage_Index"
+      address =""
+      type ="string"
+      value = "Step 3: Review Count &amp; Quote"
+    />
+
+    <Parameter
+      name ="Parameter28"
+      key ="Count Judgement"
+      address ="adjustdt1"
+      type ="string"
+      value = "200"
+    />
+
+    <Parameter
+      name ="Parameter29"
+      key ="Using this list multiple times?"
+      address ="results_listusage_multitime"
+      type ="boollean"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter30"
+      key ="Using mailing labels?"
+      address ="results_sendlabels"
+      type ="boollean"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter31"
+      key ="Select: Save Count(T) or Next(F)"
+      address =""
+      type ="boollean"
+      value = "False"
+    />
+
+    <Parameter
+      name ="Parameter32"
+      key ="Address of Save Count or Next"
+      address =""
+      type ="boollean"
+      value = "Next"
+    />
+
+    <Parameter
+      name ="Parameter33"
+      key ="PaymentInformationPage_Index"
+      address =""
+      type ="string"
+      value = "Step 4: Enter Payment Information"
+    />
+
+    <Parameter
+      name ="Parameter34"
+      key ="Information_Firstname"
+      address ="payment_contact_firstname"
+      type ="string"
+      value = "testFirstname1"
+    />
+
+    <Parameter
+      name ="Parameter35"
+      key ="Information_Lastname"
+      address ="payment_contact_lastname"
+      type ="string"
+      value = "testLastname1"
+    />
+
+    <Parameter
+      name ="Parameter36"
+      key ="Information_Address"
+      address ="payment_contact_address"
+      type ="string"
+      value = "New york"
+    />
+
+    <Parameter
+      name ="Parameter37"
+      key ="Information_City"
+      address ="payment_contact_city"
+      type ="string"
+      value = "New York"
+    />
+
+    <Parameter
+    name ="Parameter38"
+    key ="Information_State"
+    address ="payment_contact_state"
+    type ="string"
+    value = "IN"
+    />
+
+    <Parameter
+      name ="Parameter39"
+      key ="Information_Zip"
+      address ="payment_contact_zip"
+      type ="string"
+      value = "11535"
+    />
+
+    <Parameter
+      name ="Parameter40"
+      key ="Information_Email"
+      address ="payment_contact_email"
+      type ="string"
+      value = "eric.chen@nirvana-info.com"
+    />
+
+    <Parameter
+      name ="Parameter41"
+      key ="Information_Ordername"
+      address ="payment_contact_ordername"
+      type ="string"
+      value = "Test_Ordername"
+    />
+
+    <Parameter
+      name ="Parameter42"
+      key ="Information_SameAsContact"
+      address ="payment_bill_same_as_contact"
+      type ="boollean"
+      value = "True"
+    />
+
+    <Parameter
+      name ="Parameter43"
+      key ="Information_PaymentAgreement"
+      address ="payment_payment_agreement"
+      type ="boollean"
+      value = "True"
+    />
+
+    <Parameter
+      name ="Parameter44"
+      key ="Information_CardNumber"
+      address ="payment_bill_cardnumber"
+      type ="string"
+      value = "4013 6927 7124 6205"
+    />
+
+    <Parameter
+      name ="Parameter45"
+      key ="Information_SecurityCode"
+      address ="payment_bill_securitycode"
+      type ="string"
+      value = "122234"
+    />
+
+    <Parameter
+      name ="Parameter46"
+      key ="Place Order"
+      address ="order_stepbt_placeorder"
+      type ="string"
+      value = ""
+    />
+
+    <Parameter
+      name ="Parameter47"
+      key ="OrderCompletePage_Index"
+      address =""
+      type ="string"
+      value = "Your Order Is Complete!"
+    />
+  </Parameters>
+</Table>
+
+
+
+

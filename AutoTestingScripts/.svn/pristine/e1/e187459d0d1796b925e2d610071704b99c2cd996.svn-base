@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="NUnit">
+      <section name="TestRunner" type="System.Configuration.NameValueSectionHandler" />
+    </sectionGroup>
+  </configSections>
+  <NUnit>
+    <TestRunner>
+      <!-- Valid values are STA,MTA. Others ignored. -->
+      <add key="ApartmentState" value="STA" />
+    </TestRunner>
+  </NUnit>
+  <appSettings>
+    <add key="Platform" value="FF" />
+    <!-- IE|FF -->
+    <add key="TargetHost" value="https://qa-apollo.zecco.com/trading.aspx" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

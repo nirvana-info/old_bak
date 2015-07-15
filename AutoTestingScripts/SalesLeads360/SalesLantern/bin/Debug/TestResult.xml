@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\AutomationTesting\Watin\SalesLantern\SalesLantern\bin\Debug\SalesLantern.exe" total="1" failures="1" not-run="0" date="2008-09-10" time="12:45:45">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="E:\AutomationTesting\Watin\SalesLantern\SalesLantern\bin\Debug" machine-name="CHRISTIE" user="ChristieD" user-domain="CHRISTIE" />
+  <culture-info current-culture="en-US" current-uiculture="zh-CN" />
+  <test-suite name="E:\AutomationTesting\Watin\SalesLantern\SalesLantern\bin\Debug\SalesLantern.exe" success="False" time="146.844" asserts="0">
+    <results>
+      <test-suite name="SalesLantern" success="False" time="146.844" asserts="0">
+        <results>
+          <test-suite name="Program" success="False" time="146.828" asserts="0">
+            <results>
+              <test-case name="SalesLantern.Program.placeConsumerOrderCRMExp" executed="True" success="False" time="146.078" asserts="0">
+                <failure>
+                  <message><![CDATA[WatiN.Core.Exceptions.TimeoutException : Timeout while 'waiting 120 seconds for element to show up.']]></message>
+                  <stack-trace><![CDATA[   at WatiN.Core.Element.ThrowTimeOutException(Exception lastException, String message)
+   at WatiN.Core.Element.waitUntilExistsOrNot(Int32 timeout, Boolean waitUntilExists)
+   at WatiN.Core.Element.WaitUntilExists(Int32 timeout)
+   at SalesLantern.Program.placeConsumerOrderCRMExp()
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

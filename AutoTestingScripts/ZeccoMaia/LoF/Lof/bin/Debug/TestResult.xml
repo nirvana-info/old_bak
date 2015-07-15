@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Maia Auto\LoF\Lof\bin\Debug\Lof.dll" total="1" failures="0" not-run="0" date="2010-09-06" time="15:07:00">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.3082" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="D:\Maia Auto\LoF\Lof\bin\Debug" machine-name="JESSICA-XP1" user="jelly.yu" user-domain="NIRVANA-INFO" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\Maia Auto\LoF\Lof\bin\Debug\Lof.dll" success="True" time="26.911" asserts="0">
+    <results>
+      <test-suite name="Lof" success="True" time="26.895" asserts="0">
+        <results>
+          <test-suite name="TestCases" success="True" time="26.895" asserts="0">
+            <results>
+              <test-suite name="Case1" success="True" time="26.848" asserts="0">
+                <results>
+                  <test-case name="Lof.TestCases.Case1.T01" executed="True" success="True" time="11.471" asserts="0" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

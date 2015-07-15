@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.exe" total="1" failures="0" not-run="0" date="2009-02-18" time="17:55:52">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.1.2600 Service Pack 2" platform="Win32NT" cwd="E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug" machine-name="CHRISTIE" user="ChristieD" user-domain="CHRISTIE" />
+  <culture-info current-culture="en-US" current-uiculture="zh-CN" />
+  <test-suite name="E:\AutoScripts\AutomationTesting\Watin\MaiaRegression\MaiaRegression\bin\Debug\MaiaRegression.exe" success="True" time="22.938" asserts="0">
+    <results>
+      <test-suite name="MaiaRegression" success="True" time="22.922" asserts="0">
+        <results>
+          <test-suite name="Check001_HomePage" success="True" time="22.922" asserts="0">
+            <results>
+              <test-suite name="SignInOut" success="True" time="22.891" asserts="0">
+                <results>
+                  <test-case name="MaiaRegression.Check001_HomePage.SignInOut.SignIn" executed="True" success="True" time="21.781" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

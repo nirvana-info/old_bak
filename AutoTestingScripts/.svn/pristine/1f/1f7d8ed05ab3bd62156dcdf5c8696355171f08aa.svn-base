@@ -1,0 +1,11 @@
+bin\Debug\SalesLantern.exe.config
+bin\Debug\SalesLantern.exe
+bin\Debug\SalesLantern.pdb
+bin\Debug\nunit.framework.dll
+bin\Debug\WatiN.Core.dll
+bin\Debug\Interop.SHDocVw.dll
+bin\Debug\WatiN.Core.xml
+bin\Debug\nunit.framework.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SalesLantern.exe
+obj\Debug\SalesLantern.pdb

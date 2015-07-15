@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll" total="1" failures="0" not-run="0" date="2009-04-28" time="14:05:48">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug" machine-name="NIAVANA-BOBBY" user="bobby" user-domain="NIAVANA-BOBBY" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="F:\AutoTestingScripts\SalesLeads360\SalesLeads360\SalesLeads360\bin\Debug\SalesLeads360.dll" success="True" time="8.766" asserts="0">
+    <results>
+      <test-suite name="SalesLeads360" success="True" time="8.766" asserts="0">
+        <results>
+          <test-suite name="Task" success="True" time="8.766" asserts="0">
+            <results>
+              <test-suite name="T006_SpecialtyList" success="True" time="8.766" asserts="0">
+                <results>
+                  <test-suite name="T001_SpecialtyList" success="True" time="8.734" asserts="0">
+                    <results>
+                      <test-case name="SalesLeads360.Task.T006_SpecialtyList.T001_SpecialtyList.T01_Check_SpecialtyList" executed="True" success="True" time="6.422" asserts="4" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

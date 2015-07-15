@@ -1,0 +1,232 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F17DFB6-6189-4E3F-B44A-1F7314ACE22D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaiaRegression</RootNamespace>
+    <AssemblyName>MaiaRegression</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/MaiaRegression/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.3.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tool\binupdate\binupdate\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Tool\Selenium\selenium-remote-control-1.0.3\selenium-dotnet-client-driver-1.0.1\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WatiN.Core, Version=2.0.10.928, Culture=neutral, PublicKeyToken=db7cfd3acb5ad44e, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\WatiN.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appobjects\App01_HomePage\ACH.cs" />
+    <Compile Include="Appobjects\App01_HomePage\ActivityFeed.cs" />
+    <Compile Include="Appobjects\App01_HomePage\BlogsForums.cs" />
+    <Compile Include="Appobjects\App01_HomePage\MessageCenter.cs" />
+    <Compile Include="Appobjects\App01_HomePage\OLA.cs" />
+    <Compile Include="Appobjects\App01_HomePage\SignIn.cs" />
+    <Compile Include="Appobjects\App01_HomePage\SignOut.cs" />
+    <Compile Include="Appobjects\App01_HomePage\SignUp.cs" />
+    <Compile Include="Appobjects\App01_HomePage\ViewProfile.cs" />
+    <Compile Include="Appobjects\App02_QuotesAndResearch\OptionsAnalytics.cs" />
+    <Compile Include="Appobjects\App02_QuotesAndResearch\Quotes.cs" />
+    <Compile Include="Appobjects\PublicPara.cs" />
+    <Compile Include="Tasks\2010Spring4\S001_PrivacyPolicy_Module.cs" />
+    <Compile Include="Tasks\2010Spring4\S002_HermesFAQ_Module\S002_HermesFAQ_Module_1.cs" />
+    <Compile Include="Tasks\2010Spring4\S002_HermesFAQ_Module\S002_HermesFAQ_Module_2.cs" />
+    <Compile Include="Tasks\2010Spring6\S001_PricingReferences_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S002_MobileMarketingPages_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S003_OLAExplore_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S004_NewAcctTypeLandingPage_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S005_NewAcctTypeBackEnd_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S006_NewAcctTypeCheck_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S007_ForexMetaTrader_Module.cs" />
+    <Compile Include="Tasks\2010Spring6\S008_YearlyPasswordReset_Module.cs" />
+    <Compile Include="Tasks\2011Sprint10\S001_ACHBlacklist_Module.cs" />
+    <Compile Include="Tasks\2011Sprint12\S001_Simplexity_Module.cs" />
+    <Compile Include="Tasks\2011Sprint7\S001_MarginSchedule_Module.cs" />
+    <Compile Include="Tasks\2012Sprint13\S001_ForexMarketing_Module.cs" />
+    <Compile Include="Tasks\2012Sprint13\S002_YodleeUI_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S001_SignIn_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S002_SignUp__Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S003_ViewProfile_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S004_EditProfile_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S005_ShoutBox_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S006_ActivityFeed_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S007_ChangePassword_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S008_Connections_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S009_StaticPageDisplay_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S010_BlogsForums_Module\S010_BlogsForums_Module_1.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S010_BlogsForums_Module\S010_BlogsForums_Module_2.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S011_QR_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S012_ResetPassword_Module.cs" />
+    <Compile Include="Tasks\Spring1&amp;2\S013_MessageCenter_Module.cs" />
+    <Compile Include="Tasks\Spring3\S001_ChangeEmail_Module.cs" />
+    <Compile Include="Tasks\Spring3\S002_IPLogging_Module.cs" />
+    <Compile Include="Tasks\Spring3\S003_FieldValidation_Module.cs" />
+    <Compile Include="Tasks\Spring3\S004_GainsKeeper_Module.cs" />
+    <Compile Include="Tasks\Spring3\S005_Performance_Module.cs" />
+    <Compile Include="Tasks\Spring4\S001_AccountManagementSetting_Module.cs" />
+    <Compile Include="Tasks\Spring4\S002_Form_Module.cs" />
+    <Compile Include="Tasks\Spring4\S002_Form_Module_2.cs" />
+    <Compile Include="Tasks\Spring4\S003_FAQ_Module.cs" />
+    <Compile Include="Tasks\Spring4\S004_Management_Module.cs" />
+    <Compile Include="Tasks\Spring4\S005_SupportMessage_Module.cs" />
+    <Compile Include="Tasks\Spring5\S001_UserTracking_Module.cs" />
+    <Compile Include="Tasks\Spring5\S002_SEO_Module.cs" />
+    <Compile Include="Tasks\Spring5\S002_SEO_Module_2.cs" />
+    <Compile Include="Tasks\Spring5\S003_Prospect_Module.cs" />
+    <Compile Include="Tasks\Spring5\S004_ACH_Module\S004_ACH_Module_1.cs" />
+    <Compile Include="Tasks\Spring5\S004_ACH_Module\S004_ACH_Module_2.cs" />
+    <Compile Include="Tasks\Spring5\S004_ACH_Module\S004_ACH_Module_3.cs" />
+    <Compile Include="Tasks\Spring5\S005_Search_Generic.cs" />
+    <Compile Include="Tasks\Spring5\S006_AD_Option.cs" />
+    <Compile Include="Tasks\Spring6\S001_Dashboard_Module.cs" />
+    <Compile Include="Tasks\Spring6\S002_Group_Module.cs" />
+    <Compile Include="Tasks\Spring6\S003_Moderation_Module.cs" />
+    <Compile Include="Tasks\Spring6\S004_Cache_Module.cs" />
+    <Compile Include="Tasks\Spring6\S005_Community_Reputation.cs" />
+    <Compile Include="Tasks\Spring6\S007_Refer_Friend.cs" />
+    <Compile Include="Tasks\Spring7\S001_IPChallenge_Module.cs" />
+    <Compile Include="Tasks\Spring7\S002_CRMCase_Module.cs" />
+    <Compile Include="Tasks\SpringFunnel3\S001_ExploreEnhancements_Module\S001_ExploreEnhancements_Module_1.cs" />
+    <Compile Include="Tasks\SpringFunnel3\S001_ExploreEnhancements_Module\S001_ExploreEnhancements_Module_2.cs" />
+    <Compile Include="Tasks\SpringFunnel3\S001_ExploreEnhancements_Module\S001_ExploreEnhancements_Module_3.cs" />
+    <Compile Include="Tasks\SpringFunnel3\S002_EmailUnsubscribes_Module.cs" />
+    <Compile Include="Tasks\SpringMaia1\S001_SiteMap_Module.cs" />
+    <Compile Include="Tasks\SpringMaia1\S002_AdminEnhancements_Module.cs" />
+    <Compile Include="Tasks\SpringMaia1\S003_Homepage_Module.cs" />
+    <Compile Include="Tasks\SpringPreProdA\S001_SecurityUpgrade_Module.cs" />
+    <Compile Include="Tasks\SpringPreProdA\S002_OLA_Module.cs" />
+    <Compile Include="Tasks\SpringTech1\S001_ZapTrade_Module.cs" />
+    <Compile Include="Tasks\SpringTech1\S002_ServiceMessaging_Module.cs" />
+    <Compile Include="Tasks\SpringTech1\S003_PageBuilder_Module.cs" />
+    <Compile Include="Tasks\SpringTech1\S004_ShareVideo_Module.cs" />
+    <Compile Include="Tasks\SpringTech1\S005_OutageAdmin_Module.cs" />
+    <Compile Include="Tasks\SpringTech2\S001_FrontEnd_Module\S001_FrontEnd_Module_1.cs" />
+    <Compile Include="Tasks\SpringTech2\S001_FrontEnd_Module\S001_FrontEnd_Module_2.cs" />
+    <Compile Include="Tasks\SpringTech2\S001_FrontEnd_Module\S001_FrontEnd_Module_3.cs" />
+    <Compile Include="Tasks\SpringTech2\S002_BackEnd_Module\S002_BackEnd_Module_1.cs" />
+    <Compile Include="Tasks\SpringTech2\S002_BackEnd_Module\S002_BackEnd_Module_2.cs" />
+    <Compile Include="TestCases\02-Quotes&amp;Research\Check003_Quotes.cs" />
+    <Compile Include="Appobjects\TestBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\01-HomePage\Check001_SignIn.cs" />
+    <Compile Include="TestCases\01-HomePage\Check002_SignOut.cs" />
+    <Compile Include="TestCases\02-Quotes&amp;Research\Check004_OptionsAnalytics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

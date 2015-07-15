@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll" total="1" failures="1" not-run="0" date="2011-02-16" time="18:49:43">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.4927" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\Document\Test tools\binupdate\bin" machine-name="USE-PC" user="Administrator" user-domain="use-PC" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll" success="False" time="41.042" asserts="0">
+    <results>
+      <test-suite name="YinJiaRegressionTestingProject" success="False" time="41.036" asserts="0">
+        <results>
+          <test-suite name="调配" success="False" time="40.977" asserts="0">
+            <results>
+              <test-case name="YinJiaRegressionTestingProject.调配.Step01门店日常补货申请" executed="True" success="False" time="40.969" asserts="0">
+                <failure>
+                  <message><![CDATA[Selenium.SeleniumException : ERROR: Element //form[@action='http://www.nirvana-info.cn:8111/Portal/PU/Order/ReplenishReqest.aspx?OrderRoleType=60&IsTransfer=Y'] not found]]></message>
+                  <stack-trace><![CDATA[   在 Selenium.HttpCommandProcessor.DoCommand(String command, String[] args) 位置 c:\hudson\workspace\selenium-rc-trunk-win-headless\trunk\clients\dotnet\src\Core\HttpCommandProcessor.cs:行号 98
+   在 Selenium.DefaultSelenium.Submit(String formLocator) 位置 c:\hudson\workspace\selenium-rc-trunk-win-headless\trunk\clients\dotnet\src\Core\DefaultSelenium.cs:行号 599
+   在 YinJiaRegressionTestingProject.调配.Step01门店日常补货申请() 位置 D:\Scripts\YinJiaRegressionTestingProject\YinJiaRegressionTestingProject\调配.cs:行号 40
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

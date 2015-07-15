@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll" total="1" failures="1" not-run="0" date="2011-06-02" time="16:03:13">
+  <environment nunit-version="2.4.3.0" clr-version="2.0.50727.4959" os-version="Microsoft Windows NT 6.1.7600.0" platform="Win32NT" cwd="D:\QA Team\八哥\Selenium environment tools\binupdate\bin" machine-name="JULA-PC" user="Jula" user-domain="Jula-PC" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite name="D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\bin\Debug\YinJiaRegressionTestingProject.dll" success="False" time="69.436" asserts="0">
+    <results>
+      <test-suite name="YinJiaRegressionTestingProject" success="False" time="69.434" asserts="0">
+        <results>
+          <test-suite name="门店调配" success="False" time="69.388" asserts="0">
+            <results>
+              <test-case name="YinJiaRegressionTestingProject.门店调配.A002_自营补货申请处理" executed="True" success="False" time="69.384" asserts="0">
+                <failure>
+                  <message><![CDATA[Selenium.SeleniumException : ERROR: Element //table[@id='ctl00_contentPlaceHolder_btnSearch']/tbody/tr/td[2]/em/button not found]]></message>
+                  <stack-trace><![CDATA[   在 Selenium.HttpCommandProcessor.DoCommand(String command, String[] args)
+   在 Selenium.DefaultSelenium.Click(String locator)
+   在 YinJiaRegressionTestingProject.门店调配.A002_自营补货申请处理() 位置 D:\QA Team\自动化测试\autoscript\YinJiaRegressionTestingProject\门店调配.cs:行号 60
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
