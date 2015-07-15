@@ -1,0 +1,29 @@
+//
+// Prefix header for all source files of the 'NiMobile' target in the 'NiMobile' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    // Categories to be made available app-wide
+    #import "NSNull+Safety.h"
+    #import "NSNumber+Currency.h"
+    #import "NSNumber+Formatting.h"
+    #import "NSStringCategories.h"
+    //#import "NSString+DollarSymbol.h"
+    #import "UIColorCategories.h"
+    #import "UIView+Categories.h"
+    //#import "GATracker.h"
+
+    // Utilities to be made available app-wide
+    #import "DLog.h"
+    #import "NiConstants.h"
+
+#endif
