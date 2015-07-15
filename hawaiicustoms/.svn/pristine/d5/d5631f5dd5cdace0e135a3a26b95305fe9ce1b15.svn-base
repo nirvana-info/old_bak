@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>                                                                                                           
+        <title>Make an Offer</title>
+        <script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery.js"></script>
+        <link href="%%GLOBAL_ShopPath%%/templates/CongoWorld/Styles/orange.css" type="text/css" rel="stylesheet" />  
+        <link href="%%GLOBAL_ShopPath%%/templates/CongoWorld/Styles/styles.css" type="text/css" rel="stylesheet" />    
+    </head>
+	<body>
+        <div class="AccountLogin" style="padding-top:15px;">
+	    <h2 style="color:#FF0000">Mail sent successfully</h2>
+        Your offer is sent directly to one of our Customer Service Managers. We check our email frequently, and can usually respond within an hour or so. However, if you send an offer very late in the night or early morning, you will get a response by 10 am EST. Thanks! 
+        <p align="center" style="padding-top:10px;">
+            <a href="javascript: self.close()">Close Window</a>
+        </p>
+        </div>
+	</body>
+</html>

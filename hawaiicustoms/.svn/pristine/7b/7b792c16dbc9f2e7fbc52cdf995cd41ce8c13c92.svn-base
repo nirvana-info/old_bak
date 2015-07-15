@@ -1,0 +1,4 @@
+<strong>%%GLOBAL_OrderProductName%%</strong>
+<dl class="ProductOptions">
+	%%GLOBAL_OrderProductFields%%
+</dl>

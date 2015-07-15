@@ -1,0 +1,10 @@
+<script type="text/javascript"> 
+    var playerpath = '%%GLOBAL_ShopPath%%/templates/default/images/'; 
+    function loadVideo(name)
+    {               
+         $("#slideshow").load("%%GLOBAL_ShopPath%%/videoobject.php?playerpath="+playerpath+"&vidname="+name); 
+    }  
+    $(document).ready(function() {
+        %%GLOBAL_FirstVideo%%
+    });    
+</script>

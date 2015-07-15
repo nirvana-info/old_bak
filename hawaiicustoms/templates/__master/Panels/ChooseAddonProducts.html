@@ -1,0 +1,17 @@
+	<div class="Block Moveable" id="ChooseAddonProducts">
+		<h2>%%LNG_ChooseAddonProducts%%</h2>
+		<div class="BlockContent">
+			<p class="InfoMessage">
+				%%LNG_CheckoutAddonProductsIntro%%
+			</p>
+			<div>
+				<form action="%%GLOBAL_ShopPath%%/checkout.php?action=save_addonproducts" method="post">
+					<ul class="AddonProductList">
+					    %%GLOBAL_AddonProductList%%
+					</ul>
+					<input type='button' onclick="Checkout.ChooseAddonProducts(1)" value='No Thanks. Continue Checkout.'/>
+					<input type='button' onclick="Checkout.ChooseAddonProducts()" value="Add To Cart"/>
+				</form>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,17 @@
+<tr onmouseout="this.className='GridRow'" onmouseover="this.className='GridRowOver'" class="GridRow" style="height:25px">
+	<td align="center" style="width: 18px;"><img width="16" height="16" src="images/emailtemplate.gif"/></td>
+	<td>%%GLOBAL_FileName%%</td>
+	<td>%%GLOBAL_FileSize%% %%LNG_KB%%</td>
+	<td>%%GLOBAL_FileDate%%</td>
+	<td><a href="#" onclick="edit_template('%%GLOBAL_ExpandId%%', '%%GLOBAL_FileName%%'); return false">%%LNG_Edit%%</a></td>
+</tr>
+<tr id="edit_%%GLOBAL_ExpandId%%" style="display:none">
+	<td></td>
+	<td colspan="3">
+		<div id="edit_box_%%GLOBAL_ExpandId%%"></div>
+		<div style="padding-bottom:10px">
+			<input type="button" value="%%LNG_Save%%" class="FormButton" onclick="save_edit('%%GLOBAL_ExpandId%%', '%%GLOBAL_FileName%%')" /> <input type="button" value="%%LNG_Cancel%%" class="FormButton" onclick="edit_hide('%%GLOBAL_ExpandId%%');" />
+		</div>
+	</td>
+	<td></td>
+</tr>

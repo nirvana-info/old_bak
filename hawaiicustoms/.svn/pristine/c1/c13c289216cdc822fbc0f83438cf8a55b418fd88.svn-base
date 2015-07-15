@@ -1,0 +1,13 @@
+; [Froogle]
+FroogleFeed = "Google Products Feed"
+FroogleExportCancelled = "The Google Products Feed export has been cancelled."
+FroogleExportUnableCreate = "Unable to create cache file. Please check that the /cache/ directory is writable."
+FroogleExportInvalidFile = "You have followed a link to an outdated export. Please start a new Google products Feed export."
+FroogleExportInvalidFile = "You have followed an outdated or invalid export link.. Please start a new Google products Feed export."
+FroogleFeedIntro = "Google Product Search is a free service offered by Google that lets you list your products on their &quot;<a href='http://www.google.com/products' target='_blank'>Google Products</a>&quot; search page."
+GenerateFroogleFeed = "Export my products to a Google feed file"
+FroogleFeedGeneratingIntro = "Your products are currently being exported to a Google Products feed. Once the export is complete you will be able to download the product list."
+GeneratingFroogleFeed = "Generating Google Products Feed..."
+FroogleFeedGeneratedIntro = "Your Google Products feed has been generated and is ready to download."
+DownloadFroogleFeed = "Download my Google Products file"
+NoFroogleProducts = "Your shop contains no products. You need to add at least one product before they can be exported."

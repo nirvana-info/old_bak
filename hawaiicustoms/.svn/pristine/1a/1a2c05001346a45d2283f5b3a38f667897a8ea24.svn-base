@@ -1,0 +1,14 @@
+<div class="Block Moveable" id="CartHeader">
+	<h2>
+		<span style="%%GLOBAL_HideCheckoutButton%%;" class="FloatRight">
+			
+			%%GLOBAL_AdditionalCheckoutButtons%%
+		</span>
+		%%GLOBAL_OfferTitle%%	
+	</h2>
+</div>
+<div class="Block Moveable" id="CartHeader">
+	<h2>
+	%%GLOBAL_OfferHeader%%	
+	</h2>
+</div>

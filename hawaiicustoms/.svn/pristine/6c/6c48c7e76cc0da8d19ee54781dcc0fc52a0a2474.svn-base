@@ -1,0 +1,48 @@
+/** IE 7 Specific Fixes **/
+
+#HomeFeaturedProducts {
+padding-top: 10px;
+}
+
+* html .SelectGiftWrapMultiple {
+	height: 400px;
+}
+
+/** General IE Fixes **/
+
+.Left .FeedLink, .Right .FeedLink {
+	position: relative;
+	z-index: 1;
+}
+
+.Content .FeedLink {
+	margin: 2px 4px 0 0;
+}
+#ordernow {
+		background: transparent url('../../../images/design23/phone1.png') 4px 0px no-repeat;
+}
+
+select, input {
+	font-size: 0.95em;
+}
+
+.HasSubMenu {
+	z-index:10;
+}
+
+.ExpressCheckoutContent {
+	display: inline-block;
+}
+
+#tc-home-info {
+	width: 740px;
+}
+
+#HomeNewProducts {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.TabNav li {
+	display: inline;
+}

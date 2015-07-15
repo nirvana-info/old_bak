@@ -1,0 +1,12 @@
+<div style="%%GLOBAL_HideShippingQuotesListNote%%">
+	<h3>%%LNG_ShippingForYourOrder%%</h3>
+	<small>
+		%%GLOBAL_ShippingQuotesListNote%%
+	</small>
+	<hr />
+</div>
+%%GLOBAL_ShippingQuotes%%
+<p class="Submit">
+	<input type="button" value="%%LNG_UpdateShippingCost%%" onclick="Cart.UpdateShippingCost();" />
+</p>
+%%GLOBAL_DeliveryDisclaimer%%

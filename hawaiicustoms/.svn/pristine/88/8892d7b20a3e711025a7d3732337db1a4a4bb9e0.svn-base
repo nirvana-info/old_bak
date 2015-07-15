@@ -1,0 +1,9 @@
+<html>
+    <body style="font-family:Arial; font-size:12px">
+		<div style="padding:0px 20px 20px 20px">		
+			<div>
+				%%GLOBAL_RequestDetail%%
+            </div>
+		</div>
+    </body>
+</html>

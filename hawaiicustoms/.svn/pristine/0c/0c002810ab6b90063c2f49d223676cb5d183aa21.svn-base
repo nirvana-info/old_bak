@@ -1,0 +1,143 @@
+body {
+	background:  #fff url('../../../images/design23/blue-bg-top.gif') top left repeat-x;
+}
+#Container {
+	width: 990px;
+	margin: 0 auto;
+	text-align: center;
+	border: 0;
+}
+.Left {
+	margin: 0;
+	padding: 0;
+}
+.Left .Block {
+	margin: 0;
+	padding: 0;
+	
+}
+.Left #SideCategoryList {
+
+}
+.Left #SideCategoryList li ul {
+	
+}
+.Left h2 {
+left: 0;	
+}
+.Left #SideCategoryList .filterheaders li {
+	padding: 0;
+}
+.Left #SideCategoryList .filterheaders li.titleheader {
+	padding: 1px 5px 0 35px;
+}
+h2#catlisth2, ul.filterheaders{
+	top: 5px;
+	left: 0;
+}
+ #features {
+	position: absolute;
+	top: 80px;
+    left: 720px;
+	width: 400px;
+	z-index: 305;
+} 
+
+#Outer {
+	text-align: left;
+	width: 100%
+	/* min-width: 970px; */
+}
+#Container #menu2 {
+}
+#Container #menu2 { 
+padding-left: 5px;
+padding-top: 3px;
+}
+#Container #menu2 a:hover{
+	border: none;
+}
+#SearchForm .Button {
+	top: -4px;
+	left: 192px;
+}
+#SearchForm {
+	position: absolute;
+	top: 108px;
+    left: 52%;
+    text-align: left;
+	height: 24px;
+	display: inline;
+	padding: 4px 0 5px 0px;
+	margin: -1px 0 0px -340px;
+	overflow: hidden;	
+	width: 785px;
+	z-index: 20;
+}	
+#SearchForm p {
+	top: -23px;
+
+}
+#topsale {
+	position: absolute;
+	top: 23px;
+    left: 52%;
+    margin-left: -100px;
+	width: 270px;
+ 	height: 40px;
+    text-align: left;
+ 	z-index: 0;
+	overflow: hidden;
+}
+#Menu {
+	margin-left: 60px;
+}
+	
+* html #TopMenu {
+	width: 369px; /* this one is needed */
+	height: 25px;
+	overflow: visible;
+	position: absolute;
+   	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+* html #TopMenu ul {
+	list-style: none;
+	clear: both;
+}
+* html #TopMenu li {
+	display: inline;
+	background: none;
+}
+* html #TopMenu li.First  { }
+* html #TopMenu li a, * html #TopMenu li div {
+	text-decoration: none;
+	font-size: 0.85em;
+	background: none;
+	padding: 5px 5px 0 5px; /* this one is needed */
+}
+
+* html #TopMenu li div a {
+	padding: 0;
+	margin: 0;
+	display: inline;
+	font-size: 1em;
+}
+
+* html #TopMenu li a:hover {
+	background: none;
+}
+#subcatcontent 
+{                             
+    float: left;
+    width: 52%;         
+}
+
+#Footer {
+
+}
+	
+	
+	

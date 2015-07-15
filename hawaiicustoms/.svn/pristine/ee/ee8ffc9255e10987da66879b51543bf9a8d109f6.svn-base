@@ -1,0 +1,14 @@
+<tr class="ConfigurableField">
+	<td class="FieldLabel"><span class="Required">%%GLOBAL_FieldRequired%%</span> %%GLOBAL_FieldName%%</td>
+	<td>
+		<div style="padding: 4px 0; %%GLOBAL_HideFileCurrentValue%%">
+			Currently: <a href="%%GLOBAL_CurrentFileLink%%" target="_blank">%%GLOBAL_CurrentFileName%%</a>
+			&nbsp;&nbsp;
+			<span style="%%GLOBAL_HideRemoveFile%%">
+				(<label><input type="checkbox" style="vertical-align: middle;" class="RemoveCheckbox" name="removeProductField[%%GLOBAL_FieldId%%]" value="1" />%%LNG_Remove%%?</label>)
+			</span>
+		</div>
+		%%GLOBAL_InputField%%
+		<div style="padding-top: 4px; padding-bottom: 4px;">%%GLOBAL_FieldHelp%%</div>
+	</td>
+</tr>

@@ -1,0 +1,13 @@
+TypeTitle = "Photos"
+
+; [Fields]
+picid = "Photo ID"
+customerFullName = "Customer Name"
+path = "File Path"
+description = "Description"
+filename = "File Name"
+dateline = "Upload Time"
+adminnote = "Comments"
+uploaderName = "Uploader Name"
+address = "Address"
+deleted = "Is Available ?"

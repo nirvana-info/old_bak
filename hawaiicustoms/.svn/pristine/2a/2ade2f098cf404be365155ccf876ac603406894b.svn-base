@@ -1,0 +1,76 @@
+<div class="Block Moveable PurchaseGiftCertificate" id="DefectReportForm">
+	<h2>%%GLOBAL_DefectReportTitle%%</h2>
+	<div class="BlockContent">
+		<p>
+			%%LNG_DefectReportDescription%%
+		</p>
+
+		<p class="ErrorMessage" style="display: %%GLOBAL_HideErrorMessage%%">
+        %%GLOBAL_Message%%
+			%%GLOBAL_ErrorMessage%%
+		</p>
+        <p style="display: %%GLOBAL_DisplayLogin%%">
+             <b>If you are a registered user, please <a href="login.php">Click here</a> to login to view the defects reported by you .</b> 
+        </p>
+
+		<form method="post" action="%%GLOBAL_ShopPath%%/defectreport.php?action=saved" onsubmit="return CheckDefectReportForm()"  style="display: %%GLOBAL_HideDefectReportForm%%;" id="frmDefectReport">
+
+			<div class="FormContainer HorizontalFormContainer">
+				<dl>
+					<dt><span class="Required">*</span> %%LNG_ProblemURL%%:</dt>
+					<dd>
+                        <textarea name="url" id="url" rows="5" cols="40" class="Field350"></textarea> 
+                    </dd>
+                     <dd>
+                        (Eg: www.congoworld.com)
+                    </dd>
+                    <dt><span class="Required">*</span> %%LNG_Description%%:</dt>
+                    <dd>
+                        <textarea name="description" id="description" rows="5" cols="40" class="Field350"></textarea> 
+                        <input type="hidden" value="%%GLOBAL_customerid%%" name="cid" id="cid">
+                    </dd>
+				</dl>
+				<p class="Submit">
+                    <input type="submit" value="%%LNG_Submit%%" />
+					<input type="reset" value="%%LNG_Reset%%"  />
+				</p>
+			</div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+function CheckDefectReportForm() {
+	if($('#url').val() == "") {
+		alert('%%LNG_EnterUrl%%');
+		$('#url').focus();
+		$('#url').select();
+		return false;
+	}
+    if(!checkWeb($('#url').val())) 
+    {
+        alert("Please Enter Valid URL"); 
+        return false;   
+    }
+    if($('#description').val() == "") {
+        alert('%%LNG_EnterDescription%%');
+        $('#description').focus();
+        $('#description').select();
+        return false;
+    }
+	return true;
+}
+
+function checkWeb(url)
+{
+    var RegExp = /^(([\w]+:)?\/\/)?(([\d\w]|%[a-fA-f\d]{2,2})+(:([\d\w]|%[a-fA-f\d]{2,2})+)?@)?([\d\w][-\d\w]{0,253}[\d\w]\.)+[\w]{2,4}(:[\d]+)?(\/([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)*(\?(&?([-+_~.\d\w]|%[a-fA-f\d]{2,2})=?)*)?(#([-+_~.\d\w]|%[a-fA-f\d]{2,2})*)?$/;
+
+    if(RegExp.test(url))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+} 
+</script>

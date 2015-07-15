@@ -1,0 +1,32 @@
+
+/* F-150 overstock sale styles */
+.f150overstock-reg-cab {
+	display: block;
+	width: 204px;
+	height: 162px;
+	float: left;
+	background: url('http://www.truckchamp.com/images/email-f150-nerf-overstock/test/regular-cab.jpg');
+}
+a.f150overstock-reg-cab:hover {
+	background-position: -204px 0;
+}
+.f150overstock-super-cab {
+	display: block;
+	width: 173px;
+	height: 162px;
+	float: left;
+	background: url('http://www.truckchamp.com/images/email-f150-nerf-overstock/test/super-cab.jpg');
+}
+a.f150overstock-super-cab:hover {
+	background-position: -173px 0;
+}
+.f150overstock-super-crew {
+	display: block;
+	width: 203px;
+	height: 162px;
+	float: left;
+	background: url('http://www.truckchamp.com/images/email-f150-nerf-overstock/test/super-crew.jpg');
+}
+a.f150overstock-super-crew:hover {
+	background-position: -203px 0;
+}

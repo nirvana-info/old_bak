@@ -1,0 +1,27 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="top">
+			<div style="height:120px; border:dashed 1px #DDDDDD; overflow: auto; ">
+				%%GLOBAL_ProductsTable%%
+	            <div style="%%GLOBAL_HideCouponsUsed%%">
+	                <h5 style="margin-top: 10px;">%%LNG_CouponsUsed%%</h5>
+	                <div style="margin-left: 20px;">
+	                    %%GLOBAL_CouponsUsedDetails%%
+	                </div>
+	            </div>
+				<div style="%%GLOBAL_HideOrderComments%%">
+					<h5 style="margin-top: 10px;">%%LNG_OrderComments%%</h5>
+					<div style="margin-left: 20px;">
+						%%GLOBAL_OrderComments%%
+					</div>
+				</div>
+				<!--  div style="display:none;">
+					<h5 style="margin-top: 10px;">%%LNG_RequestLogs%%</h5>
+					<div style="margin-left: 20px;">
+						%%GLOBAL_RequestLogs%%
+					</div>
+				</div-->
+			</div>
+		</td>
+	</tr>
+</table>

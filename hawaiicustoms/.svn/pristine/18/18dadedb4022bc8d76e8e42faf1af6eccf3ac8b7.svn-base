@@ -1,0 +1,11 @@
+; [FileManagement]     
+FileManagement = "File Management"
+ManageFilesIntro = "Find the failed download and download them manually."
+NoQualifierAssociationResults = "No qualifier associations were found matching your search criteria, please try again."
+NoFailedDownloadFiles = "You have no failed download of the files ."                                                                    
+VideoFile = "Video File"
+Download = "Download"
+ChooseFiles = "Select at least one file to download"
+FilesDownloadedSuccessfully = "Files Downloaded Successfully"      
+FileStatus = "File Status";
+FileName = "File Name";

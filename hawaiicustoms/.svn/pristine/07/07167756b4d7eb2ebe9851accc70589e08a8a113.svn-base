@@ -1,0 +1,14 @@
+<div class="subcategory">
+<div style="min-width: 250px;float:left">
+%%GLOBAL_LeftImage%%
+</div>
+
+<div class="subcat-content">
+%%GLOBAL_TitleLink%%
+%%GLOBAL_videolink%%
+<h3><!--Starting at $179.99-->%%GLOBAL_PriceRange%%</h3>
+%%GLOBAL_rightsidecontent%%
+<p>%%GLOBAL_warranty%%</p>
+%%GLOBAL_ViewDetailsImage%%
+</div>
+</div>

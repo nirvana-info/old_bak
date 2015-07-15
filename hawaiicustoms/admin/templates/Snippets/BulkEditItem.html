@@ -1,0 +1,16 @@
+<input type="hidden" name="existing_categories_%%GLOBAL_ProductId%%" id="existing_categories_%%GLOBAL_ProductId%%" value="%%GLOBAL_ProductExistingCategories%%" />
+<input type="hidden" name="existing_brand_%%GLOBAL_ProductId%%" id="existing_brand_%%GLOBAL_ProductId%%" value="%%GLOBAL_ProductExistingBrand%%" />
+<input type="hidden" name="existing_brand_id_%%GLOBAL_ProductId%%" id="existing_brand_id_%%GLOBAL_ProductId%%" value="%%GLOBAL_ProductExistingBrandId%%" />
+<tr onmouseout="this.className='GridRow'" onmouseover="this.className='GridRowOver'" class="GridRow" style="height:25px">
+	<td valign="top" align="center" style="width: 18px;"><img width="16" height="16" src="images/product.gif"/></td>
+	<td valign="top"><input type="text" class="Field150" value="%%GLOBAL_ProductName%%" name="prodname_%%GLOBAL_ProductId%%" id="prodname_%%GLOBAL_ProductId%%" style="width:95%" /></td>
+	<td valign="top">%%GLOBAL_CurrencyTokenLeft%% <input type="text" class="Field50" value="%%GLOBAL_ProductPrice%%" name="prodprice_%%GLOBAL_ProductId%%" id="prodprice_%%GLOBAL_ProductId%%" /> %%GLOBAL_CurrencyTokenRight%%</td>
+	<td valign="top">
+		<select size="5" id="category_%%GLOBAL_ProductId%%" name="category_%%GLOBAL_ProductId%%[]" class="Field150 ISSelectReplacement" multiple="multiple" style="width:180px; height:23px">%%GLOBAL_ProductCategories%%</select>
+		<a title="%%LNG_ClickToExpandCategories%%" href="#" onclick="ExpandCategories(%%GLOBAL_ProductId%%); return false;"><img id="catdrop_%%GLOBAL_ProductId%%" src="images/droparrow.gif" width="10" height="5" style="padding-top:8px" border="0" /></a>
+	</td>
+	<td valign="top"><input type="text" class="Field50" value="%%GLOBAL_ProductBrand%%" name="prodbrand_%%GLOBAL_ProductId%%" id="prodbrand_%%GLOBAL_ProductId%%" /></td>
+	<td valign="top"><input type="checkbox" %%GLOBAL_ProductVisible%% value="ON" name="prodvisible_%%GLOBAL_ProductId%%" id="prodvisible_%%GLOBAL_ProductId%%" /></td>
+	<td valign="top"><input type="checkbox" %%GLOBAL_ProductFeatured%% value="ON" name="prodfeatured_%%GLOBAL_ProductId%%" id="prodfeatured_%%GLOBAL_ProductId%%" /></td>
+	<td valign="top"><input type="checkbox" %%GLOBAL_ProductFreeShipping%% value="ON" name="prodfreeshipping_%%GLOBAL_ProductId%%" id="prodfreeshipping_%%GLOBAL_ProductId%%" /></td>
+</tr>

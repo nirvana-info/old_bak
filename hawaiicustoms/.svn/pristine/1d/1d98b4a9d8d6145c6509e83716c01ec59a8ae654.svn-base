@@ -1,0 +1,6 @@
+<li>
+	<label>
+		<input type="radio" name="shippingMethod" value="%%GLOBAL_MethodId%%" onclick="OrderManager.ToggleShippingMethod($(this).val());" %%GLOBAL_MethodChecked%% />
+		%%GLOBAL_MethodName%% - %%GLOBAL_MethodCost%%
+	</label>
+</li>

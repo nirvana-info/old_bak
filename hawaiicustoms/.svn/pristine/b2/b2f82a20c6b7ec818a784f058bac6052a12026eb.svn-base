@@ -1,0 +1,8 @@
+<strong>%%GLOBAL_ShipFullName%%</strong>
+%%GLOBAL_ShipCompany%%
+<br />
+%%GLOBAL_ShipAddressLine1%%<br />
+%%GLOBAL_ShipAddressLine2%%<br />
+%%GLOBAL_ShipSuburb%%, %%GLOBAL_ShipState%% %%GLOBAL_ShipZip%%<br/>
+%%GLOBAL_ShipCountry%%
+%%GLOBAL_ShipPhone%%

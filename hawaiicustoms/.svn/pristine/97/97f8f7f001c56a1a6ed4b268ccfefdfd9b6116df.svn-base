@@ -1,0 +1,200 @@
+<script type="text/javascript">
+function urlencode(str)
+{
+str = (str+'').toString();
+return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28'). replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/%20/g, '+');
+}
+
+function MakeURLSafe(val)
+{
+val = val.replace(/-/g, "%2d");
+val = val.replace(/\+/g, "%2b");
+val = val.replace(/\//g, "{47}");
+//val = val.replace("/", "{47}");
+val = urlencode(val);
+val = val.replace(/\+/g, "-");
+return val;
+}
+
+function check_small_search_form(seostatus) {
+var search_query = g("search_query");
+var langEmptySmallSearch = "You forgot to enter some search keywords.";
+
+if(search_query.value == "") {
+alert(langEmptySmallSearch);
+search_query.focus();
+return false;
+}
+
+if(seostatus != 0)
+{
+var str = search_query.value;
+//str = str.replace(/ /g,"-");
+str = str.toLowerCase();
+str = MakeURLSafe(str);
+
+var make = $('#searchmake').val();
+var model = $('#searchmodel').val();
+var year = $('#searchyear').val();
+
+if( model != null && model != '' )
+	model = "/model/"+model;
+else
+	model = '';
+if( make != null && make != '' )
+	make = "/make/"+make;
+else
+	make = '';
+if( year != null && year != '' )
+	year = "/year/"+year;
+else
+	year = '';	
+
+// lguan_20100521: Append smart search flag to indicate the search was fired by smart search
+location.href = "%%GLOBAL_ShopPath%%/search/"+str+year+make+model+"/is_smart_search/1";
+return false;
+}
+else
+{
+return true;
+}
+}
+
+function getSearchOptions(searchtype,catuniversal) 
+{
+	var make = $('#searchmake').val();
+
+	if(searchtype == 'make')
+	{
+		$('#searchmodel').find('option').remove().end();
+		$('#searchmodel').append('<option value=\'\'>--select model--</option>');
+		//return false;
+	}
+
+	var model = $('#searchmodel').val();
+	var year = $('#searchyear').val();
+	var universal = catuniversal;
+
+	var params = 'autopopulate=true&make='+make+'&model='+model+'&year='+year+'&universal='+universal+'&ymmtype='+searchtype;
+
+	$.ajax({
+	type: "GET",
+	url: "%%GLOBAL_ShopPath%%/redefine_filters.php",
+	data: params,
+	success: function(msg){
+		var ymm_array=msg.split("~");
+		if(searchtype == 'make')
+		{
+			$('#searchmodel').find('option').remove().end();
+			$('#searchmodel').append(ymm_array[0]);
+			/*if(year == '')
+			{*/
+				$('#searchyear').find('option').remove().end();
+				$('#searchyear').append(ymm_array[1]);
+			/*}*/
+		}
+		else if(searchtype == 'model')
+		{
+			if(year == '')
+			{
+				$('#searchyear').find('option').remove().end();
+				$('#searchyear').append(ymm_array[0]);
+			}
+		}
+		else if(searchtype == 'year')
+		{
+			if(make != '')
+			{
+				$('#searchmodel').find('option').remove().end();
+				$('#searchmodel').append(ymm_array[0]);
+			}					
+		}			   
+	}
+	});
+
+}
+
+function setYMM()
+{
+	var today = new Date();
+	var expire = new Date();
+
+	var make = $('#searchmake').val();
+	var model = $('#searchmodel').val();
+	var year = $('#searchyear').val();
+
+	var current_url = location.href;
+	var search_url = location.href;
+	var pos = current_url.indexOf("#");
+	if(pos != -1)
+	{
+		current_url = current_url.substring(0,pos);
+	}
+	//current_url = current_url.replace(new RegExp(/#$/),"");
+	current_url = current_url.replace(new RegExp(/\/$/),"");
+	current_url = current_url.replace(new RegExp(/\/search\//),"/searchtext/");
+	current_url = current_url.replace(new RegExp(/\/model_flag\/0/),"");
+	current_url = current_url.split("/");
+	var new_url = "";
+
+	for( var i =0; i <current_url.length; i++) 
+	{
+		if(current_url[i] == 'make' || current_url[i] == 'model' || current_url[i] == 'year' || current_url[i] == 'page')
+		{
+			i++;
+		}
+		else if(current_url[i] == 'searchtext')
+		{
+			if( typeof(SearchStringVal) != "undefined" )
+			{
+				new_url += "searchtext/"+SearchStringVal;
+			}
+			else if( search_url.indexOf("/search/") == -1 ) // this condition is added so that when searched and having no result, no need to retain search text.
+			{
+				new_url += "searchtext/"+current_url[eval(i+1)]+"/";
+			}
+				i++;	
+		}
+		else
+		{
+			new_url += current_url[i]+"/";
+		}
+	}
+
+	if( typeof(SearchQualVal) != "undefined" )
+	{
+		new_url +=	SearchQualVal;
+	}
+
+	if(make != '')
+		new_url += "make/"+make+"/";
+
+	if(model != '')
+		new_url += "model/"+model+"/";
+
+	if(year != '')
+		new_url += "year/"+year+"/";
+
+	new_url += "#focusDiv";
+
+	location.href=new_url;
+
+}
+
+function createtip(catid)	
+{
+
+	catid = 'span'+catid;
+	TagToTip(catid,STICKY, true, DURATION, 3000, CLICKCLOSE, true, CLOSEBTN, false);
+	$('.thickbox1').unbind('click');
+	tb_init('a.thickbox1, area.thickbox1, input.thickbox1');//pass where to apply thickbox
+
+}
+
+function checkcategoryselection()
+{
+	alert('Please select any category listed under view category.');
+	return false;
+}
+
+</script>

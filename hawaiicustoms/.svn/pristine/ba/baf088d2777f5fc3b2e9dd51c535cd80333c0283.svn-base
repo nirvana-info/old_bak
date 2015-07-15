@@ -1,0 +1,4 @@
+<li>
+    <label>%%GLOBAL_ItemName%%:</label>
+    [<a href='javascript:void(0)' id="%%GLOBAL_ItemType%%_%%GLOBAL_ItemId%%" name="%%GLOBAL_ItemKeywordsEdit%%" class='editableItem'>%%GLOBAL_ItemKeywords%%</a>]
+</li>

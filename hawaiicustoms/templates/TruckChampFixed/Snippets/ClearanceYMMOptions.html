@@ -1,0 +1,35 @@
+<a name="vehicles" id="vehicles"></a>
+<div class="cat-section" id="vehicle-section">
+<div class="banner">
+    <div class="text"><h3>Narrow by Vehicle:</h3></div>
+    <div class="arrow"></div> 
+</div>
+<div class="content">
+%%GLOBAL_CurrentSelection%%
+<div style="background: transparent none repeat scroll 0% 0%; width: 700px; margin-bottom: 0pt; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; height: 50px;" id="mmyform_container">
+<div style="padding-left: 15px;" id="mmyform_year">
+<span style="font-size: 16px; margin-right: 10px;" class="mmyform_text">Year:</span><img alt="Year" src="%%GLOBAL_ShopPath%%/images/mmy-many-cars.gif"/><br/>
+<select name="searchyear" id="searchyear" onchange="getSearchOptions('year',%%GLOBAL_UniversalCat%%)">%%GLOBAL_YearList%%</select>
+<img alt="Arrow" src="%%GLOBAL_ShopPath%%/images/mmy-arrow.gif" style="padding-left: 10px;"/>
+</div>
+<div id="mmyform_make">
+<span style="font-size: 16px; margin-right: 10px;" class="mmyform_text">Make:</span><img alt="Make" src="%%GLOBAL_ShopPath%%/images/mmy-some-cars.gif"/><br/>
+<select name="searchmake" id="searchmake" onchange="getSearchOptions('make',%%GLOBAL_UniversalCat%%)">%%GLOBAL_MakeList%%</select>
+<img alt="Arrow" src="%%GLOBAL_ShopPath%%/images/mmy-arrow.gif" style="padding-left: 10px;"/>
+</div>
+<div id="mmyform_model">
+<span style="font-size: 16px; margin-right: 10px;" class="mmyform_text">Model:</span><img alt="Model" src="%%GLOBAL_ShopPath%%/images/mmy-one-car.gif"/><br/>
+<select name="searchmodel" id="searchmodel" onchange="getSearchOptions('model',%%GLOBAL_UniversalCat%%)">%%GLOBAL_ModelList%%</select>
+<img alt="Arrow" src="%%GLOBAL_ShopPath%%/images/mmy-arrow.gif" style="padding-left: 10px;"/>
+</div>
+<div style="float: left; padding-left: 10px; padding-top: 18px;" id="mmyform_button">
+<input type="image" alt="Submit button" src="%%GLOBAL_ShopPath%%/images/set-vehicle.gif" value="Set Vehicle" onclick="setYMM()" name="setvehicle"/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+</div>
+%%GLOBAL_SelectVehicleJS%%

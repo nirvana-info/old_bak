@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<title type="html"><![CDATA[TruckChamp: Popular Products]]></title>
+	<subtitle type="html"><![CDATA[A list of the popular products at TruckChamp.]]></subtitle>
+	<link rel="self" href="http://70.90.149.161/rss.php?action=popularproducts&amp;type=atom" />
+	<id>http://70.90.149.161</id>
+	<updated>2011-05-25T09:21:00Z</updated>
+	<entry xmlns="http://www.w3.org/2005/Atom">
+		<published>2011-05-25T04:21:00Z</published>
+		<updated>2011-05-25T04:21:00Z</updated>
+		<link rel="alternate" type="text/html" href="http://70.90.149.161/products/.html" />
+		<id>http://70.90.149.161/products/.html</id>
+		<title type="html" xml:space="preserve"><![CDATA[]]></title>
+		<content type="html" xml:space="preserve" xml:base="http://70.90.149.161/products/.html"><![CDATA[<ul><li>Class I 1.25 in. Receiver Hitch</li><li>Hitch Only</li><li>Rear</li><li>2000lbs. Gross Trailer Weight</li><li>200lbs. Tongue Weight</li><li>Minor Fascia Trim</li><li>Install Time 40min.</li><li class='fp2'>Durable Powder Coat Finish Resists Rust/Corrosion</li><li class='fp1'>One-Piece Coll..<p><strong>Price: $0.00</strong> <img src="http://70.90.149.161/templates/TruckChampFixed/images/IcoRating4.gif" alt="" /></p>]]></content>
+		<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+	</entry>
+</feed>

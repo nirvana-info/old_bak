@@ -1,0 +1,45 @@
+<form method="post" action="#" onsubmit="OrderManager.SaveShippingMethod(); return false;" id="ShippingMethodForm">
+	<div class="ModalTitle">
+		<!--%%LNG_OrderShippingAndHandling%%-->
+		%%LNG_OrderShippingAndHandlingCustom%%
+	</div>
+	<div class="ModalContent">
+		<!--<p>%%LNG_OrderShippingAndHandlingIntro%%</p>-->
+		<p class="MessageBox MessageBoxInfo" style="%%GLOBAL_HideNoShipingMethods%%">%%LNG_OrderShippingAndHandlingNoMethods%%</p>
+
+		<ul class="OrderManagerShippingMethods">
+			%%GLOBAL_ShippingMethods%%
+
+			<li>
+				<label>
+					<input type="radio" name="shippingMethod" value="custom" onclick="OrderManager.ToggleShippingMethod($(this).val());" %%GLOBAL_CustomChecked%% />
+					%%LNG_UseCustomShippingMethod%%
+				</label>
+				<div id="shippingMethodCustom" style="margin-top: 4px; margin-left: 2px; padding-left: 20px; background: url('images/nodejoin.gif') no-repeat; %%GLOBAL_HideCustom%%">
+					<table width="100%">
+						<tr>
+							<td class="FieldLabel" style="padding-top: 3px;"><span class="Required">*</span> %%LNG_ShippingMethod%%:</td>
+							<td style="padding-top: 3px;">
+								<input type="text" name="customName" value="%%GLOBAL_CustomName%%" class="Field250" readonly="readonly"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="FieldLabel" style="padding-top: 3px;"><span class="Required">*</span> %%LNG_ShippingCost%%:</td>
+							<td style="padding-top: 3px;">
+								%%GLOBAL_CurrencyTokenLeft%%
+								<input type="text" name="customPrice" value="%%GLOBAL_CustomPrice%%" class="Field50" />
+								%%GLOBAL_CurrencyTokenRight%%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="ModalButtonRow">
+		<div class="FloatRight">
+			<input type="button" class="Button" value="Cancel" onclick="$.modal.close();" />
+			<input class="Submit" class="Submit" type="submit" value="%%LNG_ShippingMethodButton%%" />
+		</div>
+	</div>
+</form>

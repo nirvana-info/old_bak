@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+	<script type="text/javascript" src="%%GLOBAL_AppPath%%/javascript/product.js"></script>
+	<div id="Container">
+	%%Panel.Header%%
+
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Left" id="LayoutColumn1">
+			%%Panel.SideNewProducts%%
+			%%Panel.SideNewsletterBox%%
+			%%Panel.SideLiveChatServices%%
+		</div>
+		<div class="Content" id="LayoutColumn2">
+			%%Panel.BackToSearch%%
+			%%Panel.ProductBreadcrumb%%
+			%%Panel.ProductDetails%%
+           	%%Panel.ProductTabs%%
+			%%Panel.ProductDescription%%
+            %%Panel.ApplicationChart%%            
+			%%Panel.ProductManufacturer%%
+			%%Panel.ProductWarranty%%
+            %%Panel.ShippingInfo%%             
+			%%Panel.ProductInstruction%%
+			%%Panel.ProductArticle%%
+			%%Panel.ProductOtherDetails%%
+			%%Panel.SimilarProductsByTag%%
+			%%Panel.ProductReviews%%
+            %%Panel.ProductByCategory%%   
+			
+		</div>
+	
+		<div class="Right" id="LayoutColumn3">
+			%%Panel.SideProductAddToCart%%
+			%%Panel.SideCurrencySelector%%
+			%%Panel.SideProductAddToWishList%%
+			%%Panel.SideProductRelated%%
+			%%Panel.SideProductRecentlyViewed%%
+		</div>
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</body>
+</html>

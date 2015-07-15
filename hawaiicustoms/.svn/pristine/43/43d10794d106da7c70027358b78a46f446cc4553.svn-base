@@ -1,0 +1,2 @@
+%%GLOBAL_CurrencyTokenLeft%% <input type="text" name="storecredit_%%GLOBAL_CustomerId%%" id="storecredit_%%GLOBAL_CustomerId%%" value="%%GLOBAL_StoreCredit%%" onkeypress="if(event.keyCode == 13) { updateStoreCredit(%%GLOBAL_CustomerId%%); }" class="Field50" /> %%GLOBAL_CurrencyTokenRight%%
+			<input type="button" value="%%LNG_Save%%" class="Field50" onclick="updateStoreCredit(%%GLOBAL_CustomerId%%);" id="save_storecredit_%%GLOBAL_CustomerId%%" />

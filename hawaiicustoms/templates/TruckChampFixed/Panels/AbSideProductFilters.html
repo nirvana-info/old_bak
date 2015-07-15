@@ -1,0 +1,26 @@
+%%GLOBAL_DynFilter%%
+<form action="%%GLOBAL_formaction%%" method="POST" name="priceform" onsubmit="return vadatepricieform()">
+<div class="Block BrandList Moveable" id="SideProductFilters" style="display: %%GLOBAL_HideSideProductFiltersPanelPrice%%">
+    <h2>Price</h2>
+    <div class="BlockContent">
+        <ul>
+            <li>$<input type="text" name="price_from" size="3" value="%%GLOBAL_FromPrice%%"> to $<input type="text" name="price_to" size="3" value="%%GLOBAL_ToPrice%%"><br>
+            <input type="submit" name="GO" value="GO" style="margin-left:78px"></li>
+        </ul>
+    </div>                
+</div>
+</form>
+<script>
+function vadatepricieform() 
+{
+    var from_price = document.priceform.price_from.value;
+    var to_price = document.priceform.price_to.value;
+    if(isNaN(from_price) || isNaN(to_price))
+    {
+        alert('Please enter the amount correctly');
+        return false;
+    }
+    return true;
+}
+
+</script>

@@ -1,0 +1,7 @@
+<tr>
+	<td style="padding-left: 10pt; padding-bottom: 5pt;" width="70%" class="text">
+		%%GLOBAL_ProductQty%% x %%GLOBAL_ProductName%%
+		%%GLOBAL_ProductOptions%%
+		%%GLOBAL_EventDate%%
+	</td>
+</tr>

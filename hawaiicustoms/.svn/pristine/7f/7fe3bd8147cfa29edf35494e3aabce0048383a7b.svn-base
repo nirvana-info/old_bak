@@ -1,0 +1,16 @@
+<div class="Block Moveable" id="ProductArticle">
+	<h3>%%LNG_ProductArticle%%</h3>
+<!-- <div class="ProductWarrantyContainer">
+		%%GLOBAL_Adobe%%
+	</div> -->
+	<div class="ProductWarrantyContainer">
+		%%GLOBAL_ArticleFile%%
+	</div>
+	<BR>
+
+	<div class="ProductWarrantyContainer">
+		%%GLOBAL_ProductArticle%%
+	</div>
+
+	<hr style="%%GLOBAL_HideSectionSeparator%%" />
+</div>

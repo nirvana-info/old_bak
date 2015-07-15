@@ -1,0 +1,17 @@
+<li class="SearchBoxRecord">
+	<div class="RecordContent">
+		<input type="hidden" class="CustomerId" value="%%GLOBAL_CustomerId%%" />
+		<div class="History" style="%%GLOBAL_HideHistoryLink%%">
+			<a class="SearchResultOrderHistoryLink" href="index.php?ToDo=viewCustomers&amp;searchQuery=%%GLOBAL_CustomerId%%" target="_blank">%%LNG_OrderHistory%%</a>
+		</div>
+		<div class="History ChangeCustomerLink" style="%%GLOBAL_HideChangeLink%%">
+			<a href="#" onclick="OrderManager.RemoveSelectedCustomer()" id="RemoveSelectedCustomer">%%LNG_OrderCustomerChange%%</a>
+		</div>
+		<img src="images/customer.gif" width="16" height="16" />
+		<strong>%%GLOBAL_CustomerFirstName%% %%GLOBAL_CustomerLastName%%</strong>
+		<div class="Details">
+			%%GLOBAL_CustomerCompany%%
+			%%GLOBAL_CustomerEmail%%
+		</div>
+	</div>
+</li>

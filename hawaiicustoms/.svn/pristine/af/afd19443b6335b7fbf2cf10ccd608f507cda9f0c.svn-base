@@ -1,0 +1,4 @@
+<div id="free-delivery">
+<a href="%%GLOBAL_ShopPath%%/shipping.html" rel="nofollow" onClick="ShowPopupCustom('shipping.html','615','600'); return false;"><img src="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/images/top-menu/free-delivery-banner.jpg" alt="Free shipping on all items in the store!" /></a>
+</div>
+<div><a  href="/bf"><img src="/promotions/blackfriday-2011/blackfriday2011-skinnybanner.jpg" alt="Black Friday at TruckChamp.com" /></a></div>

@@ -1,0 +1,7 @@
+<div class="Moveable GiftCertificateBalanceRemaining" id="GiftCertificateBalanceRemaining">
+	%%GLOBAL_Back2Search%%
+	<h2>%%LNG_GiftCertificateBalanceFor%% %%GLOBAL_GiftCertificateCode%%</h2>
+	<div class="InfoMessage">
+		%%GLOBAL_RemainingBalance%%
+	</div>
+</div>

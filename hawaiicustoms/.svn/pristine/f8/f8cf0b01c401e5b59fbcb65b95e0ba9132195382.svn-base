@@ -1,0 +1,10 @@
+	<div class="CategoryPagination">
+	<div >
+	<ul class="PagingList">
+	<li>%%SNIPPET_CategoryPagingPrevious%%</li>
+		<li>%%LNG_Pages%%:</li>
+		%%SNIPPET_PagingData%%
+	<li>%%SNIPPET_CategoryPagingNext%%</li>
+	</ul>
+	</div>
+	</div>

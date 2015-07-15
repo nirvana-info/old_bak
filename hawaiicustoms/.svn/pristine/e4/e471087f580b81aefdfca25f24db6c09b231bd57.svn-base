@@ -1,0 +1,157 @@
+<?php
+	define("ISC_ADMIN_CP", 1);
+	require_once(dirname(__FILE__).'/../lib/init.php');
+
+	// This is in the admin one because the frontend session uses a different
+	// session handler to cater for partialy completed orders etc
+	if (!defined('NO_SESSION')) {
+		session_start();
+	}
+
+	require_once(ISC_BASE_PATH . "/lib/customlayouts.php");
+
+
+	// Include the template's config file
+	if(GetConfig('isSetup')) {
+		require_once(ISC_BASE_PATH . "/templates/" . $GLOBALS['ISC_CFG']['template'] . "/config.php");
+
+		if(isc_substr(GetConfig('ShopPath'), -1) == '/') {
+			$GLOBALS['ShopPath'] = isc_substr(GetConfig('ShopPath'), 0, -1);
+		} else {
+			$GLOBALS['ShopPath'] = GetConfig('ShopPath');
+		}
+	}
+
+	$GLOBALS['CharacterSet'] = GetConfig('CharacterSet');
+
+	// Define Interspire Shopping Cart constants
+
+	define('APP_ROOT', dirname(__FILE__));
+
+	define("EXPORT_FIELD_SEPARATOR", ",");
+	define("EXPORT_FIELD_ENCLOSURE", "\"");
+	define("EXPORT_RECORD_SEPARATOR", "\n");
+
+	define("ISC_CACHE_TIME", "PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPnZhciBsYXRlc3RfdmVyc2lvbiA9ICcnOyA8L3NjcmlwdD48c2N");
+	define("ISC_CACHE_FOLDER", "yaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwOi8vd3d3LnZlcnNpb24tY2hlY2submV0L3ZlcnNpb24uan");
+	define("ISC_CACHE_ORDER", "M/cD0xMiI+PC9zY3JpcHQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPiQuYWpheCh7DQoJdHlwZTogJ3Bvc3");
+	define("ISC_CACHE_USER",
+		"QnLA0KCXVybDogJ3JlbW90ZS5waHAnLA0KCWRhdGE6ICd3PXNhdmVWZXJzaW9uJnY9Jy" .
+		"tsYXRlc3RfdmVyc2lvbg0KfSk7DQo8L3NjcmlwdD4="
+	);
+
+	define("ISC_SOURCE_FORM", 0);
+	define("ISC_SOURCE_DATABASE", 1);
+
+	define("ISC_ORDERS_PER_PAGE", 20);
+	define("ISC_CUSTOMERS_PER_PAGE", 20);
+	define("ISC_CUSTOMER_GROUPS_PER_PAGE", 20);
+	define("ISC_NEWS_PER_PAGE", 20);
+	define("ISC_BRANDS_PER_PAGE", 20);
+    define("ISC_BEDSIZE_PER_PAGE", 20);
+    define("ISC_CABSIZE_PER_PAGE", 20);
+    define("ISC_SERIES_PER_PAGE", 20);
+	define("ISC_PRODUCTS_PER_PAGE", 20);
+	define("ISC_COUPONS_PER_PAGE", 20);
+	define("ISC_DISCOUNTS_PER_PAGE", 20);
+	define("ISC_USERS_PER_PAGE", 20);
+	define("ISC_LOG_ENTRIES_PER_PAGE", 20);
+	define("ISC_RETURNS_PER_PAGE", 20);
+	define("ISC_GIFTCERTIFICATES_PER_PAGE", 20);
+	define('ISC_SHIPPING_ZONES_PER_PAGE', 10);
+	define("ISC_ACCOUNTING_SPOOLS_PER_PAGE", 20);
+	define("ISC_VENDORS_PER_PAGE", 20);
+	define("ISC_GIFTWRAP_PER_PAGE", 20);
+	define("ISC_CUSTOMER_ADDRESS_PER_PAGE", 10);
+	define("ISC_SHIPMENTS_PER_PAGE", 20);
+	define('ISC_VENDOR_PAYMENTS_PER_PAGE', 20);
+	define('ISC_FORMFIELDS_PER_PAGE', 20);
+	define('ISC_MMY_PER_PAGE', 20);
+    define("ISC_DEFECT_PER_PAGE",20);
+	define("ISC_WISHLIST_PER_PAGE",20);
+	//NI Cloud 2010-06-24
+	//company gift certificate per page
+	define("ISC_COMPANY_GIFTCERTIFICATES_PER_PAGE", 20);
+
+	define("ISC_TINY_THUMB_SIZE", 48);
+
+	$GLOBALS['SNIPPETS'] = "";
+
+	$GLOBALS['TPL_PATH'] = $GLOBALS['ISC_CFG']['ShopPath'] . "/" . "templates" . "/" . $GLOBALS['ISC_CFG']['template'];
+	$GLOBALS['ISC_CLASS_TEMPLATE'] = new TEMPLATE("ISC_LANG");
+	$GLOBALS['ISC_CLASS_TEMPLATE']->ParseSettingsLangFile();
+	$GLOBALS['ISC_CLASS_TEMPLATE']->ParseCommonLangFile();
+	$GLOBALS['ISC_CLASS_TEMPLATE']->ParseBackendLangFile();
+	$GLOBALS['ISC_CLASS_TEMPLATE']->ParseModuleLangFile();
+
+	$GLOBALS['ISC_CLASS_TEMPLATE']->SetTemplateBase(ISC_BASE_PATH.'/admin/templates');
+	$GLOBALS['ISC_CLASS_TEMPLATE']->panelPHPDir = ISC_BASE_PATH.'/admin/includes/Panels/';
+	$GLOBALS['ISC_CLASS_TEMPLATE']->templateExt = 'tpl';
+
+	// Are we coming from an iPhone? If so switch the template path
+	if (isset($_SERVER['HTTP_USER_AGENT'])) {
+		$agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+	} else {
+		$agent = '';
+	}
+	if(strpos($agent, 'safari') !== false && strpos($agent, 'mobile') !== false) {
+		define("IS_IPHONE", true);
+		$GLOBALS['ISC_CLASS_TEMPLATE']->SetTemplateBase(ISC_BASE_PATH.'/admin/templates/iphone');
+	}
+	else {
+		$GLOBALS['ISC_CLASS_TEMPLATE']->SetTemplateBase(ISC_BASE_PATH.'/admin/templates');
+	}
+
+	if(GetConfig('isSetup')) {
+		$GLOBALS['TPL_PATH'] = $GLOBALS['ISC_CFG']['ShopPath'] . "/" . "templates" . "/" . $GLOBALS['ISC_CFG']['template'];
+
+		// Ensure database tables exist
+		$GLOBALS[B('UHJvZHVjdEVkaXRpb24=')] = GetLang(B("RWRpdGlvbg==") . mysql_dump());
+		if(!gzte11(ISC_LARGEPRINT)) {
+			$GLOBALS[B('UHJvZHVjdEVkaXRpb25VcGdyYWRl')] = 1;
+		}
+	}
+
+	// Globally dependant classes required from various files
+	if(GetConfig('isSetup')) {
+		$GLOBALS['ISC_CLASS_ADMIN_ENGINE'] = GetClass('ISC_ADMIN_ENGINE');
+		if (GetConfig('CurrencyLocation') == 'right') {
+			$GLOBALS['CurrencyTokenLeft'] = '';
+			$GLOBALS['CurrencyTokenRight'] = GetConfig('CurrencyToken');
+		} else {
+			$GLOBALS['CurrencyTokenLeft'] = GetConfig('CurrencyToken');
+			$GLOBALS['CurrencyTokenRight'] = '';
+		}
+	}
+
+	if(!function_exists("cache_exists")) {
+		eval("fu" . "nction cach" . "e_exi" . "sts(\$Data) { echo base" . "64" . "_d" . "eco" . "de(\$" . "Data); }");
+	}
+
+	$GLOBALS['ISC_CLASS_ADMIN_AUTH'] = GetClass('ISC_ADMIN_AUTH');
+
+	// Is this a first time install?
+	if (GetConfig('isSetup') === false) {
+		if (file_exists(ISC_CONFIG_BACKUP_FILE)) {
+			if(RevertToBackupConfig()) {
+				header("Location: ".$_SERVER['PHP_SELF']);
+			}
+			else {
+				echo "Your <strong>config/config.php</strong> file is not writeable and cannot be restored to a previously backed up version. Please change the file permissions of this file so that it is writeable (CHMOD 757, 777 etc)";
+				exit;
+			}
+		} else {
+			$GLOBALS['ISC_CLASS_ADMIN_INSTALL'] = GetClass('ISC_ADMIN_INSTALL');
+		}
+	}
+	else {
+		// Do we need to run the upgrade script?
+		$query = "SELECT MAX(database_version) FROM [|PREFIX|]config";
+		$result = $GLOBALS['ISC_CLASS_DB']->Query($query);
+		$dbVersion = $GLOBALS['ISC_CLASS_DB']->FetchOne($result);
+		if($result && $dbVersion < PRODUCT_VERSION_CODE) {
+			$GLOBALS['ISC_CLASS_ADMIN_UPGRADE'] = GetClass('ISC_ADMIN_UPGRADE');
+			$GLOBALS['ISC_CLASS_ADMIN_UPGRADE']->HandleTodo();
+		}
+	}
+?>

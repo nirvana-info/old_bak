@@ -1,0 +1,84 @@
+<?php 
+     
+	CLASS ISC_MYVEHICLEAREA_PANEL extends PANEL
+	{
+		var $cacheable = true;
+		var $cacheId = "";
+
+		function SetPanelSettings()
+		{
+            $path = GetConfig('ShopPath');
+            
+            $output = "";
+            $GLOBALS['SITEPATH'] = $path;
+            $GLOBALS['ProductMMYHeader1'] = "Make";
+			$GLOBALS['ProductMMYHeader2'] = "Model";
+			$GLOBALS['ProductMMYHeader'] = "Year";
+
+			$model_srch_param = "search_query=";
+			$year_srch_param = "search_query=";  // Here this was applied earlier "search_query=&year=&column=year"
+			$make_srch_param = "search_query=";
+			$GLOBALS['mousedefaultpointer'] = "mousedefaultpointer";
+			$GLOBALS['ModelJS'] = "";
+
+			if(!empty($_COOKIE['last_search_selection']['year'])) {
+				$GLOBALS['YearName'] = $_COOKIE['last_search_selection']['year'];
+				$model_srch_param .= "&year=".$GLOBALS['YearName'];
+				$make_srch_param .= "&year=".$GLOBALS['YearName'];
+            }
+			
+			if(!empty($_COOKIE['last_search_selection']['make']))  {
+				$GLOBALS['MakeName'] = strtoupper($_COOKIE['last_search_selection']['make']);
+				$year_srch_param .= "&make=".MakeURLSafe(strtolower($GLOBALS['MakeName']));
+				$model_srch_param .= "&make=".MakeURLSafe(strtolower($GLOBALS['MakeName']));
+
+				$make_srch_param .= "&make=&column=make";
+				$GLOBALS['MakeJS'] = "getvalueswithajax('prod_make','$make_srch_param');";
+
+				$model_srch_param .= "&column=model";
+				$GLOBALS['ModelJS'] .= "getvalueswithajax('prod_model','$model_srch_param');checkanimate('prod_model')";
+				$GLOBAL['mousedefaultpointer'] = "";
+				if(!empty($_COOKIE['last_search_selection']['model'])) {
+					$GLOBALS['ModelName'] = strtoupper($_COOKIE['last_search_selection']['model']);
+					$year_srch_param .= "&model=".MakeURLSafe(strtolower($GLOBALS['ModelName']));
+				}
+			} else {
+				$make_srch_param .= "&make=&column=make";
+				$GLOBALS['MakeJS'] = "getvalueswithajax('prod_make','$make_srch_param');";
+			}
+
+			$year_srch_param .= "&column=year";
+			$GLOBALS['YearJS'] = "getvalueswithajax('prod_year','$year_srch_param');";
+            
+            $GLOBALS['Dynimage'] = "imgHdrDropDownIconright.gif"; 
+            //$GLOBALS['dynid'] = "prod_year";
+            $GLOBALS['id'] = "prod_year";
+			$GLOBALS['yearid'] = "mmy_year";
+            $GLOBALS['DynFilterArrow'] = $GLOBALS['ISC_CLASS_TEMPLATE']->GetSnippet("SideProductFilterImage");
+            //$GLOBALS['dynid'] = "prod_make";
+            $GLOBALS['id1'] = "prod_make";
+			$GLOBALS['makeid'] = "mmy_make";
+            $GLOBALS['DynFilterArrow1'] = $GLOBALS['ISC_CLASS_TEMPLATE']->GetSnippet("SideProductFilterImage");
+			//$GLOBALS['dynid'] = "prod_model";
+            $GLOBALS['id2'] = "prod_model";
+            $GLOBALS['modelid'] = "mmy_model";
+            $GLOBALS['DynFilterArrow2'] = $GLOBALS['ISC_CLASS_TEMPLATE']->GetSnippet("SideProductFilterImage");
+            
+			$GLOBALS['ProductMMY'] = $output;
+            $output .= "Results Fit Your Vehicle, Guaranteed !";
+
+			if(isset($GLOBALS['YearName']) || isset($GLOBALS['MakeName'])) {
+				$GLOBALS['DeleteCookie'] = "<ul id='modifyvehicle'><li><a href='javascript:deleteMMYcookies()'>Clear my Vehicle</a></li></ul>";
+				$GLOBALS['RemoveBackgroundImage'] = "$('#MyVehicleArea').css('background', 'transparent url(".$GLOBALS['SITEPATH']."/templates/default/images/ss12.gif) no-repeat');";
+			}
+
+            if(!$output) {
+				$this->DontDisplay = true;
+				return;
+			}
+
+			$GLOBALS['SNIPPETS']['MyVehicleArea'] = $output;
+		}
+        
+	}  
+?>

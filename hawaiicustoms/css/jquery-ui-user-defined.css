@@ -1,0 +1,7 @@
+#ui-datepicker-div {
+    z-index: 5000;
+}
+
+.ui-datepicker-trigger {
+    cursor: pointer;
+}

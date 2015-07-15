@@ -1,0 +1,9 @@
+<form onsubmit="ExpressCheckout.ChooseAddonProducts(); return false;" action="#" method="post">
+<ul class="AddonProductList">
+    %%GLOBAL_AddonProductList%%
+    <div class='Clear'></div>
+</ul>
+<div id='addon_prod_desc'></div>
+<input type='button' onclick="ExpressCheckout.ChooseAddonProducts(1)" value='No Thanks. Continue Checkout.'/>
+<input type='button' onclick="ExpressCheckout.ChooseAddonProducts()" value="Add To Cart"/>
+</form>

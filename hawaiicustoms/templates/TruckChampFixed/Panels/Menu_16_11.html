@@ -1,0 +1,30 @@
+<?php
+if ($GLOBALS['EnableSEOUrls'] == 1 ){
+?>
+
+<div id="Menu">
+			<ul style="display:">
+				<li><a class="first" href="%%GLOBAL_ShopPath%%/"><span>Home</span></a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/account">My Account</a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/pages/10">Contact Us </a></li>
+			</ul>
+			<br class="Clear" />
+		</div>
+
+		<?php
+}
+else
+{
+?>
+<div id="Menu">
+			<ul style="display:">
+				<li><a class="first" href="%%GLOBAL_ShopPath%%/"><span>Home</span></a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/account.php">My Account</a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/pages.php?pageid=10.php">Contact Us </a></li>
+			</ul>
+			<br class="Clear" />
+		</div>
+<?php
+}
+?>
+

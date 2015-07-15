@@ -1,0 +1,8 @@
+<div style="float: right;">%%LNG_SortBy%%:
+    <select id="ProductReviewSortBy">
+        <option %%GLOBAL_SortSelected_1%% value="1">%%LNG_SortByRateToHigh%%</option>
+        <option %%GLOBAL_SortSelected_2%% value="2">%%LNG_SortByRateToLow%%</option>
+        <option %%GLOBAL_SortSelected_3%% value="3">%%LNG_SortByDateToOld%%</option>
+        <option %%GLOBAL_SortSelected_4%% value="4">%%LNG_SortBydateToNew%%</option>
+    </select>
+</div>

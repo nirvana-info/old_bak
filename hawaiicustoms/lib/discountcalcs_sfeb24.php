@@ -1,0 +1,277 @@
+<?php
+     
+    /**
+     * Get Rule Module Info
+     *
+     * Retrieves a list of discount rules enabled by the customer
+     *
+     * @access public
+     * @param string $type - The type of the rules
+     * @return array Returns an array of initialized rules
+     */
+    function GetRuleModuleInfo($type='all')
+    {
+        static $cache = array();
+        if(isset($cache[$type])) {
+            return $cache[$type];
+        }
+
+        if ($type == 'all') {
+            $query = "
+            SELECT *
+            FROM [|PREFIX|]discounts ORDER BY sortorder DESC";
+        }
+        else {
+            $query = "
+            SELECT *
+            FROM [|PREFIX|]discounts
+            WHERE discountruletype='rule_".$type . "'
+            ORDER BY sortorder DESC";
+        }
+
+        $result = $GLOBALS['ISC_CLASS_DB']->Query($query);
+
+        $DiscountInfo = array();
+
+        while($var = $GLOBALS['ISC_CLASS_DB']->Fetch($result)) { 
+            if(($var['discountruletype']=='rule_percentoffitemsincat' || $var['discountruletype']=='rule_percentoffitemsinseries') && $var['discountenabled'])    {
+                GetModuleByIdNew('rule', $object, $var['discountruletype']); 
+                $DiscountInfo = initializeObj($var, $DiscountInfo);
+            }
+            
+        }
+        return $DiscountInfo;
+    }
+
+    $GLOBALS['DiscountRules'] = GetRuleModuleInfo(); 
+      
+    /**
+     * Return the object of a module based on the passed ID.
+     *
+     * @param string The type of module that needs to be loaded.
+     * @param object The object of the module, returned by reference.
+     * @param string The ID of the module to load.
+     * @return boolean True if successful, false if not.
+     */
+    function GetModuleByIdNew($type, &$returned_module, $id)
+    {
+        $valid_types = array (
+            'accounting',
+            'analytics',
+            'checkout',
+            'notification',
+            'shipping',
+            'currency',
+            'livechat',
+            'addon',
+            'rule'
+        );
+
+        if (!in_array($type, $valid_types)) {
+            return false;
+        }
+        return true;
+    }
+            
+    function initializeObj($data, &$DiscountInfo)
+    {    
+        
+        $tmp = unserialize($data['configdata']); 
+        
+        $amount             = $tmp['var_amount'];    
+        $minprice           = isset($tmp['var_minprice']) ? $tmp['var_minprice'] : 0;       
+        $discountpolicy       = isset($tmp['var_discountpolicy']) ? $tmp['var_discountpolicy'] : 0;  
+        $DiscountInfoSub    = array();
+        $DiscountInfoSub['amount']        = $amount;
+        $DiscountInfoSub['minprice']      = $minprice;
+        $DiscountInfoSub['discountpolicy']  = $discountpolicy;
+                                      
+                                      
+        if(isset($tmp['var_catids']))    {
+            $catids = $tmp['var_catids'];
+            $DiscountInfoSub['catids']  = $catids;
+        } 
+        else if(isset($tmp['var_seriesids']))   {
+            $seriesids = $tmp['var_seriesids'];
+            $DiscountInfoSub['seriesids']  = $seriesids;
+        }                                        
+        $DiscountInfo[] = $DiscountInfoSub;
+        return $DiscountInfo;
+    }
+
+    function CalculateDiscountPrice($price, $discountprice, $categoryid, $seriesid, &$discountpolicy=0)   {
+        //Added by Simha for onsale addition 
+        $Rules = $GLOBALS['DiscountRules'];
+        foreach($Rules as $Rule)   {  
+            if((float)$price >= (float)$Rule['minprice'])    {
+                if(isset($Rule['catids']))    { 
+                    $discountprice = CalculateCatBasedDiscount($Rule, $price, $discountprice, $categoryid, $discountpolicy);                   }
+                elseif(isset($Rule['seriesids']))    {
+                    $discountprice = CalculateSeriesBasedDiscount($Rule, $price, $discountprice, $seriesid, $discountpolicy);
+                }
+                if($discountprice < $price)    {
+                     return $discountprice;
+                }
+            }
+        }  
+        return $discountprice;
+    }
+    
+    function CalculateCatBasedDiscount($rule, $price, $discountprice, $categoryid, &$discountpolicy=0)    { 
+        $catids = explode(",", $rule['catids']); 
+        foreach($catids as $catid) {
+            if($catid == $categoryid) {
+                /*if($discountprice < $price)    {
+                    $discountamount = $discountprice * ((int)$rule['amount']/100); 
+                }
+                else    {*/
+                    $discountamount = $price * ((int)$rule['amount']/100);
+                /*}*/
+                if ($discountprice < 0) {
+                    $discountprice = 0;
+                }
+                
+                if(isset($rule['discountpolicy']))    {
+                    $discountpolicy = $rule['discountpolicy'];
+                }
+                
+                $discountprice  = $price - $discountamount;  
+            } 
+        }
+        return $discountprice;
+    }
+    
+    function CalculateSeriesBasedDiscount($rule, $price, $discountprice, $seriesid, &$discountpolicy=0)    {
+        $seriesids = explode(",", $rule['seriesids']); 
+        foreach($seriesids as $sid) {
+            if($sid == $seriesid) {
+                /*if($discountprice < $price)    {  
+                    $discountamount = $discountprice * ((int)$rule['amount']/100); 
+                }
+                else    { */
+                    $discountamount = $price * ((int)$rule['amount']/100); 
+                /*}*/
+                if ($discountprice < 0) {
+                    $discountprice = 0;
+                }
+                
+                if(isset($rule['discountpolicy']))    {
+                    $discountpolicy = $rule['discountpolicy'];
+                }
+                
+                $discountprice  = $price - $discountamount;  
+            } 
+        }      
+        return $discountprice;
+    }
+    
+    
+    function IsDiscountAvailable($type, $id)   {
+        //Added by Simha for onsale addition
+        $Rules = $GLOBALS['DiscountRules'];
+        foreach($Rules as $Rule)   {                           
+            if(isset($Rule['catids']) && $type=='category')    {    
+                $catids = explode(",", $Rule['catids']);
+                if(in_array($id, $catids))    {
+                   return true; 
+                }   
+            }
+            elseif(isset($Rule['seriesids']) && $type=='series')    {                                      
+                $seriesids = explode(",", $Rule['seriesids']);
+                if(in_array($id, $seriesids))    {
+                   return true; 
+                }
+            } 
+        }  
+        return false;
+    } 
+    
+    function GetStartingPrice($CatId, $CatMinPrice)     {  
+        GetCatMinPriceDetails($CatId, $CatMinPrice, &$CatAmount, &$RuleMinPrice);
+        if($CatAmount==0)    {
+            return $CatMinPrice;
+        }
+        else    {
+            //$v1 = CalculateDiscountPrice($CatMinPrice, $CatMinPrice, $CatId, 0);
+            if($CatMinPrice > (float)$RuleMinPrice)    {
+                return $v1 = $CatMinPrice*((100-(float)$CatAmount)/100);    
+            }
+            else    {  
+                //$v2 = CalculateDiscountPrice($NewMinPrice, $NewMinPrice, $CatId, 0);  
+                $query = "SELECT MIN(prodcalculatedprice) AS prodcalculatedprice
+                          FROM isc_products p                                                 
+                          LEFT JOIN isc_categoryassociations ca ON ca.productid = p.productid 
+                          LEFT JOIN isc_categories c ON c.categoryid = ca.categoryid AND c.catvisible = 1 
+                          WHERE c.categoryid='".$CatId."' AND prodcalculatedprice > '".$RuleMinPrice."' GROUP BY c.categoryid";
+                $result         = $GLOBALS['ISC_CLASS_DB']->Query($query); 
+                $NewMinPrice    = $GLOBALS['ISC_CLASS_DB']->FetchOne($result);     
+                      
+                $v2 = $NewMinPrice*((100-(float)$CatAmount)/100); 
+                
+                return min((float)$CatMinPrice, (float)$v2);
+            }
+            
+        }         
+    }
+    
+    function GetStartingPriceForSeries($SeriesId, $SeriesMinPrice)     {
+        GetSeriesMinPriceDetails($SeriesId, $SeriesMinPrice, &$SeriesAmount, &$RuleMinPrice);
+        if($SeriesAmount==0)    {
+            return $SeriesMinPrice;    
+        }
+        else    {
+            //$v1 = CalculateDiscountPrice($CatMinPrice, $CatMinPrice, $CatId, 0);
+            if($SeriesMinPrice > (float)$RuleMinPrice)    {
+                return $v1 = $SeriesMinPrice*((100-(float)$SeriesAmount)/100);    
+            }
+            else    {  
+                //$v2 = CalculateDiscountPrice($NewMinPrice, $NewMinPrice, $CatId, 0);  
+                $query = "SELECT MIN(prodcalculatedprice) AS prodcalculatedprice
+                          FROM isc_products p
+                          WHERE p.brandseriesid='".$SeriesId."' AND prodcalculatedprice > '".$RuleMinPrice."' GROUP BY p.brandseriesid";
+                $result         = $GLOBALS['ISC_CLASS_DB']->Query($query); 
+                $NewMinPrice    = $GLOBALS['ISC_CLASS_DB']->FetchOne($result);     
+                      
+                $v2 = $NewMinPrice*((100-(float)$SeriesAmount)/100); 
+                
+                return min((float)$SeriesMinPrice, (float)$v2);
+            }
+            
+        }         
+    }
+    
+    function GetCatMinPriceDetails($CatId, $CatMinPrice, &$CatAmount, &$RuleMinPrice)     {
+        $CatAmount = 0;
+        $RuleMinPrice = 0;
+        $Rules = $GLOBALS['DiscountRules'];
+        foreach($Rules as $Rule)   {                           
+            if(isset($Rule['catids']))    { 
+                $catids = explode(",", $Rule['catids']);
+                if(in_array($CatId, $catids))    {
+                   $CatAmount         = (float)$Rule['amount'];
+                   $RuleMinPrice      = (float)$Rule['minprice'];
+                   return true;
+                }
+            }
+        } 
+    }
+    
+    function GetSeriesMinPriceDetails($SeriesId, $SeriesMinPrice, &$SeriesAmount, &$RuleMinPrice)     {
+        $SeriesAmount = 0;
+        $RuleMinPrice = 0;
+        $Rules = $GLOBALS['DiscountRules'];
+        foreach($Rules as $Rule)   {                           
+            if(isset($Rule['seriesids']))    { 
+                $seriesids = explode(",", $Rule['seriesids']);
+                if(in_array($SeriesId, $seriesids))    {
+                   $SeriesAmount         = (float)$Rule['amount'];
+                   $RuleMinPrice         = (float)$Rule['minprice'];
+                   return true;
+                }
+            }
+        } 
+    }
+    
+    
+        
+?>

@@ -1,0 +1,70 @@
+<tr class="orderItem" id="orderItem_%%GLOBAL_CartItemId%%" style="%%GLOBAL_HideRow%%">
+	<td style="padding: 6px; vertical-align: top;">
+		<input type="text" name="cartItem[%%GLOBAL_CartItemId%%][prodcode]" class="ProductCode" style="width: 98%;" value="%%GLOBAL_ProductCode%%" tabindex="1" />
+	</td>
+	<td style="padding: 6px; vertical-align: top; position: relative;" nowrap="nowrap">
+		<input type="hidden" name="cartItem[%%GLOBAL_CartItemId%%][productid]" value="%%GLOBAL_ProductId%%" class="ProductId" />
+		<div style="position: relative;">
+			<input type="text" name="cartItem[%%GLOBAL_CartItemId%%][prodname]" style="width: 98%" class="ProductName" value="%%GLOBAL_ProductName%%" onkeypress="OrderManager.ProductSearch(this, event)" autocomplete="off" />
+		</div>
+		<div style="color: gray; %%GLOBAL_HideInsertTip%%" class="InsertTip">
+			%%LNG_OrderItemInsertTip%%
+		</div>
+		<div>
+			<div style="padding-top: 4px; %%GLOBAL_HideProductVariation%%" class="VariationList">
+				<img src="images/nodejoin.gif" style="vertical-align: middle; margin-top: -3px;" alt="" />
+				<strong>%%LNG_ProductVariation%%:</strong>
+				%%GLOBAL_ProductOptions%%
+				 (<a href="#" onclick="OrderManager.ConfigureProduct('%%GLOBAL_CartItemId%%'); return false;">%%LNG_Change%%</a>)
+			</div>
+
+			<div style="padding-top: 4px; %%GLOBAL_HideProductFields%%" class="ConfigurableFields">
+				<img src="images/nodejoin.gif" style="vertical-align: middle; margin-top: -3px;" alt="" />
+				<strong>%%LNG_ConfigurableOptions%%:</strong> (<a href="#" onclick="OrderManager.ConfigureProduct('%%GLOBAL_CartItemId%%'); return false;">%%LNG_Change%%</a>)
+				<dl class="OrderProductConfigurableFields">
+					%%GLOBAL_ProductFields%%
+				</dl>
+			</div>
+			<div style="padding-top: 4px; %%GLOBAL_HideEventDate%%" class="EventDate">
+				<img src="images/nodejoin.gif" style="vertical-align: middle; margin-top: -3px;" alt="" />
+				<strong>%%LNG_EventDateName%%:</strong> (<a href="#" onclick="OrderManager.ConfigureProduct('%%GLOBAL_CartItemId%%'); return false;">%%LNG_Change%%</a>)
+				<dl class="OrderProductEventDate">
+					%%GLOBAL_EventDate%%
+				</dl>
+			</div>
+			<div style="padding-top: 4px; %%GLOBAL_HideWrappingOptions%%" class="GiftWrappingOptions">
+				<img src="images/nodejoin.gif" style="vertical-align: middle; margin-top: -3px;" alt="" />
+				<strong>%%LNG_GiftWrapping%%:</strong>
+				<span class="ExistingWrappingName">%%GLOBAL_GiftWrappingName%%</span>
+				<a href="#" onclick="OrderManager.ManageGiftWrapping('%%GLOBAL_CartItemId%%'); return false;" style="%%GLOBAL_HideGiftWrappingAdd%%" class="AddWrappingLink">%%LNG_Add%%</a>
+				<span style="%%GLOBAL_HideGiftWrappingEdit%%" class="ChangeWrappingLink">
+					(<a href="#" onclick="OrderManager.ManageGiftWrapping(%%GLOBAL_CartItemId%%); return false;">%%LNG_Change%%</a> %%LNG_Or%% <a href="#" onclick="OrderManager.RemoveGiftWrapping('%%GLOBAL_CartItemId%%'); return false;">%%LNG_Remove%%</a>)
+				</span>
+			</div>
+		</div>
+	</td>
+	<td style="padding: 6px; vertical-align: top; text-align: center; width: 16px;">
+		<a href="#" onclick="OrderManager.ShowProductSelector(this); return false;" class="FloatRight" tabindex="66000">
+			<img src="images/find.gif" alt="" style="border: 0" />
+		</a>
+	</td>
+	<td style="padding: 6px; vertical-align: top; text-align: center;">
+		<input type="text" name="cartItem[%%GLOBAL_CartItemId%%][quantity]" class="Field50 Quantity" style="text-align: center;" size="3" value="%%GLOBAL_ProductQuantity%%" />
+	</td>
+	<td style="padding: 6px; vertical-align: top; text-align: center;" width="100">
+		%%GLOBAL_CurrencyTokenLeft%%
+		<input type="text" name="cartItem[%%GLOBAL_CartItemId%%][prodprice]" class="Field50 ItemPrice" value="%%GLOBAL_ProductPrice%%" style="text-align: center;" />
+		%%GLOBAL_CurrencyTokenRight%%
+	</td>
+	<td style="padding: 6px; vertical-align: top;" class="Right">
+		<span class="ItemTotal">%%GLOBAL_ProductTotal%%</span>
+	</td>
+	<td style="padding: 6px; vertical-align: top;" class="Right" nowrap="nowrap">
+		<a href="#" onclick="OrderManager.AddNewItem(this); return false;">
+			<img src="images/addicon.gif" alt="" border="0" />
+		</a>
+		<a href="#" onclick="OrderManager.RemoveItem(this); return false;">
+			<img src="images/delicon.gif" alt="" border="0" />
+		</a>
+	</td>
+</tr>

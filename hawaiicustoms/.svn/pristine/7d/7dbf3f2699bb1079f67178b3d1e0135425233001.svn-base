@@ -1,0 +1,23 @@
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/formfield.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	/* Make sure all new shipping address details are filled in */
+	function check_shipping_address_form() {
+		var formfields = FormField.GetValues(%%GLOBAL_AddressFormFieldID%%);
+
+		for (var i=0; i<formfields.length; i++) {
+			var rtn = FormField.Validate(formfields[i].field);
+
+			if (!rtn.status) {
+				alert(rtn.msg);
+				FormField.Focus(formfields[i].field);
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	%%GLOBAL_FormFieldRequiredJS%%
+//]]>
+</script>

@@ -1,0 +1,9 @@
+<div class="Block Moveable" id="DefectReportMenu">
+	<h2>%%LNG_DefectReport%%</h2>
+	<div class="BlockContent">
+		<ul>
+			<li><a href="%%GLOBAL_ShopPath%%/defectreport.php">%%LNG_DefectReportForm%%</a></li>
+			<li style="display: %%GLOBAL_DisplayList%%"><a href="%%GLOBAL_ShopPath%%/defectreport.php?action=reports">%%LNG_Defects%%</a></li>
+		</ul>
+	</div>
+</div>

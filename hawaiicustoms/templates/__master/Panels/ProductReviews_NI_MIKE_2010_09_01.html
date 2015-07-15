@@ -1,0 +1,197 @@
+<div class="Block Moveable" id="ProductReviews">
+	
+	<a href="#" onclick="show_product_review_form(); return false;" class="FloatRight">
+		<img src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/WriteReviewButton.gif" alt="%%LNG_WriteYourOwnProductReview%%" /></a>
+	<h3 id="reviews">%%LNG_ProductReviews%%</h3>
+	<div class="BlockContent">
+		<div class="SuccessMessage" style="display:%%GLOBAL_HideReviewMessage%%">
+			%%GLOBAL_ReviewMessage%%
+		</div>
+		<a id="write_review"></a>
+		<script type="text/javascript">			
+			lang.ReviewNoText = "%%LNG_ReviewNoText%%";
+			lang.ReviewNoCaptcha = "%%LNG_NoCaptcha%%";
+			lang.ReviewNoTitle = "%%LNG_ReviewNoTitle%%";
+			var current_url = location.href;
+			var regex_pattern = /#ProductTabs/;
+			
+			if(current_url.search(regex_pattern) > 0)
+			{			
+				var ActiveReviewTab = 1;
+			}	   
+
+		</script>
+		<form action="%%GLOBAL_ShopPath%%/postreview.php" style="display: none;" method="post" class="ProductReviewForm" id="rating_box" onsubmit="return handleBeforeSubmit();">
+			<input type="hidden" name="action" value="post_review" />
+			<input type="hidden" name="submitLocation" id="submitLocation"/>
+			<input type="hidden" name="popupFlag" id="popupFlag"/>
+			<input type="hidden" name="order_id" id="orderId"/>
+			<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+			<h4>%%LNG_WriteYourOwnReview%%</h4>
+
+			%%GLOBAL_ReviewErrorMessage%%
+
+			<div class="FormContainer VerticalFormContainer">
+				<span class="StarRatingHeadSpan" style="font-size:10px; color:#aaa;padding-right:30px;float: right;">
+					Worst &lt;-&gt; Average &lt;-&gt; Best | No Opinion
+				</span>
+				
+				<dl class="ProductReviewFormContainer StarRatingForm">
+					
+					<dt class="RatingCell">%%LNG_HowRateProduct%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="revrating" class="Field100" id="revrating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+					
+					<dt class="RatingCell">%%LNG_HowRateProductQuality%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="qualityrating" class="Field400" id="qualityrating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+					
+					<dt class="RatingCell">%%LNG_HowRateEaseInstallation%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="installrating" class="Field400" id="installrating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+					
+					<dt class="RatingCell">%%LNG_HowRateProductValue%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="valuerating" class="Field400" id="valuerating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+					
+					<dt class="RatingCell">%%LNG_HowRateCustomerSupport%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="supportrating" class="Field400" id="supportrating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+					
+					<dt class="RatingCell">%%LNG_HowRateDeliveryTime%%</dt>
+					<dd class="RatingCell">
+						<span class="StarRatingSpan">
+							<select name="deliveryrating" class="Field400" id="deliveryrating">
+								<!--  option value="">&nbsp;</option -->
+								<option value="1" %%GLOBAL_ReviewRating1%%>%%LNG_Rate1Star%%</option>
+								<option value="2" %%GLOBAL_ReviewRating2%%>%%LNG_Rate2Stars%%</option>
+								<option value="3" %%GLOBAL_ReviewRating3%%>%%LNG_Rate3Stars%%</option>
+								<option value="4" %%GLOBAL_ReviewRating4%%>%%LNG_Rate4Stars%%</option>
+								<option value="5" %%GLOBAL_ReviewRating5%%>%%LNG_Rate5Stars%%</option>
+							</select>
+						</span>
+					</dd>
+
+					<dt>%%LNG_WriteAHeadline%%</dt>
+					<dd class="RegularCell"><input name="revtitle" id="revtitle" type="text" class="Textbox Field400" value="%%GLOBAL_RevTitle%%" /></dd>
+
+					<dt>%%LNG_WriteYourReview%%</dt>
+					<dd class="RegularCell"><textarea name="revtext" id="revtext" class="Field400" rows="8" cols="50">%%GLOBAL_RevText%%</textarea></dd>
+
+					<dt>%%LNG_ReviewEnterYourName%%</dt>
+					<dd class="RegularCell"><input name="revfromname" id="revfromname" type="text" class="Textbox Field400" value="%%GLOBAL_RevFromName%%" /></dd>
+
+					<dt style="display: %%GLOBAL_HideReviewCaptcha%%">%%LNG_EnterTheCodeBelow%%</dt>
+					<dd style="display: %%GLOBAL_HideReviewCaptcha%%" class="RegularCell">
+						<input name="captcha" id="captcha" type="text" class="Field150" />
+						<div style="margin-top: 3px;">
+							%%GLOBAL_CaptchaImage%%
+						</div>
+					</dd>
+				</dl>
+				<p class="Submit" style="clear:both;">
+					<input type="submit" value="%%LNG_SaveMyReview%%" />
+				</p>
+			</div>
+		</form>
+
+		<p style="display: %%GLOBAL_HideNoReviewsMessage%%">
+			%%GLOBAL_NoReviews%%
+		</p>
+
+		%%GLOBAL_ProductReviewPaging%%
+
+		%%GLOBAL_ProductReviewList%%
+
+		%%GLOBAL_ProductReviewPaging%%
+
+		<script type="text/javascript">
+		//<![CDATA[
+		var HideReviewCaptcha = "%%GLOBAL_HideReviewCaptcha%%";
+
+		// Should we automatically open the review form?
+		if("%%GLOBAL_AutoShowReviewForm%%" == "1") {
+			show_product_review_form();
+		}
+
+		if("%%GLOBAL_JumpToReviews%%" == "1") {
+			jump_to_product_reviews();
+		}
+		//wirror20100728: methods for order review request
+		function handleBeforeSubmit(){
+			document.getElementById("submitLocation").value = document.location.href;
+			if(document.getElementById("reviewPopupFlag")){
+				document.getElementById("popupFlag").value = document.getElementById("reviewPopupFlag").value;
+				document.getElementById("orderId").value = document.getElementById("reviewOrder").value;
+			}else{
+				document.getElementById("popupFlag").value = 0;
+				document.getElementById("orderId").value = 0;
+			}
+			return check_product_review_form();
+		}
+		//]]>
+		</script>
+	</div>
+</div>
+
+<script type="text/javascript">   
+	//zfang_20100709: Set Active Tab after write review  		  
+	var current_url = location.href;
+	var regex_pattern = /review/;	 
+			
+	if(current_url.search(regex_pattern) > 0)
+	{	
+		if(typeof(ActiveProductTab)=="function")
+			$(document).ready(function () {ActiveProductTab('ProductReviews_Tab');});
+	}
+</script>     

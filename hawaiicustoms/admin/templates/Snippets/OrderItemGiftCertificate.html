@@ -1,0 +1,16 @@
+<tr class="orderItem" id="orderItem_%%GLOBAL_CartItemId%%" colspan="2">
+	<td style="padding: 6px; vertical-align: top;">%%GLOBAL_ProductCode%%</td>
+	<td style="padding: 6px; vertical-align: top;" nowrap="nowrap">%%GLOBAL_ProductName%%</td>
+	<td style="padding: 6px; vertical-align: top; text-align: center;">%%GLOBAL_ProductQuantity%%</td>
+	<td style="padding: 6px; vertical-align: top; text-align: center;" width="100">%%GLOBAL_ProductPrice%%</td>
+	<td style="padding: 6px; vertical-align: top;" class="Right">%%GLOBAL_ProductTotal%%</td>
+	</td>
+	<td style="padding: 6px; vertical-align: top;" class="Right" nowrap="nowrap">
+		<a href="#" onclick="OrderManager.AddNewItem(this); return false;">
+			<img src="images/addicon.gif" alt="" border="0" />
+		</a>
+		<a href="#" onclick="OrderManager.RemoveItem(this); return false;">
+			<img src="images/delicon.gif" alt="" border="0" />
+		</a>
+	</td>
+</tr>

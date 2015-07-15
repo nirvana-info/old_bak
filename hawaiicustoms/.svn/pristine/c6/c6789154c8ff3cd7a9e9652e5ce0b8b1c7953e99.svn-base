@@ -1,0 +1,14 @@
+<table id="orderdetailtable" class="SubcatProdItem" cellpadding="0" cellspacing="0">    
+    <tr class='%%GLOBAL_RowColor%%'>
+        <td class="prodinfo whiterow" width="33%">%%GLOBAL_ProductThumb%%<br/>%%GLOBAL_ProductCode%%</td>
+        <td class="prodinfo" width="25%">%%GLOBAL_ProductDesc%%</td>
+        <td class="prodinfo" width="21%">$%%GLOBAL_ProductPrice%%</td>
+        <td class="prodinfo" width="21%">
+	        <a href="%%GLOBAL_ProductURL%%">%%GLOBAL_ProductAddText%%</a><br/><br/>
+			<a id="linkReview" onclick="ShowPopupCustom('%%GLOBAL_ReviewURL%%','600','600'); return false;" href="%%GLOBAL_ReviewURL%%"><img src="%%GLOBAL_ShopPath%%/templates/default/images/add-a-review-button.gif" border="0"/></a>
+		</td>
+    </tr>
+</table>
+<div class="SubcatProdItemGap" class="SubcatProdItemGap">
+&nbsp;
+</div> 

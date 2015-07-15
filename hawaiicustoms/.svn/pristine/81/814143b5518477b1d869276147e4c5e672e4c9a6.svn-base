@@ -1,0 +1,26 @@
+<a name="vehicles" id="vehicles"></a>
+<div id="mmyform_flash">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="730" height="30" title="Select Your Vehicle">
+    <param name="movie" value="/images/rhb_images3/flash/attention2.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="transparent">
+    <embed wmode="transparent" src="/images/rhb_images3/flash/attention2.swf" quality="high" pluginspage="https://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="730" height="30" style="z-index:1000;"></embed>
+  </object>
+</div>
+<div id="mmyform_container">
+<div id="mmyform_year">
+<span class="mmyform_text">Year:</span><br />
+<select name="searchyear" id="searchyear" onchange="getSearchOptions2('year',%%GLOBAL_UniversalCat%%)">%%GLOBAL_YearList%%</select>
+</div>
+<div id="mmyform_make">
+<span class="mmyform_text">Make:</span><br />
+<select name="searchmake" id="searchmake" onchange="getSearchOptions2('make',%%GLOBAL_UniversalCat%%)">%%GLOBAL_MakeList%%</select>
+</div>
+<div id="mmyform_model">
+<span class="mmyform_text">Model:</span><br />
+<select name="searchmodel" id="searchmodel" onchange="getSearchOptions2('model',%%GLOBAL_UniversalCat%%)">%%GLOBAL_ModelList%%</select>
+</div>
+<div id="mmyform_button">
+<input name="setvehicle" type="image" onclick="setYMM()" value="Set Vehicle" src="/images/rhb_images3/mmy/set-vehicle-button.gif" alt="Submit button" />
+</div>
+</div>

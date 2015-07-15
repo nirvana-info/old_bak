@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+%%Panel.FacebookShare%%
+<script src="%%GLOBAL_PATH%%/javascript/jquery.blockUI.js" type="text/javascript"></script>
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+<div id="Container">
+%%Panel.Header%%
+%%Panel.FreeDelivery%%
+%%Banner.TopBanner%%
+<div id="Wrapper">
+<div class="Left" id="LayoutColumn1">
+%%Panel.MyVehicleArea%%
+%%Panel.SideCategoryList%%
+%%Panel.SideShopByBrand%%
+%%Panel.SideNewsletterBox%%
+%%Panel.GiftCertificatesMenu%%
+</div>
+<div class="Content" id="LayoutColumn2">
+%%Panel.SearchForm%%
+%%Panel.TruckChampWelcome%%
+%%Panel.FeatureViewer%%
+%%Panel.StaticFeaturedCategories%%
+%%Panel.StaticFeaturedBrands%%
+%%Panel.HomeInfo%%
+%%Banner.BottomBanner%%
+%%Panel.NewSearchPagingTop%%
+</div>
+</div>
+
+%%Panel.Footer%%
+</div>
+
+</div>
+</div>
+
+</div>
+%%Panel.TCFooter%%
+
+<script type="text/javascript">
+function GetRequest() {
+   var url = location.search; 
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) { 
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) { 
+         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
+function goto_sweepstakes()
+{
+	 var enableSeoUrl = %%GLOBAL_EnableSEOUrls%%;
+	 var myurl = "";
+	 var urlreffer = "";
+	 if(typeof(document.referrer)!= "undefined" && document.referrer != null )
+	 {
+		 urlreffer = document.referrer;
+	}
+	
+	$('#sweepstakes_refurl').val(urlreffer);
+	 
+	var email = $('#sweepstakes_email').val();
+	if($.trim(email) == '')
+	{
+		$('#email_info').html('%%LNG_InputEmailForSweepstakes%%');
+		return false;
+	}
+	var pattern = /^([a-z]{1}[-a-zA-Z0-9_.]*)@([-a-zA-Z0-9]+)([.][a-zA-Z]+)+$/;    
+	flag = pattern.test(email);
+	if(!flag)
+	{
+		$('#email_info').html('%%LNG_InputEmailForSweepstakesIncorrect%%');
+		return false;
+	}
+	$('#email_info').html('');
+	 if(enableSeoUrl == 1)
+	 {
+		 myurl = '%%GLOBAL_ShopPath%%/sweepstakes/';
+	 }
+	 else
+	 {
+		 myurl = '%%GLOBAL_ShopPath%%/sweepstakes.php';
+	 }
+	 
+	 $.unblockUI();
+	 document.getElementById('frmsweepstakes').action =myurl;
+	 document.getElementById('frmsweepstakes').submit();
+	 //return true;
+}
+$(document).ready(function(){
+	$.blockUI.defaults.applyPlatformOpacityRules = false;
+     var my_request = new Object();
+     my_request = GetRequest();    
+     
+     if(typeof(my_request['harley']) != 'undefined')
+     {
+         var containDiv = '#email_popup';
+         var widDis =  $(containDiv).width() +10;
+    	 var topDis = ((document.body.clientHeight - $(containDiv).height()) / document.body.clientHeight)*40 + "%";
+ 		 var leftDis = ((document.body.clientWidth - widDis) / document.body.clientWidth)*50 + "%";   
+         $.blockUI({ 
+     			message: $(containDiv),
+     			overlayCSS : 
+     			{
+     				opacity : '0.75',
+     				backgroundColor : 'Black'
+     			},
+     			css : 
+     			{
+     				border : 'solid gray 1px',
+     				opacity : '1',
+     				cursor : 'default',
+ 					top: topDis,
+ 					left: leftDis,
+ 					width: widDis+'px'
+     			},
+     			baseZ : 10000 
+         });
+        
+     }
+});
+
+</script>
+<style type="text/css">
+#email_popup{ width:350px; height:201px; border:5px solid #578da7; background:url(%%GLOBAL_ShopPath%%/templates/default/images/sweepstakes_bg.gif)}
+#email_logo{margin:0px 0px 0px 6px;padding:0px;width:330px; border-bottom:1px solid #d8d7d6 }
+#email_text{float:left;margin:20px 0px 0px 15px;padding:0px; font-family:Verdana,Arial,Helvetica,sans-serif; font-weight:bold; font-size:18px}
+#email_input{ float:left;margin:20px 0px 0px 15px;padding:0px; font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px}
+.email_submit{margin:10px 30px 0px 0px;padding:0px; float:right}
+#email_info{ clear:both; margin:0px; padding:10px;font-family:Arial, Helvetica, sans-serif; font-size:11px}
+</style>
+
+<div id="email_popup" style="display:none;">
+<form id="frmsweepstakes" name="frmsweepstakes" method="post" >
+ 	<p id="email_logo"><img src="%%GLOBAL_ShopPath%%/templates/default/images/sweepstakes_logo.gif"></p>
+    <p id="email_text">Email: </p>
+    <p id="email_input"><input type="text" name="sweepstakes_email" id="sweepstakes_email" size="35" tabindex="1000" /><p>
+    <p class="email_submit"> <input type="button" onclick="$.unblockUI();" value="Cancel" tabindex="1002"/></p>
+    <p class="email_submit"><input type="button"  value="Proceed" onclick="return goto_sweepstakes();" tabindex="1001"/></p>
+    <p id="email_info">%%LNG_InputEmailForSweepstakes%%</p>
+    <input type="hidden" id="sweepstakes_refurl" name="sweepstakes_refurl" value=""/>
+    </form>
+</div>
+
+</body>
+</html>

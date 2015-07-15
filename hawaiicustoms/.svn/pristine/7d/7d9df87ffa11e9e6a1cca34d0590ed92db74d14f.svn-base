@@ -1,0 +1,71 @@
+/** IE 6, 7, 8 Specific Fixes **/
+
+* html .Content, * html .Left, * html .Right {
+	height: 500px; /* Compensates for no min-height */
+}
+
+* html #Container	{
+	width: expression(document.body.clientWidth < 1000? "990px" : "auto");
+}
+
+* html #Menu li a {
+	padding: 4px 10px 4px 10px;
+
+}
+
+* html #Menu li ul {
+	top:22px;
+}
+
+* html .SelectGiftWrapMultiple {
+	height: 400px;
+}
+body {
+}
+
+/** General IE Fixes **/
+.Left h2, .Right h2 {
+	margin-top: -1px;
+}
+.Left .FeedLink, .Right .FeedLink {
+	position: relative;
+	z-index: 1;
+}
+#Menu{
+	margin-left: 65px;
+}
+.Content .FeedLink {
+	margin: 2px 4px 0 0;
+}
+#ordernow {
+		background: transparent url('../../../images/design23/phone1.png') 4px 0px no-repeat;
+}
+#SearchForm { 	padding: 3px 0 5px 0px; }
+#SearchForm .Button {
+	left: 193px;
+	top: -4px;
+	height: 27px;
+	width: 66px;
+}
+#SearchForm p {
+	top: -23px;
+}
+
+#GiftCertificatesMenu h2, #MyVehicleArea h2 {
+	top: -25px;
+}
+.Left #SideCategoryList {
+	position: relative;
+	top: -17px;
+}
+h2#catlisth2 {
+	top: -5px;
+	margin-bottom: -7px;
+}
+select, input {
+	font-size: 0.95em;
+}
+
+.HasSubMenu {
+	z-index:10;
+}

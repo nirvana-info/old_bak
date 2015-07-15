@@ -1,0 +1,97 @@
+<script type="text/javascript" src="script/formfield.admin.js"></script>
+<script type="text/javascript"><!--
+
+	lang.FormFieldSetupSaving = "%%LNG_FormFieldSetupSaving%%";
+	lang.FormFieldSetupInvalidName = "%%LNG_FormFieldSetupInvalidName%%";
+	lang.FormFieldSetupInvalidSize = "%%LNG_FormFieldSetupInvalidSize%%";
+	lang.FormFieldSetupInvalidMaxLength = "%%LNG_FormFieldSetupInvalidMaxLength%%";
+	lang.FormFieldSetupInvalidRows = "%%LNG_FormFieldSetupInvalidRows%%";
+	lang.FormFieldSetupSelectOptionsAddError = "%%LNG_FormFieldSetupSelectOptionsAddError%%";
+	lang.FormFieldSetupSelectOptionsAddDuplicate = "%%LNG_FormFieldSetupSelectOptionsAddDuplicate%%";
+	lang.FormFieldSetupInvalidChoosePrefix = "%%LNG_FormFieldSetupInvalidChoosePrefix%%";
+	lang.FormFieldSetupInvalidSelectOptions = "%%LNG_FormFieldSetupInvalidSelectOptions%%";
+	lang.FormFieldSetupInvalidSelectOptionsSort = "%%LNG_FormFieldSetupInvalidSelectOptionsSort%%";
+	lang.FormFieldSetupChooseOption = "%%LNG_FormFieldSetupChooseOption%%";
+	lang.FormFieldSetupInvalidLimitForm = "%%LNG_FormFieldSetupInvalidLimitFrom%%";
+	lang.FormFieldSetupInvalidLimitTo = "%%LNG_FormFieldSetupInvalidLimitTo%%";
+	lang.FormFieldSetupInvalidLimitRange = "%%LNG_FormFieldSetupInvalidLimitRange%%";
+	lang.FormFieldSetupInvalidLimitDefault = "%%LNG_FormFieldSetupInvalidLimitDefault%%";
+	lang.FormFieldSetupInvalidNumberDefaultValue = "%%LNG_FormFieldSetupInvalidNumberDefaultValue%%";
+	lang.FormFieldSetupInvalidDateLimitFrom = "%%LNG_FormFieldSetupInvalidDateLimitFrom%%";
+	lang.FormFieldSetupInvalidDateLimitTo = "%%LNG_FormFieldSetupInvalidDateLimitTo%%";
+	lang.FormFieldSetupInvalidDateLimitRange = "%%LNG_FormFieldSetupInvalidDateLimitRange%%";
+	lang.FormFieldSetupInvalidDateDefaultValue = "%%LNG_FormFieldSetupInvalidDateDefaultValue%%";
+	lang.FormFieldSetupInvalidDateDefaultRange = "%%LNG_FormFieldSetupInvalidDateDefaultRange%%";
+
+	function InitFormFieldPopup()
+	{
+		ShowTab(%%GLOBAL_CurrentTab%%);
+		InitImmutableFieldHandlers();
+
+		$('#FormFieldName').focus();
+		$('#FormFieldName').select();
+	}
+
+	function ShowTab(T)
+	{
+		i = 0;
+		while (document.getElementById('tab' + i) != null) {
+			document.getElementById('div' + i).style.display = 'none';
+			document.getElementById('tab' + i).className = '';
+			i++;
+		}
+
+		if (isNaN(T)) {
+			T = 0;
+		}
+
+		document.getElementById('div' + T).style.display = '';
+		document.getElementById('tab' + T).className = 'active';
+		document.getElementById('currentTab').value = T;
+	}
+
+	function InitImmutableFieldHandlers()
+	{
+		$('#FormFieldSetupWorkSpace *[readonly]').each(
+			function()
+			{
+				$(this).click(
+					function()
+					{
+						alert('%%LNG_FormFieldSetupImmutableWarning%%');
+						this.blur();
+						return false;
+					}
+				);
+			}
+		);
+	}
+
+//-->
+</script>
+<form action="" id="FormFieldSetup" onsubmit="FormFieldAdmin.Save(); return false;">
+	<input type="hidden" id="currentTab" name="currentTab" value="0">
+	<input type="hidden" id="FormFieldID" name="fieldId" value="%%GLOBAL_FormFieldID%%" />
+	<input type="hidden" id="FormFieldFormID" name="formId" value="%%GLOBAL_FormFieldFormID%%" />
+	<input type="hidden" id="FormFieldType" name="fieldType" value="%%GLOBAL_FormFieldType%%" />
+	<div class="ModalTitle">
+		%%GLOBAL_FormFieldSetupPopupHeading%%
+	</div>
+	<div class="ModalContent">
+		<ul id="tabnav">
+			<li><a href="#" class="active" id="tab0" onclick="ShowTab(0); return false;">%%LNG_FormFieldTabGeneral%%</a></li>
+			<li><a href="#" class="active" id="tab1" onclick="ShowTab(1); return false;">%%LNG_FormFieldTabAdvanced%%</a></li>
+		</ul>
+
+		<div id="FormFieldSetupWorkSpace">
+			%%GLOBAL_FormFieldTabWorkSpace%%
+		</div>
+	</div>
+	<div class="ModalButtonRow">
+		<div class="FloatLeft">
+			<img src="images/loading.gif" alt="" style="vertical-align: middle; display: none;" class="LoadingIndicator" />
+			<input type="button" class="CloseButton FormButton" value="%%LNG_Cancel%%" onclick="$.modal.close();" />
+		</div>
+		<input type="submit" class="Submit" value="%%LNG_Save%%" />
+	</div>
+</form>

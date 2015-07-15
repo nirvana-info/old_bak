@@ -1,0 +1,11 @@
+<tr>
+	<td class="FieldLabel">
+		<span class="Required">%%GLOBAL_VariationRequired%%</span>
+		%%GLOBAL_VariationName%%:</td>
+	<td>
+		<select class="Field300">
+			<option value="">%%LNG_ChooseAnOption%%</option>
+			%%GLOBAL_VariationOptions%%
+		</select>
+	</td>
+</tr>

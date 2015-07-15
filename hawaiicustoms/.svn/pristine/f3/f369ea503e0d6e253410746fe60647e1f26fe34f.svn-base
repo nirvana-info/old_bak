@@ -1,0 +1,54 @@
+<div class="Block Moveable" id="EditAccountForm">
+<h1>%%LNG_UploadImageDetail%%</h1>
+<div class="c_form">
+	<p class="InfoMessage">
+		Please select image(s) that you want to upload, you can upload %%GLOBAL_maxUploadImgNum%% images each time.
+	</p>
+	<table cellspacing="0" cellpadding="0" class="formtable">
+	
+		<tbody id="attachbodyhidden" style="display:none">
+			<tr>
+				<td>
+					<form method="post" id="upload" action="%%GLOBAL_ShopPath%%/account/uploadimage" enctype="multipart/form-data" target="uploadframe">
+						<input type="file" name="attach" size="25" style="padding:3px 10px;" />
+						<span id="localfile"></span>		
+						<input type="hidden" name="max_file_size" value="3000">			
+						<input type="hidden" name="uploadsubmit" id="uploadsubmit" value="true" />
+					</form>
+				</td>
+			</tr>
+		</tbody>
+		<tbody id="attachbody"></tbody>
+	</table>
+
+<script language="javascript">
+	var imageUploader_maxNum = %%GLOBAL_maxNum%%;
+	var imageUploadPerMax = %%GLOBAL_maxUploadImgNum%%;
+	var imageUploadMaxSize = %%GLOBAL_allowUploadImageSize%%;
+</script>
+<input type="hidden" id="allowSize" value="%%GLOBAL_allowUploadImageSize%%"/>
+<script src="%%GLOBAL_ShopPathNormal%%/javascript/script_upload.js" type="text/javascript"></script>
+<iframe id="uploadframe" name="uploadframe" width="0" height="0" marginwidth="0" frameborder="0" src="about:blank"></iframe>
+
+<form method="post" id="starUploadForm" action="%%GLOBAL_ShopPath%%/account/uploadimage" target="uploadframe">
+	<div class="item">
+		%%GLOBAL_copyRight%%
+		<div class="itemList"><span class="Required">*</span>(First Name)<input style="margin-left:30px;" type="text" maxlength="100" id="uploaderFirstName" name="uploaderFirstName"></div>
+		<div class="itemList"><span class="Required">*</span>(Last  Name)<input style="margin-left:30px;" type="text" maxlength="100" id="uploaderLastName" name="uploaderLastName"></div>
+		<div class="itemList"><span class="Required">*</span>(Address Line 1)<input type="text" id="address1" maxlength="100" name="address1"></div>
+		<div class="itemList"><span class="Required">*</span>(Address Line 2)<input type="text" id="address2" maxlength="100" name="address2"></div>
+	</div>
+	
+	<div class="item" id="captchaitem"><span style="float:left; vertical-align:middle;"><span class="Required">*</span> Please input these random characters:</span><input type="text" size="10" name="captcha" id="captcha" />%%GLOBAL_CaptchaImage%%</div>
+
+	<input type="hidden" name="starsubmit" id="starsubmit" value="true" />
+	<div class="item" id="errormsg"></div>
+	<div id="uploadBtnContainer" class="item"><input type="submit" name="uploadsubmit" id="uploadsubmit" value="I agree. Please submit" class="submit" /></div>
+</form>
+
+<form method="post" id="albumresultform" action="%%GLOBAL_ShopPath%%/account/showimage" class="c_form">
+	<input type="hidden" name="viewAlbumid" id="viewAlbumid" value="true" />
+</form>
+
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div id="SearchForm-Outer">
+	<div id="SearchForm">
+		<div id="SearchFormContent">
+			<h3>Search</h3>
+			<form action="%%GLOBAL_ShopPath%%/search.php" method="get" onsubmit="return check_small_search_form(%%GLOBAL_EnableSEOUrls%%)">
+			<label for="search_query">Search</label>
+			<input type="text" name="search_query" id="search_query" class="Textbox" value="%%GLOBAL_OriginalSearchQuery%%" />
+			<input type="hidden" name="search_key" value="1" />
+			<input type="hidden" name="is_smart_search" value="1" />
+			<input type="image" src="%%GLOBAL_ShopPath%%/images/search-button.gif" class="Button" />
+			</form>
+			
+			
+			
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+	var QuickSearchAlignment = 'left';
+	var QuickSearchWidth = '200px';
+	lang.EmptySmallSearch = "You forgot to enter some search keywords.";
+	</script>
+
+	<!-- The below code will include the javascript file -->
+	%%Panel.CustomJS%%
+
+</div>

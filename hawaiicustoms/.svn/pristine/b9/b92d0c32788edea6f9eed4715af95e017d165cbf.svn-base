@@ -1,0 +1,35 @@
+<div id="Outer">
+<div id="Header-Outer">
+
+	<a id="HeaderLink" title="Welcome to TruckChamp" href="%%GLOBAL_ShopPath%%">TruckChamp.com</a>
+	<!--<a id="HeaderLink2" title="2010 Motorcycle Sweepstakes" href="%%GLOBAL_ShopPath%%/sweepstakes">Truck Champ 2010 Motorcycle Sweepstakes</a>-->
+
+	<div id="TopMenu">
+		<ul style="display:">
+
+			<!--<li style="display:" class="First"><a href="%%GLOBAL_ShopPath%%">Home</a></li>-->
+
+			<li style="display:" class="Cart"><a href="%%GLOBAL_ShopPath%%/cart" rel="nofollow"><span id='lang_ViewCart' class='LNGString'><img src="%%GLOBAL_ShopPath%%/images/shopping-cart.gif" alt="Shopping Cart" /> View Secure Cart %%GLOBAL_CartTotalQuantity%%</span> </a></li>
+			<!--<li style="display:%%GLOBAL_HideAccountOptions%%"><a href="%%GLOBAL_ShopPath%%/account.php"><span>%%LNG_YourAccount%%</span></a></li>
+
+			<li style="display:"><a href="%%GLOBAL_ShopPath%%/wishlist"><span id='lang_GiftCertificates' class='LNGString'>Wish Lists</span></a></li>
+	
+		<li style="display:"><a href="%%GLOBAL_ShopPath%%/giftcertificates"><span id='lang_GiftCertificates' class='LNGString'>Gift Certificates</span></a></li>-->
+
+			<li style="display:"><a href="/account">My Account</a></li>
+			
+			<li style="display:"><a href="%%GLOBAL_ShopPath%%/company-info.html" rel="nofollow" onClick="ShowPopupCustom('company-info.html','615','600'); return false;">Company Info</a></li>
+
+			<li style="display:"><a href="%%GLOBAL_ShopPath%%/shipping.html" rel="nofollow" onClick="ShowPopupCustom('shipping.html','615','600'); return false;">Shipping Info</a></li>
+
+			<li style="display:"><a href="%%GLOBAL_ShopPath%%/returns.html" rel="nofollow" onClick="ShowPopupCustom('returns.html','615','600'); return false;">Return Policy</a></li>
+
+		</ul>
+
+	</div>
+
+	%%Panel.FollowUs%%
+	%%Panel.ChatNow%%
+	
+</div>
+</div>

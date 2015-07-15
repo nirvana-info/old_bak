@@ -1,0 +1,16 @@
+; [Buy X Get Free Shipping]
+
+PERCENTOFFITEMSINSERIESdisplayName = "Get X% off all items in one or more series"
+PERCENTOFFITEMSINSERIESget = "Get "
+PERCENTOFFITEMSINSERIESoff = "% off all items in the following series: "
+PERCENTOFFITEMSINSERIESincart = ""
+
+PERCENTOFFITEMSINSERIESDiscountMessage = "You have received %s%% off items you purchased in the '%s' series!"
+PERCENTOFFITEMSINSERIESDiscountMessagePlural = "You have received %s%% off items you purchased in the '%s' series!"
+
+PERCENTOFFITEMSINSERIESEnterDiscountamount = "Please enter a valid discount between %s and %s."
+PERCENTOFFITEMSINSERIESEnterMinamount = "Please enter a valid discount between %s and %s."
+PERCENTOFFITEMSINSERIESEnterMaxamount = "Please enter a valid discount between %s and %s."
+
+PERCENTOFFITEMSINSERIESEnterDiscountseriesids = "Please select a series"
+PERCENTOFFITEMSINSERIESMinPrice = "Min price of the product to avail this discount"

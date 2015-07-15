@@ -1,0 +1,12 @@
+							<li class="VariationRow">
+								<div class="VariationColumn">
+									<div class="VariationValueDrag">&nbsp;</div>
+									<input type="textbox" id="variationOptionName_%%GLOBAL_VariationOptionRankId%%" name="variationOptionName[%%GLOBAL_VariationOptionRankId%%]" class="VariationOptionName" value="%%GLOBAL_VariationOptionName%%" />
+									<a href="#" onclick="AddVariationRow(this);" class="VariationRowAdd" title="Click here to add a new attribute"><img src="images/addicon.gif" alt="Add" border="0" /></a>
+									<a href="#" onclick="DelVariationRow(this);" class="VariationRowDel" style="display: %%GLOBAL_HideRowDelete%%;"><img src="images/delicon.gif" alt="Del" border="0" /></a>
+								</div>
+								<ul class="VariationValues">
+									%%GLOBAL_ProductVariationValue%%
+								</ul>
+								<br class="Clear" />
+							</li>

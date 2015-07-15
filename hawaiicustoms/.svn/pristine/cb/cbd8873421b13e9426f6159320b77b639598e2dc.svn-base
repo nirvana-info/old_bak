@@ -1,0 +1,204 @@
+<style type="text/css" media="screen">
+    object { outline:none; }
+</style>
+<div class="Block Moveable" id="PageContent">
+    <div class="BlockContent">
+        <p class="ErrorMessage" style="display: %%GLOBAL_HideErrorMessage%%">
+            %%GLOBAL_Message%%
+            %%GLOBAL_ErrorMessage%%
+        </p>
+        <h1>%%LNG_MotorcycleSweepstakes%%</h1>
+            <div style="float: right; width: 350px;">
+                <h2 style="background:none;color:black;">Enter Today to Win a 2010 Harley-Davidson&reg; Super Glide&reg; Motorcycle!</h2>
+				<img src="%%GLOBAL_ShopPath%%/templates/default/images/win-a-dream-blk-shadow.gif" alt="Win An American Dream!" />
+                <p style="font-size:0.8em;"><em>Harley-Davidson Motor Company is not endorsing, sponsoring, or otherwise affiliated with this promotion.</em></p>
+<p><a href="%%GLOBAL_ShopPath%%/templates/default/images/sweepstakes-rules-lof.pdf" target="_new">Official Sweepstakes Rules</a></p>
+                <p>Anyone who purchases from TruckChamp.com from April 1st to Dec. 20th 2010 will be automatically entered for a chance to win! No purchase necessary. You may also enter by providing your information in the form below.<img style="vertical-align:text-top;" src="%%GLOBAL_ShopPath%%/templates/default/images/arrow.gif" alt="Arrow" /></p>
+            </div>
+            <div id="flashContent">SimpleViewer requires JavaScript and the Flash Player. <a href="http://www.adobe.com/go/getflashplayer/">Get Flash.</a></div>
+            <!--<p><img src="%%GLOBAL_ShopPath%%/templates/default/images/prize-placeholder.jpg" alt="2010 Harley Super Glide" /></p>-->
+            <h2>%%LNG_SweepstakesEntryForm%%</h2>
+            <form method="post" action="%%GLOBAL_FormAction%%" onsubmit="return isValidEmail();">
+					 <p style="margin-bottom: 15px;"><span class="Required">*</span>&nbsp;%%LNG_RequiredField%%</p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;"><span class="Required">*</span>&nbsp;%%LNG_EmailAddress%%:</p>
+                <p><input style="font-size: 12px; padding: 3px; width: 200px;" maxlength="55" id="email" name="email" type="text" value="%%GLOBAL_Email%%" /> <span style="color:#666666; font-size:0.9em;">We will never sell your email address.</span></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">&nbsp;</p>
+        <p><input name="newsletter" type="checkbox" value="1" /><label for="option"> %%LNG_Receivediscount%%</label></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;"><span class="Required">*</span>&nbsp;%%LNG_SweepFirstName%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="25" name="firstname" id="firstname" type="text" value="%%GLOBAL_Firstname%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;"><span class="Required">*</span>&nbsp;%%LNG_SweepLastName%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="25" name="lastname" id="lastname" type="text" value="%%GLOBAL_Lastname%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepPhoneNumber%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="25" name="phone" type="text" value="%%GLOBAL_PhoneNumber%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepAddressLine1%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="100" name="address1" type="text" value="%%GLOBAL_AddressLine1%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepAddressLine2%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="100" name="address2" type="text" value="%%GLOBAL_AddressLine2%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepCity%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 300px;" maxlength="100" name="city" type="text" value="%%GLOBAL_City%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepCountry%%:</p>
+                    <p>*United States Only*</p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepState%%:</p>
+                    <p><select style="font-size: 12px; padding: 3px;" name="states">
+                        <option>%%LNG_SweepChooseaState%%</option> 
+                        <option value="Alabama">Alabama</option> 
+                        <option value="Alaska">Alaska</option> 
+                        <option value="Arizona">Arizona</option> 
+                        <option value="Arkansas">Arkansas</option> 
+                        <option value="California">California</option> 
+                        <option value="Colorado">Colorado</option> 
+                        <option value="Connecticut">Connecticut</option> 
+                        <option value="Delaware">Delaware</option> 
+                        <option value="District of Columbia">District of Columbia</option> 
+                        <option value="Florida">Florida</option> 
+                        <option value="Georgia">Georgia</option> 
+                        <option value="Hawaii">Hawaii</option> 
+                        <option value="Idaho">Idaho</option> 
+                        <option value="Illinois">Illinois</option> 
+                        <option value="Indiana">Indiana</option> 
+                        <option value="Iowa">Iowa</option> 
+                        <option value="Kansas">Kansas</option> 
+                        <option value="Kentucky">Kentucky</option> 
+                        <option value="Louisiana">Louisiana</option> 
+                        <option value="Maine">Maine</option> 
+                        <option value="Maryland">Maryland</option> 
+                        <option value="Massachusetts">Massachusetts</option> 
+                        <option value="Michigan">Michigan</option> 
+                        <option value="Minnesota">Minnesota</option> 
+                        <option value="Mississippi">Mississippi</option> 
+                        <option value="Missouri">Missouri</option> 
+                        <option value="Montana">Montana</option> 
+                        <option value="Nebraska">Nebraska</option> 
+                        <option value="Nevada">Nevada</option> 
+                        <option value="New Hampshire">New Hampshire</option> 
+                        <option value="New Jersey">New Jersey</option> 
+                        <option value="New Mexico">New Mexico</option> 
+                        <option value="New York">New York</option> 
+                        <option value="North Carolina">North Carolina</option> 
+                        <option value="North Dakota">North Dakota</option> 
+                        <option value="Ohio">Ohio</option> 
+                        <option value="Oklahoma">Oklahoma</option> 
+                        <option value="Oregon">Oregon</option> 
+                        <option value="Other, Call for quote">Other, Call for quote</option> 
+                        <option value="Pennsylvania">Pennsylvania</option> 
+                        <option value="Rhode Island">Rhode Island</option> 
+                        <option value="South Carolina">South Carolina</option> 
+                        <option value="South Dakota">South Dakota</option> 
+                        <option value="Tennessee">Tennessee</option> 
+                        <option value="Texas">Texas</option> 
+                        <option value="Utah">Utah</option> 
+                        <option value="Vermont">Vermont</option> 
+                        <option value="Virginia">Virginia</option> 
+                        <option value="Washington">Washington</option> 
+                        <option value="West Virginia">West Virginia</option> 
+                        <option value="Wisconsin">Wisconsin</option> 
+                        <option value="Wyoming">Wyoming</option> 
+                    </select></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">%%LNG_SweepZip%%:</p>
+                    <p><input style="font-size: 12px; padding: 3px; width: 70px;" maxlength="12" name="zipcode" id="zipcode" type="text" value="%%GLOBAL_ZipCode%%" /></p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;">
+                    <div style="margin-bottom: 15px;">
+                        %%GLOBAL_CaptchaImage%%
+                    </div>
+                    </p>
+                    <p style="width: 140px; float: left; text-align: right; margin-right: 10px;"><span class="Required">*</span>&nbsp;%%LNG_EnterTheCapthcaBelow%%:
+                    </p>
+                <p style="display: %%GLOBAL_HideReviewCaptcha%%">
+                    <input style="font-size: 12px; padding: 3px; width: 90px;" name="captcha" id="captcha" type="text" />
+                </p>
+				<br class="clear">
+                <p><strong>Please enter the year, make, and model of your vehicle:</strong><br /> <span style="color:#666666; font-size: 0.9em;">This will help us better tailor our special offers to you, if you opted in above.</span></p>
+                <ul style="list-style:none;">
+                <li style="display:inline; margin-right: 20px;"> <label id="yearlabel">Year:</label> <select id="searchyear" style="font-size: 11px; padding: 2px;" name="searchyear" onchange="getSearchOptions('year',0)">
+                %%GLOBAL_YearList%%
+                 </select></li>
+
+                <li style="display:inline; margin-right: 20px;"><label>Make:</label><select id="searchmake" style="font-size: 11px; padding: 2px;" name="searchmake" onchange="getSearchOptions('make',0)">
+                %%GLOBAL_MakeList%%
+                </select>
+                </li>
+                <li style="display:inline;"><label>Model:</label><select id="searchmodel" style="font-size: 11px; padding: 2px;" name="searchmodel" onchange="getSearchOptions('model',0)">
+                %%GLOBAL_ModelList%%
+                </select>
+                </li>
+                </ul>
+                <p style="margin-left:200px;">&nbsp;<input style="padding:3px;font-size:12px;font-weight:bold;" type="submit" value="* Submit *" />&nbsp;</p>
+            </form>
+        </div>
+    </div>
+        <br class="Clear" />
+        
+<script>
+
+function isValidEmail()
+{
+       /* var field = document.getElementById('zipcode').value;
+
+        var valid = "0123456789-";
+        var hyphencount = 0;
+
+        if (field.length!=5 && field.length!=10) {
+        alert("Please enter your 5 digit or 5 digit+4 zip code.");
+        return false;
+        }
+        for (var i=0; i < field.length; i++) {
+        temp = "" + field.substring(i, i+1);
+        if (temp == "-") hyphencount++;
+        if (valid.indexOf(temp) == "-1") {
+        alert("Invalid characters in your zip code.  Please try again.");
+        return false;
+        }
+        if ((hyphencount > 1) || ((field.length==10) && ""+field.charAt(5)!="-")) {
+        alert("The hyphen character should be used with a properly formatted 5 digit+four zip code, like '12345-6789'.   Please try again.");
+        return false;
+           }
+        } */
+        
+     var inputString = document.getElementById('email').value;
+     if($('#email').val()) {
+         var expression = /^([a-z]{1}[-a-zA-Z0-9_\.]*)@([-a-zA-Z0-9]+)([\.][a-zA-Z]+)+$/;
+         if(matchExpression(expression,inputString) == false) {
+            alert('%%LNG_OfferEmailValid%%');
+            $('#email').focus();
+            return false;
+         }
+     }
+     else {
+        alert('%%LNG_EnterEmail%%');
+        $('#email').focus();
+        return false;
+     }
+    var firstname = document.getElementById("firstname");
+    var lastname = document.getElementById("lastname");
+    var captcha = document.getElementById("captcha");
+    
+    if(firstname.value == "") {
+        alert("%%LNG_Enterfirstname%%");
+        firstname.focus();
+        return false;
+    }
+    if(lastname.value == "") {
+        alert("%%LNG_Enterlastname%%");
+        lastname.focus();
+        return false;
+    }      
+    if(captcha.value == "") {
+        alert("%%LNG_EntercaptchaCodeBelow%%");
+        captcha.focus();
+        return false;
+    }
+}
+
+function matchExpression(expression,inputString)
+{
+    if(inputString.search(expression)==-1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+</script>        
+            

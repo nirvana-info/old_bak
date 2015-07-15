@@ -1,0 +1,41 @@
+
+<div id="div0" class="FormFieldTabs">
+	<div class="MessageBox MessageBoxInfo">%%LNG_FormFieldSetupSingleCheckboxIntro%%</div>
+
+	<dl>
+		<dt><span class="Required">*</span> %%LNG_FormFieldSetupName%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldName" name="name" value="%%GLOBAL_FormFieldName%%" class="Field300" />
+		</dd>
+
+		<dt><span class="Required">*</span>  %%LNG_FormFieldSetupSelectOptions%%:</dt>
+		<dd>
+			<textarea id="FormFieldOptions" rows="7" class="Field300">%%GLOBAL_FormFieldOptions%%</textarea>
+			<div id="FormFieldOptionsSort">%%LNG_FormFieldSetupSelectOptionsIntro%%<br /><a href="#" onclick="FormFieldAdmin.SortOptions(); return false;">(%%LNG_FormFieldSetupSelectOptionsSort%%)</a></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupIsRequired%%:</dt>
+		<dd>
+			<label for="FormFieldIsRequired"><input type="checkbox" id="FormFieldIsRequired" name="isRequired" %%GLOBAL_FormFieldIsRequiredChecked%% %%GLOBAL_FormFieldImmutableFlag%% /> %%LNG_FormFieldSetupIsRequiredYes%%</label>
+		</dd>
+	</dl>
+</div>
+
+<div id="div1" class="FormFieldTabs">
+	<dl>
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupClass%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldClass" name="class" value="%%GLOBAL_FormFieldClass%%" class="extraInfo Field300" />
+			<img onmouseout="HideHelp('dclass');" onmouseover="ShowHelp('dclass', '%%LNG_FormFieldSetupClass%%', '%%LNG_FormFieldSetupClassHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dclass"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupStyle%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldStyle" name="style" value="%%GLOBAL_FormFieldStyle%%" class="extraInfo Field300" />
+			<img onmouseout="HideHelp('dstyle');" onmouseover="ShowHelp('dstyle', '%%LNG_FormFieldSetupStyle%%', '%%LNG_FormFieldSetupStyleHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dstyle"></div>
+		</dd>
+	</dl>
+</div>
+

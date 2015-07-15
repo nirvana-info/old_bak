@@ -1,0 +1,28 @@
+<li>
+    <div class="prod_top">
+        <div class="prod_thumbnail">
+            %%GLOBAL_AddonProductThumbnail%%
+            <div class="prod_desc">
+                %%GLOBAL_ProductDescription%%
+            </div>
+        </div>
+        <div class="prod_detail">
+            <h2>%%GLOBAL_AddonProductTitle%%</h2>
+            <div class="prod_price">
+                %%GLOBAL_AddonProductPrice%%
+                <input type="hidden" value="%%GLOBAL_AddonProductHidePrice%%" name="addonProductPrice[%%GLOBAL_AddonProductId%%]"/>
+            </div>
+            <div class="prod_select">
+                <input type="checkbox" %%GLOBAL_AddonProductChecked%% name="addonProduct[%%GLOBAL_AddonProductId%%]" value="%%GLOBAL_ProductId%%" onclick="ExpressCheckout.ShowAddonProductQuantity(this)"/>
+                <label>Select the item</label>
+                <select name="addonProductQuantity[%%GLOBAL_AddonProductId%%]" style="display: %%GLOBAL_AddonProductDisplay%%;">
+                    %%GLOBAL_AddonProductOptions%%
+                </select>
+            </div>
+        </div>
+        <div class="Clear"></div>
+    </div>
+    <div class="prod_bottom">
+        %%GLOBAL_AddonProductDescription%%
+    </div>
+</li>

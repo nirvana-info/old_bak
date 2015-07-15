@@ -1,0 +1,8 @@
+<table style="margin-bottom:10px" width="100%">
+<tr>
+	<td>Year : <select name="searchyear" id="searchyear" onchange="getSearchOptions('year',%%GLOBAL_UniversalCat%%)">%%GLOBAL_YearList%%</select>&nbsp;&nbsp;</td>
+	<td>Make : <select name="searchmake" id="searchmake" onchange="getSearchOptions('make',%%GLOBAL_UniversalCat%%)">%%GLOBAL_MakeList%%</select>&nbsp;&nbsp;</td>
+	<td>Model : <select name="searchmodel" id="searchmodel" onchange="getSearchOptions('model',%%GLOBAL_UniversalCat%%)">%%GLOBAL_ModelList%%</select>&nbsp;&nbsp;</td>
+	<td><input type="button" name="setvehicle" value="Set Vehicle" onclick="setYMM()"></td>
+</tr>
+</table>

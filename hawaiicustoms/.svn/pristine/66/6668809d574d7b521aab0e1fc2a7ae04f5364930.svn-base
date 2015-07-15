@@ -1,0 +1,18 @@
+  			 <div id="SearchForm">
+				<form action="http://www.congoworld.com/search.php" method="get" onsubmit="return check_small_search_form()">
+					<label for="search_query">Search</label>
+					<input type="text" name="search_query" id="search_query" class="Textbox" value="" />
+					<input type="hidden" name="search_key" value="1" />
+					<input type="image" src="http://www.congoworld.com/images/design23/search-button.png" class="Button" />
+				</form>
+
+				<p>
+					<a href="http://www.congoworld.com/search.php?mode=advanced">Advanced Search</a> |
+					<a href="http://www.congoworld.com/search.php?action=Tips">Search Tips</a>
+				</p>
+			</div>
+			<script type="text/javascript">
+				var QuickSearchAlignment = 'left';
+				var QuickSearchWidth = '200px';
+				lang.EmptySmallSearch = "You forgot to enter some search keywords.";
+			</script>

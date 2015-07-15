@@ -1,0 +1,12 @@
+<ul class="TabNav" id="ProductTabs">
+</ul>
+<script type="text/javascript">
+var HideProductTabs = 0;
+	lang.Description = '%%LNG_Description%%';
+	lang.Warranty = '%%LNG_Warranty%%';
+	lang.OtherDetails = '%%LNG_OtherDetails%%';
+	lang.ProductTags = '%%LNG_Tags%%';
+	lang.SimilarProducts = '%%LNG_SimilarProducts%%';
+	lang.Reviews = '%%LNG_Reviews%%';
+	lang.OtherProducts = '%%LNG_OtherProducts%%';
+</script>

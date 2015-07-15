@@ -1,0 +1,61 @@
+<tr class="ConfigField" id="productFieldTR_%%GLOBAL_ProductFieldKey%%">
+	<td VALIGN="TOP"  class="FieldLabel">
+		<span style="margin-left:10px;">
+			 %%LNG_ConfigurableField%% #<span class="FieldNumber">%%GLOBAL_ProductFieldNumber%%</span>:
+		</span>
+	</td>
+
+			<td><select name="productFieldType[%%GLOBAL_ProductFieldKey%%]"  class="productFieldType Field80"
+			onchange="ToggleFieldFileType(this.value, %%GLOBAL_ProductFieldKey%%)">
+
+				<option value="text" %%GLOBAL_ProductFieldTypeText%%>%%LNG_ShortText%%</option>
+				<option value="textarea" %%GLOBAL_ProductFieldTypeTextarea%%>%%LNG_Textarea%%</option>
+				<option value="file" %%GLOBAL_ProductFieldTypeFile%%>%%LNG_File%%</option>
+				<option value="checkbox" %%GLOBAL_ProductFieldTypeCheckbox%%>%%LNG_Checkbox%%</option>
+			</select></td>
+<!--
+	<td style="width: 100px;">%%LNG_FieldName%%:</td>
+-->
+			<td>
+				<input name="productFieldName[%%GLOBAL_ProductFieldKey%%]" value="%%GLOBAL_ProductFieldName%%"  class="productFieldName Field100 %%GLOBAL_FieldNameClass%%" onfocus = "HideFieldHelpText(this);" onblur = "ShowFieldHelpText(this, '%%LNG_FieldName%%');"/>
+
+				<input name="productFieldId[%%GLOBAL_ProductFieldKey%%]" value="%%GLOBAL_ProductFieldId%%"  class="productFieldId" type="hidden" />
+			</td>
+
+
+<!--			<td style="width: 100px;">%%LNG_FieldRequired%%:</td>-->
+			<td>
+				<input class="productFieldRequired" name="productFieldRequired[%%GLOBAL_ProductFieldKey%%]" type="checkbox" style="margin-right:15px;" %%GLOBAL_ProductFieldRequired%% />%%LNG_Required%%?
+			</td>
+
+
+<!--			<td style="width: 100px;">%%LNG_FieldFileType%%: </td> -->
+
+			<td>
+				<div style="%%GLOBAL_HideFieldFileType%%" id="FileTypeContainer_%%GLOBAL_ProductFieldKey%%" name="FileTypeContainer_%%GLOBAL_ProductFieldKey%%">
+					<input name="productFieldFileType[%%GLOBAL_ProductFieldKey%%]" value="%%GLOBAL_ProductFieldFileType%%" size="12"  class="productFieldFileType Field80  %%GLOBAL_FileTypeClass%%"  onfocus = "HideFieldHelpText(this);" onblur = "ShowFieldHelpText(this, '%%LNG_FieldFileType%%');" />
+
+					<img onmouseout="HideHelp('FileTypeHelp_%%GLOBAL_ProductFieldKey%%');" onmouseover="ShowHelp('FileTypeHelp_%%GLOBAL_ProductFieldKey%%', '%%LNG_FieldFileType%%', '%%LNG_FieldFileTypeHelp%%')" src="images/help.gif" width="24" height="16" border="0" style="margin-top: 5px;" />
+
+					<div style="display:none" id="FileTypeHelp_%%GLOBAL_ProductFieldKey%%"></div>
+	<!--			</td>
+
+				<td style="width: 100px;">%%LNG_FieldFileSize%%:</td>
+				<td name="FileTypeContainer_%%GLOBAL_ProductFieldKey%%"> -->
+
+
+					<input name="productFieldFileSize[%%GLOBAL_ProductFieldKey%%]" value="%%GLOBAL_ProductFieldFileSize%%" size ="4"  class="productFieldFileSize Field50  %%GLOBAL_FileSizeClass%%"  onfocus = "HideFieldHelpText(this);"   onblur = "ShowFieldHelpText(this, '%%LNG_FieldFileSize%%');" /> KB
+
+					<img onmouseout="HideHelp('FileSizeHelp_%%GLOBAL_ProductFieldKey%%');" onmouseover="ShowHelp('FileSizeHelp_%%GLOBAL_ProductFieldKey%%', '%%LNG_FieldFileSize%%', '%%LNG_FieldFileSizeHelp%%')" src="images/help.gif" width="24" height="16" border="0" style="margin-top: 5px;" />
+
+					<div style="display:none" id="FileSizeHelp_%%GLOBAL_ProductFieldKey%%"></div>
+				</div>
+			</td>
+			<td align="left"  style="width: 50px;">
+
+				<a href="#" onclick="return AddProductField(%%GLOBAL_ProductFieldKey%%);"><img src="images/addicon.gif" alt="Add" border="0"  /></a>
+
+				<a href="#" onclick="return DelProductField(%%GLOBAL_ProductFieldKey%%);" style="display: %%GLOBAL_HideProductFieldDelete%%;"><img src="images/delicon.gif" alt="Del" border="0" /></a>
+
+			</td>
+</tr>

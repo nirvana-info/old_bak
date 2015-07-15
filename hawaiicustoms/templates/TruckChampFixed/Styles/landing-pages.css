@@ -1,0 +1,494 @@
+@charset "utf-8";
+/* category landing pages */
+
+/* emergency hide MMY */
+
+/*#MyVehicleArea {
+	display: none;
+}*/
+
+h1#lp_tonneau {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/tonneau-covers.jpg') no-repeat;
+}
+
+h1#lp_bullbars {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/bull-bars.jpg') no-repeat;
+}
+
+h1#lp_exhaust {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/exhaust-systems.jpg') no-repeat;
+}
+
+h1#lp_camgears {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/cam-gears.jpg') no-repeat;
+}
+
+h1#lp_cat {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/catalytic-converters.jpg') no-repeat;
+}
+
+h1#lp_fenderflares {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/fender-flares.jpg') no-repeat;
+}
+
+h1#lp_floor {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/floor-protection.jpg') no-repeat;
+}
+
+h1#lp_nerfbars {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/nerf-bars.jpg') no-repeat;
+}
+
+h1#lp_winches {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/winches.jpg') no-repeat;
+}
+
+h1#lp_bugshields {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/bug-shields.jpg') no-repeat;
+}
+
+h1#lp_airintakes {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/air-intakes.jpg') no-repeat;
+}
+
+h1#lp_airfilters {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/air-filters.jpg') no-repeat;
+}
+
+h1#lp_pchips {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/performance-chips.jpg') no-repeat;
+}
+
+h1#lp_tguard {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/taillight-guard.jpg') no-repeat;
+}
+
+h1#lp_truckbedaccessories {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/truck-bed-accessories.jpg') no-repeat;
+}
+
+
+#lp_backright {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/landing-page-back.gif') repeat-x;
+	height: 241px;
+}
+
+#lp_special_offers {
+	width: 716px;
+	height: 145px;
+	margin: 0;
+	padding: 0px 20px 20px 20px;
+	background: url('../../../images/landing-pages/special-offers-back.jpg') no-repeat;
+}
+
+#lp_special_offers p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#lp_equation {
+	margin-top: 40px;
+}
+
+#lp_coupon {
+	float: right;
+	margin-right: 20px;
+	border: 0;
+}
+
+#lp_coupon_only {
+	width: 656px;
+	height: 105px;
+	margin: 0;
+	padding: 0px 20px 20px 80px;
+	background: url('../../../images/landing-pages/special-offers-back-clear.jpg') no-repeat;
+}
+
+#lp_full_coupon {
+	border: 0;
+}
+
+/* Best Offer */
+
+#lp_bestoffer {
+	height: 100px;
+}
+
+
+#lp_bestoffer_banner {
+	float: left;
+}
+
+
+/* Top 5 wife trouble */
+
+#t5_guy_image {
+	float: left;
+	margin-right: 2em;
+	width: 214px;
+	height: 250px;
+}
+
+#t5_girl_image {
+	float: left;
+	margin-right: 2em;
+	width: 214px;
+}
+
+#t5_guy_text {
+	min-height: 200px;
+}
+
+#t5_guy_text ol li{
+	padding-bottom: 10px;
+}
+
+
+#t5_girl_text {
+	min-height: 200px;
+}
+
+#t5_girl_text ol li{
+	padding-bottom: 10px;
+}
+
+#t5_clear {
+	clear: both;
+}
+
+/* Holiday Gift Card Offer, Bedrug */
+
+#gift_banner {
+	float: left;
+	margin-right: 20px;
+}
+
+#gift_card {
+	margin-bottom: 20px;
+}
+
+/* Brand Landing Pages */
+
+h1#br_backrack {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/backrack.jpg') no-repeat;
+}
+
+h1#br_bak {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/bak.jpg') no-repeat;
+}
+
+h1#br_bedrug {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/bedrug.jpg') no-repeat;
+}
+
+h1#br_duha {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/du-ha.jpg') no-repeat;
+}
+
+h1#br_edge {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/edge.jpg') no-repeat;
+}
+
+h1#br_ezload {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/ez-load.jpg') no-repeat;
+}
+
+h1#br_firestone {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/firestone.jpg') no-repeat;
+}
+
+h1#br_husky {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/husky.jpg') no-repeat;
+}
+
+h1#br_lrv {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/lrv.jpg') no-repeat;
+}
+
+h1#br_magnaflow {
+	text-indent : -999em;
+	width: 751px;
+	height: 220px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/magnaflow.jpg') no-repeat;
+}
+
+#magnaflow-sounds ul {
+	list-style: none;
+}
+
+#magnaflow-sounds ul li {
+	float: left;
+	padding: 5px 15px 5px 15px;
+	text-align: center;
+	border-left: dotted 1px black;
+}
+
+#magnaflow-sounds ul li:first-child {
+	border-left: none;
+}
+
+#magnaflow-sounds-fix {
+	width: 600px;
+}
+
+#br_background {
+	width: 100%;
+	margin: -20px 0 0 -10px;
+	padding: 0;
+	background: url('../../../images/brand-landing-pages/brand-back.jpg') repeat-x;
+}
+
+/* Styles added by Bob, I assume */
+
+#tonneau-types { 
+	position: absolute; 
+	left: 500px; 
+	top: 123px;
+	width: 300px;
+	height: 175px;
+}
+#tonneau-types h3 {
+	text-indent : -999em;
+	background: url('../../../images/landing-pages/six-types.gif') no-repeat;
+	height: 25px;
+}
+#tonneau-types div {
+	width: 90px;
+	float: left;
+}
+#tonneau-types img{
+    border: none;
+	margin: 3px;
+}
+
+/* Gas Calculator Styles */
+#gas-pump {
+	float: right;
+}
+
+#gascalc {
+	padding: 5px;
+	margin-top: 10px;
+	position: relative;
+	background: transparent url('../../../images/design23/orange-gradient2.gif') bottom left;
+	border: 1px dotted #ffcc66;
+}
+#gascalc form {
+	margin-top: 5px;
+	height: 100px;
+}
+
+#gascalc label {
+	position: absolute;
+	margin: 3px 5px 3px 10px;
+	text-align: left;
+	width: 120px;
+}
+#gascalc input#gallon, #gascalc #mpg, #gascalc #milesdriven {
+	height: 15px;
+	margin: 5px 0 0 140px;
+}
+#gascalc #mfs, #gascalc #afs {
+	font-size: 1.1em;	
+	font-weight: bold;
+}
+#gascalc #mfs {
+	position: absolute;
+	top: 40px;
+	left: 250px;
+	}
+#gascalc #afs {
+	position: absolute;
+	top: 70px;
+	left: 250px;
+	}
+#gascalc #mfs span, #gascalc #afs span{
+	font-size: 1.2em;
+	color: red;
+	font-weight:bold;
+}
+#gascalc p input {
+	position: relative;
+	left: 10px;
+	width: 50px;
+	margin-top: 6px;
+
+}
+#gascalc h3{
+	color: blue;
+	font-size: 19px;
+	}
+
+#gascalc h3:first-child {
+	margin-left: 10px;
+}
+h3.gsc {
+	position: absolute;
+	left: 250px;
+	top: 5px;
+}
+#gascalc p.details {
+	position: absolute;
+	top: 115px;
+	right: 10px;
+}
+/* end Gas Calculator Styles */
+
+/* Begin styles for pricing for Nerf Bars */
+#nerf-prices {
+	position: relative;
+	top: 0;
+	margin-bottom: 30px;
+}
+#nerf-prices ul {
+	padding: 0;
+	margin: 10px 0;
+}
+#nerf-prices li {
+	display: inline;
+	list-style: none;
+	font-size: 24px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0px 3px;
+	padding: 0;
+}
+.nerf-price {
+	color:#F60;
+	font-weight: bold;
+	font-size: 26px;
+}
+#nerf-prices .font-smaller {
+	font-size: 18px;
+	font-weight: normal;
+	padding-top: 5px;
+}
+#nerf-prices li a{
+	font-size: 18px;
+}

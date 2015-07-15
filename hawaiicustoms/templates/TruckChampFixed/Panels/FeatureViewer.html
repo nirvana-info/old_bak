@@ -1,0 +1,31 @@
+<script src="/javascript/jquery-1.6.2.min.js"></script>
+<script>window.jQuery || document.write('<script src="/javascript/jquery-1.6.2.min.js"><\/script>')</script>
+
+<link rel="stylesheet" href="/feature-viewer/css/anythingslider.css">
+<script src="/feature-viewer/js/jquery.anythingslider.js"></script>
+
+<script>
+// DOM Ready
+jQuery.noConflict();
+(function($) { 
+  $(function() {
+	  $('#slider').anythingSlider({
+			buildArrows : false,
+			autoPlay : true,
+			delay : 6000
+		});
+  });
+})(jQuery);
+
+</script>
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="/feature-viewer/css/anythingslider-ie.css" type="text/css" media="screen" />
+<![endif]-->
+
+<ul id="slider">
+	<li><a href="/nerf-bars"><img src="/feature-viewer/banners/launch/nerf-bars.jpg" alt="TruckChamp Nerf Bars"></a></li>
+	<li><a href="/bull-bars-&-grille-guards"><img src="/feature-viewer/banners/launch/bull-bars.jpg" alt="TruckChamp Bull Bars"></a></li>
+	<li><a href="/construction-%252d-ladder-racks"><img src="/feature-viewer/banners/launch/ladder-rack.jpg" alt="TruckChamp Ladder Rack"></a></li>
+	<li><a href="/side-view-mirrors/subcategory/side-view-mirror"><img src="/feature-viewer/banners/launch/replacement-mirrors.jpg" alt="BestInAUTO Replacement Mirrors"></a></li>
+</ul>
+<br />

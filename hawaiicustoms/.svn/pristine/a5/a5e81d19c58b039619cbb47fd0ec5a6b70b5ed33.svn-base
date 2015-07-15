@@ -1,0 +1,7 @@
+<div class="Block Moveable" id="ProductManufacturer">
+	<h3>%%LNG_ManufacturerInformation%%</h3>
+	<div class="ProductWarrantyContainer">
+		%%GLOBAL_ProductManufacturer%%
+	</div>
+		<hr style="%%GLOBAL_HideSectionSeparator%%" />
+</div>

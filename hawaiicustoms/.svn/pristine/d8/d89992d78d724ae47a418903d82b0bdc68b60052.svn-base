@@ -1,0 +1,53 @@
+<div class="Block Moveable PurchaseGiftCertificate" id="DefectReportForm">
+    <h2>%%GLOBAL_DefectReportTitle%%</h2>
+    <div class="BlockContent">
+        <p>
+            %%LNG_DefectReportDescription%%  
+        </p>
+        <form method="post" action="%%GLOBAL_ShopPath%%/defectreport.php?action=editsave" onsubmit="return CheckDefectReportForm()"  style="display: %%GLOBAL_HideDefectReportForm%%;" id="frmDefectReport">
+
+            <div class="FormContainer HorizontalFormContainer">
+                <dl>
+                    <dt><span class="Required">*</span> %%LNG_ProblemURL%%:</dt>
+                    <dd>
+                        <textarea name="url" id="url" rows="5" cols="40" class="Field350">%%GLOBAL_url%%</textarea> 
+                    </dd>
+                    <dt><span class="Required">*</span> %%LNG_Description%%:</dt>
+                    <dd>
+                        <textarea name="description" id="description" rows="5" cols="40" class="Field350">%%GLOBAL_description%%</textarea> 
+                        <input type="hidden" value="%%GLOBAL_Id%%" name="Id" id="Id">
+                    </dd>
+                </dl>
+                <p class="Submit">
+                    <input type="submit" value="%%LNG_Submit%%" />
+                    <input type="button" value="%%LNG_Cancel%%" onclick="ConfirmCancel()" />
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+function CheckDefectReportForm() {
+    if($('#url').val() == "") {
+        alert('%%LNG_EnterUrl%%');
+        $('#url').focus();
+        $('#url').select();
+        return false;
+    }
+    if($('#description').val() == "") {
+        alert('%%LNG_EnterDescription%%');
+        $('#description').focus();
+        $('#description').select();
+        return false;
+    }
+
+    return true;
+}
+function ConfirmCancel()
+{
+    if(confirm('%%LNG_CancelMessage%%'))
+        document.location.href='defectreport.php?action=reports';
+    else
+        return false;
+}
+</script>

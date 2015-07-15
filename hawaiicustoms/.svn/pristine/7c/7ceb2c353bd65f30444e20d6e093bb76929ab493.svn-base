@@ -1,0 +1,69 @@
+<div id="tc-static-featured-brands">
+<h2>Favorite Truck Accessory Brands</h2>
+<ul class="CategoryList">
+	<li class="Odd">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=K%26N" ><img src="/images/frontpage/kn-logo.jpg" alt="K & N" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=K%26N" class="CNameLink">K &amp; N</a>
+		</div>
+	</li>
+	<li class="Even">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=Extang" ><img src="/images/frontpage/extang-logo.jpg" alt="Extang" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=Extang" class="CNameLink">Extang</a>
+		</div>
+	</li>
+	<li class="Odd">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=Edge" ><img src="/images/frontpage/edge-logo.jpg" alt="Edge" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=Edge" class="CNameLink">Edge</a>
+		</div>
+	</li>
+	<li class="Even">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=Magnaflow" ><img src="/images/frontpage/magnaflow-logo.jpg" alt="Magnaflow" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=Magnaflow" class="CNameLink">Magnaflow</a>
+		</div>
+	</li>
+	<li class="Odd">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=Westin" ><img src="/images/frontpage/westin-logo.jpg" alt="Westin" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=Westin" class="CNameLink">Westin</a>
+		</div>
+	</li>
+	<li class="Even">
+		<div class="CategoryImage">
+			<a href="search.php?search_query=Warn" ><img src="/images/frontpage/warn-logo.jpg" alt="Warn" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="search.php?search_query=Warn" class="CNameLink">Warn</a>
+		</div>
+	</li>
+	<li class="Odd">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=MBRP" ><img src="/images/frontpage/mbrp-logo.jpg" alt="MBRP" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=MBRP" class="CNameLink">MBRP</a>
+		</div>
+	</li>
+	<li class="Even">
+		<div class="CategoryImage">
+			<a href="/search.php?search_query=BakFlip" ><img src="/images/frontpage/bak-logo.jpg" alt="Bak" /></a>
+		</div>
+		<div class="CategoryDetails">
+			<a href="/search.php?search_query=BakFlip" class="CNameLink">Bak</a>
+		</div>
+	</li>
+</ul>
+</div>

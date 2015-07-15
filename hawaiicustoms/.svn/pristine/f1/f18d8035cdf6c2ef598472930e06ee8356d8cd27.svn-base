@@ -1,0 +1,11 @@
+<div %%GLOBAL_FormFieldDefaultArgs%%>
+	<select name="%%GLOBAL_FormFieldMonthFieldName%%" %%GLOBAL_FormFieldMonthFieldArgs%%>
+		%%GLOBAL_FormFieldMonthOptions%%
+	</select>
+	<select name="%%GLOBAL_FormFieldDayFieldName%%" %%GLOBAL_FormFieldDayFieldArgs%%>
+		%%GLOBAL_FormFieldDayOptions%%
+	</select>
+	<select name="%%GLOBAL_FormFieldYearFieldName%%" %%GLOBAL_FormFieldYearFieldArgs%%>
+		%%GLOBAL_FormFieldYearOptions%%
+	</select>
+</div>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<title type="html"><![CDATA[TruckChamp: Latest News]]></title>
+	<subtitle type="html"><![CDATA[The latest news from TruckChamp.]]></subtitle>
+	<link rel="self" href="http://70.90.149.161/rss.php?action=newblogs&amp;type=atom" />
+	<id>http://70.90.149.161</id>
+	<updated>2011-05-25T09:21:40Z</updated>
+</feed>

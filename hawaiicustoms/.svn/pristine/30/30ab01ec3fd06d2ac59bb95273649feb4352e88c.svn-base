@@ -1,0 +1,23 @@
+<table class="SubcatProdItem" cellpadding="0" cellspacing="0">    
+    <tr class='%%GLOBAL_RowColor%%'>
+         <td class="prodimage"  align='center'>
+			%%GLOBAL_ProductThumb%%<br>%%GLOBAL_ProdCode%%
+		</td>
+		<td align="left"  valign="top" style="padding:8px 0px 0px 8px" class="prodqualifiers">
+			%%GLOBAL_VehicleOptions%%
+			%%GLOBAL_ProdOptions%%
+		</td>
+		<td class="prodbrandseries" align="center">%%GLOBAL_BrandName%%</td>
+		<td class="prodpricedetails" align='center'>
+			%%GLOBAL_ProductPrice%%
+			<a href="%%GLOBAL_ProductURL%%">%%GLOBAL_ProductAddText%%</a>
+			<a href="%%GLOBAL_CartURL%%"><img src="%%GLOBAL_ShopPath%%/templates/default/images/add-to-cart.gif" border=0></a>
+			<span style="display: %%GLOBAL_HideOfferButton%%;">
+			<a href='/makeaoffer.php?action=add&product_id=%%GLOBAL_ProductId%%' >Make an Offer</a>
+			</span>
+		</td>
+    </tr>
+</table>
+<div class="SubcatProdItemGap" class="SubcatProdItemGap">
+&nbsp;
+</div> 

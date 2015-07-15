@@ -1,0 +1,1 @@
+<textarea name="%%GLOBAL_WysiwygId%%" id="%%GLOBAL_WysiwygId%%" style="padding: 0; width: %%GLOBAL_WysiwygWidth%%; height: %%GLOBAL_WysiwygHeight%%;">%%GLOBAL_WysiwygValue%%</textarea>

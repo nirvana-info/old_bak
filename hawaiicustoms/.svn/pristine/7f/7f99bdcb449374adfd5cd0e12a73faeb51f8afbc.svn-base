@@ -1,0 +1,910 @@
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery-ui-1.7.3.custom.min.js"></script>
+<style type="text/css">
+    #dialog-notMatch,#dialog-pqvq,#dialog-search,#dialog-confirm{
+        font-size:12px;
+    }
+    .ui-widget-header .ui-icon {
+        background-image:url("%%GLOBAL_ShopPath%%/images/ui-icons_222222_256x240.png");
+    }
+
+    .ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix{
+        display:none;
+    }
+
+    .ui-icon ui-icon-closethick{
+        display:none;
+    }
+
+    ._show_productname{
+        font-weight:bold;
+    }
+    tr{
+        height:25px;
+    }
+    
+    .td_content{
+    	font-family: Verdana, Arial, Helvetica, sans-serif;
+    	font-size:16px;
+    	padding-left:20px;
+    }
+    
+    .td_dialog1_bgimg{
+    	background:url('%%GLOBAL_PATH%%/popup_images/2A_01.jpg');
+    	height:38px;
+    }
+    
+    .td_dialog2_bgimg{
+    	background:url('%%GLOBAL_PATH%%/popup_images/1B_01.jpg');
+    	height:38px;
+    }
+    
+    .td_dialog3_bgimg{
+    	background:url('%%GLOBAL_PATH%%/popup_images/1B_01-short.jpg');
+    	height:38px;
+    }
+
+</style>
+
+<div class="Block Moveable PagingTop" id="SearchPagingTop">
+    <div class="BlockContent">%%SNIPPET_SearchPaging%%</div>
+</div>
+
+<div id="dialog-notMatch" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+            <td class="td_dialog1_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="dialog_close();">Close</a></span></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td style="font-family: Verdana, Arial, Helvetica, sans-serif;font-weight:bold;font-size:16px;padding-left:50px;"><strong>Your vehicle <span class="_show_vehicle"></span> doesn't match with the selected product:
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="_show_productname" style="font-family: Verdana, Arial, Helvetica, sans-serif;font-weight:bold;font-size:16px;padding-left:50px;"></td>
+                    </tr>
+
+                </table></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="166" height="50" alt="" border=0></td>
+                        <td><a href="javascript:void(0);" class="_show_cartURL"><img src="%%GLOBAL_PATH%%/popup_images/1B_14.jpg" width="166" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);" onclick="SetDialogCookie();" class="_show_research" ><img src="%%GLOBAL_PATH%%/popup_images/searchagainbutton166.jpg" width="164" height="50" alt="" border=0></a></td>
+
+
+                    </tr>
+                </table></td>
+        </tr>
+
+    </table>
+</div>
+
+<div id="dialog-pqvq" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+           <td class="td_dialog2_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="disableImg();dialog_close();">Close</a></span></td>
+        </tr>
+        <tr>
+            <td  height="60" align="center">
+            <a href="javascript:void(0);" onclick="showDialog(3);" style="color: blue; font-size: 20px; font-weight: bold;" title="This product may not be available for your vehicle. If you look in the dropdowns and can&#39;t find your vehicle, then click on &#39;Don&#39;t See Your Vehicle? Click Here&#39;. Then you will be able to find your vehicle and the system will search for products that fit your vehicle.">Don't See Your Vehicle? Click Here</a>&nbsp;
+            <a href="javascript:void(0);" onclick="showDialog(3);"><img src="%%GLOBAL_PATH%%/popup_images/1B_qbutton3.jpg" height="30px" align="top" border="0" title="This product may not be available for your vehicle. If you look in the dropdowns and can&#39;t find your vehicle, then click on &#39;Don&#39;t See Your Vehicle? Click Here&#39;. Then you will be able to find your vehicle and the system will search for products that fit your vehicle."></a>
+            </td>
+        </tr>  
+        <tr>
+            <td><img src="%%GLOBAL_PATH%%/popup_images/1B_02.jpg" width="715" height="36" alt=""></td>
+        </tr>
+        <tr>
+            <td><table width="715" height="39" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td width="44"><img src="%%GLOBAL_PATH%%/popup_images/1B_03.jpg" width="44" height="39" alt=""></td>
+                        <td width="219">
+                            <label>
+
+                                <select name="searchyear"  class="_searchyear" onchange="$('#dialog-pqvq ._searchyear').val(this.value);getSearchOptionsClass('_','year',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);disableImg();redirectYMM(this.value);"></select>
+                            </label>
+                        </td>
+                        <td width="217">
+                            <label>
+                                <select name="searchmake"  class="_searchmake" onchange="$('#dialog-pqvq ._searchmake').val(this.value);getSearchOptionsClass('_','make',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);changeImg();redirectYMM(this.value);"></select>
+                            </label>
+                        </td>
+                        <td width="222">
+                            <label>
+                                <select name="searchmodel"  class="_searchmodel" onchange="$('#dialog-pqvq ._searchmodel').val(this.value);getSearchOptionsClass('_','model',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);changeImg();redirectYMM(this.value);" ></select>
+                            </label>
+                        </td>
+                        <td widht="39"><img src="%%GLOBAL_PATH%%/popup_images/1B_07.jpg" width="13" height="39" alt=""></td>
+                    </tr>
+                </table></td>
+        </tr>
+        <!--tr>
+            <td align=center><a href="javascript:void(0);" onclick="showDialog(3);" style="color: blue; font-size: 16px; font-weight: bold;">Don't See Your Vehicle? Click Here<a><br><br></td>
+        </tr-->
+        <tr>
+            <td><img src="%%GLOBAL_PATH%%/popup_images/1B_08.jpg" width="715" height="35" alt=""></td>
+        </tr>
+        <tr>
+            <td><table width="715" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td width="433" class="td_content"><p style="font-size:small;">
+                                <span class="_show_pqvq">&nbsp;</span>
+                            </p></td>
+                        <td width="282"><a href="javascript:void(0);" onclick="showDialog(3);"><img src="%%GLOBAL_PATH%%/popup_images/1B_10c.jpg" width="282" height="102" alt="" title="This product may not be available for your vehicle. If you look in the dropdowns and can&#39;t find your vehicle, then click on &#39;Don&#39;t See Your Vehicle? Click Here&#39;. Then you will be able to find your vehicle and the system will search for products that fit your vehicle." border=0></a></td>
+                    </tr>
+                </table></td>
+        </tr>
+        <tr>
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="166" height="50" alt="" border=0></td>
+
+                        <td><a href="javascript:void(0);" onclick="dialog_close();"><img src="%%GLOBAL_PATH%%/popup_images/1B_13.jpg" width="164" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);" class="_show_hide_carturl" onclick="return checkYMM('_',0);"><img id="AddCart_button" src="%%GLOBAL_PATH%%/popup_images/1B_14_grey.jpg" width="166" height="50" alt="" border=0></a></td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</div>
+
+<div id="dialog-search" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+            <td class="td_dialog1_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="dialog_close();">Close</a></span></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="50">&nbsp;</td><td style="font-family: Verdana, Arial, Helvetica, sans-serif;font-size:16px;"><strong>The product may not be available for your specific vehicle.<br>Please Set your vehicle and search products in <span class="_show_brandname"></span> <span class="_show_seriesname"></span> again:</strong></td>
+                    </tr>
+                </table></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><img src="%%GLOBAL_ShopPath%%/popup_images/1B_02.jpg" width="715" height="36" alt=""></td>
+        </tr>
+
+        <tr>
+            <td><table width="715" height="39" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td width="44"><img src="%%GLOBAL_ShopPath%%/popup_images/1B_03.jpg" width="44" height="39" alt=""></td>
+                        <td width="219">
+                            <label>
+                                <select name="searchyear"  class="__searchyear" onchange="$('#dialog-search .__searchyear').val(this.value);getSearchOptionsClass('__','year',0,%%GLOBAL_UniversalCat%%);">%%GLOBAL_YearList%%</select>
+                            </label>
+                        </td>
+                        <td width="217">
+                            <label>
+                                <select name="searchmake"  class="__searchmake" onchange="$('#dialog-search .__searchmake').val(this.value);getSearchOptionsClass('__','make',0,%%GLOBAL_UniversalCat%%)">%%GLOBAL_MakeList%%</select>
+                            </label>
+                        </td>
+                        <td width="222">
+                            <label>
+                                <select name="searchmodel" class="__searchmodel" onchange="$('#dialog-search .__searchmodel').val(this.value);getSearchOptionsClass('__','model',0,%%GLOBAL_UniversalCat%%)">%%GLOBAL_ModelList%%</select>
+                            </label>
+                        </td>
+                        <td widht="39"><img src="%%GLOBAL_ShopPath%%/popup_images/1B_07.jpg" width="13" height="39" alt=""></td>
+                    </tr>
+                </table></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_ShopPath%%/popup_images/1B_11.jpg" width="166" height="50" alt=""></td>
+                        <td><img src="%%GLOBAL_ShopPath%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><a href="javascript:void(0);" onclick="setYMMClass('__',1);"><img src="%%GLOBAL_ShopPath%%/popup_images/searchagainbutton166.jpg" width="166" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);" onclick="dialog_close();"><img src="%%GLOBAL_ShopPath%%/popup_images/1B_13.jpg" width="164" height="50" alt="" border=0></a></td>
+                    </tr>
+                </table></td>
+
+        </tr>
+    </table>
+</div>
+
+<div id="dialog-confirm" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+            <td class="td_dialog2_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="dialog_close();">Close</a></span></td>
+        </tr>
+
+        <tr>
+            <td class="td_content"><strong>Please verify your vehicle:</strong></td>
+        </tr>
+        <tr>
+            <td>
+                <table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="50">&nbsp;</td>
+                        <td class="td_content">
+                            <strong><span id="confirm_show_vehicle" class="_show_vehicle"></span></strong>
+                        </td>
+                    </tr>
+                </table></td>
+        </tr>
+
+        <tr>
+            <td><img src="%%GLOBAL_PATH%%/popup_images/1B_08.jpg" width="715" height="35" alt=""></td>
+        </tr>
+        <tr>
+            <td><table width="715" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td width="433" class="td_content"><p style="font-size:small;">
+                                <span class="_show_pqvq">&nbsp;</span>
+                            </p></td>
+
+                        <td width="282"><!--<a href="javascript:void(0);" onclick="showDialog(3);"><img src="%%GLOBAL_PATH%%/popup_images/1B_10.jpg" width="282" height="102" alt="" border=0></a>--></td>
+                    </tr>
+                </table></td>
+        </tr>
+        <tr>
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="166" height="50" alt=""></td>
+                        <!--<td><a href="%%GLOBAL_ShopPath%%"><img src="%%GLOBAL_PATH%%/popup_images/1B_12.jpg" width="166" height="50" alt="" border=0></a></td>-->
+
+                        <td><a href="javascript:void(0);" onclick="dialog_close();"><img src="%%GLOBAL_PATH%%/popup_images/1B_13.jpg" width="164" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);" class="_show_cartURL"><img src="%%GLOBAL_PATH%%/popup_images/1B_14.jpg" width="166" height="50" alt="" border=0></a></td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</div>
+
+<div id="dialog-notFound" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+            <td class="td_dialog1_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="dialog_close();">Close</a></span></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td><table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+
+                    <tr><td width=20px>&nbsp;</td>
+                        <td style="font-family: Verdana, Arial, Helvetica, sans-serif;"><strong>Sorry, the %%GLOBAL_dialogSeriesname%%  
+                            is not available for your %%GLOBAL_dialogVehicle%%. 
+                            However, there may be other %%GLOBAL_dialogCategoryname%% available for your vehicle: 
+                            </strong>
+
+                        </td>
+                    </tr>
+
+                </table><br><br><br></td>
+        </tr>
+
+        <tr>
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><a href="%%GLOBAL_dialogCategorylink%%" ><img src="%%GLOBAL_PATH%%/popup_images/2B_12.jpg" width="166" height="50" alt="" border=0></a></td>
+                        <td><a href="%%GLOBAL_ShopPath%%" onclick="clearCookie();"><img src="%%GLOBAL_PATH%%/popup_images/2B_13.jpg" width="166" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);" onclick="dialog_close();clearCookie();"><img src="%%GLOBAL_PATH%%/popup_images/1B_13.jpg" width="164" height="50" alt="" border=0></a></td>
+                    </tr>
+                </table></td>
+        </tr>
+
+    </table>
+</div>
+
+
+<div id="dialog-alert" style="display:none;">
+<table align="center" width="450" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+
+  <tr>
+    <td><table align="center" width="400" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" style="font-family: Verdana, Arial, Helvetica, sans-serif;"><p><strong>More information is needed.<br>
+          Please complete your selection.
+        </strong></p></td>
+      </tr>
+    </table></td>
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><table width="450" height="50" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center"><a href="javascript:void(0);" onclick="dialog_close();showDialog(2);"><img src="%%GLOBAL_ShopPath%%/popup_images/okbutton166.jpg" width="166" height="50" alt="" border=0></a></td>
+      </tr>
+    </table></td>
+
+  </tr>
+</table>
+</div>
+
+<div id="dialog-application" style="display:none;">
+    <table align="center" width="715" border="0" cellspacing="0" cellpadding="0" bgcolor="#C5E8E7" style="border:2px solid black;">
+        <tr>
+           <td class="td_dialog3_bgimg" align="right"><span style="padding-right:8px;"><a href="javascript:void(0);" onclick="disableImg();dialog_close();">Close</a></span></td>
+        </tr>
+        <tr>
+            <td  height="60" align="center">
+            <a href="javascript:void(0);" onclick="dialog_close();showDialog(3);" style="color: blue; font-size: 20px; font-weight: bold;" title="This product may not be available for your vehicle. If you look in the dropdowns and can&#39;t find your vehicle, then click on &#39;Don&#39;t See Your Vehicle? Click Here&#39;. Then you will be able to find your vehicle and the system will search for products that fit your vehicle.">Don't See Your Vehicle? Click Here</a>&nbsp;
+            <a href="javascript:void(0);" onclick="dialog_close();showDialog(3);"><img src="%%GLOBAL_PATH%%/popup_images/1B_qbutton3.jpg" height="30px" align="top" border="0" title="This product may not be available for your vehicle. If you look in the dropdowns and can&#39;t find your vehicle, then click on &#39;Don&#39;t See Your Vehicle? Click Here&#39;. Then you will be able to find your vehicle and the system will search for products that fit your vehicle."></a>
+            </td>
+        </tr>  
+        <tr>
+            <td><img src="%%GLOBAL_PATH%%/popup_images/1B_02.jpg" width="715" height="36" alt=""></td>
+        </tr>
+        <tr>
+            <td><table width="715" height="39" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top">
+                        <td width="44"><img src="%%GLOBAL_PATH%%/popup_images/1B_03.jpg" width="44" height="39" alt=""></td>
+                        <td width="219">
+                            <label>
+
+                                <select name="searchyear"  class="application_searchyear" onchange="$(this).val(this.value);getSearchOptionsClass('application_','year',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);disableApplicationImg();redirectYMM(this.value);"></select>
+                            </label>
+                        </td>
+                        <td width="217">
+                            <label>
+                                <select name="searchmake"  class="application_searchmake" onchange="$(this).val(this.value);getSearchOptionsClass('application_','make',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);changeApplicationImg();redirectYMM(this.value);"></select>
+                            </label>
+                        </td>
+                        <td width="222">
+                            <label>
+                                <select name="searchmodel"  class="application_searchmodel" onchange="$(this).val(this.value);getSearchOptionsClass('application_','model',$('#showproductid').val(),%%GLOBAL_UniversalCat%%);changeApplicationImg();redirectYMM(this.value);" ></select>
+                            </label>
+                        </td>
+                        <td widht="39"><img src="%%GLOBAL_PATH%%/popup_images/1B_07.jpg" width="13" height="39" alt=""></td>
+                    </tr>
+                </table></td>
+        </tr>
+               
+        <tr>
+            <td><table width="715" height="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="219" height="50" alt=""></td>
+                        <td><img src="%%GLOBAL_PATH%%/popup_images/1B_11.jpg" width="166" height="50" alt="" border=0></td>
+
+                        <td><a href="javascript:void(0);" onclick="dialog_close();"><img src="%%GLOBAL_PATH%%/popup_images/1B_13.jpg" width="164" height="50" alt="" border=0></a></td>
+                        <td><a href="javascript:void(0);"  onclick="return checkApplicationYMM('application_',1);"><img id="application_button" src="%%GLOBAL_PATH%%/popup_images/SetVehicleButtonHide.jpg" width="166" height="50" alt="" border=0></a></td>
+                    </tr>
+                </table></td>
+        </tr>
+    </table>
+</div>
+
+<input type="hidden" name="pqvqSelect" id="pqvqSelect" value="%%GLOBAL_pqvqSearch%%">
+<input type="hidden" name="pqvqSelect" id="showproductid" value="0">
+<input type="hidden" name="search_prefix" id="search_prefix" value="">
+<input type="hidden" name="ymmisselect" id="ymmisselect" value="0">
+<input type="hidden" name="Displaydialog" id="Displaydialog" value="%%GLOBAL_Displaydialog%%">
+
+<input type="hidden" name="brandname" id="brandname" value="">
+<input type="hidden" name="seriesname" id="seriesname" value="">
+<input type="hidden" name="categoryname" id="categoryname" value="">
+<input type="hidden" name="category_link" id="category_link" value="">
+<input type="hidden" name="hide_carturl" id="hide_carturl" value="">
+<input type="hidden" name="detail_url" id="detail_url" value="%%GLOBAL_detailUrl%%">
+
+<script language="javascript">
+
+    jQuery.noConflict();
+    (function ($) {
+        var $dialogPQVQ = $("#dialog-pqvq");
+        var $dialogNotMatch = $("#dialog-notMatch");
+        var $dialogSearch = $("#dialog-search");
+        var $dialogConfirm = $("#dialog-confirm");
+        var $dialogNotFound = $("#dialog-notFound");
+        var displaydialog = $("#Displaydialog");
+        var $dialogAlert = $("#dialog-alert");
+        var $dialogApplication = $("#dialog-application");;
+
+        
+        var $AddCart_button = $('#AddCart_button');
+        var $application_button = $('#application_button');
+        var $ApplicationChart_Tab = $("#ApplicationChart_Tab");
+
+        var $csVehicle= $('#confirm_show_vehicle');
+        var $frm = $('#product_deteail_form');
+        var $ymmisselect = $('#ymmisselect');
+        window.dialog_close = function(){
+            $dialogPQVQ.dialog('close');
+            $dialogNotMatch.dialog('close');
+            $dialogSearch.dialog('close');
+            $dialogConfirm.dialog('close');
+            $dialogNotFound.dialog('close');
+            $dialogAlert.dialog('close');
+            $dialogApplication.dialog('close');
+
+        }
+
+		window.clearCookie = function(){
+			document.cookie = 'showDialog=; expires=; path=/;';
+		}
+
+		//APPLICATION CHECK
+        window.ClickApplicationButton = function(productid){
+			
+            var params = "w=checkproduct&productid="+productid;
+            if(productid >= 0){
+            	$('#showproductid').val(productid);
+                $.ajax({
+                    type: "GET",
+                    url: "%%GLOBAL_ShopPath%%/remote.php",
+                    data: params,
+                    dataType: 'json',
+                    success: function(msg){
+						     if(msg['showApplication']){
+                                //pqvq-ymm-year.
+                                if(typeof(msg['year_option']) != 'undefined'){
+                                    $('.application_searchyear').find('option').remove().end();
+                                    for(var i=0;i<=msg['year_option'].length;i++){
+                                        $('.application_searchyear').append(msg['year_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var yearLastItem = '<option value="1">My Year Not Showing Here</option>';
+                                    $('.application_searchyear').append(yearLastItem);
+                                    //$('._searchyear_filter').append(msg['year_option']);
+                                }
+
+                                //pqvq-ymm-make.
+                                if(typeof(msg['make_option']) != 'undefined'){
+                                    $('.application_searchmake').find('option').remove().end();
+                                    for(var i=0;i<=msg['make_option'].length;i++){
+                                        $('.application_searchmake').append(msg['make_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var makeLastItem = '<option value="1">My Make Not Showing Here</option>';
+                                    $('.application_searchmake').append(makeLastItem);
+                                }
+
+                                //pqvq-ymm-model.
+                                //if(typeof(msg['make']) != 'undefined' && msg['make'] != '' & msg['model_option'].length > 0){
+                                if(typeof(msg['model_option']) != 'undefined'){
+                                    $('.application_searchmodel').find('option').remove().end();
+                                    for(var i=0;i<=msg['model_option'].length;i++){
+                                        $('.application_searchmodel').append(msg['model_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var modelLastItem = '<option value="1">My Model Not Showing Here</option>';
+                                    $('.application_searchmodel').append(modelLastItem);
+                                }
+
+    							//enable img.
+                                if(msg['detailimg']){
+                                	enableApplicationImg();
+                                }
+
+                                //show dialog 9.
+								showDialog(9);
+                           }
+                   
+                    }
+
+                });
+            }
+          
+        }
+		
+		//ADD TO CART CHECK.
+        window.ClickCartButton = function(productid,refer){
+
+            var params = "w=checkproduct&productid="+productid;
+            if(productid >= 0){
+                $('#showproductid').val(productid); 
+                $.ajax({
+                    type: "GET",
+                    url: "%%GLOBAL_ShopPath%%/remote.php",
+                    data: params,
+                    dataType: 'json',
+                    success: function(msg){
+
+                        if(typeof(msg['prodallowpurchase']) != 'undefined'){
+                            alert(msg['prodallowpurchase']);
+                            return false;
+                        }else{
+                            //if product have no vehicle,then redirect to shopping cart.
+                            if(typeof(msg['ymmisselect']) != 'undefined'){ //no ymm,redirect to shopping cart.
+                                if(refer == 'detail'){
+                                    if(msg['vehicle'] =="" && msg['pqvq']==""){
+                                    	 $('#product_deteail_form').submit();
+                                    }else{
+                                    	showDialog(4);
+                                    }
+                                   
+                                }else{
+                                	if(msg['vehicle'] =="" && msg['pqvq'] ==""){
+                                		window.location.href = msg['cartURL'];
+                                   }else{
+                                   		showDialog(4);
+                                   }
+                                    
+                                }
+                            }
+
+                            if(typeof(msg['popup']) != 'undefined'){
+
+                                $('._show_vehicle').each(function(){
+                                    $(this).html(msg['vehicle']);
+                                    document.cookie = 'add_to_cart_vehicle='+msg['vehicle']+';expires=; path=/;';
+                                }) ;
+
+                                $('._show_productname').each(function(){
+                                    $(this).html(msg['prodname']);
+                                }) ;
+
+                                $('._show_brandname').each(function(){
+                                    $(this).html(msg['brandname']);
+                                    document.cookie = 'add_to_cart_brand='+msg['brandname']+';expires=; path=/;';
+                                }) ;
+
+                                $('#brandname').val(msg['brandname']);
+                                $('#categoryname').val(msg['categoryname']);
+                               
+                                $('._show_seriesname').each(function(){
+                                    $(this).html(msg['seriesname']);
+                                    document.cookie = 'add_to_cart_series='+msg['seriesname']+';expires=; path=/;';
+                                }) ;
+
+                                $('#seriesname').val(msg['seriesname']);
+
+                                $('#category_link').val(msg['catname_link']);
+
+                                //hide carturl
+                                $('#hide_carturl').val(msg['cartURL']);
+                                
+                                $('._show_pqvq').each(function(){
+                                    $(this).html(msg['pqvq']);
+                                }) ;
+
+                                if(refer != 'detail'){
+                                    $('._show_cartURL').each(function(){
+                                        $(this).attr('href',msg['cartURL']);
+                                    }) ;
+                                }else{
+                                    $("._show_cartURL").click( function () {
+
+                                        if($ymmisselect.val() == '1'){
+
+                                            $('#product_deteail_form').submit();
+                                        }
+                                    });
+                                }
+
+                                //category link.
+                                if(typeof(msg['catname_link']) != 'undefined'){
+                                	$('._show_catnameURL').each(function(){
+                                        $(this).attr('href',msg['catname_link']);
+                                    }) ;
+                                }
+								
+                                //pqvq-ymm-year.
+                                if(typeof(msg['year_option']) != 'undefined'){
+                                    $('._searchyear').find('option').remove().end();
+                                    for(var i=0;i<=msg['year_option'].length;i++){
+                                        $('._searchyear').append(msg['year_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var yearLastItem = '<option value="1">My Year Not Showing Here</option>';
+                                    $('._searchyear').append(yearLastItem);
+                                    //$('._searchyear_filter').append(msg['year_option']);
+                                }
+
+                                //pqvq-ymm-make.
+                                if(typeof(msg['make_option']) != 'undefined'){
+                                    $('._searchmake').find('option').remove().end();
+                                    for(var i=0;i<=msg['make_option'].length;i++){
+                                        $('._searchmake').append(msg['make_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var makeLastItem = '<option value="1">My Make Not Showing Here</option>';
+                                    $('._searchmake').append(makeLastItem);
+                                }
+
+                                //pqvq-ymm-model.
+                                //if(typeof(msg['make']) != 'undefined' && msg['make'] != '' & msg['model_option'].length > 0){
+                                if(typeof(msg['model_option']) != 'undefined'){
+                                    $('._searchmodel').find('option').remove().end();
+                                    for(var i=0;i<=msg['model_option'].length;i++){
+                                        $('._searchmodel').append(msg['model_option'][i]);
+                                    }
+                                    //add last item redirect to not find popup.
+                                    var modelLastItem = '<option value="1">My Model Not Showing Here</option>';
+                                    $('._searchmodel').append(modelLastItem);
+                                }
+
+                                $('._show_research').attr('href',msg['vehicle_research']);
+
+                                $('#search_prefix').val(msg['search_prefix']);
+
+                                $csVehicle.html(msg['vehicle']);
+
+                                showDialog(msg['popup']);
+                                return false;
+                            }else{
+                                $('.add_cart_button').attr('href',msg['cartURL']);
+
+                                return '';
+                            }
+                        }
+
+                    }
+
+                });
+            }
+        }
+        //redirect to not found dialog.
+        window.redirectYMM = function(val){
+        	
+            if(val == 1){
+            	dialog_close();
+            	showDialog(3);
+            	return false;
+            }else{
+				return true;
+            }
+        }
+        
+		//set dialog cookie.
+		window.SetDialogCookie = function(){
+			var expire = new Date();
+			expire.setTime(expire.getTime()+(3600*24*1000*1000));
+			var tmptime = expire.getTime() + 60;
+			document.cookie = 'showDialog=5; expires='+expire.toGMTString()+'; path=/;';
+		}
+        //Change 'OK' img
+        window.changeImg = function(){
+        	var year,make,model;
+        	year = $('#dialog-pqvq ._searchyear :selected').val();
+            make = $('#dialog-pqvq ._searchmake :selected').val();
+            model = $('#dialog-pqvq ._searchmodel :selected').val();
+            
+            if(year != '' && make != '' && model != ''){
+            	//replace grey->green img.
+                $AddCart_button.attr("src","/popup_images/1B_14.jpg");
+            }else{
+            	//replace green->grey img.
+                $AddCart_button.attr("src","/popup_images/1B_14_grey.jpg");
+            }
+        }
+
+        //change application img.
+        window.changeApplicationImg = function(){
+        	var year,make,model;
+        	year = $('#dialog-application .application_searchyear :selected').val();
+            make = $('#dialog-application .application_searchmake :selected').val();
+            model = $('#dialog-application .application_searchmodel :selected').val();
+            
+            if(year != '' && make != '' && model != ''){
+            	//replace grey->green img.
+               $application_button.attr("src","/popup_images/SetVehicleButtonShow.jpg");
+            }else{
+            	//replace green->grey img.
+                $application_button.attr("src","/popup_images/SetVehicleButtonHide.jpg");
+            }
+        }
+        
+        //Disable 'add to cart' img.
+		window.disableImg = function(){
+			$AddCart_button.attr("src","/popup_images/1B_14_grey.jpg");
+		}
+
+		//Disable Application img.
+		window.disableApplicationImg = function(){
+			$application_button.attr("src","/popup_images/SetVehicleButtonHide.jpg");
+		}
+
+		window.enableApplicationImg = function(){
+			$application_button.attr("src","/popup_images/SetVehicleButtonShow.jpg");
+		}
+        //check ymm selector,then add to cart.
+        window.checkYMM = function(prefix,isRedirect){
+            var year,make,model,pqvqSelect,vehicle;
+            year = $('#dialog-pqvq ._searchyear :selected').val();
+            make = $('#dialog-pqvq ._searchmake :selected').val();
+            model = $('#dialog-pqvq ._searchmodel :selected').val();
+
+            pqvqSelect = $('#pqvqSelect').val();
+            vehicle = year+" "+make+" "+model;
+
+            if(year =='' || make == '' || model == ''){
+               // alert('Please Complete the selection.');
+               // showDialog(6);
+                return false;
+            }else{
+                //product detail form can be post to cart.
+                $('#ymmisselect').val('1');
+                
+                if(isRedirect == 0){
+                	$("._show_hide_carturl").attr('href',$('#hide_carturl').val());
+                }     
+                //set ymm cookie.
+                setYMMClass(prefix,isRedirect);
+
+                /*COMMIT.
+            //pqvq confirm.
+            if(pqvqSelect == 0){
+                $csVehicle.html(vehicle);
+                showDialog(4);
+                return false;
+            }
+                 */
+
+
+                return true;
+            }
+
+        }
+
+
+        //for application click check ymm.
+        window.checkApplicationYMM = function(prefix,isRedirect){
+            var year,make,model
+            year = $('#dialog-application .application_searchyear :selected').val();
+            make = $('#dialog-application .application_searchmake :selected').val();
+            model = $('#dialog-application .application_searchmodel :selected').val();
+  
+            if(year =='' || make == '' || model == ''){
+				//do nothing ,when ymm not complete select.
+				   alert('Please Complete the selection.');
+                   return false;
+            }else{
+            	 setYMMClass(prefix,isRedirect);
+            }
+        }
+            
+
+        window.showDialog = function(type){
+            type = parseInt(type);
+
+            switch(type){
+                case 1 :
+                    $dialogNotMatch.dialog('open');
+                    break;
+                case 2 :
+                    $dialogPQVQ.dialog('open');
+                    break;
+                case 3 :
+                    $dialogPQVQ.dialog('close');
+                    $dialogSearch.dialog('open');
+                    break;
+                case 4 :
+                    $('#ymmisselect').val('1');
+                    $dialogPQVQ.dialog('close');
+                    $dialogConfirm.dialog('open');
+                    break;
+                case 5 :
+                    $dialogNotFound.dialog('open');
+                    break;
+                case 6 :
+                    dialog_close();
+                    $dialogAlert.dialog('open');
+                    break;
+                case 9 :
+                	$dialogApplication.dialog('open');
+                    break;
+                
+            }
+
+        }
+        
+        $(function(){
+            function init_dialog(event, ui) {
+                $('.ui-icon-closethick').hide();
+                $('.ui-widget-content').css('height','auto');
+            }
+            
+            var val = parseInt(displaydialog.val());
+            if(val > 0){ //not match product.
+                $('#SearchPagingTop').css('display','none');
+            }
+            //dialog 1
+            $dialogNotMatch.dialog({
+                resizable: true,
+                modal: true,
+                width:750,
+                height:200,
+                autoOpen: false,
+                open: init_dialog
+
+            });
+            //dialog 2.
+            $dialogPQVQ.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:350,
+                autoOpen: false,
+                open: init_dialog
+
+            });
+
+            //dialog 3.
+            $dialogSearch.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:200,
+                autoOpen: false,
+                open: init_dialog
+            });
+
+            //dialog 4.
+            $dialogConfirm.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:350,
+                autoOpen: false,
+                open: init_dialog
+            });
+
+            $dialogNotFound.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:350,
+                autoOpen: false,
+                open:function(){
+                    $('.ui-icon-closethick').hide();
+                }
+            });
+
+            $dialogAlert.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:350,
+                autoOpen: false,
+                open:function(){
+                    $('.ui-icon-closethick').hide();
+                }
+            });
+
+            $dialogApplication.dialog({
+                resizable: true,
+                modal: true,
+                width:720,
+                height:350,
+                autoOpen: false,
+                open:function(){
+                    $('.ui-icon-closethick').hide();
+                }
+            });
+
+
+
+            if(val > 0){
+                showDialog(val);
+            }
+
+        });
+    })(jQuery);
+
+</script>

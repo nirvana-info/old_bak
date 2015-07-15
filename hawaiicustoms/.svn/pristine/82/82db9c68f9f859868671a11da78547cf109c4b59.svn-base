@@ -1,0 +1,13 @@
+<div class="Block Moveable" id="GiftCertificateIntro">
+	%%GLOBAL_Back2Search%%
+	<h2>%%LNG_RedeemCompanyGiftCertificate%%</h2>
+	<div class="BlockContent">
+		<p>%%LNG_RedeemCompanyGiftCertificateIntro%%</p>
+		<ol>
+			<li>%%LNG_RedeemCompanyGiftCertificate1%%</li>
+			<li>%%LNG_RedeemCompanyGiftCertificate2%%</li>
+			<li>%%LNG_RedeemCompanyGiftCertificate3%%</li>
+			<li>%%LNG_RedeemCompanyGiftCertificate4%%</li>
+		</ol>
+	</div>
+</div>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* category landing pages */
+
+h1#lp_tonneau {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/tonneau-covers.jpg') no-repeat;
+}
+
+h1#lp_bullbars {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/bull-bars.jpg') no-repeat;
+}
+
+h1#lp_exhaust {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/exhaust-systems.jpg') no-repeat;
+}
+
+h1#lp_cat {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/catalytic-converters.jpg') no-repeat;
+}
+
+h1#lp_fenderflares {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/fender-flares.jpg') no-repeat;
+}
+
+h1#lp_nerfbars {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/nerf-bars.jpg') no-repeat;
+}
+
+h1#lp_winches {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/winches.jpg') no-repeat;
+}
+
+h1#lp_airintakes {
+	text-indent : -999em;
+	width: 756px;
+	height: 241px;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/air-intakes.jpg') no-repeat;
+}
+
+#lp_backright {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: url('../../../images/landing-pages/landing-page-back.gif') repeat-x;
+}
+
+#lp_special_offers {
+	width: 716px;
+	height: 145px;
+	margin: 0;
+	padding: 0px 20px 20px 20px;
+	background: url('../../../images/landing-pages/special-offers-back.jpg') no-repeat;
+}
+
+#lp_special_offers p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#lp_equation {
+	margin-top: 40px;
+}
+
+#lp_coupon {
+	float: right;
+	margin-right: 20px;
+	border: 0;
+}
+
+#lp_coupon_only {
+	width: 656px;
+	height: 105px;
+	margin: 0;
+	padding: 0px 20px 20px 80px;
+	background: url('../../../images/landing-pages/special-offers-back-clear.jpg') no-repeat;
+}
+
+#lp_full_coupon {
+	border: 0;
+}
+
+/* Top 5 wife trouble */
+
+#t5_guy_image {
+	float: left;
+	margin-right: 2em;
+	width: 214px;
+}
+
+#t5_girl_image {
+	float: left;
+	margin-right: 2em;
+	width: 214px;
+}
+
+#t5_guy_text {
+	min-height: 200px;
+}
+
+#t5_girl_text {
+	min-height: 200px;
+}
+
+#t5_clear {
+	clear: both;
+}
+

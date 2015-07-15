@@ -1,0 +1,6 @@
+<div class="Block Moveable" id="CompItem">
+    <div class="ProductWarrantyContainer">
+        %%GLOBAL_CompDesc%%
+    </div>
+    <hr style="%%GLOBAL_HideSectionSeparator%%" />
+</div>

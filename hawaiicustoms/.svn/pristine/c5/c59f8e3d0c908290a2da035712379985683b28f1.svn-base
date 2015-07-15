@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+	<div id="Container">
+	%%Panel.Header%%
+
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Left" id="LayoutColumn1">
+			%%Panel.MyVehicleArea%%
+			%%Panel.SideCategoryList%%
+			%%Panel.SideNewProducts%%
+			%%Panel.SideNewsletterBox%%
+		</div>
+		<div class="Content" id="LayoutColumn2">
+			<div class="Block YourAccount">
+				%%GLOBAL_Back2Search%%
+				<h2>%%LNG_YourAccount%%</h2>
+				<div class="BlockContent">
+					<p>%%LNG_YourAccountHelpIntro%%</p>
+
+<ul>
+						<li style="display: %%GLOBAL_HideMessagesMenu%%"><a href="%%GLOBAL_ShopPathNormal%%/account/inbox">%%LNG_ViewMessages%%</a> - %%LNG_ViewMessagesDescription%%</li>
+						<li><a href="%%GLOBAL_ShopPathNormal%%/account/order_status">%%LNG_ViewYourOrderStatus%%</a> - %%LNG_ViewOrderStatusDescription%%</li>
+						<li><a href="%%GLOBAL_ShopPathNormal%%/account/view_orders">%%LNG_CompletedOrders%%</a> - %%LNG_CompletedOrdersDescription%%</li>
+						<li style="display: %%GLOBAL_HideReturnRequestsMenu%%"><a href="%%GLOBAL_ShopPathNormal%%/account/view_returns">%%LNG_ReturnRequests%%</a> - %%LNG_ReturnRequestsDescription%%</li>
+						<li><a href="%%GLOBAL_ShopPathNormal%%/account/address_book">%%LNG_YourAddressBook%%</a> - %%LNG_AddressBookDescription%%</li>
+						<li style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPathNormal%%/wishlist">%%LNG_WishLists%%</a> - %%LNG_WishListsDescription%%</li>
+						<li><a href="%%GLOBAL_ShopPathNormal%%/account/account_details">%%LNG_YourAccountDetails%%</a> - %%LNG_AccountDetailsDescription%%</li>
+						<li><a href="%%GLOBAL_ShopPathNormal%%/account/recent_items">%%LNG_RecentlyViewedItems%%</a> - %%LNG_RecentlyViewedItemsDescription%%</li>
+					</ul>
+					
+
+
+				</div>
+			</div>
+		</div>
+		<div class="Right" id="LayoutColumn3">
+			%%Panel.SideAccountMenu%%
+			%%Panel.SideAccountStoreCredit%%
+		</div>
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</body>
+</html>

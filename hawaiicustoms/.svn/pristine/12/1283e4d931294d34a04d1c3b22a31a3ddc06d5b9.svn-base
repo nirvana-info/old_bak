@@ -1,0 +1,18 @@
+<div id="Outer">
+        <div id="Header-Outer">
+            <div id="Header">
+                <div id="TopMenu">
+		  <ul style="display:">
+			  <li style="display:" class="First"><a href="http://www.congoworld.com/account/order_status"><span id='lang_OrderStatus' class='LNGString'>Order Status</span></a></li>
+			  <li style="display:"><a href="http://www.congoworld.com/wishlist"><span id='lang_GiftCertificates' class='LNGString'>Wish Lists</span></a></li>
+			  <li style="display:"><a href="http://www.congoworld.com/giftcertificates"><span id='lang_GiftCertificates' class='LNGString'>Gift Certificates</span></a></li>
+			  <li style="display:"><a href="http://www.congoworld.com/cart"><span id='lang_ViewCart' class='LNGString'>View Cart</span> </a></li>
+		  </ul>
+	       </div>
+               <div id="ordernow"><p>Order Now! <span>1-888-987-3476</span></p><p class="hours">M-F: 8:00am-7:00pm, Sat: 9:00am-1:00pm</p>
+               <img src="images/payment-forms2.gif" alt="Pay with Visa, Master Card, American Express, Discover Card, PayPal, or Google Checkout" />
+               </div>
+ 			               
+      </div>
+	  	   
+	  </div>

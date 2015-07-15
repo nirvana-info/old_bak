@@ -1,0 +1,7 @@
+<dt>
+	<span class="Required FormFieldRequired" style="visibility: %%GLOBAL_FormFieldRequiredVisable%%">*</span> <span class="FormFieldLabel">%%GLOBAL_FormFieldLabel%%</span>
+</dt>
+<dd>
+	%%GLOBAL_FormFieldExtraHidden%%
+	%%GLOBAL_FormFieldFieldData%%
+</dd>

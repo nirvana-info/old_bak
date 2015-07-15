@@ -1,0 +1,58 @@
+<form action="#" onsubmit="OrderManager.SaveProductConfiguration(); return false;" id="ProductConfigurationWindow">
+	<input type="hidden" name="cartItemId" value="%%GLOBAL_CartItemId%%" />
+	<input type="hidden" name="productId" value="%%GLOBAL_ProductId%%" />
+	<input type="hidden" name="variationId" value="%%GLOBAL_VariationId%%" class="CartVariationId" />
+	<input type="hidden" name="orderSession" value="%%GLOBAL_OrderSession%%" />
+	<input type="hidden" name="quantity" value="%%GLOBAL_Quantity%%" />
+	<input type="hidden" name="optionRequired" class="ProductVariationRequired" value="%%GLOBAL_ProductOptionRequired%%" />
+	<input type="hidden" name="editingExisting" class="editingExisting" value="%%GLOBAL_EditingExistingProduct%%" />
+	<div class="ModalTitle">
+		%%LNG_ProductOptionsFor%% %%GLOBAL_ProductName%%
+	</div>
+	<div class="ModalContent">
+		<p>%%GLOBAL_Intro%%</p>
+		<div style="%%GLOBAL_HideVariationList%%">
+			<table width="100%" class="Panel ProductOptionList">
+				<tr>
+					<td class="Heading2" colspan="2">%%LNG_ProductVariation%%</td>
+				</tr>
+				%%GLOBAL_VariationList%%
+				<tr>
+					<td class="FieldLabel">
+						<span class="Required">&nbsp;</span>
+						%%LNG_Price%%:
+					</td>
+					<td><span class="VariationProductPrice">%%GLOBAL_ProductPrice%%</span></td>
+				</tr>
+			</table>
+			<br />
+		</div>
+		<div style="%%GLOBAL_HideConfigurableFields%%">
+			<table width="100%" class="Panel ProductConfiguration">
+				<tr>
+					<td class="Heading2" colspan="2">%%LNG_ProductConfiguration%%</td>
+				</tr>
+				%%GLOBAL_ProductFields%%
+			</table>
+		</div>
+		<div style="%%GLOBAL_HideEventDate%%">
+			<table width="100%" class="Panel ProductConfiguration">
+				<tr>
+					<td class="Heading2" colspan="2">%%LNG_ProductEventDate%%</td>
+				</tr>
+				%%GLOBAL_EventDate%%
+			</table>
+		</div>
+	</div>
+	<div class="ModalButtonRow">
+		<div class="FloatLeft">
+			<input type="button" class="Button" value="%%LNG_Cancel%%" onclick="$.modal.close();" />
+		</div>
+		<input class="Submit" class="Submit" type="submit" value="%%GLOBAL_ButtonLabel%%" />
+	</div>
+</form>
+%%GLOBAL_ProductVariationJavascript%%
+<script type="text/javascript" src="../javascript/product.js"></script>
+<script type="text/javascript">
+%%GLOBAL_EventDateJavascript%%
+</script>

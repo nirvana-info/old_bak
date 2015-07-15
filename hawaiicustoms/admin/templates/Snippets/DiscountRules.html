@@ -1,0 +1,24 @@
+					<tr id="discountRulesTR_%%GLOBAL_DiscountRulesKey%%" class="DiscountRulesTR">
+						<td class="FieldLabel MediumFieldLabel">
+							&nbsp;&nbsp;&nbsp;<span id="discountRulesFieldLabel_%%GLOBAL_DiscountRulesKey%%">%%GLOBAL_DiscountRulesLabel%%</span>:
+						</td>
+						<td>
+							%%LNG_DiscountRulesBetween%%
+							<input type="text" id="discountRulesQuantityMin_%%GLOBAL_DiscountRulesKey%%" name="discountRulesQuantityMin[%%GLOBAL_DiscountRulesKey%%]" class="Field50" value="%%GLOBAL_DiscountRulesQuantityMin%%">
+							%%LNG_LittleAnd%%
+							<input type="text" id="discountRulesQuantityMax_%%GLOBAL_DiscountRulesKey%%" name="discountRulesQuantityMax[%%GLOBAL_DiscountRulesKey%%]" class="Field50" value="%%GLOBAL_DiscountRulesQuantityMax%%">
+							%%LNG_DiscountRulesReceive%%
+							<select id="discountRulesType_%%GLOBAL_DiscountRulesKey%%" name="discountRulesType[%%GLOBAL_DiscountRulesKey%%]" class="Field120" onchange="ToggleDiscountRateValueType(%%GLOBAL_DiscountRulesKey%%);">
+								<option value="price" %%GLOBAL_DiscountRulesTypePriceSelected%%>%%LNG_DiscountRulesTypePrice%%</option>
+								<option value="percent" %%GLOBAL_DiscountRulesTypePercentSelected%%>%%LNG_DiscountRulesTypePercent%%</option>
+								<option value="fixed" %%GLOBAL_DiscountRulesTypeFixedSelected%%>%%LNG_DiscountRulesTypeFixed%%</option>
+							</select>
+							%%LNG_LittleOf%%
+							<span id="discountRulesAmountPrefix_%%GLOBAL_DiscountRulesKey%%">%%GLOBAL_DiscountRulesAmountPrefix%%</span>
+							<input type="text" id="discountRulesAmount_%%GLOBAL_DiscountRulesKey%%" name="discountRulesAmount[%%GLOBAL_DiscountRulesKey%%]" class="Field50" value="%%GLOBAL_DiscountRulesAmount%%">
+							<span id="discountRulesAmountPostfix_%%GLOBAL_DiscountRulesKey%%">%%GLOBAL_DiscountRulesAmountPostfix%%</span>
+							<span id="discountRulesLineEnding_%%GLOBAL_DiscountRulesKey%%">%%GLOBAL_DiscountRulesLineEnding%%</span>
+							<a href="#" id="discountRulesAdd_%%GLOBAL_DiscountRulesKey%%" onclick="AddDiscountRules(this.parentNode.parentNode); return false;"><img src="images/addicon.gif" alt="Add" border="0" /></a>
+							<a href="#" id="discountRulesDel_%%GLOBAL_DiscountRulesKey%%" onclick="DelDiscountRules(this.parentNode.parentNode); return false;"><img src="images/delicon.gif" alt="Del" border="0" /></a>
+						</td>
+					</tr>

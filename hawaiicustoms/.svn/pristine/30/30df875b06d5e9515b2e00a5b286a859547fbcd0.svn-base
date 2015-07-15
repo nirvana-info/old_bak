@@ -1,0 +1,48 @@
+<html>
+<head>
+<style type="text/css">
+#TB_window .catgname {
+color:#075899;
+font-weight:bold
+}
+</style>
+
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/styles.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/blue.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<table border="0" cellpadding="2" cellspacing="5" width="100%">
+<tr>
+	<td width="50%" rowspan="5">
+		%%GLOBAL_LeftImage%%
+	</td>
+	<td width="50%">
+		%%GLOBAL_TitleLink%%
+	</td>
+</tr>
+<tr>
+	<td>
+		%%GLOBAL_PriceRange%%
+	</td>
+</tr>
+<tr>
+	<td>
+		<img src="%%GLOBAL_PATH%%/templates/default/images/free-shipping2.gif" border="0"/> 
+	</td>
+</tr>
+<tr>
+	<td>
+		%%GLOBAL_Header%%
+		%%GLOBAL_Info%%
+	</td>
+</tr>
+<tr>
+	<td align='right'>
+		<a href='%%GLOBAL_LINKPATH%%'><img src="%%GLOBAL_PATH%%/templates/default/images/viewproducts.gif" border="0" alt="View Products" title="View Products"></a>
+		<a href="javascript:" onclick="self.parent.tb_remove();"><img src='%%GLOBAL_PATH%%/templates/default/images/close.gif' border='0' alt='Close' title='Close'></a>
+		
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<li>
+	<span class="OrderStatus OrderStatus%%GLOBAL_OrderStatusId%%">%%GLOBAL_OrderStatus%%</span>
+	<span class="OrderDetails">
+		<a href="index.php?ToDo=viewOrders&amp;orderId=%%GLOBAL_OrderId%%">Order #%%GLOBAL_OrderId%% - %%GLOBAL_CustomerName%%</a>
+		<small>%%GLOBAL_OrderSummary%%</small>
+	</span>
+</li>

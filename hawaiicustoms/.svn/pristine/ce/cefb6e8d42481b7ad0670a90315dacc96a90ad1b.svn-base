@@ -1,0 +1,112 @@
+<div class="Title">
+	<h2>%%GLOBAL_ProductName%%</h2>
+</div>
+<!--
+<div class="Nav">
+	<div class="NextLink" style="display:%%GLOBAL_HideNextLink%%">
+		<a href="%%GLOBAL_NextLink%%">%%LNG_NextImage%% &raquo;</a>
+	</div>
+
+	<div class="PrevLink" style="display:%%GLOBAL_HidePrevLink%%">
+		<a href="%%GLOBAL_PrevLink%%">&laquo; %%LNG_PreviousImage%%</a>
+	</div>
+
+	<div class="ImageCount">
+		%%GLOBAL_CurrentImage%%
+	</div>
+
+</div>                    -->
+
+<!--<table width="100%" border="0" cellspacing="0" cellpadding="0" class="Image">
+	<tr>
+		<td><img src="%%GLOBAL_ShopPath%%/%%GLOBAL_ImageDirectory%%/%%GLOBAL_ImageFile%%" id="ProductImage" vspace="10" hspace="10" alt="" name="ProductImage" /></td>
+	</tr>
+	<tr>
+		<td><small><a href="#" onclick="window.parent.focus(); window.close();">%%LNG_ClickHereCloseWindow%%</a></small></td>
+	</tr>
+</table>-->
+
+
+<!-- Start Advanced Gallery Html Containers -->
+<div id="page">
+    <div id="container">
+        <!-- Start Advanced Gallery Html Containers -->  
+        <div id="gallery" class="content">
+            <div id="controls" class="controls" style="display:%%GLOBAL_HideControls%%"></div>
+            <div id="loading" class="loader"></div>
+            <div id="slideshow" class="slideshow"></div>
+            <!--<div id="caption" class="embox"></div>-->
+        </div>
+        <div id="thumbs" class="navigation">
+            <ul class="thumbs noscript">
+
+            <!--Dynamic code goes here-->
+            %%GLOBAL_ImageGallery%%
+            
+            </ul>
+        </div>
+        <!-- End Advanced Gallery Html Containers --> 
+        <div style="clear: both;"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    // We only want these styles applied when javascript is enabled
+    $('div.navigation').css({'width' : '700px', 'float' : 'left'});
+    $('div.content').css('display', 'block');
+
+    // Initially set opacity on thumbs and add
+    // additional styling for hover effect on thumbs
+    var onMouseOutOpacity = 0.67;
+    $('#thumbs ul.thumbs li').css('opacity', onMouseOutOpacity)
+        .hover(
+            function () {
+                $(this).not('.selected').fadeTo('fast', 1.0);
+            }, 
+            function () {
+                $(this).not('.selected').fadeTo('fast', onMouseOutOpacity);
+            }
+        );
+
+    $(document).ready(function() {
+        // Initialize Advanced Galleriffic Gallery
+        var galleryAdv = $('#gallery').galleriffic('#thumbs', {
+            delay:                  2000,
+            numThumbs:              10,
+            preloadAhead:           10,
+            enableTopPager:         true,
+            enableBottomPager:      true,
+            imageContainerSel:      '#slideshow',
+            controlsContainerSel:   '#controls',
+            captionContainerSel:    '#caption',
+            loadingContainerSel:    '#loading',
+            renderSSControls:       true,
+            renderNavControls:      true,
+            playLinkText:           'Play Slideshow',
+            pauseLinkText:          'Pause Slideshow',
+            prevLinkText:           '&lsaquo;&lsaquo; Previous',
+            nextLinkText:           'Next &rsaquo;&rsaquo;',
+            nextPageLinkText:       'Next &rsaquo;&rsaquo;',
+            prevPageLinkText:       '&lsaquo;&lsaquo; Prev',
+            enableHistory:          true,
+            autoStart:              false,
+            onChange:               function(prevIndex, nextIndex) {
+                $('#thumbs ul.thumbs').children()
+                    .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+                    .eq(nextIndex).fadeTo('fast', 1.0);
+            },
+            onTransitionOut:        function(callback) {
+                $('#caption').fadeOut('fast');
+                $('#slideshow').fadeOut('fast', callback);
+            },
+            onTransitionIn:         function() {
+                $('#slideshow, #caption').fadeIn('fast');
+            },
+            onPageTransitionOut:    function(callback) {
+                $('#thumbs ul.thumbs').fadeOut('fast', callback);
+            },
+            onPageTransitionIn:     function() {
+                $('#thumbs ul.thumbs').fadeIn('fast');
+            }
+        });
+    });
+</script>

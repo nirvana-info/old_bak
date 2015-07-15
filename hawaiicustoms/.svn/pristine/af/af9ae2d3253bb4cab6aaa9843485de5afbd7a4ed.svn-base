@@ -1,0 +1,19 @@
+<table class="SubcatProdItem" cellpadding="0" cellspacing="0">    
+    <tr class='%%GLOBAL_RowColor%%'>
+        <td class="whiterow twpcwidth">%%GLOBAL_ProductThumb%%</td>
+        <td class="prodinfo tenpcwidth">%%GLOBAL_BrandName%%</td>
+        <td class="twpcwidth">%%GLOBAL_VehicleOptions%%</td>
+        <td class="prodinfo tenpcwidth">%%GLOBAL_ProdCode%%</td>
+        <td class="twpcwidth">%%GLOBAL_ProdOptions%%</td>
+        <td class="prodinfo tenpcwidth">%%GLOBAL_ProductPrice%%</td>
+        <td class="prodinfo tenpcwidth"><a href="%%GLOBAL_ProductURL%%">%%GLOBAL_ProductAddText%%</a>
+		<a href="%%GLOBAL_CartURL%%">Add to Cart</a>
+		<span style="display: %%GLOBAL_HideOfferButton%%;">
+			 <a href='#' onclick="ShowPopup(%%GLOBAL_ProductId%%);">Make an Offer</a>
+		</span>
+		</td>
+    </tr>
+</table>
+<div class="SubcatProdItemGap" class="SubcatProdItemGap">
+&nbsp;
+</div> 

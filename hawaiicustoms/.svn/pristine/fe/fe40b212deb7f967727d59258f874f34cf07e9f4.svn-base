@@ -1,0 +1,13 @@
+<tr>
+					<td class="FieldLabel">
+						&nbsp;&nbsp;&nbsp;%%LNG_StoreCreditPermission%%:
+					</td>
+					<td>
+						<select id="userstorecreditperm" name="userstorecreditperm" class="Field250" %%GLOBAL_StoreCreditDisable%%>
+							<option value="1" %%GLOBAL_StoreCreditActive1%%>%%LNG_UserActive%%</option>
+							<option value="0" %%GLOBAL_StoreCreditActive0%%>%%LNG_UserInactive%%</option>
+						</select>
+						<img onmouseout="HideHelp('d35');" onmouseover="ShowHelp('d35', '%%LNG_StoreCreditPermission%%', '%%LNG_StoreCreditPermissionHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+						<div style="display:none" id="d35"></div>
+					</td>
+</tr>

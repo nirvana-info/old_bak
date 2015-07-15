@@ -1,0 +1,85 @@
+<tr class="orderSubTotal">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_SubTotal%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_Subtotal%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideGiftWrappingTotal%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_GiftWrapping%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_GiftWrappingTotal%%</td>
+	<td>&nbsp;</td>
+</tr>
+%%GLOBAL_CouponCodes%%
+<tr class="orderSubTotal" style="%%GLOBAL_HideShipping%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">
+			%%LNG_Shipping%%:
+			<div style="color: gray; font-weight: normal;">%%GLOBAL_ShippingMethod%%</div>
+	</td>
+	<td style="padding: 6px; text-align: right;">
+		%%GLOBAL_ShippingCost%%
+		<br />
+		(<a href="#" onclick="OrderManager.CalculateShipping(); return false;" style='color: gray'>%%LNG_ShippingLabel%%</a>)
+	</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideHandlingCost%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_Handling%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_HandlingCost%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideTaxCost%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%GLOBAL_TaxName%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_TaxCost%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_Total%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_Total%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideIncludedTaxCost%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%GLOBAL_TaxName%% %%LNG_IncludedInTotal%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_TaxCost%%</td>
+	<td>&nbsp;</td>
+</tr>
+%%GLOBAL_GiftCertificates%%
+<tr class="orderSubTotal" style="%%GLOBAL_HideGiftCertificateTotal%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_GiftCertificates%%:</td>
+	<td style="padding: 6px; text-align: right;">-%%GLOBAL_GiftCertificateTotal%%</td>
+	<td>&nbsp;</td>
+</tr>
+%%GLOBAL_CompanyGiftCertificates%%
+<tr class="orderSubTotal" style="%%GLOBAL_HideCompanyGiftCertificateTotal%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_CompanyGiftCertificates%%:</td>
+	<td style="padding: 6px; text-align: right;">-%%GLOBAL_GompanyGiftCertificateTotal%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideStoreCredit%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_StoreCredit%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_StoreCreditTotal%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr class="orderSubTotal" style="%%GLOBAL_HideAdjustedTotal%%">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right; font-weight: bold">%%LNG_AdjustedTotalCost%%:</td>
+	<td style="padding: 6px; text-align: right;">%%GLOBAL_AdjustedTotalCost%%</td>
+	<td>&nbsp;</td>
+</tr>
+<tr>
+	<td>&nbsp;</td>
+	<td colspan="6" style="padding: 4px; text-align: right;">
+		<input type="button" value="%%LNG_UpdateOrderTotals%%" id="updateTotals" onclick="OrderManager.UpdateOrderTotals()" />
+		<br />
+		<a href="#" onclick="OrderManager.OpenApplyCoupon(); return false;" style="color: gray">%%LNG_ApplyCouponGiftCertificate%%</a>
+		</td>
+	<td>&nbsp;</td>
+</tr>

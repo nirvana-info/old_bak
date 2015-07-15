@@ -1,0 +1,9 @@
+<!-- BEGIN LivePerson Button Code --><div id="chatnow" >
+     <table>
+         <tr>
+              <td></td>
+              <td><a id="_lpChatBtn" rel="nofollow" href='https://server.iad.liveperson.net/hc/68977976/?cmd=file&file=visitorWantsToChat&site=68977976&byhref=1&imageUrl=%%GLOBAL_ShopPath%%/images/custom/liveperson' target='chat68977976'  onClick="lpButtonCTTUrl = 'https://server.iad.liveperson.net/hc/68977976/?cmd=file&file=visitorWantsToChat&site=68977976&imageUrl=%%GLOBAL_ShopPath%%/images/custom/liveperson.%%GLOBAL_ShopPath%%/images/custom/liveperson&referrer='+escape(document.location); lpButtonCTTUrl = (typeof(lpAppendVisitorCookies) != 'undefined' ? lpAppendVisitorCookies(lpButtonCTTUrl) : lpButtonCTTUrl); lpButtonCTTUrl = ((typeof(lpMTag)!='undefined' && typeof(lpMTag.addFirstPartyCookies)!='undefined')?lpMTag.addFirstPartyCookies(lpButtonCTTUrl):lpButtonCTTUrl);window.open(lpButtonCTTUrl,'chat68977976','width=472,height=320,resizable=yes');return false;" >
+                      <img src='https://server.iad.liveperson.net/hc/68977976/?cmd=repstate&site=68977976&channel=web&&ver=1&imageUrl=%%GLOBAL_ShopPath%%/images/custom/liveperson' name='hcIcon' border=0></a></td> 
+        </tr>
+ </table>
+</div><!-- END LivePerson Button code -->

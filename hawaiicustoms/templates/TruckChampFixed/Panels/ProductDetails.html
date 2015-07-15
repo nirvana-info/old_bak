@@ -1,0 +1,176 @@
+%%Panel.NewSearchPagingTop%%
+%%GLOBAL_DisplayScript%%
+<div class="Block Moveable PrimaryProductDetails" id="ProductDetails">
+	<div class="BlockContent">
+		<div class="ErrorMessage" style="clear:both;%%GLOBAL_HideProductErrorMessage%%">
+			%%GLOBAL_ProductErrorMessage%%
+		</div>
+		<div class="ProductThumb" style="width:230px">
+			%%GLOBAL_LightBoxImageJavascript%% <br />
+			%%GLOBAL_ThumbImage%%
+            %%SNIPPET_AdditionalView%%
+            <h3 style="text-align:left;display:%%GLOBAL_HideVideosLink%%"><strong>%%LNG_AudioAndVideo%%</strong></h3>
+		    
+            <div style="display:%%GLOBAL_HideVideosLink%%">         
+                <div style="float:left;width:100px;display:%%GLOBAL_HideSpecVideosLink%%">
+                <a href="#" onclick="%%GLOBAL_VideoPopupJavascript%%" class="ViewLarger"> 
+                %%GLOBAL_SeeVideos%%</a>  
+                </div>
+                <div style="float:left;display:%%GLOBAL_HideSpecVideosLink%%">
+                <img onclick="%%GLOBAL_VideoPopupJavascript%%" src="%%GLOBAL_ShopPath%%/templates/default/images/play.gif" alt="Play Video" />
+                </div>
+                <br />
+                <div style="float:left;width:100px;display:%%GLOBAL_HideSpecAudiosLink%%">
+                <a href="#" onclick="%%GLOBAL_AudioPopupJavascript%%" class="ViewLarger"> 
+                %%GLOBAL_SeeAudios%%</a>  
+                </div>
+                <div style="float:left;display:%%GLOBAL_HideSpecAudiosLink%%">
+                <img onclick="%%GLOBAL_AudioPopupJavascript%%" src="%%GLOBAL_ShopPath%%/templates/default/images/play.gif" alt="Play Audio" />
+                </div>
+                <br />
+            </div>
+            %%GLOBAL_Impvariations%%
+        </div>  
+        <form id="product_deteail_form" name="product_deteail_form" method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%)"  enctype="multipart/form-data">      
+		<div class="ProductMain" style="width:285px">
+			<h2>%%GLOBAL_ProductName%%</h2>
+			<!--alandy_2011-6-15 modify -->
+			<input type="hidden" id="prodallowpurchases" name="prodallowpurchases" value="%%GLOBAL_DetailProdallowpurchases%%">
+			<div id="callbestprice" style="word-wrap:break-word;display:none;z-index:1;border:6px solid #008080;width:220px;padding:10px;position: Absolute;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);background: white;">
+				<p><font size="3px" color="#800000"><img src="/images/qm.gif"/>&nbsp;&nbsp;Call-in Special</font><br>
+                    <font size="1px" class="bestPricePopupMessage"></font>
+				</p>
+			</div>
+			<dl class="ProductDetailsGrid">
+				<dt style="display:%%GLOBAL_HideRRP%%">%%LNG_RRP%%:</dt>
+				<dd style="display:%%GLOBAL_HideRRP%%">%%GLOBAL_RetailPrice%%</dd>
+
+				<dt style="%%GLOBAL_HidePrice%%">%%GLOBAL_PriceLabel%%:</dt>
+				<dd style="%%GLOBAL_HidePrice%%"><em class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%
+                <br />
+                %%GLOBAL_DiscountPrice%%
+                </em> %%GLOBAL_IncludingExcludingTaxHidden%% %%GLOBAL_YouSave%%    <br />
+                %%GLOBAL_ShowOnSaleImage%%
+                <noscript>SDDSDS</noscript>
+                </dd>
+                <dt>&nbsp;</dt>
+                <!--2011-12-29 alandy add cart check. -->
+                <dd>
+                %%GLOBAL_BestPrice%%
+                <a href="javascript:void(0)" onclick="check_addToCart(%%GLOBAL_ProductId%%);" class = "add_cart_button"><img src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/AddCartButton.gif" border=0></a>
+				<!--<input type="image" src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/AddCartButton.gif" onclick="return chksubmit()" alt="" />-->
+				
+				</dd> 
+				<dt style="display: %%GLOBAL_HideSKU%%" class="ProductSKU">%%LNG_SKU%%:</dt>
+				<dd style="display: %%GLOBAL_HideSKU%%" class="ProductSKU"><span class="VariationProductSKU">%%GLOBAL_SKU%%</span></dd>
+
+				<dt style="%%GLOBAL_HideVendorDetails%%">%%LNG_Vendor%%:</dt>
+				<dd style="%%GLOBAL_HideVendorDetails%%">%%GLOBAL_VendorName%%</dd>
+
+				<dt style="display: %%GLOBAL_HideBrandLink%%">%%LNG_Brand%%:</dt>
+                <dd><img src="%%GLOBAL_ImageUrl%%" alt="Brand Image"/></dd>  <!-- Baskaran Added-->               
+				<dd style="display: %%GLOBAL_HideBrandLink%%"><a href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></dd>
+
+				<dt style="display: %%GLOBAL_HideWeight%%">%%LNG_Weight%%:</dt>
+				<dd style="display: %%GLOBAL_HideWeight%%"><span class="VariationProductWeight">%%GLOBAL_ProductWeight%%</span></dd>
+
+				<dt style="display: %%GLOBAL_HideRating%%">%%LNG_Rating%%:</dt>
+				<dd style="display: %%GLOBAL_HideRating%%">
+					<img width="64" height="12" src="%%GLOBAL_TPL_PATH%%/images/IcoRating%%GLOBAL_Rating%%.gif" alt="" />
+					<span style="display:%%GLOBAL_HideReviewLink%%">(<a href="#ProductTabs" onclick="ActiveProductTab('ProductReviews_Tab'); return true;">%%GLOBAL_ReviewLinkText%%</a>)</span>
+				</dd>
+
+				<dt style="display: %%GLOBAL_HideAvailability%%">%%LNG_Availability%%:</dt>
+				<dd style="display: %%GLOBAL_HideAvailability%%">%%GLOBAL_Availability%%</dd>
+				
+				<dt style="display: %%GLOBAL_HideShipping%%">%%LNG_Shipping%%:</dt>
+				<dd style="display: %%GLOBAL_HideShipping%%">%%GLOBAL_ShippingPrice%%</dd>
+				
+				<dt style="display: %%GLOBAL_HideShipping%%">Availability:</dt>
+				<dd style="display: %%GLOBAL_HideShipping%%">Ships in 1 to 3 business days</dd>
+				
+				<dt style="%%GLOBAL_HideCurrentStock%%" class="InventoryLevel">%%LNG_CurrentStock%%:</dt>
+				<dd style="%%GLOBAL_HideCurrentStock%%" class="InventoryLevel"><span class="VariationProductInventory">%%GLOBAL_InventoryList%%</span></dd>
+
+				<dt style="%%GLOBAL_HideGiftWrapMessage%%">%%LNG_GiftWrapping%%:</dt>
+				<dd style="%%GLOBAL_HideGiftWrapMessage%%">%%GLOBAL_GiftWrappingAvailable%%</dd>
+			</dl>
+			%%SNIPPET_ProductAddToCart%%  
+            <span class="ProductPrice" style="display: %%GLOBAL_DisplayNotForSaleMsg%%;">
+                %%LNG_ProductNotForSale%%
+            </span>
+		</div>
+		</form>
+	</div>
+    <input type="hidden" id="product_ids" value="%%GLOBAL_ProductId%%" />
+    <input type="hidden" id="isProductDetail" value="1" /> 
+    <input type="hidden" id="searchPrefixval" value="%%GLOBAL_searchPrefix%%" /> 
+	<br class="Clear" />
+</div>
+<script language="javascript">
+jQuery.noConflict();
+(function($) { 
+ 	$('#ymmisselect').val(1);
+ 	$searchPrefixVal = $('#searchPrefixval').val();
+ 	$('#search_prefix').val($searchPrefixVal);
+ 	$('#brandname').val('%%GLOBAL_searchBrandname%%');
+ 	$('#seriesname').val('%%GLOBAL_searchSeriesname%%');
+ 	$('#category_link').val('%%GLOBAL_searchCatnameLink%%');
+ 	$('#categoryname').val('%%GLOBAL_searchCatname%%');
+
+ 	
+ 	var yearLastItem = '<option value="1">My Year Not Showing Here</option>';
+ 	var makeLastItem = '<option value="1">My Make Not Showing Here</option>';
+ 	var modelLastItem = '<option value="1">My Model Not Showing Here</option>';
+
+	// KATE CHANGE: 2/29/2012
+	//$('#searchyear_left').prepend(yearLastItem);
+	//$('#searchmake_left').prepend(makeLastItem);
+	//$('#searchmodel_left').prepend(modelLastItem);
+	$('#searchyear_left').append(yearLastItem);
+	$('#searchmake_left').append(makeLastItem);
+	$('#searchmodel_left').append(modelLastItem);
+
+ 	 //bind this selecter.show dialog.
+     $('#searchyear_left').bind('change', function(){
+		if(!check_ymm($(this).val())){
+			$(this).val('');
+		}
+     });
+
+     $('#searchmake_left').bind('change', function(){
+    	 if(!check_ymm($(this).val())){
+ 			$(this).val('');
+ 		}
+     });
+
+     $('#searchmodel_left').bind('change', function(){
+    	 if(!check_ymm($(this).val())){
+ 			$(this).val('');
+ 		}
+     });     
+  
+})(jQuery);
+
+function check_ymm(val){
+	if(val == 1){
+		dialog_close();
+     	showDialog(3);
+     	return false;
+     }else{
+			return true;
+     }	
+}
+
+function check_addToCart(productid){
+	//first,chksubmit such as Complementary and prodallowpurchase.
+	if(chksubmit()){
+		ClickCartButton(productid,'detail');
+		//$('._show_cartURL').attr('href','javascript:void(0)');
+	}else{
+		return false;
+	}
+	
+	
+}
+</script>

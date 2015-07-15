@@ -1,0 +1,14 @@
+<li style="width: %%GLOBAL_GraphItemWidth%%%" title="%%GLOBAL_GraphDateTitle%%" class="%%GLOBAL_GraphRangeLabelClass%%">
+	<div style="%%GLOBAL_HideInsideRangeLabels%%" class="InsideRangeLabel">
+		<em>%%GLOBAL_GraphDataRevenue%% (%%GLOBAL_GraphDataNumOrders%%)</em>
+		<span>
+			%%GLOBAL_GraphDateLabel%%
+		</span>
+	</div>
+	<div style="%%GLOBAL_HideOutsideRangeLabels%%" class="OutsideRangeLabel">
+		<span>
+			%%GLOBAL_GraphDateLabel%%
+		</span>
+		<em>%%GLOBAL_GraphDataRevenue%% (%%GLOBAL_GraphDataNumOrders%%)</em>
+	</div>
+</li>

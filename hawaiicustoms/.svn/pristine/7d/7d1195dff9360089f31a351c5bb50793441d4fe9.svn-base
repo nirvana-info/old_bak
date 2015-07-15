@@ -1,0 +1,6 @@
+			<tr class="SubTotal" id="trcouponcode">
+				<td colspan="3">
+					<strong>%%LNG_Coupon%% (%%GLOBAL_CouponCode%% - %%GLOBAL_CouponName%%):</strong><br />
+				</td>
+				<td><em class="ProductPrice" style="font-style: italic;">-%%GLOBAL_CouponDiscount%%</em></td>
+			</tr>

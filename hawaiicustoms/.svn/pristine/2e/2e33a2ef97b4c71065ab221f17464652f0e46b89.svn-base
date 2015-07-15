@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+	<script type="text/javascript" src="%%GLOBAL_AppPath%%/javascript/product.js"></script>
+	<div id="Container">
+	%%Panel.Header%%
+	%%Panel.FreeDelivery%%
+	%%Banner.TopBanner%%
+	<div id="Wrapper">
+		%%Panel.WrapperBanner%%
+		<div class="Right" id="LayoutColumn3">
+			%%Panel.SideProductAddToCart%%
+			%%Panel.SideCurrencySelector%%
+			<a href="/sweepstakes"><img style="margin-left:6px;" src="/images/frontpage/sweepstakes-rightmenu.jpg" alt="2010 Motorcycle Sweepstakes!" /></a>
+			%%Panel.SideProductAddToWishList%%
+			%%Panel.SideProductRelated%%
+			%%Panel.SideProductRecentlyViewed%%
+		</div>
+		<div class="Left" id="LayoutColumn1">
+			%%Panel.SideProductFilters%%
+			%%Panel.SideNewsletterBox%%
+			%%Panel.SideLiveChatServices%%
+%%Panel.GiftCertificatesMenu%%
+		</div>
+		<div class="Content" id="product-content">
+			%%Panel.SearchFormSmall%%
+			%%Panel.ProductBreadcrumb%%
+			%%Panel.ProductDetails%%			
+           	        %%Panel.ProductTabs%%
+			%%Panel.ProductDescription%%
+                        %%Panel.ApplicationChart%%            
+			%%Panel.ProductManufacturer%%
+			%%Panel.ProductWarranty%%
+			%%Panel.ProductInstruction%%
+			%%Panel.ProductArticle%%
+			%%Panel.ProductReviews%%
+			%%Panel.ProductOtherDetails%%
+			%%Panel.SimilarProductsByTag%%
+			%%Panel.CompItem%%
+                        %%Panel.ProductByCategory%%   
+		</div>
+	
+	
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</div>
+</div>
+%%Panel.TCFooter%%
+</body>
+</html>

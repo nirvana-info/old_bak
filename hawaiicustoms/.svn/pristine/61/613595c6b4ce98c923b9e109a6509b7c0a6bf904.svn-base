@@ -1,0 +1,73 @@
+<html><body style="font-family:Arial; font-size:12px; margin: 0; padding: 20px;">
+	<div>
+		<h2 style="font-size:22px; height:30px; color:#cc6600; border-bottom:dashed 1px gray">%%LNG_ThanksForYourOrder%%</h2>
+		<div style="width:100%; padding:10px; background-color:#FFF4EA">
+			<img src="%%GLOBAL_TPL_PATH%%/images/InfoMessage.gif" />&nbsp;
+			%%LNG_YourOrderIDIs%% <strong>#%%GLOBAL_OrderNumber%%</strong>. %%GLOBAL_ViewOrderStatusMsg%%
+		</div>
+		%%GLOBAL_PendingPaymentNotice%%
+		<br />
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td id="Left" width="50%" valign="top">
+					<h3 style="font-family:Arial; font-size:18px">%%LNG_ShippingToAddress%%</h3>
+					<div style="font-family:Arial; font-size:12px">%%GLOBAL_ShippingAddress%%</div>
+				</td>
+				<td id="Right" width="50%" valign="top">
+					<h3 style="font-family:Arial; font-size:18px">%%LNG_BillingAddress%%</h3>
+					<div style="font-family:Arial; font-size:12px">%%GLOBAL_BillingAddress%%</div>
+				</td>
+			</tr>
+		</table>
+		<br /><br />
+		<div style="font-size:12px">
+			%%GLOBAL_ShippingMethod%%
+		</div>
+		%%GLOBAL_PendingPaymentDetails%%
+
+		<div style="font-size:12px">
+			%%GLOBAL_OrderComments%%
+		</div>
+
+		<h3 style="font-size:18px">%%LNG_YourOrderContainsTheFollowingItems%%</h3>
+		<table width="100%" id="CheckoutCartGrid" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" nowrap>%%LNG_CartItems%%</td>
+				<td style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" nowrap="nowrap" width="100">%%LNG_Qty%%</td>
+				<td style="font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" nowrap="nowrap" width="150">%%LNG_ItemPrice%%</td>
+				<td style="font-family:Arial; font-size:12px; background-color:#020B6F; color:white; padding:5px; font-weight:bold" nowrap="nowrap" width="200" align="right">%%LNG_ItemTotal%%</td>
+			</tr>
+		</table>
+		%%SNIPPET_CartItems%%
+		<table width="100%" id="CheckoutCartGrid" cellspacing="0" cellpadding="0">
+			<tr>
+				<td colspan="4" align="right">
+					<table width="200">
+						<tr>
+							<td width="100" align="right" style="font-family: Arial; font-size:12px">%%LNG_Items%%:</td>
+							<td width="100" align="right" style="font-family:Arial; font-size:12px">%%GLOBAL_ItemTotal%%</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		%%SNIPPET_InvoiceEmailShippingTotal%%
+		%%SNIPPET_InvoiceEmailHandlingTotal%%
+		%%SNIPPET_InvoiceEmailGiftWrapTotal%%
+		%%SNIPPET_InvoiceEmailTaxTotal%%
+		<table width="100%" id="CheckoutCartGrid" cellspacing="0" cellpadding="0">
+			<tr>
+				<td colspan="4" align="right">
+					<table width="200">
+						<tr>
+							<td width="100" align="right" style="font-family: Arial; font-size:12px"><strong>%%LNG_TotalCost%%:</strong></td>
+							<td width="100" align="right" style="font-family:Arial; font-size:12px"><strong>%%GLOBAL_TotalCost%%</strong></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		%%SNIPPET_InvoiceEmailTaxTotalIncluded%%
+	</div>
+</body>
+</html>

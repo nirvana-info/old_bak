@@ -1,0 +1,5 @@
+	<li><span id="brand_%%GLOBAL_Brandid%%img" onclick="hideseries('brand_%%GLOBAL_Brandid%%')"><img src='%%GLOBAL_ShopPath%%/admin/images/minus.gif' width="19" height="16"></span><a href="%%GLOBAL_BrandLink%%">%%GLOBAL_Brandname%%</a>
+    <span id="brand_%%GLOBAL_Brandid%%">
+        %%GLOBAL_Serieslist%%
+	</span>
+    </li>

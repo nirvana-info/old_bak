@@ -1,0 +1,68 @@
+; [PayPal]
+PayPalPaymentsProName = "PayPal Website Payments Pro (UK)"
+PayPalPaymentsProDesc = "PayPal Website Payments Pro (UK) modules"
+PayPalPaymentsProHelp = "To integrate PayPal Website Payments Pro (UK) into your store you need to follow a few simple steps, which are shown below:<ul><li><a href='https://registration.paypal.com/welcomePage.do?partner=PayPalUK&amp;bundleType=C2&amp;country=UK' target=_blank>Click here</a> to register for a Paypal Website Payments Pro (UK) account.</li><li>Type the Vendor ID you received from Paypal into the 'Vendor ID' field below</li><li>Type the User ID you received from Paypal into the 'User ID' field below</li><li>Type the Partner ID you received from Paypal into the 'Partner ID' field below</li><li>Type the password that you set up while registering for you Paypal Website Payments Pro UK account in the Password field below</li><li>Choose 'Yes' from the 'Require Security Code' dropdown box below to require the credit card security code from customers during the checkout process</li><li>Choose 'Yes' from the test mode dropdown box below to enable test orders</li><li>When everything appears to be working change test mode to 'No' to accept live payments from your store</li></ul>"
+
+PayPalPaymentsProNoSSLError = "To checkout with PayPal Website Payments Pro (UK) you need to first enable secure checkout from the settings page in the shopping cart's control panel. If your website doesn't have an SSL certificate then you should disable PayPal Website Payments Pro (UK) from the checkout settings page."
+
+
+VendorID = "Vendor ID"
+VendorIDHelp = "Your merchant login ID that you created when you registered for the PayPal Website Payments Pro account. This value is case sensitive."
+PartnerID = "Partner ID"
+PartnerIDHelp = "The ID provided to you by the authorised PayPal Reseller who registered you for the Payflow SDK. If you purchased your account directly from PayPal, use PayPalUK.This value is case-sensitive."
+UserID = "User ID"
+UserIDHelp = "If you set up one or more additional users on your Paypal account, this value is the ID of the user authorized to process transactions. If, however, you have not set up additional users on the account, USER has the same value as VENDOR. This value is case-sensitive."
+Password = "Password"
+PasswordHelp = "The password that you defined while registering for your Paypal account. This value is case-sensitive."
+
+SecretCode = "SecretCode"
+SecretCodeHelp = "The password that you defined while registering for your Paypal account. This value is case-sensitive."
+
+
+TestMode = "Test Mode"
+TestModeHelp = "Should the order details be passed to PayPal as a test transaction? Test transactions are a good way to make sure your PayPal account is setup and functioning correctly. You should choose <strong>NO</strong> when your site is ready to go live. Note: This requires a <a href=http://developer.paypal.com target=_blank>PayPal Sandbox Account</a>."
+TestModeNo = "No (Recommended)"
+TestModeYes = "Yes"
+TransactionType = "Transaction Type:"
+TransactionTypeSale = "Sale"
+TransactionTypeAuthorize = "Authorize Only"
+TransactionTypeHelp = "<strong>Sale:</strong> A credit card transaction that immediately charges a customer\'s credit card.<br /><br /><strong>Authorize Only:</strong> A credit card transaction that reserves funds on a customer\'s credit card. An Authorize Only transaction does not charge the card until you confirm it.<br /><br />Note: Authorizations reserve funds for varying periods, depending on the issuing credit card company\'s policy."
+PayPalPaymentsProCurlRequired = "Your server must support PHP's CURL library to use Paypal Website Payments Pro (UK)."
+DeclinedRedirect = "Your credit card payment has been declined due to incorrect card details or insufficient funds on the card."
+PayPalPaymentsProError = "Paypal Website Payments Pro UK payment didn't process successfully. Order ID: %s. Transaction ID: %s. Response code: %s."
+PayPalPaymentsProDuplicate = "Paypal Website Payments Pro UK payment didn't process successfully, duplicate order ID was detected. Order ID: %s. Transaction ID: %s."
+PayPalPaymentsProSuccess = "Paypal Website Payments Pro payment processed successfully. Order ID: %s. Transaction ID: %s. Response code: %s."
+PayPalPaymentsProOrUse = "-- Or Use --"
+CheckoutWithPayPal = "Checkout with PayPal"
+ErrorConnectingToPaypal = "There was an error occured while connecting to Paypal."
+PayPalPaymentsProInvalidOrder = "Invalid order was found, no payment has been made."
+PayPalPaymentsProSecurityCodeHelp = "If you want to use the Paypal Credit Card Veritification Feature to add extra security to credit card transactions, enable this option. This option will require users to enter the CVV2/CVS code for their credit card during the checkout."
+RequireSecurityCode = "Require Security Code"
+PayPalPaymentsProSecurityCodeNo = "No, do not require credit card security codes"
+PayPalPaymentsProSecurityCodeYes = "Yes, require credit card security codes"
+
+
+AVSCheckFailed = "AVS mismatch."
+CVV2CheckFailed = "CVV2 mismatch."
+DelayedCaptureFailed = "The payment couldn't be captured. %s."
+DelayedCaptureSuccess = "The payment was captured successfully".
+DelayedCaptureDuplicateTransaction = "The payment couldn't be captured successfully, this is a duplicate transaction."
+DelayedCaptureError = "The delayed capture transaction couldn't be completed successfully. Order ID: %s. Response Code: %s."
+DelayedCaptureSuccessLog = "The delayed capture transaction completed successfully. Order ID: %s. Transaction ID: %s. Paypal Message: %s."
+
+RefundFailed = "The payment couldn't be refunded. %s."
+RefundSuccess = "The payment was refunded successfully".
+RefundDuplicateTransaction = "The payment couldn't be refunded successfully, this is a duplicate transaction."
+RefundError = "The refund transaction couldn't be completed successfully. Order ID: %s. Response Code: %s."
+RefundSuccessLog = "The refund transaction completed successfully. Order ID: %s. Transaction ID: %s. Paypal Message: %s."
+
+VoidFailed = "The transaction couldn't be voided. %s."
+VoidSuccess = "The transaction was voided successfully".
+VoidDuplicateTransaction = "The payment couldn't be voided successfully, this is a duplicate transaction."
+VoidError = "The void transaction couldn't be completed successfully. Order ID: %s. Response Code: %s."
+VoidSuccessLog = "The void transaction completed successfully. Order ID: %s. Transaction ID: %s. Paypal Message: %s."
+
+
+ErrorConnectToPaypal = "There was an error when connecting to PayPal. Transaction couldn't be processed."
+
+PayPalPaymentsProCurrecyNotSupported = "PayPal Website Payments Pro UK cannot be enabled as it only supports stores with USD, EUR, GBP, JPY, CAD or AUD as their default currency. Go to the Settings -> Currency Settings page to change your default currency."

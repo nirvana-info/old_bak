@@ -1,0 +1,21 @@
+<div style="" id="HomeNewProducts" class="Block NewProducts Moveable">
+  <div>%%GLOBAL_CatgDescandBrandImage%%</div>
+  <div style="position:relative">
+	<div class="focushiddendiv">
+		<a name="focusDiv"></a>
+	</div>
+  </div>
+  <div class="searchmsg" style="display:%%GLOBAL_DynamicDisplay%%"><h2>%%GLOBAL_SearchTitle%%</h2></div>
+  <div class="ymmselector" style="display:%%GLOBAL_YMMTableDisplay%%;text-align:center;">%%GLOBAL_YMMTable%%</div>
+  <div id='pagenum_focus' style="display:%%GLOBAL_DynamicDisplay%%">%%Panel.NewSearchPagingTop%%</div>
+  <div>
+  	%%GLOBAL_CustomPage%%
+  </div>
+  <div class="BlockContent" style="display:%%GLOBAL_DynamicDisplay%%">
+    <ul class="SubcatList" style="display:%%GLOBAL_DynamicDisplay%%">
+	%%GLOBAL_SearchResultList%%
+    </ul>
+  </div>
+  <br class="Clear"/>
+  <div>%%GLOBAL_CatgBrandSeriesFooter%%</div>
+</div>

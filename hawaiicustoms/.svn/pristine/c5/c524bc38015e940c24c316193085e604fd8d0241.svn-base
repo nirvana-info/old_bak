@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+	<div id="Container">
+		%%Panel.Header%%
+                %%Panel.FreeDelivery%%
+		%%Banner.TopBanner%%
+		<div id="Wrapper">
+			%%Panel.WrapperBanner%%
+                      <div class="Right" id="account-right" style="%%GLOBAL_HideRightMenu%%">
+				%%Panel.SideAccountMenu%%
+				<div style="clear:right;">%%Panel.SidePopularProducts%%</div>
+			</div>
+			<div class="Left" id="LayoutColumn1">
+				%%Panel.MyVehicleArea%%
+				%%Panel.SideCategoryList%%
+				%%Panel.SideNewsletterBox%%
+%%Panel.GiftCertificatesMenu%%
+			</div>
+			<div class="Content" id="account-content">
+				%%Panel.SearchFormSmall%%
+				%%Panel.WishListItems%%
+				%%Panel.WishLists%%
+				%%Panel.WishListAddForm%%
+			</div>
+			
+			<br class="Clear" />
+		</div>
+		%%Panel.Footer%%
+	</div>
+	<script type="text/javascript">
+	//<![CDATA[
+	function ValidateWishListForm(formtype)
+	{
+		var wishlistname = g("wishlistname");
+
+		wishlistname.value = wishlistname.value.replace(/^s+|s+$/g, '') ;
+		if(wishlistname.value == "") {
+			alert("%%LNG_EnterWishListName%%");
+			wishlistname.focus();
+			wishlistname.select();
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+
+	function ValidateDeleteWishlist(bulkDelete, wishlistId)
+	{
+		if (bulkDelete == true) {
+			var deleteWishList = g("wishlistsform").elements;
+
+			var wishlistSelected = false;
+			for(i = 0; i < deleteWishList.length; i++) {
+				if (deleteWishList[i].checked == true) {
+					wishlistSelected = true;
+					break;
+				}
+			}
+			if (wishlistSelected == true) {
+				return window.confirm('%%LNG_ConfirmDeleteWishLists%%');
+			} else {
+				alert('%%LNG_SelectAWishListToDelete%%');
+				return false
+			}
+		} else {
+			if (window.confirm('%%LNG_ConfirmDeleteWishLists%%') == true) {
+				window.location = '%%GLOBAL_WishListDeleteLink%%'+wishlistId;     // Baskaran
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	function ToggleWishListDeleteBoxes(Status)
+	{
+		var deleteWishList = g("wishlistsform").elements;
+
+		for(i = 0; i < deleteWishList.length; i++) {
+			deleteWishList[i].checked = Status;
+		}
+	}
+	//]]>
+	</script>
+</div>
+</div>
+%%Panel.TCFooter%%
+</body>
+</html>

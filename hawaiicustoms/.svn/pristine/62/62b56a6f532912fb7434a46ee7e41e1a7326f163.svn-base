@@ -1,0 +1,21 @@
+<div class="Popup" id="%%GLOBAL_PopupID%%" style="display:%%GLOBAL_PopupDisplay%%;">
+	<div class="PopupToolbar">
+		<div class="PopupToolbarLeftCorner"></div>
+		<div class="PopupToolbarRightCorner"></div>
+		<div class="PopupToolbarTools">
+			<ul>
+				<li><img src="images/popupbuttonclose.gif" alt="" border="0" onclick="$('#%%GLOBAL_PopupID%%').hide('slow');" /></li>
+				%%GLOBAL_PopupTools%%
+			</ul>
+		</div>
+	</div>
+	<div class="PopupDocument">
+		<div class="PopupDocumentImg" style="display:%%GLOBAL_PopupImgDisplay%%">
+			<img src="%%GLOBAL_PopupImgSrc%%" />
+		</div>
+		<div class="PopupDocumentBody">
+			<p><h2>%%GLOBAL_PopupHeader%%</h2></p>
+			<p>%%GLOBAL_PopupContent%%</p>
+		</div>
+	</div>
+</div>

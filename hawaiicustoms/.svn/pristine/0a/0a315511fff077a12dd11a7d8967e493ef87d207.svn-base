@@ -1,0 +1,170 @@
+<head>
+%%GLOBAL_CategoryTrackingCodeTop%%
+<title>%%Page.WindowTitle%%</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=%%GLOBAL_CharacterSet%%" />
+<meta name="description" content="%%Page.MetaDescription%%" />
+<meta name="keywords" content="%%Page.MetaKeywords%%" />
+<meta name="netinsert" content="0.0.1.12.1.2.1">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="msvalidate.01" content="165140A3C47319C7FB7FD74852EDDB82" />
+
+<link rel="shortcut icon" href="%%GLOBAL_ShopPath%%/favicon.ico" />
+
+<link href="%%GLOBAL_ShopPath%%/css/custom-pages.css" type="text/css" rel="stylesheet" />
+
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/styles.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/blue.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/iselector.css" type="text/css" rel="stylesheet" />
+<!--<link href="%%GLOBAL_ShopPath%%/templates/CongoWorld/Styles/tab.css" type="text/css" rel="stylesheet" /> added by vikas-clarion -->
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/rhb_styles.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/landing-pages.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/javascript/search_js/thickbox.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/category-styles.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/stars.rating/ui.stars.css" type="text/css" rel="stylesheet" />
+<link href="%%GLOBAL_ShopPath%%/swfobjectupload/default.css" type="text/css" rel="stylesheet" />  <!--johnny add-->
+
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/ie.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_ShopPath%%/templates/TruckChampFixed/Styles/ie6.css" />
+<![endif]-->
+
+<!-- For applying canonical link -->
+<link rel="canonical" href="%%GLOBAL_HeadCanonicalLink%%"/>
+
+<!-- Tell the browsers about our RSS feeds -->
+%%GLOBAL_HeadRSSLinks%%
+
+<!-- Include visitor tracking code (if any) -->
+%%GLOBAL_TrackingCode%%
+
+%%GLOBAL_Stylesheets%%
+
+%%GLOBAL_DesignModeStyleSheet%%
+
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/menudrop.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/common.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/iselector.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/admin/script/order.manager.js"></script>
+<!--Added by Simha-->
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/search_js/thickbox.js"></script>
+<!--Added by Rowland-->
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/sorttable.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/hoverimages.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/ui.core.js"></script>
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/jquery/plugins/stars.rating/ui.stars.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+config.ShopPath = '%%GLOBAL_ShopPath%%';
+config.AppPath = '%%GLOBAL_AppPath%%';
+
+// Ensure that all product lists are the same height
+$(document).ready(function() {
+if(typeof(DesignMode) != 'undefined') {
+return;
+}
+var maxHeight = 0;
+$('.Content .ProductList li .ProductDetails').each(function() {
+if($(this).height() > maxHeight) {
+maxHeight = $(this).height();
+}
+});
+$('.Content .ProductList li .ProductDetails').css('height', maxHeight);
+});
+
+function checkanimate(divId) {
+
+var imgID = divId+'image';
+divId = '#'+divId;
+
+//alert($(divId+'image').attr("src"));
+
+if ($(divId).is(":hidden")) {
+$(divId).slideDown();
+//$(divId+'image').html("<img src='%%GLOBAL_ShopPath%%/templates/default/images/imgHdrDropDownIcon.gif'>");
+$(divId+'image').attr("src","%%GLOBAL_ShopPath%%/templates/default/images/imgHdrDropDownIcon.gif");
+//document.getElementById(imgID).src = '/store/templates/default/images/imgHdrDropDownIcon.gif';
+} else {
+$(divId).slideUp();
+//$(divId+'image').html("<img src='%%GLOBAL_ShopPath%%/templates/default/images/imgHdrDropDownIconright.gif'>");
+$(divId+'image').attr("src","%%GLOBAL_ShopPath%%/templates/default/images/imgHdrDropDownIconright.gif");
+//document.getElementById(imgID).src = '/store/templates/default/images/imgHdrDropDownIconright.gif';
+}
+}
+
+function getvalueswithajax(divid,params) {
+// Locations div is empty
+
+if ($.trim($('#'+divid).text()) == '') {
+$.ajax({
+type: "GET",
+url: "%%GLOBAL_ShopPath%%/redefine_filters.php",
+data: params,
+beforeSend: function() {
+$('#'+divid).html('&nbsp;&nbsp;&nbsp;<img src="%%GLOBAL_ShopPath%%/templates/default/images/21-0.gif"/>');
+},
+success: function(msg){
+//alert( "Data Saved: " + msg );
+$('#'+divid).html(msg);
+}
+});
+}
+}
+
+function show_hide(type) {
+
+if(type != '')
+{
+if(document.getElementById('extra_'+type).style.display=='none' || document.getElementById('extra_'+type).style.display=='') {
+
+document.getElementById('extra_'+type).style.display='block';
+document.getElementById(type+'_more').innerHTML = 'Hide...';
+
+} else {
+
+document.getElementById('extra_'+type).style.display='none';
+document.getElementById(type+'_more').innerHTML = 'More...';
+
+}
+}
+
+}
+
+function ShowPopupCustom(pid, w, h)
+{
+    var siteUrl = '%%GLOBAL_ShopPath%%';
+    if(pid.indexOf('/')!=0){
+        siteUrl = '%%GLOBAL_ShopPath%%/';
+    }
+    window.open(siteUrl + pid,"Window1","menubar=no,width="+w+",height="+h+",toolbar=no,left=250,top=150,scrollbars=yes,resizable=no");
+}
+
+/*$(function () {
+$(window).load(function () {
+$(':input[id="search_query"]').focus();
+});
+})*/
+//]]>
+</script>
+
+%%GLOBAL_QuickSearchJS%%
+
+%%GLOBAL_RTLStyles%%
+
+
+
+<script type="text/javascript" src="%%GLOBAL_ShopPath%%/admin/script/swfobject.js"></script>
+<script type="text/javascript">
+swfobject.registerObject("myFlashContent", "9");
+$(document).ready(function(){
+$(".SubcatList li:nth-child(even)").addClass("even");
+});
+</script>
+</head>

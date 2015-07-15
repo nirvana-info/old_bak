@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+	<div id="Container">
+	%%Panel.Header%%
+	%%Panel.FreeDelivery%%
+	%%Banner.TopBanner%%
+	<div id="Wrapper">
+		<div class="Left" id="LayoutColumn1">
+			%%Panel.MyVehicleArea%%
+			%%Panel.SideCategoryList%%
+			%%Panel.SideNewsletterBox%%
+			%%Panel.GiftCertificatesMenu%%
+		</div>
+		<div class="Content Wide WideWithLeft" id="LayoutColumn2">
+			%%Panel.SearchForm%%
+			<div class="Block" style='padding-top:20px;'>
+				
+				<h2>%%GLOBAL_OrderReviewTitle%%</h2>
+				
+				
+				<div class="BlockContent">
+				<div id="orderTitle" style="margin-bottom:5px;">
+				%%LNG_OrderReviewTips%%<span style="%%GLOBAL_ShowOrderCouponCode%%">You may use this coupon code :
+%%GLOBAL_OrderCouponCode%% <br>for your next order.	</span>	
+				
+				</div>
+					<div class="ProductList">  
+					<table class="SubcatProdItem" cellpadding="0" cellspacing="0">  
+					    <tr class="listproductsheader">
+					        <td width="33%">%%GLOBAL_ImagePart%%</td>
+					        <td width="25%">%%GLOBAL_ProductDescTitle%%</td>
+					        <td width="21%">%%GLOBAL_ProductPriceLabel%%</td>
+					        <td width="21%">%%GLOBAL_ProductDetails%%</td>                                         
+					    </tr>
+					</table>  
+					%%GLOBAL_ProductList%%
+					</div>
+				</div>
+			</div>
+		</div>
+		<br class="Clear" />
+	</div>
+	%%Panel.Footer%%
+</div>
+</div>
+</div>
+</div>
+%%Panel.TCFooter%%
+	<script>
+		function setReviewedInfo(productid)
+		{
+			$('#orderTitle').html('%%LNG_ReviewSavedPending3%%');
+			var trs = $("#orderdetailtable tr");//select row
+			//alert(trs.text());
+		    $.each(trs,function(idx,atr){
+		        var atd = $(atr).children()[1];//find prodname
+				var txt=""+$(atd).text();
+				var txt2=""+txt.replace(productid,'');
+		        if(txt!=txt2){//find the product
+					//var atd2 = $(atr).children()[3];
+					var atd3 = $(atr).find("#linkReview");//find the link
+					$(atd3).css("display","none");//hide
+				}
+		        
+		    })
+		}
+	</script>
+</body>
+</html>

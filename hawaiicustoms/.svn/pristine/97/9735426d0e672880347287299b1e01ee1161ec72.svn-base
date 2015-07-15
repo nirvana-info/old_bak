@@ -1,0 +1,4 @@
+<input class="plain" id="dc_show%%GLOBAL_CalendarId%%" name="SpecialDate[]" value="%%GLOBAL_DefindedDate%%" size="12" onfocus="this.blur()" readonly/>
+<a href="javascript:void(0)" onclick="if(self.gfPop)gfPop.fStartPop(document.getElementById('dc_show%%GLOBAL_CalendarId%%'),document.getElementById('dc_hide%%GLOBAL_CalendarId%%'));return false;" HIDEFOCUS>
+	<img name="popcal" align="absmiddle" src="images/calbtn.gif" width="34" height="22" border="0" alt="">
+</a><input type="text" id="dc_hide%%GLOBAL_CalendarId%%" name="dc_hide%%GLOBAL_CalendarId%%" style="display:none"/>

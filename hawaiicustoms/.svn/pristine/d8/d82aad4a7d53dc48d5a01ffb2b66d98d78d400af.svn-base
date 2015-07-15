@@ -1,0 +1,8 @@
+
+<div style="margin:40px;">
+<strong>Sweepstakes</strong><br><br>
+Email:<input type="text" size=40 id="sweepstakes_email" name="sweepstakes_email" class="Feild150"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Action Now!" onclick="goto_sweepstakes();"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Cancel" onclick="$.unblockUI();"/>
+</div>
+ 

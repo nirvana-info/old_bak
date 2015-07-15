@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/checkout.js"></script>
+	<script type="text/javascript" src="%%GLOBAL_ShopPath%%/javascript/express.checkout.js"></script>
+	<div id="Container">
+		%%Panel.Header%%
+		%%Panel.FreeDelivery%%
+		%%Banner.TopBanner%%
+		<div id="Wrapper" style="background-color:#FFFFFF;">
+			%%Panel.WrapperBanner%%
+			<div class="Content Widest" id="LayoutColumn1">
+				%%Panel.ChooseAddonProducts%%
+			</div>
+			<br class="Clear" />
+		</div>
+		%%Panel.Footer%%
+	</div>
+</div>
+</div>
+%%Panel.TCFooter%%
+</body>
+</html>

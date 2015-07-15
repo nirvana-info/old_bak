@@ -1,0 +1,7 @@
+			<tr class="SubTotal">
+				<td colspan="3">
+					<strong>%%LNG_CompanyGiftCertificate%% (%%GLOBAL_CompanyGiftCertificateCode%%):</strong><br />
+					<small style="color: gray;">%%GLOBAL_CompanyGiftCertificateRemaining%% %%LNG_CompanyGiftCertificateRemaining%%</small>
+				</td>
+				<td><em class="ProductPrice" style="font-style: italic;">-%%GLOBAL_CompanyCertificateAmountUsed%%</em></td>
+			</tr>

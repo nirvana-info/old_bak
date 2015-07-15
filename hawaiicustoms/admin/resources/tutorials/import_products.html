@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head>
+<link rel="stylesheet" href="../../Styles/styles.css" type="text/css">
+<style type="text/css">
+code {
+	width: 400px;
+	display: block;
+	background-color: #efefef;
+	border: 1px solid #ccc;
+	padding: 4px;
+	margin-left: 30px;
+}
+
+p.image {
+	background-color:#FFFEE4;
+	border:1px solid #EDEACA;
+	font-size:11px;
+	line-height:100%;
+	padding:20px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+p img {
+	display: block;
+	border: 1px solid #000;
+	margin-bottom: 3px;
+}
+
+</style>
+</head>
+<body class="popupBody">
+<div class="popupContainer">
+
+	<div class="Heading1">Importing Products: A Quick Tutorial</div>
+
+	<p>If you have a list of products in a file on your computer, you can upload that file in to the system and have the products automatically added to your store. To start, you will need to have your list of products in a CSV (comma separated value) formatted file. A CSV file will contain a list of your product details in a line-by-line format, such as:</p>
+
+	<code>
+    Product Name,Product Description,$9.99<br />
+    Product Name 2,Product Description 2,$99.99
+	</code>
+
+	<p>Move your mouse over the "Products" tab and click the "Import Products" option, as shown below:</p>
+
+	<p class="image" style="width: 226px"><img src="images/import_products-1.gif" alt="" /><br />To import products from a file, click the "Import Products" option under the "Products" tab.</p>
+
+	<p>This will start the "Import Products" wizard.</p>
+
+	<div class="Heading2">Step 1</div>
+	<div class="step">
+		<p class="image" style="width: 533px"><img src="images/import_products-2.gif" alt="" /><br />Set the import settings and select the file to import from.</p>
+
+		<div class="Heading3">Import Details</div>
+
+		<ol>
+			<li>
+				<strong>Category</strong>
+				<p>If you your CSV file contains the categories for your products, check "Detect category names from CSV file."</p>
+				<p>If you'd like to manually specify a category, uncheck the checbox and select the category you wish to import the products in to.</p>
+			</li>
+
+			<li>
+				<strong>Override Existing Details?</strong>
+				<p>If you'd like to override the product information of any existing products with the same name, check "Yes, override existing records."</p>
+				<p>If left unchecked, any products in your CSV file with an excisting matching name in the store will not be imported.</p>
+			</li>
+		</ol>
+
+		<div class="Heading3">File Details</div>
+
+		<ol>
+			<li>
+				<strong>Import File</strong>
+				<p>To upload a file from your computer, select "Upload a file from my computer" and click "Browse..." to locate the file on your computer.</p>
+				<p>Note: If the file size is larger than the noted maximum size limit, you will need to upload the file file via FTP in to the admin/import/ directory.</p>
+				<p>If this is the case, select "Use a file already on the server" and select the file you uploaded.</p>
+			</li>
+
+			<li>
+				<strong>Contains Headers?</strong>
+				<p>If this CSV file contains a row of headers at the top before the actual data starts, check this option.</p>
+				<p>A CSV file with a row of headers will look similar to the following:</p>
+
+				<code>
+					<span style="background: yellow;">Name,Description,Price</span><br />
+					Product Name,Product Description,$9.99<br />
+					Product Name 2,Product Description 2,$99.99<br />
+				</code>
+			</li>
+
+			<li>
+				<strong>Field Separator</strong>
+				<p>If the fields in your CSV file are not separated by a comma (,), change this field to match your field separator.</p>
+
+				<p>Note: If unsure, leave this setting as the default.</p>
+			</li>
+
+			<li>
+				<strong>Field Enclosure</strong>
+				<p>If the fields in your CSV file are enclosed within a different character (by default &quot;), change this field to match your field enclosure.</p>
+
+				<p>Note: If unsure, leave this setting as the default.</p>
+			</li>
+		</ol>
+
+		<p><strong>Click "Next >>"</strong> when you are done.</p>
+
+		<p>The upload process may take a moment or two to complete and parse your CSV file.</p>
+	</div>
+
+	<div class="Heading2">Step 2</div>
+	<div class="step">
+		<p>You will now be asked to map the fields from the imported file to fields in the system.</p>
+
+		<p>Simply click the drop down box next to each of the system fields to select an appropriate field from your CSV file. Here's an example for an import file that contained the "Product Name", "Product Description" and "Price" fields:</p>
+
+		<p class="image" style="width: 475px"><img src="images/import_products-3.gif" alt="" /><br />Click the drop down next to each field to map it to an appropriate field in the CSV file.</p>
+
+		<p><strong>Click "Next >>"</strong> when you are done.</p>
+	</div>
+
+	<div class="Heading2">Step 3</div>
+	<div class="step">
+		<p><strong>Click "Start Import"</strong> to begin the import process.</p>
+
+		<p>Your products will be imported one by one and the popup window that appears will show you how many records have been imported and how many remain.</p>
+
+		<p>After the import process is complete you will see a final report which shows the status of the import as well as any incomplete or invalid records.</p>
+
+		<p class="image" style="width: 360px"><img src="images/import_products-4.gif" alt="" /><br />The final screen will show you how many products were imported. It will also tell you if the import file contained bad data.</p>
+	</div>
+
+	<div class="Heading2">Appendix: Product CSV Fields</div>
+	<div class="step">
+	<p>The system supports numerous fields for importing products from a CSV file.</p>
+	<ul>
+		<li><strong>Product Name:</strong> <em>(String)</em> The name of the product</li>
+		<li><strong>Category:</strong> <em>(String)</em>The name of the category to put the product in. If the category does not exist, it will be created.</li>
+		<li><strong>Brand Name:</strong> <em>(String)</em> The brand name fo the product. If it does not exist, it will be created automatically.</li>
+		<li><strong>Product Code/Sku:</strong> <em>(String)</em> The product code or SKU for the product.</li>
+		<li><strong>Product Description:</strong> <em>(Text)</em> The description of the product. Note, this needs to be on one line. HTML formatting and HTML line breaks allowed.</li>
+		<li><strong>Availability:</strong> <em>(String)</em> Any information regarding the availability of the product.</li>
+		<li><strong>Price:</strong> <em>(Float)</em> The price of the product. (examples: $9.99, 9.99, $9)</li>
+		<li><strong>Current Stock Level:</strong> <em>(Integer)</em> The inventory level of the product. If not specified, inventory tracking will not be enabled for the product.</li>
+		<li><strong>Weight:</strong> <em>(Float)</em> The weight of the product - with no units. Examples include (1, 1.99)</li>
+		<li><strong>Width:</strong> <em>(Float)</em> The width of the product - with no units. Examples include (1, 1.99)</li>
+		<li><strong>Height:</strong> <em>(Float)</em> The height of the product - with no units. Examples include (1, 1.99)</li>
+		<li><strong>Depth:</strong> <em>(Float)</em> The depth of the product - with no units. Examples include (1, 1.99)</li>
+	</ul>
+
+	<p><strong>Note:</strong> The product import system does not include the ability to import product options. Any imported items are added as direct products.</p>
+	</div>
+</div>
+</body>
+</html>

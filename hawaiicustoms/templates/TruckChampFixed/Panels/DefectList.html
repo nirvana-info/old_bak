@@ -1,0 +1,39 @@
+<div class="Block Moveable PurchaseGiftCertificate" id="DefectReportForm">
+    <br />
+    <h2>%%GLOBAL_DefectReportTitle%%</h2>
+    <div class="BlockContent">
+        <p>
+            %%LNG_DefectReportDescription%%
+            %%GLOBAL_Message%% 
+        </p>
+            <div class="FormContainer HorizontalFormContainer">
+                <table cellpadding="1" cellspacing="1" border="0" width="100%" bgcolor="#808080">
+                <tr>
+                    <td>
+                        <h2 style="color:#FFFFFF;background:none;">%%LNG_Url%%</h2>
+                    </td>
+                    <td>
+                        <h2 style="color:#FFFFFF;background:none;">%%LNG_Description%%</h2>
+                    </td>
+                    <td>
+                        <h2 style="color:#FFFFFF;background:none;">%%LNG_Comment%%</h2>
+                    </td>
+                    <td>
+                        <h2 style="color:#FFFFFF;background:none;">%%LNG_Status%%</h2>
+                    </td>
+                    <td>
+                        <h2 style="color:#FFFFFF;background:none;">%%LNG_Action%%</h2>
+                    </td>
+                </tr>
+                %%GLOBAL_DefectGrid%%
+                </table>
+            </div>
+    </div>
+</div>
+<script>
+function deletedefectid(id) {
+     if(confirm("%%LNG_ConfirmDeleteDefect%%")) {
+        document.location.href = "defectreport.php?action=deletedefect&Id="+id;
+    }
+}
+</script>

@@ -1,0 +1,5 @@
+    <h4 style="text-align:left;"><strong>%%LNG_InstallImages%%</strong></h4> 
+    <div class="BlockContent">   
+        %%GLOBAL_InsAdditionalViewGallery%%    
+    </div>
+    <div style="height:0; clear:both;"></div>       

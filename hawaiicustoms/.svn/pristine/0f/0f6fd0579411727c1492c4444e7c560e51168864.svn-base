@@ -1,0 +1,11 @@
+					<tr>
+						<td class="FieldLabel">
+							&nbsp;&nbsp;&nbsp;%%GLOBAL_CustomFieldLabel%%:
+						</td>
+						<td>
+							<input type="text" id="customFieldName[%%GLOBAL_CustomFieldKey%%]" name="customFieldName[%%GLOBAL_CustomFieldKey%%]" class="Field200" value="%%GLOBAL_CustomFieldName%%">
+							<input type="text" id="customFieldValue[%%GLOBAL_CustomFieldKey%%]" name="customFieldValue[%%GLOBAL_CustomFieldKey%%]" class="Field200" value="%%GLOBAL_CustomFieldValue%%">
+							<a href="#" onclick="return AddCustomField()"><img src="images/addicon.gif" alt="Add" border="0" /></a>
+							<a href="#" onclick="return DelCustomField(this.parentNode.parentNode)" style="display: %%GLOBAL_HideCustomFieldDelete%%;"><img src="images/delicon.gif" alt="Del" border="0" /></a>
+						</td>
+					</tr>

@@ -1,0 +1,2871 @@
+***********************************************************************
+* Change Log for Interspire Shopping Cart 5.0.2 (Maintenance Release) *
+***********************************************************************
+
+* Bug #4813: Expiry date shows incorrectly in dashboard
+* Bug #4814: Expiry date checking is off by one day and doesn't take timezone into account
+* Bug #4816: Edit template files function doesn't work, a blank page shows up after clicking on it
+* Bug #4835: Discount rules aren't visible in Professional edition
+* Bug #4842: License keys are not being validated correctly for localhost
+* Bug #4846: Subscriber custom fields are not sent to Email Marketer
+* Bug #4847: Can't enter a fix discount price more than $100 for customer group discount
+* Bug #4848: Google checkout should allow store own to set order status to complete when an order is placed
+* Bug #4849: The description sent to WorldPay is empty
+* Bug #4850: Configurable fields don't line up in edit configurable fields form on cart page
+* Bug #4810: Undefined object error when saving in currency module admin
+* Bug #4839: Quick order view in the admin getting 404
+
+Changed Files:
+	admin/includes/classes/class.designmode.php
+	admin/includes/classes/class.discounts.php
+	admin/includes/classes/class.engine.php
+	admin/includes/classes/class.index.php
+	admin/includes/classes/class.product.php
+	admin/includes/classes/class.settings.php
+	admin/includes/classes/class.upgrade.php
+	admin/script/common.js
+	admin/templates/customers.group.form.tpl
+	changelog.txt
+	includes/classes/class.order.php
+	lib/general.php
+	lib/init.php
+	modules/checkout/googlecheckout/module.googlecheckout.php
+	modules/checkout/worldpay/lang/en/language.ini
+
+Template Changes:
+	__master
+		templates/__master/Snippets/CartEditProductFieldsForm.html
+
+	Adventure
+		templates/Adventure/config.php
+		templates/Adventure/Styles/styles.css
+
+	ArtsCrafts
+		templates/ArtsCrafts/config.php
+
+	Automotive
+		templates/Automotive/config.php
+		templates/Automotive/Styles/styles.css
+
+	Baby
+		templates/Baby/config.php
+		templates/Baby/Styles/styles.css
+
+	Beauty
+		templates/Beauty/config.php
+		templates/Beauty/Styles/styles.css
+
+	Bodybuilding
+		templates/Bodybuilding/config.php
+		templates/Bodybuilding/Styles/styles.css
+
+	Books
+		templates/Books/config.php
+		templates/Books/Styles/styles.css
+
+	Computers
+		templates/Computers/config.php
+		templates/Computers/Styles/styles.css
+
+	Cosmetics
+		templates/Cosmetics/config.php
+		templates/Cosmetics/Styles/styles.css
+
+	default
+		templates/default/config.php
+		templates/default/Styles/styles.css
+
+	Electronics
+		templates/Electronics/config.php
+		templates/Electronics/Styles/styles.css
+
+	Entertainment
+		templates/Entertainment/config.php
+		templates/Entertainment/Styles/styles.css
+
+	Fashion
+		templates/Fashion/config.php
+		templates/Fashion/Styles/styles.css
+
+	FashionJewellery
+		templates/FashionJewellery/config.php
+		templates/FashionJewellery/Styles/styles.css
+
+	Flowers
+		templates/Flowers/config.php
+		templates/Flowers/Styles/styles.css
+
+	Food
+		templates/Food/config.php
+		templates/Food/Styles/styles.css
+
+	Furniture
+		templates/Furniture/config.php
+		templates/Furniture/Styles/styles.css
+
+	Gadgets
+		templates/Gadgets/config.php
+		templates/Gadgets/Styles/styles.css
+
+	Garden
+		templates/Garden/config.php
+		templates/Garden/Styles/styles.css
+
+	Gifts
+		templates/Gifts/config.php
+		templates/Gifts/Styles/styles.css
+
+	Handbags
+		templates/Handbags/config.php
+		templates/Handbags/Styles/styles.css
+
+	Health
+		templates/Health/config.php
+		templates/Health/Styles/styles.css
+
+	Homewares
+		templates/Homewares/config.php
+		templates/Homewares/Styles/styles.css
+
+	Infinity
+		templates/Infinity/config.php
+		templates/Infinity/Styles/styles.css
+
+	Jewellery
+		templates/Jewellery/config.php
+		templates/Jewellery/Styles/styles.css
+
+	Kitchenware
+		templates/Kitchenware/config.php
+		templates/Kitchenware/Styles/styles.css
+
+	Lingerie
+		templates/Lingerie/config.php
+		templates/Lingerie/Styles/styles.css
+
+	Luggage
+		templates/Luggage/config.php
+		templates/Luggage/Styles/styles.css
+
+	Nightwear
+		templates/Nightwear/config.php
+		templates/Nightwear/Styles/styles.css
+
+	Office
+		templates/Office/config.php
+		templates/Office/Styles/styles.css
+
+	Perfume
+		templates/Perfume/config.php
+		templates/Perfume/Styles/styles.css
+
+	Reserved
+		templates/Reserved/config.php
+		templates/Reserved/Styles/styles.css
+
+	Serenity
+		templates/Serenity/config.php
+		templates/Serenity/Styles/styles.css
+
+	Shoes
+		templates/Shoes/config.php
+		templates/Shoes/Styles/styles.css
+
+	Skincare
+		templates/Skincare/config.php
+		templates/Skincare/Styles/styles.css
+
+	Software
+		templates/Software/config.php
+		templates/Software/Styles/styles.css
+
+	Sport
+		templates/Sport/config.php
+		templates/Sport/Styles/styles.css
+
+	StoreSuite
+		templates/StoreSuite/config.php
+		templates/StoreSuite/Styles/styles.css
+
+	Sunglasses
+		templates/Sunglasses/config.php
+		templates/Sunglasses/Styles/styles.css
+
+	Toys
+		templates/Toys/config.php
+		templates/Toys/Styles/styles.css
+
+	Watches
+		templates/Watches/config.php
+		templates/Watches/Styles/styles.css
+
+	Wine
+		templates/Wine/config.php
+		templates/Wine/Styles/styles.css
+
+***********************************************************************
+* Change Log for Interspire Shopping Cart 5.0.1 (Maintenance Release) *
+***********************************************************************
+
+***** NOTE *****
+ Interspire Shopping Cart 5.0.1 contains a new license key scheme.
+ Please login to the Interspire Client Area and generate a new license
+ key from the "License Keys" page.
+****************
+
+* Bug #4680: Cannot copy products for vendor editions
+* Bug #4684: Authorize.Net duplicate transactions are not detected
+* Bug #4687: Product thumb images are being loaded from http when at a https page causing IE warnings
+* Bug #4702: Negative product quantities can be entered under some circumstances
+* Bug #4708: Further refine frontend product search
+* Bug #4712: Post function is sending malformed headers when using fsockopen
+* Bug #4715: Undefined error message on install
+* Bug #4728: PayPal Express Checkout redirects to 404 page in IE
+* Bug #4731: USPS international shipping quote doesn't work in some situation
+* Bug #4734: Currency MXP should be allowed in PayPal express checkout
+* Bug #4736: Emails template folder contains some main template files
+* Bug #4746: Grammatical changes to front end language
+* Bug #4755: Typo on forgot password page
+* Bug #4756: Google checkout help tip doesn't show up
+* Bug #4797: Added checks in some modules that expect an order's state to have an abbreviation if it has a state id
+* Bug #4798: Restored UK counties
+* Bug #4799: Added Isle of Man to countries
+* Bug #4737: Approximate delivery time is reworded to be clearer and contains a disclaimer
+* Bug #4634: Importing/Exporting of dates
+* Bug #4673: Product page shows 'See 0 more pictures' when there is only one product image
+* Bug #4674: Location of the help icon on the custom/configurable fields tab is off
+* Bug #4676: PayPoint requires USD instead of GBP
+* Bug #4679: Variables may be shown in a combined field if certain sub-fields are disabled
+* Bug #4701: "Default Product Image" link found under Settings/Store Settings/Display Settings is broken
+* Bug #4706: Removed unused logo download feature
+* Bug #4721: Error saving values in form fields
+* Bug #4723: Product list mode cuts off description half way through words
+* Bug #4735: Implement TinyMCE to replace DevEdit as the WYSIWYG editor.
+* Bug #4742: State fields are still required for the form fields
+* Bug #4760: Product list layout is broken on store home page in IE
+* Bug #4762: Missing View Customer link on contorl panel home page in the new layout
+* Bug #4764: Username and Password are prefilled on create user page in control panel
+* Bug #4765: Fixed and free shipping prices show for physical-converted-to-digital products
+* Bug #4766: Default product image is too big
+* Bug #4769: New Store Linker for TinyMCE
+* Bug #4775: The configurable fields are not shown in order in the invoice
+* Bug #4783: Header call without the 'Location' request in it
+* Bug #4787: Store credit is displayed in Starter edition
+* Bug #4789: Inventory tracking bar on products page shows the status for the previous product
+* Bug #4791: Product inventory statistics are viewable in Starter
+* Bug #4793: Product limit not checked during import
+* Bug #4795: Protx module doesn't work on new Protx version 2.23
+* Bug #4800: PHP error when checkout with address with no customer checkout fields
+
+* Feature #4589: New dashboard
+* Feature #4779: Integrating new licensing decoding into ISC5
+* Feature #4740: State field now displays as not required when selecting a country that has no associated states
+
+Changed Files:
+
+	admin/de/class.devedit.php (Deleted)
+	admin/de/colorcommand.js (Deleted)
+	admin/de/colormenu.php (Deleted)
+	admin/de/common.js (Deleted)
+	admin/de/de_lang/language.js (Deleted)
+	admin/de/de_lang/language.php (Deleted)
+	admin/de/debug.js (Deleted)
+	admin/de/dialog/callback.snipshot.php (Deleted)
+	admin/de/dialog/colors.js (Deleted)
+	admin/de/dialog/custom_insert.inc (Deleted)
+	admin/de/dialog/do_spell.inc (Deleted)
+	admin/de/dialog/do_spell_old.inc (Deleted)
+	admin/de/dialog/edit_tag.inc (Deleted)
+	admin/de/dialog/file_manager.php (Deleted)
+	admin/de/dialog/find_replace.inc (Deleted)
+	admin/de/dialog/flash_properties.php (Deleted)
+	admin/de/dialog/help.inc (Deleted)
+	admin/de/dialog/image_properties.php (Deleted)
+	admin/de/dialog/images/1x1.gif (Deleted)
+	admin/de/dialog/images/anchor.gif (Deleted)
+	admin/de/dialog/images/colors.gif (Deleted)
+	admin/de/dialog/insert_anchor.inc (Deleted)
+	admin/de/dialog/insert_button.inc (Deleted)
+	admin/de/dialog/insert_chars.inc (Deleted)
+	admin/de/dialog/insert_checkbox.inc (Deleted)
+	admin/de/dialog/insert_form.inc (Deleted)
+	admin/de/dialog/insert_hidden.inc (Deleted)
+	admin/de/dialog/insert_radio.inc (Deleted)
+	admin/de/dialog/insert_select.inc (Deleted)
+	admin/de/dialog/insert_table.inc (Deleted)
+	admin/de/dialog/insert_textarea.inc (Deleted)
+	admin/de/dialog/insert_textfield.inc (Deleted)
+	admin/de/dialog/media_manager.php (Deleted)
+	admin/de/dialog/media_properties.php (Deleted)
+	admin/de/dialog/modify_anchor.inc (Deleted)
+	admin/de/dialog/modify_button.inc (Deleted)
+	admin/de/dialog/modify_cell.inc (Deleted)
+	admin/de/dialog/modify_checkbox.inc (Deleted)
+	admin/de/dialog/modify_form.inc (Deleted)
+	admin/de/dialog/modify_hidden.inc (Deleted)
+	admin/de/dialog/modify_radio.inc (Deleted)
+	admin/de/dialog/modify_select.inc (Deleted)
+	admin/de/dialog/modify_table.inc (Deleted)
+	admin/de/dialog/modify_textarea.inc (Deleted)
+	admin/de/dialog/modify_textfield.inc (Deleted)
+	admin/de/dialog/more_colors.inc (Deleted)
+	admin/de/dialog/page_properties.inc (Deleted)
+	admin/de/dialog/paste.inc (Deleted)
+	admin/de/dialog/quick_table.inc (Deleted)
+	admin/de/dialog/spell_check.inc (Deleted)
+	admin/de/dialog/upload_file.php (Deleted)
+	admin/de/dialog/upload_image.php (Deleted)
+	admin/de/editor.php (Deleted)
+	admin/de/editor_gecko.js (Deleted)
+	admin/de/editor_ie.js (Deleted)
+	admin/de/editor_safari.js (Deleted)
+	admin/de/editor_simple.js (Deleted)
+	admin/de/empty.html (Deleted)
+	admin/de/images/1x1.gif (Deleted)
+	admin/de/images/arrow.gif (Deleted)
+	admin/de/images/background.gif (Deleted)
+	admin/de/images/bigfolder.gif (Deleted)
+	admin/de/images/blank.gif (Deleted)
+	admin/de/images/br.gif (Deleted)
+	admin/de/images/bulb.gif (Deleted)
+	admin/de/images/color.jpg (Deleted)
+	admin/de/images/colors.gif (Deleted)
+	admin/de/images/cursor.gif (Deleted)
+	admin/de/images/delete.gif (Deleted)
+	admin/de/images/doc.gif (Deleted)
+	admin/de/images/end.gif (Deleted)
+	admin/de/images/enlarge.gif (Deleted)
+	admin/de/images/excel.gif (Deleted)
+	admin/de/images/exclamation.gif (Deleted)
+	admin/de/images/file.gif (Deleted)
+	admin/de/images/flash.gif (Deleted)
+	admin/de/images/flash1.gif (Deleted)
+	admin/de/images/flash_icon.gif (Deleted)
+	admin/de/images/folder.gif (Deleted)
+	admin/de/images/help/image_color.gif (Deleted)
+	admin/de/images/help/image_font.gif (Deleted)
+	admin/de/images/help/image_format.gif (Deleted)
+	admin/de/images/help/image_size.gif (Deleted)
+	admin/de/images/help/image_style.gif (Deleted)
+	admin/de/images/help/status_edit.gif (Deleted)
+	admin/de/images/help/status_preview.gif (Deleted)
+	admin/de/images/help/status_source.gif (Deleted)
+	admin/de/images/html.gif (Deleted)
+	admin/de/images/image.gif (Deleted)
+	admin/de/images/link.gif (Deleted)
+	admin/de/images/media.gif (Deleted)
+	admin/de/images/newfolder.gif (Deleted)
+	admin/de/images/para.gif (Deleted)
+	admin/de/images/pdf.gif (Deleted)
+	admin/de/images/powerpoint.gif (Deleted)
+	admin/de/images/preview.gif (Deleted)
+	admin/de/images/rename.gif (Deleted)
+	admin/de/images/save.gif (Deleted)
+	admin/de/images/sep.gif (Deleted)
+	admin/de/images/sep1.gif (Deleted)
+	admin/de/images/tab.active.png (Deleted)
+	admin/de/images/tab.hover.png (Deleted)
+	admin/de/images/tab.png (Deleted)
+	admin/de/images/tb.gif (Deleted)
+	admin/de/images/thumb.gif (Deleted)
+	admin/de/images/thumbon.gif (Deleted)
+	admin/de/images/wait.gif (Deleted)
+	admin/de/init.php (Deleted)
+	admin/de/keepalive.php (Deleted)
+	admin/de/modsecurity.htaccess (Deleted)
+	admin/de/remote.php (Deleted)
+	admin/de/skins/default/1x1.gif (Deleted)
+	admin/de/skins/default/add.png (Deleted)
+	admin/de/skins/default/addtodictionary.gif (Deleted)
+	admin/de/skins/default/anchor.gif (Deleted)
+	admin/de/skins/default/anchor_icon.gif (Deleted)
+	admin/de/skins/default/back.gif (Deleted)
+	admin/de/skins/default/background.gif (Deleted)
+	admin/de/skins/default/black.gif (Deleted)
+	admin/de/skins/default/bold.gif (Deleted)
+	admin/de/skins/default/borders.css (Deleted)
+	admin/de/skins/default/borders.css.before.compression (Deleted)
+	admin/de/skins/default/buttondown.png (Deleted)
+	admin/de/skins/default/clearcode.gif (Deleted)
+	admin/de/skins/default/copy.gif (Deleted)
+	admin/de/skins/default/createemaillink.gif (Deleted)
+	admin/de/skins/default/createlink.gif (Deleted)
+	admin/de/skins/default/custominsert.gif (Deleted)
+	admin/de/skins/default/cut.gif (Deleted)
+	admin/de/skins/default/decreasecolumnspan.gif (Deleted)
+	admin/de/skins/default/decreaserowspan.gif (Deleted)
+	admin/de/skins/default/delete.png (Deleted)
+	admin/de/skins/default/delete_from_ie.css (Deleted)
+	admin/de/skins/default/delete_from_ie2.css (Deleted)
+	admin/de/skins/default/delete_from_moz.css (Deleted)
+	admin/de/skins/default/deletecolumn.gif (Deleted)
+	admin/de/skins/default/deleted_from_ie.css (Deleted)
+	admin/de/skins/default/deleterow.gif (Deleted)
+	admin/de/skins/default/downbutton.png (Deleted)
+	admin/de/skins/default/downbutton2.png (Deleted)
+	admin/de/skins/default/drop_arrow.gif (Deleted)
+	admin/de/skins/default/drop_arrow2.gif (Deleted)
+	admin/de/skins/default/dropmenu.gif (Deleted)
+	admin/de/skins/default/email.gif (Deleted)
+	admin/de/skins/default/end.gif (Deleted)
+	admin/de/skins/default/file.gif (Deleted)
+	admin/de/skins/default/find.gif (Deleted)
+	admin/de/skins/default/findreplace.gif (Deleted)
+	admin/de/skins/default/flash.gif (Deleted)
+	admin/de/skins/default/flash_file.gif (Deleted)
+	admin/de/skins/default/fontcolor.gif (Deleted)
+	admin/de/skins/default/fontcolor2.gif (Deleted)
+	admin/de/skins/default/form.gif (Deleted)
+	admin/de/skins/default/forward.gif (Deleted)
+	admin/de/skins/default/fullscreen.gif (Deleted)
+	admin/de/skins/default/help.gif (Deleted)
+	admin/de/skins/default/help_bullet.gif (Deleted)
+	admin/de/skins/default/help_context.gif (Deleted)
+	admin/de/skins/default/help_firefox1.gif (Deleted)
+	admin/de/skins/default/help_firefox2.gif (Deleted)
+	admin/de/skins/default/help_firefox3.gif (Deleted)
+	admin/de/skins/default/help_modes.gif (Deleted)
+	admin/de/skins/default/help_pathbar.gif (Deleted)
+	admin/de/skins/default/help_source.gif (Deleted)
+	admin/de/skins/default/hidden_icon.gif (Deleted)
+	admin/de/skins/default/highlight.gif (Deleted)
+	admin/de/skins/default/highlight2.gif (Deleted)
+	admin/de/skins/default/hoverbutton.png (Deleted)
+	admin/de/skins/default/hr.gif (Deleted)
+	admin/de/skins/default/ie.css (Deleted)
+	admin/de/skins/default/ie_popup.css (Deleted)
+	admin/de/skins/default/iemm.css (Deleted)
+	admin/de/skins/default/image.gif (Deleted)
+	admin/de/skins/default/increasecolumnspan.gif (Deleted)
+	admin/de/skins/default/increaserowspan.gif (Deleted)
+	admin/de/skins/default/indent.gif (Deleted)
+	admin/de/skins/default/insertbutton.gif (Deleted)
+	admin/de/skins/default/insertchars.gif (Deleted)
+	admin/de/skins/default/insertcheckbox.gif (Deleted)
+	admin/de/skins/default/insertcolumnleft.gif (Deleted)
+	admin/de/skins/default/insertcolumnright.gif (Deleted)
+	admin/de/skins/default/insertform.gif (Deleted)
+	admin/de/skins/default/inserthidden.gif (Deleted)
+	admin/de/skins/default/inserthorizontalrule.gif (Deleted)
+	admin/de/skins/default/insertimage.gif (Deleted)
+	admin/de/skins/default/insertorderedlist.gif (Deleted)
+	admin/de/skins/default/insertradio.gif (Deleted)
+	admin/de/skins/default/insertrowabove.gif (Deleted)
+	admin/de/skins/default/insertrowbelow.gif (Deleted)
+	admin/de/skins/default/insertselect.gif (Deleted)
+	admin/de/skins/default/inserttable.gif (Deleted)
+	admin/de/skins/default/inserttextarea.gif (Deleted)
+	admin/de/skins/default/inserttextbox.gif (Deleted)
+	admin/de/skins/default/inserttextfield.gif (Deleted)
+	admin/de/skins/default/insertunorderedlist.gif (Deleted)
+	admin/de/skins/default/italic.gif (Deleted)
+	admin/de/skins/default/justifycenter.gif (Deleted)
+	admin/de/skins/default/justifyfull.gif (Deleted)
+	admin/de/skins/default/justifyleft.gif (Deleted)
+	admin/de/skins/default/justifyright.gif (Deleted)
+	admin/de/skins/default/mail.gif (Deleted)
+	admin/de/skins/default/media.gif (Deleted)
+	admin/de/skins/default/media_file.gif (Deleted)
+	admin/de/skins/default/menu_arrow.gif (Deleted)
+	admin/de/skins/default/modifycell.gif (Deleted)
+	admin/de/skins/default/modifyform.gif (Deleted)
+	admin/de/skins/default/modifytable.gif (Deleted)
+	admin/de/skins/default/moz.css (Deleted)
+	admin/de/skins/default/mzmm.css (Deleted)
+	admin/de/skins/default/outdent.gif (Deleted)
+	admin/de/skins/default/pageproperties.gif (Deleted)
+	admin/de/skins/default/paragraph.gif (Deleted)
+	admin/de/skins/default/paste.gif (Deleted)
+	admin/de/skins/default/pastetext.gif (Deleted)
+	admin/de/skins/default/pasteword.gif (Deleted)
+	admin/de/skins/default/popupbg.gif (Deleted)
+	admin/de/skins/default/preview.gif (Deleted)
+	admin/de/skins/default/print.gif (Deleted)
+	admin/de/skins/default/redo.gif (Deleted)
+	admin/de/skins/default/removeformat.gif (Deleted)
+	admin/de/skins/default/save.gif (Deleted)
+	admin/de/skins/default/seperator.gif (Deleted)
+	admin/de/skins/default/show_toolbar.htm (Deleted)
+	admin/de/skins/default/showborders.gif (Deleted)
+	admin/de/skins/default/spellcheck.gif (Deleted)
+	admin/de/skins/default/status_border.gif (Deleted)
+	admin/de/skins/default/status_border_under.gif (Deleted)
+	admin/de/skins/default/strikethrough.gif (Deleted)
+	admin/de/skins/default/styles.css (Deleted)
+	admin/de/skins/default/styles.css.before.compression (Deleted)
+	admin/de/skins/default/subscript.gif (Deleted)
+	admin/de/skins/default/superscript.gif (Deleted)
+	admin/de/skins/default/tab.active.png (Deleted)
+	admin/de/skins/default/tab.hover.png (Deleted)
+	admin/de/skins/default/tab.png (Deleted)
+	admin/de/skins/default/table.gif (Deleted)
+	admin/de/skins/default/tabs.gif (Deleted)
+	admin/de/skins/default/tag.gif (Deleted)
+	admin/de/skins/default/tb.gif (Deleted)
+	admin/de/skins/default/theme.gif (Deleted)
+	admin/de/skins/default/toggleposition.gif (Deleted)
+	admin/de/skins/default/underline.gif (Deleted)
+	admin/de/skins/default/undo.gif (Deleted)
+	admin/de/skins/default/vertical_spacer.gif (Deleted)
+	admin/de/skins/default/wideiconover.gif (Deleted)
+	admin/de/valid_files.php (Deleted)
+	admin/de/version.txt (Deleted)
+	admin/includes/classes/class.delinker.php (Deleted)
+	templates/__emails/Panels/HomeSaleProducts.html (Deleted)
+	templates/__emails/Snippets/HomeSaleProductsItem.html (Deleted)
+
+	admin/includes/classes/class.auth.php
+	admin/includes/classes/class.backup.php
+	admin/includes/classes/class.banners.php
+	admin/includes/classes/class.batch.importer.php
+	admin/includes/classes/class.category.php
+	admin/includes/classes/class.customers.php
+	admin/includes/classes/class.discounts.php
+	admin/includes/classes/class.editor.php
+	admin/includes/classes/class.engine.php
+	admin/includes/classes/class.export.php
+	admin/includes/classes/class.exporttemplates.php
+	admin/includes/classes/class.formfields.php
+	admin/includes/classes/class.giftcertificates.php
+	admin/includes/classes/class.install.php
+	admin/includes/classes/class.layout.php
+	admin/includes/classes/class.logs.php
+	admin/includes/classes/class.news.php
+	admin/includes/classes/class.orders.php
+	admin/includes/classes/class.pages.php
+	admin/includes/classes/class.product.php
+	admin/includes/classes/class.remote.orders.php
+	admin/includes/classes/class.remote.php
+	admin/includes/classes/class.returns.php
+	admin/includes/classes/class.settings.accounting.php
+	admin/includes/classes/class.settings.checkout.php
+	admin/includes/classes/class.settings.php
+	admin/includes/classes/class.shipments.php
+	admin/includes/classes/class.statistics.orders.php
+	admin/includes/classes/class.upgrade.php
+	admin/includes/classes/class.user.php
+	admin/includes/classes/class.vendor.payments.php
+	admin/includes/classes/class.vendors.php
+	admin/includes/exporter/class.exportfiletype.php
+	admin/includes/exporter/filetypes/customers.php
+	admin/includes/exporter/filetypes/orders.php
+	admin/includes/exporter/filetypes/products.php
+	admin/includes/exporter/methods/csv.php
+	admin/includes/upgrades/4003.php
+	admin/includes/whitelabel.php
+	admin/init.php
+	admin/script/common.js
+	admin/script/formfield.admin.js
+	admin/script/order.js
+	admin/Styles/ie.css
+	admin/Styles/styles.css
+	admin/templates/banner.form.tpl
+	admin/templates/customer.form.tpl
+	admin/templates/formfields.manage.tpl
+	admin/templates/home.tpl
+	admin/templates/install.schema.tpl
+	admin/templates/layout.logo.form.tpl
+	admin/templates/layout.manage.tpl
+	admin/templates/order.manage.row.tpl
+	admin/templates/orders.manage.tpl
+	admin/templates/page.form.tpl
+	admin/templates/pageheader.tpl
+	admin/templates/product.form.tpl
+	admin/templates/settings.manage.tpl
+	admin/templates/Snippets/ProductFields.html
+	admin/templates/stats.products.tpl
+	admin/templates/user.form.tpl
+	changelog.txt
+	hashes.txt
+	includes/classes/class.account.php
+	includes/classes/class.cart.api.php
+	includes/classes/class.checkout.php
+	includes/classes/class.giftcertificates.php
+	includes/classes/class.product.php
+	includes/classes/class.remote.php
+	includes/classes/class.vendors.php
+	includes/display/CartContent.php
+	includes/display/CategoryContent.php
+	includes/display/ChooseShippingAddress.php
+	includes/display/ProductDetails.php
+	includes/display/ProductReviews.php
+	includes/display/ProductVendorsOtherProducts.php
+	includes/display/SideAccountMenu.php
+	includes/display/SidePopularVendors.php
+	includes/display/TopMenu.php
+	javascript/formfield.js
+	javascript/jquery/plugins/imodal/imodal.js
+	javascript/jquery/plugins/shiftcheckbox.js
+	language/en/admin/batch.importer.ini
+	language/en/admin/common.ini
+	language/en/admin/index.ini
+	language/en/admin/layout.ini
+	language/en/common.ini
+	language/en/front_language.ini
+	lib/class.log.php
+	lib/download.php
+	lib/form.php
+	lib/formfields/formfield.datechooser.php
+	lib/general.php
+	lib/init.php
+	lib/orders.php
+	lib/templates/template.php
+	modules/checkout/authorizenet/lang/en/language.ini
+	modules/checkout/authorizenet/module.authorizenet.php
+	modules/checkout/googlecheckout/class.handler.php
+	modules/checkout/googlecheckout/lang/en/language.ini
+	modules/checkout/payflowpro/module.payflowpro.php
+	modules/checkout/paypalexpress/module.paypalexpress.php
+	modules/checkout/paypalpaymentsprouk/module.paypalpaymentsprouk.php
+	modules/checkout/paypalpaymentsprous/module.paypalpaymentsprous.php
+	modules/checkout/paypoint/module.paypoint.php
+	modules/checkout/protx/module.protx.php
+	modules/notification/msn/module.msn.php
+	modules/notification/sms/module.sms.php
+	modules/shipping/usps/module.usps.php
+
+Files Added:
+	admin/images/ajax-dots.gif
+	admin/images/dashboard/addcontent.gif
+	admin/images/dashboard/bluecircle.gif
+	admin/images/dashboard/but-arrow-dropdown.gif
+	admin/images/dashboard/but-arrow.gif
+	admin/images/dashboard/but-left-cap-grey.gif
+	admin/images/dashboard/but-left-cap-white.gif
+	admin/images/dashboard/but-mid-sliver.gif
+	admin/images/dashboard/but-right-cap-grey.gif
+	admin/images/dashboard/but-right-cap-white.gif
+	admin/images/dashboard/button-addaproduct.gif
+	admin/images/dashboard/button-manageorders.gif
+	admin/images/dashboard/checkmark.gif
+	admin/images/dashboard/dottedline.gif
+	admin/images/dashboard/getstarted-bg-noborder.gif
+	admin/images/dashboard/getstarted-bg.gif
+	admin/images/dashboard/gettingstarted-guide.gif
+	admin/images/dashboard/gettingstarted-vid.gif
+	admin/images/dashboard/greenarrow.gif
+	admin/images/dashboard/helparticle.gif
+	admin/images/dashboard/hidethis.gif
+	admin/images/dashboard/mid-slice-corrected.gif
+	admin/images/dashboard/mid-slice.gif
+	admin/images/dashboard/num-mid.gif
+	admin/images/dashboard/pendingitem.gif
+	admin/images/dashboard/search-bg.gif
+	admin/includes/classes/class.index.php
+	admin/includes/classes/class.remote.dashboard.php
+	admin/includes/classes/class.remote.imagemanager.php
+	admin/includes/upgrades/4007.php
+	admin/script/dashboard.js
+	admin/Styles/dashboard.css
+	admin/templates/Snippets/DashboardAtGlanceItem.html
+	admin/templates/Snippets/DashboardGettingStartedItem.html
+	admin/templates/Snippets/DashboardOrderBreakdownGraphRow.html
+	admin/templates/Snippets/DashboardPerformanceIndicators.html
+	admin/templates/Snippets/DashboardRecentOrdersItem.html
+	admin/templates/Snippets/DashboardRecentOrdersNone.html
+	admin/templates/Snippets/DashboardTrialExpiryMessage.html
+	admin/templates/Snippets/DashboardVersionCheck.html
+	admin/templates/Snippets/EditorTextarea.html
+	admin/templates/Snippets/EditorTinyMCE.html
+	admin/templates/Snippets/EditorTinyMCECommon.html
+	admin/templates/Snippets/EditorTinyMCEGzip.html
+	includes/classes/class.linker.php
+	javascript/tinymce/langs/en.js
+	javascript/tinymce/license.txt
+	javascript/tinymce/plugins/advhr/css/advhr.css
+	javascript/tinymce/plugins/advhr/editor_plugin.js
+	javascript/tinymce/plugins/advhr/editor_plugin_src.js
+	javascript/tinymce/plugins/advhr/js/rule.js
+	javascript/tinymce/plugins/advhr/langs/en_dlg.js
+	javascript/tinymce/plugins/advhr/rule.htm
+	javascript/tinymce/plugins/advimage/css/advimage.css
+	javascript/tinymce/plugins/advimage/editor_plugin.js
+	javascript/tinymce/plugins/advimage/editor_plugin_src.js
+	javascript/tinymce/plugins/advimage/image.htm
+	javascript/tinymce/plugins/advimage/img/sample.gif
+	javascript/tinymce/plugins/advimage/js/image.js
+	javascript/tinymce/plugins/advimage/langs/en_dlg.js
+	javascript/tinymce/plugins/advlink/css/advlink.css
+	javascript/tinymce/plugins/advlink/editor_plugin.js
+	javascript/tinymce/plugins/advlink/editor_plugin_src.js
+	javascript/tinymce/plugins/advlink/js/advlink.js
+	javascript/tinymce/plugins/advlink/langs/en_dlg.js
+	javascript/tinymce/plugins/advlink/link.htm
+	javascript/tinymce/plugins/autosave/editor_plugin.js
+	javascript/tinymce/plugins/autosave/editor_plugin_src.js
+	javascript/tinymce/plugins/bbcode/editor_plugin.js
+	javascript/tinymce/plugins/bbcode/editor_plugin_src.js
+	javascript/tinymce/plugins/compat2x/editor_plugin.js
+	javascript/tinymce/plugins/compat2x/editor_plugin_src.js
+	javascript/tinymce/plugins/contextmenu/editor_plugin.js
+	javascript/tinymce/plugins/contextmenu/editor_plugin_src.js
+	javascript/tinymce/plugins/directionality/editor_plugin.js
+	javascript/tinymce/plugins/directionality/editor_plugin_src.js
+	javascript/tinymce/plugins/emotions/editor_plugin.js
+	javascript/tinymce/plugins/emotions/editor_plugin_src.js
+	javascript/tinymce/plugins/emotions/emotions.htm
+	javascript/tinymce/plugins/emotions/img/smiley-cool.gif
+	javascript/tinymce/plugins/emotions/img/smiley-cry.gif
+	javascript/tinymce/plugins/emotions/img/smiley-embarassed.gif
+	javascript/tinymce/plugins/emotions/img/smiley-foot-in-mouth.gif
+	javascript/tinymce/plugins/emotions/img/smiley-frown.gif
+	javascript/tinymce/plugins/emotions/img/smiley-innocent.gif
+	javascript/tinymce/plugins/emotions/img/smiley-kiss.gif
+	javascript/tinymce/plugins/emotions/img/smiley-laughing.gif
+	javascript/tinymce/plugins/emotions/img/smiley-money-mouth.gif
+	javascript/tinymce/plugins/emotions/img/smiley-sealed.gif
+	javascript/tinymce/plugins/emotions/img/smiley-smile.gif
+	javascript/tinymce/plugins/emotions/img/smiley-surprised.gif
+	javascript/tinymce/plugins/emotions/img/smiley-tongue-out.gif
+	javascript/tinymce/plugins/emotions/img/smiley-undecided.gif
+	javascript/tinymce/plugins/emotions/img/smiley-wink.gif
+	javascript/tinymce/plugins/emotions/img/smiley-yell.gif
+	javascript/tinymce/plugins/emotions/js/emotions.js
+	javascript/tinymce/plugins/emotions/langs/en_dlg.js
+	javascript/tinymce/plugins/example/dialog.htm
+	javascript/tinymce/plugins/example/editor_plugin.js
+	javascript/tinymce/plugins/example/editor_plugin_src.js
+	javascript/tinymce/plugins/example/img/example.gif
+	javascript/tinymce/plugins/example/js/dialog.js
+	javascript/tinymce/plugins/example/langs/en.js
+	javascript/tinymce/plugins/example/langs/en_dlg.js
+	javascript/tinymce/plugins/fullpage/css/fullpage.css
+	javascript/tinymce/plugins/fullpage/editor_plugin.js
+	javascript/tinymce/plugins/fullpage/editor_plugin_src.js
+	javascript/tinymce/plugins/fullpage/fullpage.htm
+	javascript/tinymce/plugins/fullpage/js/fullpage.js
+	javascript/tinymce/plugins/fullpage/langs/en_dlg.js
+	javascript/tinymce/plugins/fullscreen/editor_plugin.js
+	javascript/tinymce/plugins/fullscreen/editor_plugin_src.js
+	javascript/tinymce/plugins/fullscreen/fullscreen.htm
+	javascript/tinymce/plugins/iespell/editor_plugin.js
+	javascript/tinymce/plugins/iespell/editor_plugin_src.js
+	javascript/tinymce/plugins/inlinepopups/editor_plugin.js
+	javascript/tinymce/plugins/inlinepopups/editor_plugin_src.js
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/alert.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/button.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif
+	javascript/tinymce/plugins/inlinepopups/skins/clearlooks2/window.css
+	javascript/tinymce/plugins/inlinepopups/template.htm
+	javascript/tinymce/plugins/insertdatetime/editor_plugin.js
+	javascript/tinymce/plugins/insertdatetime/editor_plugin_src.js
+	javascript/tinymce/plugins/interspireimg/css/advimage.css
+	javascript/tinymce/plugins/interspireimg/editor_plugin.js
+	javascript/tinymce/plugins/interspireimg/editor_plugin_src.js
+	javascript/tinymce/plugins/interspireimg/image.htm
+	javascript/tinymce/plugins/interspireimg/img/sample.gif
+	javascript/tinymce/plugins/interspireimg/js/image.js
+	javascript/tinymce/plugins/interspireimg/langs/en_dlg.js
+	javascript/tinymce/plugins/layer/editor_plugin.js
+	javascript/tinymce/plugins/layer/editor_plugin_src.js
+	javascript/tinymce/plugins/linker/css/insertlink.css
+	javascript/tinymce/plugins/linker/editor_plugin.js
+	javascript/tinymce/plugins/linker/editor_plugin_src.js
+	javascript/tinymce/plugins/linker/img/linker.gif
+	javascript/tinymce/plugins/linker/js/dialog.js
+	javascript/tinymce/plugins/linker/js/linker.js
+	javascript/tinymce/plugins/linker/langs/en.js
+	javascript/tinymce/plugins/linker/langs/en_dlg.js
+	javascript/tinymce/plugins/linker/linker.html
+	javascript/tinymce/plugins/media/css/content.css
+	javascript/tinymce/plugins/media/css/media.css
+	javascript/tinymce/plugins/media/editor_plugin.js
+	javascript/tinymce/plugins/media/editor_plugin_src.js
+	javascript/tinymce/plugins/media/img/flash.gif
+	javascript/tinymce/plugins/media/img/flv_player.swf
+	javascript/tinymce/plugins/media/img/quicktime.gif
+	javascript/tinymce/plugins/media/img/realmedia.gif
+	javascript/tinymce/plugins/media/img/shockwave.gif
+	javascript/tinymce/plugins/media/img/trans.gif
+	javascript/tinymce/plugins/media/img/windowsmedia.gif
+	javascript/tinymce/plugins/media/js/embed.js
+	javascript/tinymce/plugins/media/js/media.js
+	javascript/tinymce/plugins/media/langs/en_dlg.js
+	javascript/tinymce/plugins/media/media.htm
+	javascript/tinymce/plugins/nonbreaking/editor_plugin.js
+	javascript/tinymce/plugins/nonbreaking/editor_plugin_src.js
+	javascript/tinymce/plugins/noneditable/editor_plugin.js
+	javascript/tinymce/plugins/noneditable/editor_plugin_src.js
+	javascript/tinymce/plugins/pagebreak/css/content.css
+	javascript/tinymce/plugins/pagebreak/editor_plugin.js
+	javascript/tinymce/plugins/pagebreak/editor_plugin_src.js
+	javascript/tinymce/plugins/pagebreak/img/pagebreak.gif
+	javascript/tinymce/plugins/pagebreak/img/trans.gif
+	javascript/tinymce/plugins/paste/blank.htm
+	javascript/tinymce/plugins/paste/css/blank.css
+	javascript/tinymce/plugins/paste/css/pasteword.css
+	javascript/tinymce/plugins/paste/editor_plugin.js
+	javascript/tinymce/plugins/paste/editor_plugin_src.js
+	javascript/tinymce/plugins/paste/js/pastetext.js
+	javascript/tinymce/plugins/paste/js/pasteword.js
+	javascript/tinymce/plugins/paste/langs/en_dlg.js
+	javascript/tinymce/plugins/paste/pastetext.htm
+	javascript/tinymce/plugins/paste/pasteword.htm
+	javascript/tinymce/plugins/preview/editor_plugin.js
+	javascript/tinymce/plugins/preview/editor_plugin_src.js
+	javascript/tinymce/plugins/preview/example.html
+	javascript/tinymce/plugins/preview/jscripts/embed.js
+	javascript/tinymce/plugins/preview/preview.html
+	javascript/tinymce/plugins/print/editor_plugin.js
+	javascript/tinymce/plugins/print/editor_plugin_src.js
+	javascript/tinymce/plugins/safari/blank.htm
+	javascript/tinymce/plugins/safari/editor_plugin.js
+	javascript/tinymce/plugins/safari/editor_plugin_src.js
+	javascript/tinymce/plugins/save/editor_plugin.js
+	javascript/tinymce/plugins/save/editor_plugin_src.js
+	javascript/tinymce/plugins/searchreplace/css/searchreplace.css
+	javascript/tinymce/plugins/searchreplace/editor_plugin.js
+	javascript/tinymce/plugins/searchreplace/editor_plugin_src.js
+	javascript/tinymce/plugins/searchreplace/js/searchreplace.js
+	javascript/tinymce/plugins/searchreplace/langs/en_dlg.js
+	javascript/tinymce/plugins/searchreplace/searchreplace.htm
+	javascript/tinymce/plugins/spellchecker/css/content.css
+	javascript/tinymce/plugins/spellchecker/editor_plugin.js
+	javascript/tinymce/plugins/spellchecker/editor_plugin_src.js
+	javascript/tinymce/plugins/spellchecker/img/wline.gif
+	javascript/tinymce/plugins/style/css/props.css
+	javascript/tinymce/plugins/style/editor_plugin.js
+	javascript/tinymce/plugins/style/editor_plugin_src.js
+	javascript/tinymce/plugins/style/js/props.js
+	javascript/tinymce/plugins/style/langs/en_dlg.js
+	javascript/tinymce/plugins/style/props.htm
+	javascript/tinymce/plugins/tabfocus/editor_plugin.js
+	javascript/tinymce/plugins/tabfocus/editor_plugin_src.js
+	javascript/tinymce/plugins/table/cell.htm
+	javascript/tinymce/plugins/table/css/cell.css
+	javascript/tinymce/plugins/table/css/row.css
+	javascript/tinymce/plugins/table/css/table.css
+	javascript/tinymce/plugins/table/editor_plugin.js
+	javascript/tinymce/plugins/table/editor_plugin_src.js
+	javascript/tinymce/plugins/table/js/cell.js
+	javascript/tinymce/plugins/table/js/merge_cells.js
+	javascript/tinymce/plugins/table/js/row.js
+	javascript/tinymce/plugins/table/js/table.js
+	javascript/tinymce/plugins/table/langs/en_dlg.js
+	javascript/tinymce/plugins/table/merge_cells.htm
+	javascript/tinymce/plugins/table/row.htm
+	javascript/tinymce/plugins/table/table.htm
+	javascript/tinymce/plugins/template/blank.htm
+	javascript/tinymce/plugins/template/css/template.css
+	javascript/tinymce/plugins/template/editor_plugin.js
+	javascript/tinymce/plugins/template/editor_plugin_src.js
+	javascript/tinymce/plugins/template/js/template.js
+	javascript/tinymce/plugins/template/langs/en_dlg.js
+	javascript/tinymce/plugins/template/template.htm
+	javascript/tinymce/plugins/visualchars/editor_plugin.js
+	javascript/tinymce/plugins/visualchars/editor_plugin_src.js
+	javascript/tinymce/plugins/xhtmlxtras/abbr.htm
+	javascript/tinymce/plugins/xhtmlxtras/acronym.htm
+	javascript/tinymce/plugins/xhtmlxtras/attributes.htm
+	javascript/tinymce/plugins/xhtmlxtras/cite.htm
+	javascript/tinymce/plugins/xhtmlxtras/css/attributes.css
+	javascript/tinymce/plugins/xhtmlxtras/css/popup.css
+	javascript/tinymce/plugins/xhtmlxtras/del.htm
+	javascript/tinymce/plugins/xhtmlxtras/editor_plugin.js
+	javascript/tinymce/plugins/xhtmlxtras/editor_plugin_src.js
+	javascript/tinymce/plugins/xhtmlxtras/ins.htm
+	javascript/tinymce/plugins/xhtmlxtras/js/abbr.js
+	javascript/tinymce/plugins/xhtmlxtras/js/acronym.js
+	javascript/tinymce/plugins/xhtmlxtras/js/attributes.js
+	javascript/tinymce/plugins/xhtmlxtras/js/cite.js
+	javascript/tinymce/plugins/xhtmlxtras/js/del.js
+	javascript/tinymce/plugins/xhtmlxtras/js/element_common.js
+	javascript/tinymce/plugins/xhtmlxtras/js/ins.js
+	javascript/tinymce/plugins/xhtmlxtras/langs/en_dlg.js
+	javascript/tinymce/themes/advanced/about.htm
+	javascript/tinymce/themes/advanced/anchor.htm
+	javascript/tinymce/themes/advanced/charmap.htm
+	javascript/tinymce/themes/advanced/color_picker.htm
+	javascript/tinymce/themes/advanced/editor_template.js
+	javascript/tinymce/themes/advanced/editor_template_src.js
+	javascript/tinymce/themes/advanced/image.htm
+	javascript/tinymce/themes/advanced/img/colorpicker.jpg
+	javascript/tinymce/themes/advanced/img/icons.gif
+	javascript/tinymce/themes/advanced/js/about.js
+	javascript/tinymce/themes/advanced/js/anchor.js
+	javascript/tinymce/themes/advanced/js/charmap.js
+	javascript/tinymce/themes/advanced/js/color_picker.js
+	javascript/tinymce/themes/advanced/js/image.js
+	javascript/tinymce/themes/advanced/js/link.js
+	javascript/tinymce/themes/advanced/js/source_editor.js
+	javascript/tinymce/themes/advanced/langs/en.js
+	javascript/tinymce/themes/advanced/langs/en_dlg.js
+	javascript/tinymce/themes/advanced/link.htm
+	javascript/tinymce/themes/advanced/skins/default/content.css
+	javascript/tinymce/themes/advanced/skins/default/dialog.css
+	javascript/tinymce/themes/advanced/skins/default/img/buttons.png
+	javascript/tinymce/themes/advanced/skins/default/img/items.gif
+	javascript/tinymce/themes/advanced/skins/default/img/menu_arrow.gif
+	javascript/tinymce/themes/advanced/skins/default/img/menu_check.gif
+	javascript/tinymce/themes/advanced/skins/default/img/progress.gif
+	javascript/tinymce/themes/advanced/skins/default/img/tabs.gif
+	javascript/tinymce/themes/advanced/skins/default/ui.css
+	javascript/tinymce/themes/advanced/skins/o2k7/content.css
+	javascript/tinymce/themes/advanced/skins/o2k7/dialog.css
+	javascript/tinymce/themes/advanced/skins/o2k7/img/button_bg.png
+	javascript/tinymce/themes/advanced/skins/o2k7/img/button_bg_black.png
+	javascript/tinymce/themes/advanced/skins/o2k7/img/button_bg_silver.png
+	javascript/tinymce/themes/advanced/skins/o2k7/ui.css
+	javascript/tinymce/themes/advanced/skins/o2k7/ui_black.css
+	javascript/tinymce/themes/advanced/skins/o2k7/ui_silver.css
+	javascript/tinymce/themes/advanced/source_editor.htm
+	javascript/tinymce/themes/simple/editor_template.js
+	javascript/tinymce/themes/simple/editor_template_src.js
+	javascript/tinymce/themes/simple/img/icons.gif
+	javascript/tinymce/themes/simple/langs/en.js
+	javascript/tinymce/themes/simple/skins/default/content.css
+	javascript/tinymce/themes/simple/skins/default/ui.css
+	javascript/tinymce/themes/simple/skins/o2k7/content.css
+	javascript/tinymce/themes/simple/skins/o2k7/img/button_bg.png
+	javascript/tinymce/themes/simple/skins/o2k7/ui.css
+	javascript/tinymce/tiny_mce.js
+	javascript/tinymce/tiny_mce_gzip.js
+	javascript/tinymce/tiny_mce_gzip.php
+	javascript/tinymce/tiny_mce_popup.js
+	javascript/tinymce/tiny_mce_src.js
+	javascript/tinymce/utils/editable_selects.js
+	javascript/tinymce/utils/form_utils.js
+	javascript/tinymce/utils/mctabs.js
+	javascript/tinymce/utils/validate.js
+
+Template Changes:
+	__gift_themes
+	__master
+		templates/__master/Snippets/CartShippingDeliveryDisclaimer.html (Added)
+		templates/__master/Snippets/CartShippingTransitTime.html (Added)
+
+		templates/__master/Panels/ChooseShippingProvider.html
+		templates/__master/Snippets/EstimatedShippingQuoteList.html
+		templates/__master/Snippets/ExpressCheckoutChooseShipper.html
+
+	Adventure
+		templates/Adventure/config.php
+		templates/Adventure/images/ProductDefault.gif
+		templates/Adventure/Styles/styles.css
+
+	ArtsCrafts
+		templates/ArtsCrafts/config.php
+		templates/ArtsCrafts/images/ProductDefault.gif
+		templates/ArtsCrafts/Styles/styles.css
+
+	Automotive
+		templates/Automotive/config.php
+		templates/Automotive/images/ProductDefault.gif
+		templates/Automotive/Styles/styles.css
+
+	Baby
+		templates/Baby/config.php
+		templates/Baby/images/ProductDefault.gif
+		templates/Baby/Styles/styles.css
+
+	Beauty
+		templates/Beauty/config.php
+		templates/Beauty/images/ProductDefault.gif
+		templates/Beauty/Styles/styles.css
+
+	Bodybuilding
+		templates/Bodybuilding/config.php
+		templates/Bodybuilding/images/ProductDefault.gif
+		templates/Bodybuilding/Styles/styles.css
+
+	Books
+		templates/Books/config.php
+		templates/Books/images/ProductDefault.gif
+		templates/Books/Styles/styles.css
+
+	Computers
+		templates/Computers/config.php
+		templates/Computers/images/ProductDefault.gif
+		templates/Computers/Styles/styles.css
+
+	Cosmetics
+		templates/Cosmetics/config.php
+		templates/Cosmetics/images/ProductDefault.gif
+		templates/Cosmetics/Styles/styles.css
+
+	default
+		templates/default/config.php
+		templates/default/images/ProductDefault.gif
+		templates/default/Styles/styles.css
+
+	Electronics
+		templates/Electronics/config.php
+		templates/Electronics/images/ProductDefault.gif
+		templates/Electronics/Styles/styles.css
+
+	Entertainment
+		templates/Entertainment/config.php
+		templates/Entertainment/images/ProductDefault.gif
+		templates/Entertainment/Styles/styles.css
+
+	Fashion
+		templates/Fashion/config.php
+		templates/Fashion/images/ProductDefault.gif
+		templates/Fashion/Styles/styles.css
+
+	FashionJewellery
+		templates/FashionJewellery/config.php
+		templates/FashionJewellery/images/ProductDefault.gif
+		templates/FashionJewellery/Styles/styles.css
+
+	Flowers
+		templates/Flowers/config.php
+		templates/Flowers/images/ProductDefault.gif
+		templates/Flowers/Styles/styles.css
+
+	Food
+		templates/Food/config.php
+		templates/Food/images/ProductDefault.gif
+		templates/Food/Styles/styles.css
+
+	Furniture
+		templates/Furniture/config.php
+		templates/Furniture/images/ProductDefault.gif
+		templates/Furniture/Styles/styles.css
+
+	Gadgets
+		templates/Gadgets/config.php
+		templates/Gadgets/images/ProductDefault.gif
+		templates/Gadgets/Styles/styles.css
+
+	Garden
+		templates/Garden/config.php
+		templates/Garden/images/ProductDefault.gif
+		templates/Garden/Styles/styles.css
+
+	Gifts
+		templates/Gifts/config.php
+		templates/Gifts/images/ProductDefault.gif
+		templates/Gifts/Styles/styles.css
+
+	Handbags
+		templates/Handbags/config.php
+		templates/Handbags/images/ProductDefault.gif
+		templates/Handbags/Styles/styles.css
+
+	Health
+		templates/Health/config.php
+		templates/Health/images/ProductDefault.gif
+		templates/Health/Styles/styles.css
+
+	Homewares
+		templates/Homewares/config.php
+		templates/Homewares/images/ProductDefault.gif
+		templates/Homewares/Styles/styles.css
+
+	Infinity
+		templates/Infinity/config.php
+		templates/Infinity/images/ProductDefault.gif
+		templates/Infinity/Styles/styles.css
+
+	Jewellery
+		templates/Jewellery/config.php
+		templates/Jewellery/images/ProductDefault.gif
+		templates/Jewellery/Styles/styles.css
+
+	Kitchenware
+		templates/Kitchenware/config.php
+		templates/Kitchenware/images/ProductDefault.gif
+		templates/Kitchenware/Styles/styles.css
+
+	Lingerie
+		templates/Lingerie/config.php
+		templates/Lingerie/images/ProductDefault.gif
+		templates/Lingerie/Styles/styles.css
+
+	Luggage
+		templates/Luggage/config.php
+		templates/Luggage/images/ProductDefault.gif
+		templates/Luggage/Styles/styles.css
+
+	Nightwear
+		templates/Nightwear/config.php
+		templates/Nightwear/images/ProductDefault.gif
+		templates/Nightwear/Styles/styles.css
+
+	Office
+		templates/Office/config.php
+		templates/Office/images/ProductDefault.gif
+		templates/Office/Styles/styles.css
+
+	Perfume
+		templates/Perfume/config.php
+		templates/Perfume/images/ProductDefault.gif
+		templates/Perfume/Styles/styles.css
+
+	Reserved
+		templates/Reserved/config.php
+		templates/Reserved/images/ProductDefault.gif
+		templates/Reserved/Styles/styles.css
+
+	Serenity
+		templates/Serenity/config.php
+		templates/Serenity/images/ProductDefault.gif
+		templates/Serenity/Styles/styles.css
+
+	Shoes
+		templates/Shoes/config.php
+		templates/Shoes/images/ProductDefault.gif
+		templates/Shoes/Styles/styles.css
+
+	Skincare
+		templates/Skincare/config.php
+		templates/Skincare/images/ProductDefault.gif
+		templates/Skincare/Styles/styles.css
+
+	Software
+		templates/Software/config.php
+		templates/Software/images/ProductDefault.gif
+		templates/Software/Styles/styles.css
+
+	Sport
+		templates/Sport/config.php
+		templates/Sport/images/ProductDefault.gif
+		templates/Sport/Styles/styles.css
+
+	StoreSuite
+		templates/StoreSuite/images/ProductDefault.gif (Added)
+
+		templates/StoreSuite/config.php
+		templates/StoreSuite/Styles/styles.css
+
+	Sunglasses
+		templates/Sunglasses/config.php
+		templates/Sunglasses/images/ProductDefault.gif
+		templates/Sunglasses/Styles/styles.css
+
+	Toys
+		templates/Toys/config.php
+		templates/Toys/images/ProductDefault.gif
+		templates/Toys/Styles/styles.css
+
+	Watches
+		templates/Watches/config.php
+		templates/Watches/images/ProductDefault.gif
+		templates/Watches/Styles/styles.css
+
+	Wine
+		templates/Wine/config.php
+		templates/Wine/images/ProductDefault.gif
+		templates/Wine/Styles/styles.css
+
+
+***********************************************************************
+* Change Log for Interspire Shopping Cart 5.0 (Feature Release)       *
+***********************************************************************
+
+***** NOTE *****
+ Interspire Shopping Cart 5.0 contains changes to the template
+ system to help you keep your templates up to date and allow for
+ easier customization.
+
+ When customizing your template or store design, you should copy the
+ template file you need to customize from the __master/ directory to
+ your custom template. This custom design should contain only customized
+ files. All original files will be loaded from the __master directory if
+ a custom version does not exist.
+
+ This will GREATLY improve the amount of time required to re-apply
+ customizations to, or update a custom store design when new versions
+ are released.
+
+ For this reason, it is recommended that for Interspire Shopping Cart
+ 5.0, you start out with a fresh copy of one of our default store designs
+ and begin customizing the template from the beginning, only copying out
+ files you need to modify.
+
+ The list of template files changed below does NOT include the template
+ files that were removed (over 17,000 in total). Please be aware of this.
+ If the 5.0 version of your template does not contain a specific file, it is
+ because it shares a master template file.
+
+ Full details of the changes will be made available in an updated Interspire
+ Shopping Cart Template Customization Guide shortly. An addon will also be
+ released to assist in automatically collapsing your template down to only
+ unique/customized files.
+****************
+
+* Feature #3788: Ability to create templates used to export customers, products and orders
+* Feature #3788: Ability to export product variation details
+* Feature #3827: Ogone payment module
+* Feature #3828: iwsmile payment module
+* Feature #3829: Quickbooks payment module
+* Feature #3830: MIGS Redirect payment module
+* Feature #3831: Secure Trading payment module
+* Feature #4135: Valutec payment module
+* Feature #4192: Valutec payment module
+* Feature #4194: DirectOne payment module
+* Feature #4195: PayPoint payment module
+* Feature #3833: Shopping Cart Discount Rules
+* Feature #3834: Ability to specify a delivery/event date for a product
+* Feature #4267: Ability for customers to re-order from the view order details page
+* Feature #3857: Tabs on product pages in the store with the ability to disable them
+* Feature #4006: List-style display mode for category products
+* Feature #4240: Merge all common files across templates, implement a system whereby templates only need to contain files modified from the master set
+* Feature #4275: Product price and 'Add to Cart' link are now horizontally aligned for each product thumb
+* Feature #4287: Make it optional to upload an image when creating a product
+* Feature #4288: Ability to specify the default image for a product without images (none, template or upload custom)
+* Feature #4351: StoreSuite Retro Store Design - Based on original ISC layout during initial development
+* Feature #0000: Ability to give customer groups a $ discount and a fixed product price as well as a % discount
+* Feature #2638: Ability to force customers to agree with terms and conditions
+
+
+Changed Files:
+
+	_README.txt
+	addons/googleadwords/addon.googleadwords.php
+	addons/googleadwords/googleadwords.form.tpl
+	addons/googleadwords/templates/googleadwords.form.tpl
+	addons/index.php
+	addons/verifyfiles/addon.verifyfiles.php
+	addons/ysm/addon.ysm.php
+	admin/calendar/agenda.js
+	admin/calendar/contrast.js
+	admin/calendar/DateRangeDemo.htm
+	admin/calendar/ipopeng.htm
+	admin/calendar/plugins.js
+	admin/cli.php
+	admin/includes/amcharts/ampie/pie.xml
+	admin/includes/amcharts/customersbydate.xml
+	admin/includes/amcharts/ordersbyrevenue.xml
+	admin/includes/amcharts/overviewgeneral.xml
+	admin/includes/amcharts/searchoverview.xml
+	admin/includes/amcharts/settings.xml
+	admin/includes/amcharts/top20customers.xml
+	admin/includes/amcharts/top20products.xml
+	admin/includes/classes/class.auth.php
+	admin/includes/classes/class.backup.php
+	admin/includes/classes/class.banners.php
+	admin/includes/classes/class.batch.importer.php
+	admin/includes/classes/class.brands.php
+	admin/includes/classes/class.cart.api.php
+	admin/includes/classes/class.category.php
+	admin/includes/classes/class.coupons.php
+	admin/includes/classes/class.csvimport.php
+	admin/includes/classes/class.customers.php
+	admin/includes/classes/class.designmode.php
+	admin/includes/classes/class.downloadaddons.php
+	admin/includes/classes/class.editor.php
+	admin/includes/classes/class.engine.php
+	admin/includes/classes/class.install.php
+	admin/includes/classes/class.layout.php
+	admin/includes/classes/class.logs.php
+	admin/includes/classes/class.news.php
+	admin/includes/classes/class.orders.php
+	admin/includes/classes/class.pages.php
+	admin/includes/classes/class.product.php
+	admin/includes/classes/class.remote.orders.php
+	admin/includes/classes/class.remote.php
+	admin/includes/classes/class.remote.products.php
+	admin/includes/classes/class.remote.vendors.php
+	admin/includes/classes/class.review.php
+	admin/includes/classes/class.sendstudio.php
+	admin/includes/classes/class.settings.giftwrapping.php
+	admin/includes/classes/class.settings.livechat.php
+	admin/includes/classes/class.settings.php
+	admin/includes/classes/class.settings.shipping.php
+	admin/includes/classes/class.settings.tax.php
+	admin/includes/classes/class.shipments.php
+	admin/includes/classes/class.statistics.customers.php
+	admin/includes/classes/class.statistics.orders.php
+	admin/includes/classes/class.statistics.overview.php
+	admin/includes/classes/class.statistics.php
+	admin/includes/classes/class.upgrade.php
+	admin/includes/classes/class.user.php
+	admin/includes/classes/class.vendor.payments.php
+	admin/includes/classes/class.vendors.php
+	admin/includes/converter/class.converter.php
+	admin/includes/converter/class.exporter.php
+	admin/includes/converter/templates/converters.progress.tpl
+	admin/includes/converter/templates/exporters.progress.tpl
+	admin/includes/upgrades/3200.php
+	admin/includes/upgrades/3601.php
+	admin/includes/whitelabel.php
+	admin/init.php
+	admin/resources/tutorials/import_customers.html
+	admin/resources/tutorials/import_products.html
+	admin/script/common.js
+	admin/script/customers.js
+	admin/script/install.js
+	admin/script/order.js
+	admin/script/order.manager.js
+	admin/script/shipments.js
+	admin/script/vendor.payments.js
+	admin/Styles/products.import5.tpl
+	admin/Styles/styles.css
+	admin/templates/backup.create2.tpl
+	admin/templates/backup.manage.row.tpl
+	admin/templates/banner.manage.row.tpl
+	admin/templates/brands.manage.grid.tpl
+	admin/templates/brands.manage.row.tpl
+	admin/templates/category.form.tpl
+	admin/templates/config.file.tpl
+	admin/templates/coupon.form.tpl
+	admin/templates/coupons.manage.grid.tpl
+	admin/templates/coupons.manage.row.tpl
+	admin/templates/currency.manage.row.tpl
+	admin/templates/customer.address.form.tpl
+	admin/templates/customer.address.manage.grid.tpl
+	admin/templates/customer.address.manage.row.tpl
+	admin/templates/customer.form.tpl
+	admin/templates/customers.group.form.tpl
+	admin/templates/customers.groups.manage.grid.tpl
+	admin/templates/customers.groups.manage.row.tpl
+	admin/templates/customers.manage.grid.tpl
+	admin/templates/customers.manage.row.tpl
+	admin/templates/customers.manage.tpl
+	admin/templates/customers.notes.popup.tpl
+	admin/templates/downloadernew.manage.tpl
+	admin/templates/froogle.intro.tpl
+	admin/templates/giftcertificate.quickview.item.tpl
+	admin/templates/giftcertificates.manage.grid.tpl
+	admin/templates/giftcertificates.manage.row.tpl
+	admin/templates/giftcertificates.manage.tpl
+	admin/templates/giftwrapping.form.tpl
+	admin/templates/giftwrapping.manage.tpl
+	admin/templates/home.tpl
+	admin/templates/import.customers.step5.tpl
+	admin/templates/import.importpopup.tpl
+	admin/templates/import.ordertrackingnumbers.step2.tpl
+	admin/templates/import.ordertrackingnumbers.step5.tpl
+	admin/templates/import.products.step5.tpl
+	admin/templates/install.form.tpl
+	admin/templates/install.sample.tpl
+	admin/templates/install.schema.tpl
+	admin/templates/iphone/home.tpl
+	admin/templates/iphone/iui/iui.css
+	admin/templates/iphone/iui/iui.js
+	admin/templates/iphone/order.manage.row.tpl
+	admin/templates/layout.choosetemplate.row.tpl
+	admin/templates/layout.logo.download.box.tpl
+	admin/templates/layout.logo.download.tpl
+	admin/templates/layout.logo.downloading.tpl
+	admin/templates/layout.logo.form.tpl
+	admin/templates/login.form.tpl
+	admin/templates/logs.administrator.grid.tpl
+	admin/templates/logs.system.tpl
+	admin/templates/message.manage.row.tpl
+	admin/templates/news.manage.grid.tpl
+	admin/templates/news.manage.row.tpl
+	admin/templates/order.form.tpl
+	admin/templates/order.manage.row.tpl
+	admin/templates/order.quickview.tpl
+	admin/templates/ordermessages.manage.tpl
+	admin/templates/orders.manage.grid.tpl
+	admin/templates/orders.manage.tpl
+	admin/templates/orders.notes.popup.tpl
+	admin/templates/orders.search.tpl
+	admin/templates/orders.updatestatus.popup.tpl
+	admin/templates/orders.view.tpl
+	admin/templates/page.form.tpl
+	admin/templates/page.preview.tpl
+	admin/templates/pageheader.tpl
+	admin/templates/pages.manage.tpl
+	admin/templates/Panels/product_javascript.html
+	admin/templates/password.form.tpl
+	admin/templates/product.form.download.edit.tpl
+	admin/templates/product.form.download.quickview.tpl
+	admin/templates/product.form.tpl
+	admin/templates/product.manage.row.tpl
+	admin/templates/products.manage.grid.tpl
+	admin/templates/products.manage.tpl
+	admin/templates/products.popupselect.tpl
+	admin/templates/products.variation.form.tpl
+	admin/templates/products.variations.manage.grid.tpl
+	admin/templates/quicksearch.tpl
+	admin/templates/return.quickview.tpl
+	admin/templates/returns.manage.grid.tpl
+	admin/templates/returns.manage.row.tpl
+	admin/templates/returns.manage.tpl
+	admin/templates/returns.view.tpl
+	admin/templates/review.form.tpl
+	admin/templates/reviews.manage.grid.tpl
+	admin/templates/reviews.manage.row.tpl
+	admin/templates/settings.checkout.manage.tpl
+	admin/templates/settings.currency.manage.tpl
+	admin/templates/settings.mail.manage.tpl
+	admin/templates/settings.manage.tpl
+	admin/templates/settings.tax.manage.tpl
+	admin/templates/shipments.create.tpl
+	admin/templates/shipments.manage.tpl
+	admin/templates/shipments.print.tpl
+	admin/templates/shipments.search.tpl
+	admin/templates/shipments.view.tpl
+	admin/templates/shippingzone.form.tpl
+	admin/templates/Snippets/ImportMatchOptionCategory.html
+	admin/templates/Snippets/OrderGiftWrappingOptions.html
+	admin/templates/Snippets/OrderItem.html
+	admin/templates/Snippets/OrderItemGiftCertificate.html
+	admin/templates/Snippets/OrderProductConfiguration.html
+	admin/templates/Snippets/OrderProductConfigurationVariation.html
+	admin/templates/Snippets/OrderProductFields.html
+	admin/templates/Snippets/OrderSelectGiftWrapping.html
+	admin/templates/Snippets/OrderShippingMethodWindow.html
+	admin/templates/Snippets/ProductFields.html
+	admin/templates/Snippets/ShipmentQuickViewItem.html
+	admin/templates/tax.manage.row.tpl
+	admin/templates/upgrade.done.tpl
+	admin/templates/upgrade.error.tpl
+	admin/templates/upgrade.progress.tpl
+	admin/templates/upgrade.welcome.tpl
+	admin/templates/user.form.tpl
+	admin/templates/user.manage.grid.tpl
+	admin/templates/user.manage.row.tpl
+	admin/templates/vendor.form.tpl
+	admin/templates/vendor.page.form.tpl
+	admin/templates/vendorpayments.form.tpl
+	admin/templates/vendorpayments.manage.tpl
+	admin/templates/vendors.manage.tpl
+	brands.php
+	changelog.txt
+	config/config.default.php
+	hashes.txt
+	includes/classes/class.account.php
+	includes/classes/class.accounting.php
+	includes/classes/class.addon.php
+	includes/classes/class.analytics.php
+	includes/classes/class.api.php
+	includes/classes/class.banner.php
+	includes/classes/class.captcha.php
+	includes/classes/class.cart.api.php
+	includes/classes/class.cart.php
+	includes/classes/class.category.php
+	includes/classes/class.checkout.php
+	includes/classes/class.checkoutprovider.php
+	includes/classes/class.compare.php
+	includes/classes/class.customer.php
+	includes/classes/class.generic.creditcard.php
+	includes/classes/class.livechat.php
+	includes/classes/class.notification.php
+	includes/classes/class.order.php
+	includes/classes/class.page.php
+	includes/classes/class.price.php
+	includes/classes/class.product.php
+	includes/classes/class.productimage.php
+	includes/classes/class.remote.php
+	includes/classes/class.rss.php
+	includes/classes/class.session.php
+	includes/classes/class.shipping.php
+	includes/classes/class.tags.php
+	includes/classes/class.transaction.php
+	includes/classes/class.vendors.php
+	includes/classes/class.wishlist.php
+	includes/classes/class.xmlize.php
+	includes/display/BrandProductListing.php
+	includes/display/Breadcrumb.php
+	includes/display/CartContent.php
+	includes/display/CategoryBreadcrumb.php
+	includes/display/CategoryContent.php
+	includes/display/CategoryHeading.php
+	includes/display/CategoryPagingTop.php
+	includes/display/ChooseBillingAddress.php
+	includes/display/Footer.php
+	includes/display/HomeFeaturedProducts.php
+	includes/display/HomeNewProducts.php
+	includes/display/HomeSaleProducts.php
+	includes/display/HTMLHead.php
+	includes/display/PageBreadcrumb.php
+	includes/display/PagesMenu.php
+	includes/display/PriceContent.php
+	includes/display/ProductDetails.php
+	includes/display/ProductOtherDetails.php
+	includes/display/ProductTagCloud.php
+	includes/display/ProductVendorsOtherProducts.php
+	includes/display/ProductWarranty.php
+	includes/display/SearchPage.php
+	includes/display/SideBrandTagCloud.php
+	includes/display/SideCategoryList.php
+	includes/display/SideCategoryNewProducts.php
+	includes/display/SideCategoryPopularProducts.php
+	includes/display/SideCategoryTopSellers.php
+	includes/display/SideNewProducts.php
+	includes/display/SidePopularProducts.php
+	includes/display/SidePopularVendors.php
+	includes/display/SideProductAddToCart.php
+	includes/display/SideProductAlsoBought.php
+	includes/display/SideProductRecentlyViewed.php
+	includes/display/SideProductRelated.php
+	includes/display/SideSubPageList.php
+	includes/display/SideTopSellers.php
+	includes/display/SideVendorPageList.php
+	includes/display/SimilarProductsByTag.php
+	includes/display/SuggestiveCartContent.php
+	includes/display/TagProducts.php
+	includes/display/VendorFeaturedItems.php
+	includes/display/VendorLogo.php
+	includes/display/VendorPhoto.php
+	includes/display/VendorProducts.php
+	includes/display/WishListItems.php
+	init.php
+	javascript/cart.js
+	javascript/checkout.js
+	javascript/common.js
+	javascript/designmode.js
+	javascript/express.checkout.js
+	javascript/iselector.js
+	javascript/jquery/plugins/ajax.file.upload.js
+	javascript/jquery/plugins/autocomplete/jquery.autocomplete.css
+	javascript/jquery/plugins/autocomplete/jquery.autocomplete.js
+	javascript/jquery/plugins/imodal/imodal.js
+	javascript/jquery/plugins/inestedsortable.js
+	javascript/jquery/plugins/interface.js
+	javascript/jquery/plugins/jquery.form.js
+	javascript/jquery/plugins/shiftcheckbox.js
+	javascript/product.js
+	javascript/quicksearch.js
+	javascript/thickbox.js
+	language/en/admin/common.ini
+	language/en/admin/customers.ini
+	language/en/admin/index.ini
+	language/en/admin/logs.ini
+	language/en/admin/orders.ini
+	language/en/admin/products.ini
+	language/en/admin/settings.ini
+	language/en/admin/users.ini
+	language/en/common.ini
+	language/en/converter_language.ini
+	language/en/front_language.ini
+	language/en/module_language.ini
+	lib/checkout.php
+	lib/class.datastore.php
+	lib/class.file.php
+	lib/class.xml.php
+	lib/class.zip.php
+	lib/codepress/codepress.html
+	lib/codepress/codepress.js
+	lib/codepress/engines/gecko.js
+	lib/codepress/engines/msie.js
+	lib/codepress/engines/opera.js
+	lib/codepress/languages/asp.css
+	lib/codepress/languages/asp.js
+	lib/codepress/languages/csharp.js
+	lib/codepress/languages/css.js
+	lib/codepress/languages/generic.js
+	lib/codepress/languages/html.js
+	lib/codepress/languages/java.js
+	lib/codepress/languages/javascript.js
+	lib/codepress/languages/perl.js
+	lib/codepress/languages/php.js
+	lib/codepress/languages/ruby.js
+	lib/codepress/languages/sql.css
+	lib/codepress/languages/sql.js
+	lib/codepress/languages/vbscript.css
+	lib/codepress/languages/vbscript.js
+	lib/designmode/class.designmode.php
+	lib/designmode/designmode.edit.tpl
+	lib/designmode/designmode.js
+	lib/designmode/designmode_editor.js
+	lib/entities/entity.base.php
+	lib/entities/entity.customer.php
+	lib/entities/entity.customergroup.php
+	lib/entities/entity.order.php
+	lib/entities/entity.product.php
+	lib/entities/entity.shipping.php
+	lib/general.php
+	lib/init.php
+	lib/logomaker/class.logomaker.php
+	lib/module.php
+	lib/orders.php
+	lib/pricing.php
+	lib/shipping.php
+	lib/ssl.php
+	lib/templates/template.php
+	modules/accounting/quickbooks/lang/en/language.ini
+	modules/accounting/quickbooks/templates/module.quickbooks.spoollist.tpl
+	modules/accounting/quickbooks/templates/module.quickbooks.spoollistitem.tpl
+	modules/analytics/googleanalytics/module.googleanalytics.php
+	modules/checkout/amazonfps/module.amazonfps.php
+	modules/checkout/authorizenet/module.authorizenet.php
+	modules/checkout/beanstream/module.beanstream.php
+	modules/checkout/caledon/module.caledon.php
+	modules/checkout/chronopayapi/module.chronopayapi.php
+	modules/checkout/chronopaypage/module.chronopaypage.php
+	modules/checkout/cod/module.cod.php
+	modules/checkout/creditcardmanually/module.creditcardmanually.php
+	modules/checkout/cybersource/lib/HOP.php
+	modules/checkout/cybersource/module.cybersource.php
+	modules/checkout/cynergydata/module.cynergydata.php
+	modules/checkout/eselectplusdp/module.eselectplusdp.php
+	modules/checkout/eselectplushp/module.eselectplushp.php
+	modules/checkout/eway/module.eway.php
+	modules/checkout/exact/module.exact.php
+	modules/checkout/googlecheckout/module.googlecheckout.php
+	modules/checkout/googlecheckout/templates/googlecheckout.button.tpl
+	modules/checkout/hsbc/module.hsbc.php
+	modules/checkout/ideal_rabo/module.ideal_rabo.php
+	modules/checkout/innovativegateway/module.innovativegateway.php
+	modules/checkout/intellipay/module.intellipay.php
+	modules/checkout/migs/module.migs.php
+	modules/checkout/moneybookers/module.moneybookers.php
+	modules/checkout/moneyorder/module.moneyorder.php
+	modules/checkout/myvirtualmerchant/module.myvirtualmerchant.php
+	modules/checkout/netbilling/module.netbilling.php
+	modules/checkout/netregistry/module.netregistry.php
+	modules/checkout/nochex/module.nochex.php
+	modules/checkout/payflowlinks/module.payflowlinks.php
+	modules/checkout/payflowpro/module.payflowpro.php
+	modules/checkout/payjunction/module.payjunction.php
+	modules/checkout/payleap/module.payleap.php
+	modules/checkout/paymate/lang/en/language.ini
+	modules/checkout/paymate/module.paymate.php
+	modules/checkout/paymentclearing/module.paymentclearing.php
+	modules/checkout/paypal/module.paypal.php
+	modules/checkout/paypalexpress/lang/en/language.ini
+	modules/checkout/paypalexpress/module.paypalexpress.php
+	modules/checkout/paypalpaymentsprouk/lang/en/language.ini
+	modules/checkout/paypalpaymentsprouk/module.paypalpaymentsprouk.php
+	modules/checkout/paypalpaymentsprouk/templates/paypalpaymentsprouk.providerlist.tpl
+	modules/checkout/paypalpaymentsprous/module.paypalpaymentsprous.php
+	modules/checkout/paypalpaymentsprous/templates/paypalpaymentsprous.providerlist.tpl
+	modules/checkout/paysimple/module.paysimple.php
+	modules/checkout/paystation/module.paystation.php
+	modules/checkout/plugnpay/module.plugnpay.php
+	modules/checkout/protx/lang/en/language.ini
+	modules/checkout/protx/module.protx.php
+	modules/checkout/protxvspdirect/module.protxvspdirect.php
+	modules/checkout/psigate/module.psigate.php
+	modules/checkout/pxpay/lib/pxaccess.php
+	modules/checkout/pxpay/module.pxpay.php
+	modules/checkout/pxpost/module.pxpost.php
+	modules/checkout/quantumgateway/module.quantumgateway.php
+	modules/checkout/realex/module.realex.php
+	modules/checkout/securepay/module.securepay.php
+	modules/checkout/simplepay/lib/simplepayclient.php
+	modules/checkout/simplepay/module.simplepay.php
+	modules/checkout/usaepay/module.usaepay.php
+	modules/checkout/vcsdivertccform/module.vcsdivertccform.php
+	modules/checkout/worldpay/module.worldpay.php
+	modules/livechat/custom/module.custom.php
+	modules/livechat/liveperson/images/logo.gif
+	modules/livechat/liveperson/lang/en/language.ini
+	modules/livechat/liveperson/module.liveperson.php
+	modules/livechat/liveperson/templates/liveperson_registration.tpl
+	modules/notification/email/lang/en/language.ini
+	modules/notification/email/module.email.php
+	modules/notification/sms/module.sms.php
+	modules/shipping/auspost/module.auspost.php
+	modules/shipping/canadapost/module.canadapost.php
+	modules/shipping/fedex/lang/en/language.ini
+	modules/shipping/fedex/module.fedex.php
+	modules/shipping/fedex/templates/module.fedex.test.tpl
+	modules/shipping/intershipper/module.intershipper.php
+	modules/shipping/intershipper/templates/module.intershipper.test.tpl
+	modules/shipping/royalmail/module.royalmail.php
+	modules/shipping/ups/module.ups.php
+	modules/shipping/upsonline/lang/en/language.ini
+	modules/shipping/upsonline/templates/module.upsonline.test.tpl
+	modules/shipping/usps/module.usps.php
+	templates/__emails/createaccount_email.html
+	templates/__emails/low_inventory_email.html
+	templates/__emails/return_notification_email.html
+	templates/__emails/return_statuschange_email.html
+	templates/__emails/Snippets/InvoiceCartItem.html
+	viewfile.php
+
+Files Added:
+	admin/images/application_form.png
+	admin/images/discountrule.gif
+	admin/images/export.gif
+	admin/images/fields/checkbox.png
+	admin/images/fields/datefield.png
+	admin/images/fields/multitext.png
+	admin/images/fields/numberfield.png
+	admin/images/fields/passwordfield.png
+	admin/images/fields/picklist.png
+	admin/images/fields/radiobutton.png
+	admin/images/fields/textfield.png
+	admin/includes/classes/class.discounts.php
+	admin/includes/classes/class.export.php
+	admin/includes/classes/class.exporttemplates.php
+	admin/includes/classes/class.formfields.php
+	admin/includes/classes/class.remote.checkout.php
+	admin/includes/classes/class.remote.formfields.php
+	admin/includes/classes/class.settings.checkout.php
+	admin/includes/exporter/class.exportfiletype.factory.php
+	admin/includes/exporter/class.exportfiletype.php
+	admin/includes/exporter/class.exportmethod.factory.php
+	admin/includes/exporter/class.exportmethod.php
+	admin/includes/exporter/examples/method_settings.phps
+	admin/includes/exporter/examples/type_fields.phps
+	admin/includes/exporter/filetypes/customers.php
+	admin/includes/exporter/filetypes/customersalt.php
+	admin/includes/exporter/filetypes/orders.php
+	admin/includes/exporter/filetypes/products.php
+	admin/includes/exporter/methods/csv.php
+	admin/includes/exporter/methods/xml.php
+	admin/includes/upgrades/5000.php
+	admin/script/formfield.admin.js
+	admin/templates/discount.form.tpl
+	admin/templates/discounts.manage.grid.tpl
+	admin/templates/discounts.manage.row.tpl
+	admin/templates/discounts.manage.tpl
+	admin/templates/export.grid.row.tpl
+	admin/templates/export.grid.tpl
+	admin/templates/export.method.tpl
+	admin/templates/export.step1.tpl
+	admin/templates/exporttemplates.form.grid.row.tpl
+	admin/templates/exporttemplates.form.grid.tpl
+	admin/templates/exporttemplates.form.includetype.tpl
+	admin/templates/exporttemplates.form.tab.tpl
+	admin/templates/exporttemplates.form.tpl
+	admin/templates/exporttemplates.form.type.tpl
+	admin/templates/exporttemplates.manage.grid.row.tpl
+	admin/templates/exporttemplates.manage.grid.tpl
+	admin/templates/exporttemplates.manage.tpl
+	admin/templates/exporttemplates.settings.csv.tpl
+	admin/templates/formfields.manage.tpl
+	admin/templates/Snippets/DiscountItemQtySelect.html
+	admin/templates/Snippets/DiscountItemQtyText.html
+	admin/templates/Snippets/FormFields.html
+	admin/templates/Snippets/OrderFormFields.html
+	admin/templates/Snippets/OrderProductEventDate.html
+	includes/classes/class.rule.php
+	includes/display/PriceHeading.php
+	includes/display/PricePagingTop.php
+	includes/display/ProductTabs.php
+	javascript/formfield.js
+	javascript/listmode.js
+	language/en/admin/discounts.ini
+	language/en/admin/export.filetype.customers.ini
+	language/en/admin/export.filetype.ini
+	language/en/admin/export.filetype.orders.ini
+	language/en/admin/export.filetype.products.ini
+	language/en/admin/export.ini
+	language/en/admin/export.method.csv.ini
+	language/en/admin/export.method.xml.ini
+	language/en/admin/exporttemplates.ini
+	language/en/admin/formfields.ini
+	language/en/admin/settings.checkout.ini
+	lib/api/discount.api.php
+	lib/form.php
+	lib/formfields/formfield.base.php
+	lib/formfields/formfield.checkboxselect.php
+	lib/formfields/formfield.datechooser.php
+	lib/formfields/formfield.multiline.php
+	lib/formfields/formfield.numberonly.php
+	lib/formfields/formfield.password.php
+	lib/formfields/formfield.radioselect.php
+	lib/formfields/formfield.selectortext.php
+	lib/formfields/formfield.singleline.php
+	lib/formfields/formfield.singleselect.php
+	lib/formfields/templates/checkboxselect.backend.html
+	lib/formfields/templates/checkboxselect.frontend.html
+	lib/formfields/templates/datechooser.backend.html
+	lib/formfields/templates/datechooser.frontend.html
+	lib/formfields/templates/formfield.backend.html
+	lib/formfields/templates/formfield.frontend.html
+	lib/formfields/templates/multiline.backend.html
+	lib/formfields/templates/multiline.frontend.html
+	lib/formfields/templates/numberonly.backend.html
+	lib/formfields/templates/numberonly.frontend.html
+	lib/formfields/templates/password.backend.html
+	lib/formfields/templates/password.frontend.html
+	lib/formfields/templates/radioselect.backend.html
+	lib/formfields/templates/radioselect.frontend.html
+	lib/formfields/templates/selectortext.backend.html
+	lib/formfields/templates/selectortext.frontend.html
+	lib/formfields/templates/singleline.backend.html
+	lib/formfields/templates/singleline.frontend.html
+	lib/formfields/templates/singleselect.backend.html
+	lib/formfields/templates/singleselect.frontend.html
+	lib/rule.php
+	modules/checkout/directone/images/directone_logo.gif
+	modules/checkout/directone/lang/en/language.ini
+	modules/checkout/directone/module.directone.php
+	modules/checkout/iwsmile/images/logo.gif
+	modules/checkout/iwsmile/lang/en/language.ini
+	modules/checkout/iwsmile/module.iwsmile.php
+	modules/checkout/migsredir/images/mastercard_logo.jpg
+	modules/checkout/migsredir/lang/en/language.ini
+	modules/checkout/migsredir/module.migsredir.php
+	modules/checkout/ogone/images/ogone_logo.gif
+	modules/checkout/ogone/lang/en/language.ini
+	modules/checkout/ogone/module.ogone.php
+	modules/checkout/paypoint/images/logo.jpg
+	modules/checkout/paypoint/lang/en/language.ini
+	modules/checkout/paypoint/module.paypoint.php
+	modules/checkout/qbms/images/QBMS.gif
+	modules/checkout/qbms/lang/en/language.ini
+	modules/checkout/qbms/module.qbms.php
+	modules/checkout/securetrading/images/secure_trading.gif
+	modules/checkout/securetrading/lang/en/language.ini
+	modules/checkout/securetrading/module.securetrading.php
+	modules/checkout/valutec/images/logo.jpg
+	modules/checkout/valutec/lang/en/language.ini
+	modules/checkout/valutec/module.valutec.php
+	modules/rule/buyxgetfreeshipping/lang/en/language.ini
+	modules/rule/buyxgetfreeshipping/module.buyxgetfreeshipping.php
+	modules/rule/buyxgetfreeshipping/templates/module.buyxgetfreeshipping.tpl
+	modules/rule/buyxgetx/lang/en/language.ini
+	modules/rule/buyxgetx/module.buyxgetx.php
+	modules/rule/buyxgetx/templates/module.buyxgetx.tpl
+	modules/rule/buyxgety/lang/en/language.ini
+	modules/rule/buyxgety/module.buyxgety.php
+	modules/rule/buyxgety/templates/module.buyxgety.tpl
+	modules/rule/freeshippingwhenoverx/lang/en/language.ini
+	modules/rule/freeshippingwhenoverx/module.freeshippingwhenoverx.php
+	modules/rule/freeshippingwhenoverx/templates/module.freeshippingwhenoverx.tpl
+	modules/rule/percentoffitemsincat/lang/en/language.ini
+	modules/rule/percentoffitemsincat/module.percentoffitemsincat.php
+	modules/rule/percentoffitemsincat/templates/module.percentoffitemsincat.tpl
+	modules/rule/xamountoffwhenxormore/lang/en/language.ini
+	modules/rule/xamountoffwhenxormore/module.xamountoffwhenxormore.php
+	modules/rule/xamountoffwhenxormore/templates/module.xamountoffwhenxormore.tpl
+	modules/rule/xoffforrepeatcustomers/lang/en/language.ini
+	modules/rule/xoffforrepeatcustomers/module.xoffforrepeatcustomers.php
+	modules/rule/xoffforrepeatcustomers/templates/module.xoffforrepeatcustomers.tpl
+	modules/rule/xpercentoffforrepeatcustomers/lang/en/language.ini
+	modules/rule/xpercentoffforrepeatcustomers/module.xpercentoffforrepeatcustomers.php
+	modules/rule/xpercentoffforrepeatcustomers/templates/module.xpercentoffforrepeatcustomers.tpl
+
+Template Changes:
+	__gift_themes
+	__master
+		templates/__master/403.html (Added)
+		templates/__master/404.html (Added)
+		templates/__master/account.html (Added)
+		templates/__master/account_addressbook.html (Added)
+		templates/__master/account_downloaditem.html (Added)
+		templates/__master/account_inbox.html (Added)
+		templates/__master/account_new_return.html (Added)
+		templates/__master/account_order.html (Added)
+		templates/__master/account_orders.html (Added)
+		templates/__master/account_orderstatus.html (Added)
+		templates/__master/account_recentitems.html (Added)
+		templates/__master/account_returns.html (Added)
+		templates/__master/account_saved_return.html (Added)
+		templates/__master/authorizenet.html (Added)
+		templates/__master/bottom.html (Added)
+		templates/__master/brands.html (Added)
+		templates/__master/cart.html (Added)
+		templates/__master/category.html (Added)
+		templates/__master/ccmanual.html (Added)
+		templates/__master/checkout.html (Added)
+		templates/__master/checkout_address.html (Added)
+		templates/__master/checkout_confirm.html (Added)
+		templates/__master/checkout_express.html (Added)
+		templates/__master/checkout_payment.html (Added)
+		templates/__master/checkout_shipper.html (Added)
+		templates/__master/compare.html (Added)
+		templates/__master/createaccount.html (Added)
+		templates/__master/createaccount_thanks.html (Added)
+		templates/__master/default.html (Added)
+		templates/__master/editaccount.html (Added)
+		templates/__master/error.html (Added)
+		templates/__master/eselectplusdp.html (Added)
+		templates/__master/eway.html (Added)
+		templates/__master/forgotpassword.html (Added)
+		templates/__master/genericcreditcard.html (Added)
+		templates/__master/giftcertificates.html (Added)
+		templates/__master/giftcertificates_balance.html (Added)
+		templates/__master/giftcertificates_redeem.html (Added)
+		templates/__master/invoice_print.html (Added)
+		templates/__master/login.html (Added)
+		templates/__master/message.html (Added)
+		templates/__master/news.html (Added)
+		templates/__master/newsletter_subscribe.html (Added)
+		templates/__master/order.html (Added)
+		templates/__master/page.html (Added)
+		templates/__master/page_contact_email.html (Added)
+		templates/__master/page_contact_form.html (Added)
+		templates/__master/Panels/AccountBreadcrumb.html (Added)
+		templates/__master/Panels/AccountDownloadItems.html (Added)
+		templates/__master/Panels/AccountDownloadItemsBreadcrumb.html (Added)
+		templates/__master/Panels/AccountInbox.html (Added)
+		templates/__master/Panels/AccountInboxJavaScript.html (Added)
+		templates/__master/Panels/AccountNewReturnBreadcrumb.html (Added)
+		templates/__master/Panels/AccountNewReturnInfo.html (Added)
+		templates/__master/Panels/AccountNewReturnProducts.html (Added)
+		templates/__master/Panels/AccountOrder.html (Added)
+		templates/__master/Panels/AccountOrderJavaScript.html (Added)
+		templates/__master/Panels/AccountOrderLinks.html (Added)
+		templates/__master/Panels/AccountOrders.html (Added)
+		templates/__master/Panels/AccountOrderStatus.html (Added)
+		templates/__master/Panels/AccountRecentItems.html (Added)
+		templates/__master/Panels/AccountReturns.html (Added)
+		templates/__master/Panels/ActiveKB_ARS.html (Added)
+		templates/__master/Panels/AddShippingAddressJavaScript.html (Added)
+		templates/__master/Panels/AuthorizeNetPaymentJavaScript.html (Added)
+		templates/__master/Panels/BrandBreadcrumb.html (Added)
+		templates/__master/Panels/BrandContent.html (Added)
+		templates/__master/Panels/BrandProductListing.html (Added)
+		templates/__master/Panels/Breadcrumb.html (Added)
+		templates/__master/Panels/CartBreadcrumb.html (Added)
+		templates/__master/Panels/CartContent.html (Added)
+		templates/__master/Panels/CartErrorMessage.html (Added)
+		templates/__master/Panels/CartFreeShipping.html (Added)
+		templates/__master/Panels/CartHeader.html (Added)
+		templates/__master/Panels/CartRuleMessage.html (Added)
+		templates/__master/Panels/CartStatusMessage.html (Added)
+		templates/__master/Panels/CategoryBreadcrumb.html (Added)
+		templates/__master/Panels/CategoryContent.html (Added)
+		templates/__master/Panels/CategoryHeading.html (Added)
+		templates/__master/Panels/CategoryPagingBottom.html (Added)
+		templates/__master/Panels/CategoryPagingTop.html (Added)
+		templates/__master/Panels/CategoryProductListing.html (Added)
+		templates/__master/Panels/CCManualPaymentJavaScript.html (Added)
+		templates/__master/Panels/CheckGiftCertificateBalance.html (Added)
+		templates/__master/Panels/CheckoutBreadcrumb.html (Added)
+		templates/__master/Panels/CheckoutNewAddressForm.html (Added)
+		templates/__master/Panels/ChooseBillingAddress.html (Added)
+		templates/__master/Panels/ChooseCheckoutProviderJavaScript.html (Added)
+		templates/__master/Panels/ChooseShippingAddress.html (Added)
+		templates/__master/Panels/ChooseShippingAddressJavaScript.html (Added)
+		templates/__master/Panels/ChooseShippingProvider.html (Added)
+		templates/__master/Panels/CompareBreadcrumb.html (Added)
+		templates/__master/Panels/CompareContent.html (Added)
+		templates/__master/Panels/ConfirmOrder.html (Added)
+		templates/__master/Panels/ContactFormJavaScript.html (Added)
+		templates/__master/Panels/CreateAccountBreadcrumb.html (Added)
+		templates/__master/Panels/CreateAccountForm.html (Added)
+		templates/__master/Panels/CreateAccountJavaScript.html (Added)
+		templates/__master/Panels/EditAccountBreadcrumb.html (Added)
+		templates/__master/Panels/EditAccountForm.html (Added)
+		templates/__master/Panels/EditAccountJavaScript.html (Added)
+		templates/__master/Panels/eSelectPlusDPPaymentJavaScript.html (Added)
+		templates/__master/Panels/EWayPaymentJavaScript.html (Added)
+		templates/__master/Panels/Footer.html (Added)
+		templates/__master/Panels/ForgotPasswordBreadcrumb.html (Added)
+		templates/__master/Panels/ForgotPasswordForm.html (Added)
+		templates/__master/Panels/ForgotPasswordJavaScript.html (Added)
+		templates/__master/Panels/GenericCreditCardPaymentJavaScript.html (Added)
+		templates/__master/Panels/GiftCertificateBalanceRemaining.html (Added)
+		templates/__master/Panels/GiftCertificateIntro.html (Added)
+		templates/__master/Panels/GiftCertificatesMenu.html (Added)
+		templates/__master/Panels/Header.html (Added)
+		templates/__master/Panels/HeaderSearch.html (Added)
+		templates/__master/Panels/HomeFeaturedProducts.html (Added)
+		templates/__master/Panels/HomeNewProducts.html (Added)
+		templates/__master/Panels/HomeRecentBlogs.html (Added)
+		templates/__master/Panels/HomeSaleProducts.html (Added)
+		templates/__master/Panels/HTMLHead.html (Added)
+		templates/__master/Panels/LoginBreadcrumb.html (Added)
+		templates/__master/Panels/LoginForm.html (Added)
+		templates/__master/Panels/LoginJavaScript.html (Added)
+		templates/__master/Panels/NewsBreadcrumb.html (Added)
+		templates/__master/Panels/NewsContent.html (Added)
+		templates/__master/Panels/NewsletterBreadcrumb.html (Added)
+		templates/__master/Panels/NewsletterContent.html (Added)
+		templates/__master/Panels/NewsletterJavaScript.html (Added)
+		templates/__master/Panels/PageBreadcrumb.html (Added)
+		templates/__master/Panels/PageContent.html (Added)
+		templates/__master/Panels/PagesMenu.html (Added)
+		templates/__master/Panels/PayflowProPaymentJavaScript.html (Added)
+		templates/__master/Panels/PriceBreadcrumb.html (Added)
+		templates/__master/Panels/PriceContent.html (Added)
+		templates/__master/Panels/PriceHeading.html (Added)
+		templates/__master/Panels/PricePagingBottom.html (Added)
+		templates/__master/Panels/PricePagingTop.html (Added)
+		templates/__master/Panels/ProductBreadcrumb.html (Added)
+		templates/__master/Panels/ProductByCategory.html (Added)
+		templates/__master/Panels/ProductContent.html (Added)
+		templates/__master/Panels/ProductDescription.html (Added)
+		templates/__master/Panels/ProductDetails.html (Added)
+		templates/__master/Panels/ProductImagePopup.html (Added)
+		templates/__master/Panels/ProductOtherDetails.html (Added)
+		templates/__master/Panels/ProductReviewList.html (Added)
+		templates/__master/Panels/ProductReviews.html (Added)
+		templates/__master/Panels/ProductTabs.html (Added)
+		templates/__master/Panels/ProductTagCloud.html (Added)
+		templates/__master/Panels/ProductUpdatesJavaScript.html (Added)
+		templates/__master/Panels/ProductVendorsOtherProducts.html (Added)
+		templates/__master/Panels/ProductWarranty.html (Added)
+		templates/__master/Panels/PurchaseGiftCertificate.html (Added)
+		templates/__master/Panels/RedeemGiftCertificate.html (Added)
+		templates/__master/Panels/SearchJavaScript.html (Added)
+		templates/__master/Panels/SearchPage.html (Added)
+		templates/__master/Panels/SearchPageHeader.html (Added)
+		templates/__master/Panels/SearchPageProducts.html (Added)
+		templates/__master/Panels/SearchPagingBottom.html (Added)
+		templates/__master/Panels/SearchPagingTop.html (Added)
+		templates/__master/Panels/SearchTips.html (Added)
+		templates/__master/Panels/ShippingAddressForm.html (Added)
+		templates/__master/Panels/SideAccountMenu.html (Added)
+		templates/__master/Panels/SideAccountStoreCredit.html (Added)
+		templates/__master/Panels/SideBrandTagCloud.html (Added)
+		templates/__master/Panels/SideCartContents.html (Added)
+		templates/__master/Panels/SideCartMiniCart.html (Added)
+		templates/__master/Panels/SideCategoryList.html (Added)
+		templates/__master/Panels/SideCategoryNewProducts.html (Added)
+		templates/__master/Panels/SideCategoryPopularProducts.html (Added)
+		templates/__master/Panels/SideCategoryShopByPrice.html (Added)
+		templates/__master/Panels/SideCategoryTopSellers.html (Added)
+		templates/__master/Panels/SideCouponCodeBox.html (Added)
+		templates/__master/Panels/SideCurrencySelector.html (Added)
+		templates/__master/Panels/SideGiftCertificateCodeBox.html (Added)
+		templates/__master/Panels/SideLiveChatServices.html (Added)
+		templates/__master/Panels/SideNewProducts.html (Added)
+		templates/__master/Panels/SideNewsletterBox.html (Added)
+		templates/__master/Panels/SidePopularProducts.html (Added)
+		templates/__master/Panels/SidePopularVendors.html (Added)
+		templates/__master/Panels/SideProductAddToCart.html (Added)
+		templates/__master/Panels/SideProductAddToWishList.html (Added)
+		templates/__master/Panels/SideProductAlsoBought.html (Added)
+		templates/__master/Panels/SideProductRecentlyViewed.html (Added)
+		templates/__master/Panels/SideProductRelated.html (Added)
+		templates/__master/Panels/SideShopByBrand.html (Added)
+		templates/__master/Panels/SideShopByBrandFull.html (Added)
+		templates/__master/Panels/SideSubPageList.html (Added)
+		templates/__master/Panels/SideTopSellers.html (Added)
+		templates/__master/Panels/SideVendorPageList.html (Added)
+		templates/__master/Panels/SimilarProductsByTag.html (Added)
+		templates/__master/Panels/SuggestiveCartBreadcrumb.html (Added)
+		templates/__master/Panels/SuggestiveCartContent.html (Added)
+		templates/__master/Panels/SuggestiveCartHeader.html (Added)
+		templates/__master/Panels/Syndicate.html (Added)
+		templates/__master/Panels/TagProducts.html (Added)
+		templates/__master/Panels/TopMenu.html (Added)
+		templates/__master/Panels/ValutecCardPaymentJavaScript.html (Added)
+		templates/__master/Panels/VendorFeaturedItems.html (Added)
+		templates/__master/Panels/VendorList.html (Added)
+		templates/__master/Panels/VendorLogo.html (Added)
+		templates/__master/Panels/VendorPhoto.html (Added)
+		templates/__master/Panels/VendorProducts.html (Added)
+		templates/__master/Panels/VendorProfile.html (Added)
+		templates/__master/Panels/WishListAddForm.html (Added)
+		templates/__master/Panels/WishListItems.html (Added)
+		templates/__master/Panels/WishLists.html (Added)
+		templates/__master/Panels/WrapperBanner.html (Added)
+		templates/__master/payflowpro.html (Added)
+		templates/__master/price.html (Added)
+		templates/__master/product.html (Added)
+		templates/__master/productimage.html (Added)
+		templates/__master/search.html (Added)
+		templates/__master/search_tips.html (Added)
+		templates/__master/shippingaddressform.html (Added)
+		templates/__master/Snippets/AccountDownloadItemList.html (Added)
+		templates/__master/Snippets/AccountDownloadOrderItemLink.html (Added)
+		templates/__master/Snippets/AccountInboxMessage.html (Added)
+		templates/__master/Snippets/AccountInboxOrderItem.html (Added)
+		templates/__master/Snippets/AccountNewReturnItem.html (Added)
+		templates/__master/Snippets/AccountOrderItem.html (Added)
+		templates/__master/Snippets/AccountOrderItemDownloadLink.html (Added)
+		templates/__master/Snippets/AccountOrderItemList.html (Added)
+		templates/__master/Snippets/AccountOrderItemRow.html (Added)
+		templates/__master/Snippets/AccountOrderStatusItem.html (Added)
+		templates/__master/Snippets/AccountRecentlyViewedProducts.html (Added)
+		templates/__master/Snippets/AccountReturnItem.html (Added)
+		templates/__master/Snippets/AddressLabel.html (Added)
+		templates/__master/Snippets/BrandCloudItem.html (Added)
+		templates/__master/Snippets/BrandMainPageMessage.html (Added)
+		templates/__master/Snippets/BrandProductsItem.html (Added)
+		templates/__master/Snippets/BreadcrumbItem.html (Added)
+		templates/__master/Snippets/BreadcrumbItemCurrent.html (Added)
+		templates/__master/Snippets/CartCoupon.html (Added)
+		templates/__master/Snippets/CartEditProductFieldsForm.html (Added)
+		templates/__master/Snippets/CartGiftCertificate.html (Added)
+		templates/__master/Snippets/CartItem.html (Added)
+		templates/__master/Snippets/CartItemGiftCertificate.html (Added)
+		templates/__master/Snippets/CartItemQtySelect.html (Added)
+		templates/__master/Snippets/CartItemQtyText.html (Added)
+		templates/__master/Snippets/CartShippingQuoteRow.html (Added)
+		templates/__master/Snippets/CategoryNoProductsMessage.html (Added)
+		templates/__master/Snippets/CategoryPaging.html (Added)
+		templates/__master/Snippets/CategoryPagingItem.html (Added)
+		templates/__master/Snippets/CategoryPagingItemCurrent.html (Added)
+		templates/__master/Snippets/CategoryPagingNext.html (Added)
+		templates/__master/Snippets/CategoryPagingPrevious.html (Added)
+		templates/__master/Snippets/CategoryProductsItem.html (Added)
+		templates/__master/Snippets/CategoryProductsItemList.html (Added)
+		templates/__master/Snippets/CategorySortBox.html (Added)
+		templates/__master/Snippets/CheckoutBillingAddressFields.html (Added)
+		templates/__master/Snippets/CheckoutCartItem.html (Added)
+		templates/__master/Snippets/CheckoutCartItemGiftCertificate.html (Added)
+		templates/__master/Snippets/CheckoutProviderOption.html (Added)
+		templates/__master/Snippets/CheckoutShippingAddressItem.html (Added)
+		templates/__master/Snippets/CheckoutTaxLine.html (Added)
+		templates/__master/Snippets/CompareButton.html (Added)
+		templates/__master/Snippets/CompareButtonList.html (Added)
+		templates/__master/Snippets/CompareProductCustomField.html (Added)
+		templates/__master/Snippets/CompareProductTD1.html (Added)
+		templates/__master/Snippets/CompareProductTD2.html (Added)
+		templates/__master/Snippets/CompareProductTD3.html (Added)
+		templates/__master/Snippets/CompareProductTD4.html (Added)
+		templates/__master/Snippets/CompareProductTD5.html (Added)
+		templates/__master/Snippets/CompareProductTD6.html (Added)
+		templates/__master/Snippets/CompareProductTD7.html (Added)
+		templates/__master/Snippets/CompareProductTD8.html (Added)
+		templates/__master/Snippets/CompareProductTD9.html (Added)
+		templates/__master/Snippets/CompareProductTR1.html (Added)
+		templates/__master/Snippets/CompareProductTR2.html (Added)
+		templates/__master/Snippets/CompareProductTR3.html (Added)
+		templates/__master/Snippets/CompareProductTR4.html (Added)
+		templates/__master/Snippets/CompareProductTR5.html (Added)
+		templates/__master/Snippets/CompareProductTR6.html (Added)
+		templates/__master/Snippets/CompareProductTR7.html (Added)
+		templates/__master/Snippets/CompareProductTR8.html (Added)
+		templates/__master/Snippets/CompareProductTR9.html (Added)
+		templates/__master/Snippets/ConfirmOrderCoupon.html (Added)
+		templates/__master/Snippets/ConfirmOrderGiftCertificate.html (Added)
+		templates/__master/Snippets/DefaultNewsletterSubscriptionForm.html (Added)
+		templates/__master/Snippets/eSelectPlusConfirmationDetails.html (Added)
+		templates/__master/Snippets/eSelectPlusDPConfirmationDetails.html (Added)
+		templates/__master/Snippets/EstimatedShippingQuote.html (Added)
+		templates/__master/Snippets/EstimatedShippingQuoteList.html (Added)
+		templates/__master/Snippets/EstimatedShippingQuoteProduct.html (Added)
+		templates/__master/Snippets/EventDate.html (Added)
+		templates/__master/Snippets/ExpressCheckoutAddress.html (Added)
+		templates/__master/Snippets/ExpressCheckoutChooseAddress.html (Added)
+		templates/__master/Snippets/ExpressCheckoutChooseShipper.html (Added)
+		templates/__master/Snippets/ExpressCheckoutConfirmation.html (Added)
+		templates/__master/Snippets/ExpressCheckoutCreateAccount.html (Added)
+		templates/__master/Snippets/ExpressCheckoutShippingMethod.html (Added)
+		templates/__master/Snippets/GiftWrappingWrapOptions.html (Added)
+		templates/__master/Snippets/HomeCurrencyFlags.html (Added)
+		templates/__master/Snippets/HomeFeaturedProductsItem.html (Added)
+		templates/__master/Snippets/HomeNewProductsFeed.html (Added)
+		templates/__master/Snippets/HomeNewProductsItem.html (Added)
+		templates/__master/Snippets/HomeRecentBlogsFeed.html (Added)
+		templates/__master/Snippets/HomeSaleProductsItem.html (Added)
+		templates/__master/Snippets/InvoiceCartItem.html (Added)
+		templates/__master/Snippets/InvoiceCustomerDetails.html (Added)
+		templates/__master/Snippets/InvoicePendingPaymentDetails.html (Added)
+		templates/__master/Snippets/InvoicePendingPaymentNotice.html (Added)
+		templates/__master/Snippets/ListCheckForm.html (Added)
+		templates/__master/Snippets/LogoImage.html (Added)
+		templates/__master/Snippets/LogoText.html (Added)
+		templates/__master/Snippets/MessageBox.html (Added)
+		templates/__master/Snippets/MiniCartOtherProduct.html (Added)
+		templates/__master/Snippets/MiniCartProductAdded.html (Added)
+		templates/__master/Snippets/MultiShippingItem.html (Added)
+		templates/__master/Snippets/OfflinePaymentMessage.html (Added)
+		templates/__master/Snippets/PageMenu.html (Added)
+		templates/__master/Snippets/PageMenuDropDown.html (Added)
+		templates/__master/Snippets/PageRSSItem.html (Added)
+		templates/__master/Snippets/PageSubMenu.html (Added)
+		templates/__master/Snippets/PopularVendorsItem.html (Added)
+		templates/__master/Snippets/PricePaging.html (Added)
+		templates/__master/Snippets/PricePagingItem.html (Added)
+		templates/__master/Snippets/PricePagingItemCurrent.html (Added)
+		templates/__master/Snippets/PricePagingNext.html (Added)
+		templates/__master/Snippets/PricePagingPrevious.html (Added)
+		templates/__master/Snippets/ProductAddToCart.html (Added)
+		templates/__master/Snippets/ProductBreadCrumb.html (Added)
+		templates/__master/Snippets/ProductBulkDiscountThickBox.html (Added)
+		templates/__master/Snippets/ProductCustomFieldItem.html (Added)
+		templates/__master/Snippets/ProductFieldCheckbox.html (Added)
+		templates/__master/Snippets/ProductFieldInput.html (Added)
+		templates/__master/Snippets/ProductFieldTextarea.html (Added)
+		templates/__master/Snippets/ProductFindByCategory.html (Added)
+		templates/__master/Snippets/ProductFindByCategoryItem.html (Added)
+		templates/__master/Snippets/ProductImagesLightBox.html (Added)
+		templates/__master/Snippets/ProductOptionList.html (Added)
+		templates/__master/Snippets/ProductOptionListItem.html (Added)
+		templates/__master/Snippets/ProductReviewBadCaptcha.html (Added)
+		templates/__master/Snippets/ProductReviewItem.html (Added)
+		templates/__master/Snippets/ProductReviewList.html (Added)
+		templates/__master/Snippets/ProductReviewNextLink.html (Added)
+		templates/__master/Snippets/ProductReviewPaging.html (Added)
+		templates/__master/Snippets/ProductReviewPreviousLink.html (Added)
+		templates/__master/Snippets/ProductTagCloudItem.html (Added)
+		templates/__master/Snippets/ProductUpdatesRadio.html (Added)
+		templates/__master/Snippets/ProductVariationListMultiple.html (Added)
+		templates/__master/Snippets/ProductVariationListMultipleItem.html (Added)
+		templates/__master/Snippets/ProductVariationListSingle.html (Added)
+		templates/__master/Snippets/ProductVariationListSingleItem.html (Added)
+		templates/__master/Snippets/ProductVariationMultiple.html (Added)
+		templates/__master/Snippets/ProductVendorsOtherProductsItem.html (Added)
+		templates/__master/Snippets/QuickSearchJS.html (Added)
+		templates/__master/Snippets/RecentBlog.html (Added)
+		templates/__master/Snippets/RelatedSearchItem.html (Added)
+		templates/__master/Snippets/SearchResultsFeed.html (Added)
+		templates/__master/Snippets/SelectGiftWrapping.html (Added)
+		templates/__master/Snippets/ShippingProviderItem.html (Added)
+		templates/__master/Snippets/ShippingQuote.html (Added)
+		templates/__master/Snippets/ShippingQuoteProduct.html (Added)
+		templates/__master/Snippets/ShopByBrandAllItem.html (Added)
+		templates/__master/Snippets/ShopByBrandItem.html (Added)
+		templates/__master/Snippets/ShopByPriceItem.html (Added)
+		templates/__master/Snippets/SideAddItemSoldOut.html (Added)
+		templates/__master/Snippets/SideCartContentsCheckoutLink.html (Added)
+		templates/__master/Snippets/SideCartItem.html (Added)
+		templates/__master/Snippets/SideCategoryList.html (Added)
+		templates/__master/Snippets/SideCategoryNewProducts.html (Added)
+		templates/__master/Snippets/SideCategoryNewProductsFeed.html (Added)
+		templates/__master/Snippets/SideCategoryPopularProducts.html (Added)
+		templates/__master/Snippets/SideCategoryPopularProductsFeed.html (Added)
+		templates/__master/Snippets/SideCategoryTopSellers.html (Added)
+		templates/__master/Snippets/SideCurrencySelectorCurrency.html (Added)
+		templates/__master/Snippets/SideNewProducts.html (Added)
+		templates/__master/Snippets/SideNewProductsFeed.html (Added)
+		templates/__master/Snippets/SidePageLink.html (Added)
+		templates/__master/Snippets/SidePopularProducts.html (Added)
+		templates/__master/Snippets/SidePopularProductsFeed.html (Added)
+		templates/__master/Snippets/SideProductAlsoBoughtItem.html (Added)
+		templates/__master/Snippets/SideRecentlyViewedProducts.html (Added)
+		templates/__master/Snippets/SideRelatedProducts.html (Added)
+		templates/__master/Snippets/SideTopSellers.html (Added)
+		templates/__master/Snippets/SideTopSellersFirst.html (Added)
+		templates/__master/Snippets/SimilarProductsByTagTag.html (Added)
+		templates/__master/Snippets/SubBrandItem.html (Added)
+		templates/__master/Snippets/SubBrandItemImage.html (Added)
+		templates/__master/Snippets/SubBrands.html (Added)
+		templates/__master/Snippets/SubBrandsGrid.html (Added)
+		templates/__master/Snippets/SubCategories.html (Added)
+		templates/__master/Snippets/SubCategoriesGrid.html (Added)
+		templates/__master/Snippets/SubCatItem.html (Added)
+		templates/__master/Snippets/SubCatItemImage.html (Added)
+		templates/__master/Snippets/TagProductsItem.html (Added)
+		templates/__master/Snippets/TopMenuGiftCertificates.html (Added)
+		templates/__master/Snippets/UnformattedAddressLabel.html (Added)
+		templates/__master/Snippets/VendorFeaturedItemsItem.html (Added)
+		templates/__master/Snippets/VendorListItem.html (Added)
+		templates/__master/Snippets/VendorProductsItem.html (Added)
+		templates/__master/Snippets/WishList.html (Added)
+		templates/__master/Snippets/WishListItem.html (Added)
+		templates/__master/suggestive_cart.html (Added)
+		templates/__master/tags.html (Added)
+		templates/__master/top.html (Added)
+		templates/__master/valuteccard.html (Added)
+		templates/__master/vendor_page.html (Added)
+		templates/__master/vendor_products.html (Added)
+		templates/__master/vendor_profile.html (Added)
+		templates/__master/vendors.html (Added)
+		templates/__master/wishlist.html (Added)
+
+	Adventure
+		templates/Adventure/images/magenta/ReorderButton.gif (Added)
+		templates/Adventure/images/magenta/ReorderSelected.gif (Added)
+		templates/Adventure/images/ProductDefault.gif (Added)
+
+
+		templates/Adventure/config.php
+		templates/Adventure/logo/config.php
+		templates/Adventure/Panels/HeaderSearch.html
+		templates/Adventure/Styles/magenta.css
+		templates/Adventure/Styles/popup.css
+		templates/Adventure/Styles/styles.css
+
+	ArtsCrafts
+		templates/ArtsCrafts/images/bright/ReorderButton.gif (Added)
+		templates/ArtsCrafts/images/bright/ReorderSelected.gif (Added)
+		templates/ArtsCrafts/images/ProductDefault.gif (Added)
+
+
+		templates/ArtsCrafts/config.php
+		templates/ArtsCrafts/Panels/HeaderSearch.html
+		templates/ArtsCrafts/Styles/bright.css
+		templates/ArtsCrafts/Styles/popup.css
+		templates/ArtsCrafts/Styles/styles.css
+
+	Automotive
+		templates/Automotive/images/black/ReorderButton.gif (Added)
+		templates/Automotive/images/black/ReorderSelected.gif (Added)
+		templates/Automotive/images/ProductDefault.gif (Added)
+
+
+		templates/Automotive/config.php
+		templates/Automotive/Panels/HeaderSearch.html
+		templates/Automotive/Styles/popup.css
+		templates/Automotive/Styles/styles.css
+
+	Baby
+		templates/Baby/images/pastel/ReorderButton.gif (Added)
+		templates/Baby/images/pastel/ReorderSelected.gif (Added)
+		templates/Baby/images/ProductDefault.gif (Added)
+
+
+		templates/Baby/config.php
+		templates/Baby/logo/config.php
+		templates/Baby/Styles/popup.css
+		templates/Baby/Styles/styles.css
+
+	Beauty
+		templates/Beauty/images/pink/ReorderButton.gif (Added)
+		templates/Beauty/images/pink/ReorderSelected.gif (Added)
+		templates/Beauty/images/ProductDefault.gif (Added)
+		templates/Beauty/images/turquoise/ReorderButton.gif (Added)
+		templates/Beauty/images/turquoise/ReorderSelected.gif (Added)
+
+
+		templates/Beauty/config.php
+		templates/Beauty/Styles/popup.css
+		templates/Beauty/Styles/styles.css
+
+	Bodybuilding
+		templates/Bodybuilding/images/orange/ReorderButton.gif (Added)
+		templates/Bodybuilding/images/orange/ReorderSelected.gif (Added)
+		templates/Bodybuilding/images/ProductDefault.gif (Added)
+
+
+		templates/Bodybuilding/config.php
+		templates/Bodybuilding/Styles/orange.css
+		templates/Bodybuilding/Styles/popup.css
+		templates/Bodybuilding/Styles/styles.css
+
+	Books
+		templates/Books/images/cream/ReorderButton.gif (Added)
+		templates/Books/images/cream/ReorderSelected.gif (Added)
+		templates/Books/images/ProductDefault.gif (Added)
+
+
+		templates/Books/config.php
+		templates/Books/Panels/HeaderSearch.html
+		templates/Books/Panels/TopMenu.html
+		templates/Books/Styles/popup.css
+		templates/Books/Styles/styles.css
+
+	Computers
+		templates/Computers/images/ProductDefault.gif (Added)
+		templates/Computers/images/purple/ReorderButton.gif (Added)
+		templates/Computers/images/purple/ReorderSelected.gif (Added)
+
+
+		templates/Computers/config.php
+		templates/Computers/Panels/TopMenu.html
+		templates/Computers/Styles/popup.css
+		templates/Computers/Styles/styles.css
+
+	Cosmetics
+		templates/Cosmetics/images/palegreen/ReorderButton.gif (Added)
+		templates/Cosmetics/images/palegreen/ReorderSelected.gif (Added)
+		templates/Cosmetics/images/ProductDefault.gif (Added)
+
+
+		templates/Cosmetics/config.php
+		templates/Cosmetics/logo/config.php
+		templates/Cosmetics/Styles/palegreen.css
+		templates/Cosmetics/Styles/popup.css
+		templates/Cosmetics/Styles/styles.css
+
+	default
+		templates/default/images/blue/ReorderButton.gif (Added)
+		templates/default/images/blue/ReorderSelected.gif (Added)
+		templates/default/images/ProductDefault.gif (Added)
+
+
+		templates/default/config.php
+		templates/default/Styles/ie.css
+		templates/default/Styles/popup.css
+		templates/default/Styles/styles.css
+
+	Electronics
+		templates/Electronics/images/magenta/ReorderButton.gif (Added)
+		templates/Electronics/images/magenta/ReorderSelected.gif (Added)
+		templates/Electronics/images/ProductDefault.gif (Added)
+
+
+		templates/Electronics/config.php
+		templates/Electronics/Panels/TopMenu.html
+		templates/Electronics/Styles/popup.css
+		templates/Electronics/Styles/styles.css
+
+	Entertainment
+		templates/Entertainment/images/ProductDefault.gif (Added)
+		templates/Entertainment/images/red/ReorderButton.gif (Added)
+		templates/Entertainment/images/red/ReorderSelected.gif (Added)
+
+
+		templates/Entertainment/config.php
+		templates/Entertainment/Panels/HeaderSearch.html
+		templates/Entertainment/Panels/SearchPageHeader.html
+		templates/Entertainment/Styles/popup.css
+		templates/Entertainment/Styles/styles.css
+
+	Fashion
+		templates/Fashion/images/orange/ReorderButton.gif (Added)
+		templates/Fashion/images/orange/ReorderSelected.gif (Added)
+		templates/Fashion/images/ProductDefault.gif (Added)
+
+
+		templates/Fashion/config.php
+		templates/Fashion/Panels/HeaderSearch.html
+		templates/Fashion/Styles/popup.css
+		templates/Fashion/Styles/styles.css
+
+	FashionJewellery
+		templates/FashionJewellery/images/ProductDefault.gif (Added)
+		templates/FashionJewellery/images/purple/ReorderButton.gif (Added)
+		templates/FashionJewellery/images/purple/ReorderSelected.gif (Added)
+
+
+		templates/FashionJewellery/config.php
+		templates/FashionJewellery/Snippets/SelectGiftWrapping
+		templates/FashionJewellery/Styles/popup.css
+		templates/FashionJewellery/Styles/styles.css
+
+	Flowers
+		templates/Flowers/images/green/ReorderButton.gif (Added)
+		templates/Flowers/images/green/ReorderSelected.gif (Added)
+		templates/Flowers/images/ProductDefault.gif (Added)
+
+
+		templates/Flowers/config.php
+		templates/Flowers/logo/config.php
+		templates/Flowers/Styles/green.css
+		templates/Flowers/Styles/popup.css
+		templates/Flowers/Styles/styles.css
+
+	Food
+		templates/Food/images/maroon/ReorderButton.gif (Added)
+		templates/Food/images/maroon/ReorderSelected.gif (Added)
+		templates/Food/images/ProductDefault.gif (Added)
+
+
+		templates/Food/config.php
+		templates/Food/Panels/HeaderSearch.html
+		templates/Food/Styles/popup.css
+		templates/Food/Styles/styles.css
+
+	Furniture
+		templates/Furniture/images/ecru/ReorderButton.gif (Added)
+		templates/Furniture/images/ecru/ReorderSelected.gif (Added)
+		templates/Furniture/images/ProductDefault.gif (Added)
+
+
+		templates/Furniture/account_downloaditem.html
+		templates/Furniture/account_new_return.html
+		templates/Furniture/config.php
+		templates/Furniture/logo/config.php
+		templates/Furniture/Panels/HeaderSearch.html
+		templates/Furniture/Styles/popup.css
+		templates/Furniture/Styles/styles.css
+
+	Gadgets
+		templates/Gadgets/images/ProductDefault.gif (Added)
+		templates/Gadgets/images/yellow/ReorderButton.gif (Added)
+		templates/Gadgets/images/yellow/ReorderSelected.gif (Added)
+
+
+		templates/Gadgets/config.php
+		templates/Gadgets/Panels/HeaderSearch.html
+		templates/Gadgets/Snippets/SelectGiftWrapping
+		templates/Gadgets/Styles/popup.css
+		templates/Gadgets/Styles/styles.css
+		templates/Gadgets/Styles/yellow.css
+
+	Garden
+		templates/Garden/images/green/ReorderButton.gif (Added)
+		templates/Garden/images/green/ReorderSelected.gif (Added)
+		templates/Garden/images/ProductDefault.gif (Added)
+
+
+		templates/Garden/config.php
+		templates/Garden/Panels/HeaderSearch.html
+		templates/Garden/Styles/green.css
+		templates/Garden/Styles/popup.css
+		templates/Garden/Styles/styles.css
+
+	Gifts
+		templates/Gifts/images/brown/ReorderButton.gif (Added)
+		templates/Gifts/images/brown/ReorderSelected.gif (Added)
+		templates/Gifts/images/ProductDefault.gif (Added)
+
+
+		templates/Gifts/config.php
+		templates/Gifts/Styles/popup.css
+		templates/Gifts/Styles/styles.css
+
+	Handbags
+		templates/Handbags/images/grey/ReorderButton.gif (Added)
+		templates/Handbags/images/grey/ReorderSelected.gif (Added)
+		templates/Handbags/images/ProductDefault.gif (Added)
+
+
+		templates/Handbags/config.php
+		templates/Handbags/logo/config.php
+		templates/Handbags/Styles/grey.css
+		templates/Handbags/Styles/popup.css
+		templates/Handbags/Styles/styles.css
+
+	Health
+		templates/Health/images/green/ReorderButton.gif (Added)
+		templates/Health/images/green/ReorderSelected.gif (Added)
+		templates/Health/images/ProductDefault.gif (Added)
+
+
+		templates/Health/config.php
+		templates/Health/Panels/HeaderSearch.html
+		templates/Health/Styles/popup.css
+		templates/Health/Styles/styles.css
+
+	Homewares
+		templates/Homewares/images/brown/ReorderButton.gif (Added)
+		templates/Homewares/images/brown/ReorderSelected.gif (Added)
+		templates/Homewares/images/ProductDefault.gif (Added)
+
+
+		templates/Homewares/config.php
+		templates/Homewares/Styles/popup.css
+		templates/Homewares/Styles/styles.css
+
+	Infinity
+		templates/Infinity/images/ProductDefault.gif (Added)
+		templates/Infinity/images/red/ReorderButton.gif (Added)
+		templates/Infinity/images/red/ReorderSelected.gif (Added)
+
+
+		templates/Infinity/account_new_return.html
+		templates/Infinity/config.php
+		templates/Infinity/createaccount_thanks.html
+		templates/Infinity/default.html
+		templates/Infinity/Panels/CategoryContent.html
+		templates/Infinity/Panels/Header.html
+		templates/Infinity/Panels/HeaderSearch.html
+		templates/Infinity/Panels/SideNewProducts.html
+		templates/Infinity/Panels/SideTopSellers.html
+		templates/Infinity/product.html
+		templates/Infinity/Snippets/SideTopSellers.html
+		templates/Infinity/Snippets/SideTopSellersFirst.html
+		templates/Infinity/Styles/popup.css
+		templates/Infinity/Styles/styles.css
+
+	Jewellery
+		templates/Jewellery/images/black/ReorderButton.gif (Added)
+		templates/Jewellery/images/black/ReorderSelected.gif (Added)
+		templates/Jewellery/images/ProductDefault.gif (Added)
+
+
+		templates/Jewellery/config.php
+		templates/Jewellery/logo/config.php
+		templates/Jewellery/Panels/HeaderSearch.html
+		templates/Jewellery/Styles/black.css
+		templates/Jewellery/Styles/popup.css
+		templates/Jewellery/Styles/styles.css
+
+	Kitchenware
+		templates/Kitchenware/images/ProductDefault.gif (Added)
+		templates/Kitchenware/images/red/ReorderButton.gif (Added)
+		templates/Kitchenware/images/red/ReorderSelected.gif (Added)
+
+
+		templates/Kitchenware/config.php
+		templates/Kitchenware/logo/config.php
+		templates/Kitchenware/Snippets/SelectGiftWrapping
+		templates/Kitchenware/Styles/popup.css
+		templates/Kitchenware/Styles/styles.css
+
+	Lingerie
+		templates/Lingerie/images/pink/ReorderButton.gif (Added)
+		templates/Lingerie/images/pink/ReorderSelected.gif (Added)
+		templates/Lingerie/images/ProductDefault.gif (Added)
+
+
+		templates/Lingerie/config.php
+		templates/Lingerie/Styles/popup.css
+		templates/Lingerie/Styles/styles.css
+
+	Luggage
+		templates/Luggage/images/ProductDefault.gif (Added)
+		templates/Luggage/images/purple/ReorderButton.gif (Added)
+		templates/Luggage/images/purple/ReorderSelected.gif (Added)
+
+
+		templates/Luggage/config.php
+		templates/Luggage/logo/config.php
+		templates/Luggage/Snippets/SelectGiftWrapping
+		templates/Luggage/Styles/popup.css
+		templates/Luggage/Styles/purple.css
+		templates/Luggage/Styles/styles.css
+
+	Nightwear
+		templates/Nightwear/images/coolblue/ReorderButton.gif (Added)
+		templates/Nightwear/images/coolblue/ReorderSelected.gif (Added)
+		templates/Nightwear/images/ProductDefault.gif (Added)
+
+
+		templates/Nightwear/config.php
+		templates/Nightwear/logo/config.php
+		templates/Nightwear/Snippets/SelectGiftWrapping
+		templates/Nightwear/Styles/coolblue.css
+		templates/Nightwear/Styles/popup.css
+		templates/Nightwear/Styles/styles.css
+
+	Office
+		templates/Office/images/blue/ReorderButton.gif (Added)
+		templates/Office/images/blue/ReorderSelected.gif (Added)
+		templates/Office/images/ProductDefault.gif (Added)
+
+
+		templates/Office/config.php
+		templates/Office/Panels/HeaderSearch.html
+		templates/Office/Panels/TopMenu.html
+		templates/Office/Snippets/SelectGiftWrapping
+		templates/Office/Styles/blue.css
+		templates/Office/Styles/popup.css
+		templates/Office/Styles/styles.css
+
+	Perfume
+		templates/Perfume/images/ProductDefault.gif (Added)
+		templates/Perfume/images/yellow/ReorderButton.gif (Added)
+		templates/Perfume/images/yellow/ReorderSelected.gif (Added)
+
+
+		templates/Perfume/config.php
+		templates/Perfume/Styles/popup.css
+		templates/Perfume/Styles/styles.css
+
+	Reserved
+		templates/Reserved/images/beige/ReorderButton.gif (Added)
+		templates/Reserved/images/beige/ReorderSelected.gif (Added)
+		templates/Reserved/images/ProductDefault.gif (Added)
+
+
+		templates/Reserved/config.php
+		templates/Reserved/Panels/Header.html
+		templates/Reserved/Panels/PagesMenu.html
+		templates/Reserved/Panels/SideCouponCodeBox.html
+		templates/Reserved/Styles/popup.css
+		templates/Reserved/Styles/styles.css
+
+	Serenity
+		templates/Serenity/images/blue/ReorderButton.gif (Added)
+		templates/Serenity/images/blue/ReorderSelected.gif (Added)
+		templates/Serenity/images/ProductDefault.gif (Added)
+
+
+		templates/Serenity/config.php
+		templates/Serenity/Panels/SideCouponCodeBox.html
+		templates/Serenity/Styles/popup.css
+		templates/Serenity/Styles/styles.css
+
+	Shoes
+		templates/Shoes/images/brown/ReorderButton.gif (Added)
+		templates/Shoes/images/brown/ReorderSelected.gif (Added)
+		templates/Shoes/images/ProductDefault.gif (Added)
+
+
+		templates/Shoes/config.php
+		templates/Shoes/Panels/TopMenu.html
+		templates/Shoes/Snippets/SelectGiftWrapping
+		templates/Shoes/Styles/brown.css
+		templates/Shoes/Styles/popup.css
+		templates/Shoes/Styles/styles.css
+
+	Skincare
+		templates/Skincare/images/cream/ReorderButton.gif (Added)
+		templates/Skincare/images/cream/ReorderSelected.gif (Added)
+		templates/Skincare/images/ProductDefault.gif (Added)
+
+
+		templates/Skincare/config.php
+		templates/Skincare/Panels/TopMenu.html
+		templates/Skincare/Snippets/SelectGiftWrapping
+		templates/Skincare/Styles/popup.css
+		templates/Skincare/Styles/styles.css
+
+	Software
+		templates/Software/images/blue/ReorderButton.gif (Added)
+		templates/Software/images/blue/ReorderSelected.gif (Added)
+		templates/Software/images/ProductDefault.gif (Added)
+
+
+		templates/Software/config.php
+		templates/Software/logo/config.php
+		templates/Software/Panels/TopMenu.html
+		templates/Software/Snippets/SelectGiftWrapping
+		templates/Software/Styles/popup.css
+		templates/Software/Styles/styles.css
+
+	Sport
+		templates/Sport/images/ProductDefault.gif (Added)
+		templates/Sport/images/skyblue/ReorderButton.gif (Added)
+		templates/Sport/images/skyblue/ReorderSelected.gif (Added)
+
+
+		templates/Sport/config.php
+		templates/Sport/Panels/HeaderSearch.html
+		templates/Sport/Styles/popup.css
+		templates/Sport/Styles/styles.css
+
+	StoreSuite
+		templates/StoreSuite/config.php (Added)
+		templates/StoreSuite/images/ArrowDown.gif (Added)
+		templates/StoreSuite/images/ArrowUp.gif (Added)
+		templates/StoreSuite/images/blue/AddCartButton.gif (Added)
+		templates/StoreSuite/images/blue/AddCartButtonSmall.gif (Added)
+		templates/StoreSuite/images/blue/BodyBg.gif (Added)
+		templates/StoreSuite/images/blue/Cart.gif (Added)
+		templates/StoreSuite/images/blue/ChatIcon.gif (Added)
+		templates/StoreSuite/images/blue/CheckoutButton.gif (Added)
+		templates/StoreSuite/images/blue/CompareButton.gif (Added)
+		templates/StoreSuite/images/blue/GoButton.gif (Added)
+		templates/StoreSuite/images/blue/MiniCheckoutButton.gif (Added)
+		templates/StoreSuite/images/blue/NewsletterSubscribe.gif (Added)
+		templates/StoreSuite/images/blue/NotifyMeButton.gif (Added)
+		templates/StoreSuite/images/blue/OrderDetailsButton.gif (Added)
+		templates/StoreSuite/images/blue/PaymentButton.gif (Added)
+		templates/StoreSuite/images/blue/PaymentButtonContinue.gif (Added)
+		templates/StoreSuite/images/blue/QuickSearchAllResultsButton.gif (Added)
+		templates/StoreSuite/images/blue/ReorderButton.gif (Added)
+		templates/StoreSuite/images/blue/ReorderSelected.gif (Added)
+		templates/StoreSuite/images/blue/ReturnItemsButton.gif (Added)
+		templates/StoreSuite/images/blue/Search.gif (Added)
+		templates/StoreSuite/images/blue/Search.png (Added)
+		templates/StoreSuite/images/blue/UpdateQtyButton.gif (Added)
+		templates/StoreSuite/images/blue/WishlistButton.gif (Added)
+		templates/StoreSuite/images/blue/WriteReviewButton.gif (Added)
+		templates/StoreSuite/images/BrandDefault.gif (Added)
+		templates/StoreSuite/images/Breadcrumb.gif (Added)
+		templates/StoreSuite/images/BreadcrumbSep.gif (Added)
+		templates/StoreSuite/images/Cart2.gif (Added)
+		templates/StoreSuite/images/CategoryDefault.gif (Added)
+		templates/StoreSuite/images/ContentBg.gif (Added)
+		templates/StoreSuite/images/ContentBgWide.gif (Added)
+		templates/StoreSuite/images/ContentBgWidest.gif (Added)
+		templates/StoreSuite/images/ErrorMessage.gif (Added)
+		templates/StoreSuite/images/ExampleGiftCertificate.gif (Added)
+		templates/StoreSuite/images/GiftWrappingAvailable.gif (Added)
+		templates/StoreSuite/images/green/AddCartButton.gif (Added)
+		templates/StoreSuite/images/green/AddCartButtonSmall.gif (Added)
+		templates/StoreSuite/images/green/BodyBg.gif (Added)
+		templates/StoreSuite/images/green/Cart.gif (Added)
+		templates/StoreSuite/images/green/ChatIcon.gif (Added)
+		templates/StoreSuite/images/green/CheckoutButton.gif (Added)
+		templates/StoreSuite/images/green/CompareButton.gif (Added)
+		templates/StoreSuite/images/green/GoButton.gif (Added)
+		templates/StoreSuite/images/green/MiniCheckoutButton.gif (Added)
+		templates/StoreSuite/images/green/NewsletterSubscribe.gif (Added)
+		templates/StoreSuite/images/green/NotifyMeButton.gif (Added)
+		templates/StoreSuite/images/green/OrderDetailsButton.gif (Added)
+		templates/StoreSuite/images/green/PaymentButton.gif (Added)
+		templates/StoreSuite/images/green/PaymentButtonContinue.gif (Added)
+		templates/StoreSuite/images/green/QuickSearchAllResultsButton.gif (Added)
+		templates/StoreSuite/images/green/ReorderButton.gif (Added)
+		templates/StoreSuite/images/green/ReorderSelected.gif (Added)
+		templates/StoreSuite/images/green/ReturnItemsButton.gif (Added)
+		templates/StoreSuite/images/green/Search.gif (Added)
+		templates/StoreSuite/images/green/Search.png (Added)
+		templates/StoreSuite/images/green/UpdateQtyButton.gif (Added)
+		templates/StoreSuite/images/green/WishlistButton.gif (Added)
+		templates/StoreSuite/images/green/WriteReviewButton.gif (Added)
+		templates/StoreSuite/images/IcoCreateAccount.gif (Added)
+		templates/StoreSuite/images/IcoError.gif (Added)
+		templates/StoreSuite/images/IcoLogin.gif (Added)
+		templates/StoreSuite/images/IcoMessage.gif (Added)
+		templates/StoreSuite/images/IcoMessage1.gif (Added)
+		templates/StoreSuite/images/IcoMessage2.gif (Added)
+		templates/StoreSuite/images/IcoOrder.gif (Added)
+		templates/StoreSuite/images/IcoOrderStatus.gif (Added)
+		templates/StoreSuite/images/IcoRating0.gif (Added)
+		templates/StoreSuite/images/IcoRating1.gif (Added)
+		templates/StoreSuite/images/IcoRating2.gif (Added)
+		templates/StoreSuite/images/IcoRating3.gif (Added)
+		templates/StoreSuite/images/IcoRating4.gif (Added)
+		templates/StoreSuite/images/IcoRating5.gif (Added)
+		templates/StoreSuite/images/IcoReturn.gif (Added)
+		templates/StoreSuite/images/IcoVendor.gif (Added)
+		templates/StoreSuite/images/InfoMessage.gif (Added)
+		templates/StoreSuite/images/Loading.gif (Added)
+		templates/StoreSuite/images/NodeJoin.gif (Added)
+		templates/StoreSuite/images/pink/AddCartButton.gif (Added)
+		templates/StoreSuite/images/pink/AddCartButtonSmall.gif (Added)
+		templates/StoreSuite/images/pink/BodyBg.gif (Added)
+		templates/StoreSuite/images/pink/Cart.gif (Added)
+		templates/StoreSuite/images/pink/ChatIcon.gif (Added)
+		templates/StoreSuite/images/pink/CheckoutButton.gif (Added)
+		templates/StoreSuite/images/pink/CompareButton.gif (Added)
+		templates/StoreSuite/images/pink/GoButton.gif (Added)
+		templates/StoreSuite/images/pink/MiniCheckoutButton.gif (Added)
+		templates/StoreSuite/images/pink/NewsletterSubscribe.gif (Added)
+		templates/StoreSuite/images/pink/NotifyMeButton.gif (Added)
+		templates/StoreSuite/images/pink/OrderDetailsButton.gif (Added)
+		templates/StoreSuite/images/pink/PaymentButton.gif (Added)
+		templates/StoreSuite/images/pink/PaymentButtonContinue.gif (Added)
+		templates/StoreSuite/images/pink/QuickSearchAllResultsButton.gif (Added)
+		templates/StoreSuite/images/pink/ReorderButton.gif (Added)
+		templates/StoreSuite/images/pink/ReorderSelected.gif (Added)
+		templates/StoreSuite/images/pink/ReturnItemsButton.gif (Added)
+		templates/StoreSuite/images/pink/Search.gif (Added)
+		templates/StoreSuite/images/pink/Search.png (Added)
+		templates/StoreSuite/images/pink/UpdateQtyButton.gif (Added)
+		templates/StoreSuite/images/pink/WishlistButton.gif (Added)
+		templates/StoreSuite/images/pink/WriteReviewButton.gif (Added)
+		templates/StoreSuite/images/Price.gif (Added)
+		templates/StoreSuite/images/red/AddCartButton.gif (Added)
+		templates/StoreSuite/images/red/AddCartButtonSmall.gif (Added)
+		templates/StoreSuite/images/red/BodyBg.gif (Added)
+		templates/StoreSuite/images/red/Cart.gif (Added)
+		templates/StoreSuite/images/red/ChatIcon.gif (Added)
+		templates/StoreSuite/images/red/CheckoutButton.gif (Added)
+		templates/StoreSuite/images/red/CompareButton.gif (Added)
+		templates/StoreSuite/images/red/GoButton.gif (Added)
+		templates/StoreSuite/images/red/MiniCheckoutButton.gif (Added)
+		templates/StoreSuite/images/red/NewsletterSubscribe.gif (Added)
+		templates/StoreSuite/images/red/NotifyMeButton.gif (Added)
+		templates/StoreSuite/images/red/OrderDetailsButton.gif (Added)
+		templates/StoreSuite/images/red/PaymentButton.gif (Added)
+		templates/StoreSuite/images/red/PaymentButtonContinue.gif (Added)
+		templates/StoreSuite/images/red/QuickSearchAllResultsButton.gif (Added)
+		templates/StoreSuite/images/red/ReorderButton.gif (Added)
+		templates/StoreSuite/images/red/ReorderSelected.gif (Added)
+		templates/StoreSuite/images/red/ReturnItemsButton.gif (Added)
+		templates/StoreSuite/images/red/Search.gif (Added)
+		templates/StoreSuite/images/red/Search.png (Added)
+		templates/StoreSuite/images/red/UpdateQtyButton.gif (Added)
+		templates/StoreSuite/images/red/WishlistButton.gif (Added)
+		templates/StoreSuite/images/red/WriteReviewButton.gif (Added)
+		templates/StoreSuite/images/RSS.gif (Added)
+		templates/StoreSuite/images/SearchQueryBg.gif (Added)
+		templates/StoreSuite/images/SubBrand.gif (Added)
+		templates/StoreSuite/images/SubCategory.gif (Added)
+		templates/StoreSuite/images/SuccessMessage.gif (Added)
+		templates/StoreSuite/Panels/HeaderSearch.html (Added)
+		templates/StoreSuite/Panels/HTMLHead.html (Added)
+		templates/StoreSuite/Previews/blue.jpg (Added)
+		templates/StoreSuite/Previews/green.jpg (Added)
+		templates/StoreSuite/Previews/pink.jpg (Added)
+		templates/StoreSuite/Previews/red.jpg (Added)
+		templates/StoreSuite/Styles/blue.css (Added)
+		templates/StoreSuite/Styles/green.css (Added)
+		templates/StoreSuite/Styles/iselector.css (Added)
+		templates/StoreSuite/Styles/pink.css (Added)
+		templates/StoreSuite/Styles/popup.css (Added)
+		templates/StoreSuite/Styles/printinvoice.css (Added)
+		templates/StoreSuite/Styles/red.css (Added)
+		templates/StoreSuite/Styles/styles.css (Added)
+
+	Sunglasses
+		templates/Sunglasses/images/ochre/ReorderButton.gif (Added)
+		templates/Sunglasses/images/ochre/ReorderSelected.gif (Added)
+		templates/Sunglasses/images/ProductDefault.gif (Added)
+
+
+		templates/Sunglasses/config.php
+		templates/Sunglasses/logo/config.php
+		templates/Sunglasses/Panels/HeaderSearch.html
+		templates/Sunglasses/Styles/ochre.css
+		templates/Sunglasses/Styles/popup.css
+		templates/Sunglasses/Styles/styles.css
+
+	Toys
+		templates/Toys/images/blue/ReorderButton.gif (Added)
+		templates/Toys/images/blue/ReorderSelected.gif (Added)
+		templates/Toys/images/ProductDefault.gif (Added)
+
+
+		templates/Toys/config.php
+		templates/Toys/logo/config.php
+		templates/Toys/Panels/TopMenu.html
+		templates/Toys/Styles/popup.css
+		templates/Toys/Styles/styles.css
+
+	Watches
+		templates/Watches/images/grey/ReorderButton.gif (Added)
+		templates/Watches/images/grey/ReorderSelected.gif (Added)
+		templates/Watches/images/ProductDefault.gif (Added)
+
+
+		templates/Watches/config.php
+		templates/Watches/logo/config.php
+		templates/Watches/Panels/HeaderSearch.html
+		templates/Watches/Snippets/SelectGiftWrapping
+		templates/Watches/Styles/grey.css
+		templates/Watches/Styles/ie.css
+		templates/Watches/Styles/popup.css
+		templates/Watches/Styles/styles.css
+
+	Wine
+		templates/Wine/images/ProductDefault.gif (Added)
+		templates/Wine/images/red/ReorderButton.gif (Added)
+		templates/Wine/images/red/ReorderSelected.gif (Added)
+
+
+		templates/Wine/config.php
+		templates/Wine/Styles/popup.css
+		templates/Wine/Styles/red.css
+		templates/Wine/Styles/styles.css

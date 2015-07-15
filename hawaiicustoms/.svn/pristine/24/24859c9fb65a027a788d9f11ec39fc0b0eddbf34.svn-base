@@ -1,0 +1,32 @@
+<div id="applyCoupon">
+	<div class="ModalTitle">
+		%%LNG_ApplyCouponGiftCertificate%%
+	</div>
+	<div class="ModalContent">
+		<p>%%LNG_ApplyCouponGiftCertificateIntro%%</p>
+		<table border="0" cellspacing="0" cellpadding="2" width="100%" class="PanelPlain">
+			<tr>
+				<td class="FieldLabel">Coupon Code:</td>
+				<td>%%GLOBAL_CcString%%</td>
+			</tr>
+			<tr>
+				<td class="FieldLabel">
+					%%LNG_CouponandGiftCertificate%%:
+				</td>
+				<td><input type="text" value="" class="couponcode Field250" name="couponcode"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="ModalButtonRow">
+		<div class="FloatLeft">
+			<input type="button" value="%%LNG_Cancel%%" onclick="$.modal.close()" />
+		</div>
+		<input type="button" class="Submit" value="%%LNG_Apply%%" onclick="OrderManager.ApplyCoupon()" />
+	</div>
+</div>
+<script type="text/javascript">
+function selectcoupon(code)
+{
+	$('#ModalContainer .ModalContent .couponcode').val(code);
+}
+</script>

@@ -1,0 +1,24 @@
+	<li id="FormFieldRow%%GLOBAL_FormFieldId%%" class="SortableRow" style="width:100%;">
+		<table class="GridPanel" cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+			<tr class="GridRow" onmouseover="this.className='GridRowOver'" onmouseout="this.className='GridRow'">
+				<td style="width:18px;" align="center">
+					<input type="checkbox" name="formfields[]" class="FormFieldsIdx" value="%%GLOBAL_FormFieldId%%" %%GLOBAL_DeleteStatus%%/>
+				</td>
+				<td class="%%GLOBAL_FormFieldSortRow%%">
+					%%GLOBAL_FormFieldName%%
+				</td>
+				<td style="width:17%;" class="HideOnDrag">
+					%%GLOBAL_FormFieldData%%
+				</td>
+				<td style="width:17%;" class="HideOnDrag">
+					%%GLOBAL_FormFieldLastModified%%
+				</td>
+				<td style="width:17%;" class="HideOnDrag">
+					%%GLOBAL_FormFieldType%%
+				</td>
+				<td style="width:17%;" class="HideOnDrag">
+					%%GLOBAL_FormFieldAction%%
+				</td>
+			</tr>
+		</table>
+	</li>

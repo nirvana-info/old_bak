@@ -1,0 +1,8 @@
+<li>
+	<label id="shippingMethod_%%GLOBAL_VendorId%%_%%GLOBAL_AddressId%%_%%GLOBAL_ShippingQuoteId%%">
+        <input style="float: left;" type="radio" name="selectedShippingMethod[%%GLOBAL_VendorId%%][%%GLOBAL_AddressId%%]" id="shippingCheck_%%GLOBAL_VendorId%%_%%GLOBAL_AddressId%%" value="%%GLOBAL_ShippingQuoteId%%" />
+        <span style="float: left;" class="ShipperName">%%GLOBAL_ShipperName%%</span> 
+        <div style="clear:both;"></div>
+        %%GLOBAL_TransitTime%% <em class="ShipperPrice ProductPrice">%%GLOBAL_ShippingPrice%%</em>
+    </label>
+</li>

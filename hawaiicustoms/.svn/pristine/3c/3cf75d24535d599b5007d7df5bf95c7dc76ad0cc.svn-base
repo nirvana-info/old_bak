@@ -1,0 +1,13 @@
+<tr class="orderSubTotal">
+	<td>&nbsp;</td>
+	<td colspan="5" style="padding: 4px; text-align: right;">
+		<strong>%%LNG_GiftCertificate%% (%%GLOBAL_GiftCertificateCode%%):</strong>
+		<br />
+		<span style="color: gray;">
+			%%GLOBAL_GiftCertificateRemaining%% %%LNG_GiftCertificateRemaining%% |
+			<a href="#" onclick="OrderManager.RemoveGiftCertificate('%%GLOBAL_GiftCertificateId%%'); return false;">%%LNG_Remove%%</a>
+		</span>
+	</td>
+	<td style="padding: 6px; text-align: right;">-%%GLOBAL_CertificateAmountUsed%%</td>
+	<td>&nbsp;</td>
+</tr>

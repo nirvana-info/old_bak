@@ -1,0 +1,8 @@
+<li class="%%GLOBAL_CompletedClass%%">
+	<span class="GettingStartedIcon">
+		<span>%%GLOBAL_StepNumber%%</span>
+	</span>
+	<span class="GettingStartedLabel">
+		%%GLOBAL_Instruction%%
+	</span>
+</li>

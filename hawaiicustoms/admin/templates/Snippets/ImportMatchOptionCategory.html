@@ -1,0 +1,61 @@
+				<tr>
+					<td class="FieldLabel">
+						<span class="Required">%%GLOBAL_Required%%</span>&nbsp;%%GLOBAL_FieldName%%:
+					</td>
+					<td>
+						<div>
+							<label><input type="radio" name="categoryType" value="single" onclick="$('#categoryTypeSingle').show(); $('#categoryTypeMultiple').hide();"  /> %%LNG_ImportProductCategories1%%</label>
+							<img onmouseout="HideHelp('%%GLOBAL_HelpId%%')" onmouseover="ShowHelp('%%GLOBAL_HelpId%%', '%%GLOBAL_FieldNameHelpTitle%%', '%%GLOBAL_FieldNameHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+							<div style="display:none" id="%%GLOBAL_HelpId%%"></div>
+							<div id="categoryTypeSingle" style="display: none;">
+								<img src="images/nodejoin.gif" style="vertical-align: middle;" />
+								<select name="%%GLOBAL_OptionName%%" id="%%GLOBAL_FieldId%%" class="Field250">
+									<option value="-1">Ignore</option>
+									%%GLOBAL_OptionList%%
+								</select>
+							</div>
+						</div>
+						<div>
+						<label><input type="radio" name="categoryType" value="multiple" onclick="$('#categoryTypeSingle').hide(); $('#categoryTypeMultiple').show();" checked="checked" /> %%LNG_ImportProductCategories2%%</label>
+							<table id="categoryTypeMultiple" >
+								<tr>
+									<td style="vertical-align: top;">
+										<img src="images/nodejoin.gif" style="vertical-align: middle;" />
+									</td>
+									<td>
+										<table>
+											<tr>
+												<td>%%LNG_ImportCategoriesRoot%%:</td>
+												<td>
+													<select name="LinkField[category1]" id="category1" class="Field250">
+														<option value="-1">Ignore</option>
+														%%GLOBAL_OptionList%%
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>%%LNG_ImportCategoriesChild%%:</td>
+												<td>
+													<select name="LinkField[category2]" class="Field250">
+														<option value="-1">Ignore</option>
+														%%GLOBAL_OptionList2%%
+													</select>
+												</td>
+											</tr>
+											<!-- <tr>
+												<td>%%LNG_ImportCategoriesGrandChild%%:</td>
+												<td>
+													<select name="LinkField[category3]" class="Field250">
+														<option value="-1">Ignore</option>
+														%%GLOBAL_OptionList%%
+													</select>
+												</td>
+											</tr> -->
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						%%GLOBAL_Extra%%
+					</td>
+				</tr>

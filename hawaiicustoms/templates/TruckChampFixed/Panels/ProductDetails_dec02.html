@@ -1,0 +1,88 @@
+<div class="Block Moveable PrimaryProductDetails" id="ProductDetails">
+	<div class="BlockContent">
+		<div class="ErrorMessage" style="clear:both;%%GLOBAL_HideProductErrorMessage%%">
+			%%GLOBAL_ProductErrorMessage%%
+		</div>
+		<div class="ProductThumb" style="width:230px">
+			%%GLOBAL_LightBoxImageJavascript%% <br />
+			%%GLOBAL_ThumbImage%%
+            %%SNIPPET_AdditionalView%%
+            <h3 style="text-align:left;display:%%GLOBAL_HideVideosLink%%"><strong>%%LNG_AudioAndVideo%%</strong></h3>
+		    
+            <div style="display:%%GLOBAL_HideVideosLink%%">         
+                <div style="float:left;width:100px;display:%%GLOBAL_HideSpecVideosLink%%">
+                <a href="#" onclick="%%GLOBAL_VideoPopupJavascript%%" class="ViewLarger"> 
+                %%GLOBAL_SeeVideos%%</a>  
+                </div>
+                <div style="float:left;display:%%GLOBAL_HideSpecVideosLink%%">
+                <img onclick="%%GLOBAL_VideoPopupJavascript%%" src="%%GLOBAL_ShopPath%%/templates/default/images/play.gif" alt="Play Video" />
+                </div>
+                <br />
+                <div style="float:left;width:100px;display:%%GLOBAL_HideSpecAudiosLink%%">
+                <a href="#" onclick="%%GLOBAL_AudioPopupJavascript%%" class="ViewLarger"> 
+                %%GLOBAL_SeeAudios%%</a>  
+                </div>
+                <div style="float:left;display:%%GLOBAL_HideSpecAudiosLink%%">
+                <img onclick="%%GLOBAL_AudioPopupJavascript%%" src="%%GLOBAL_ShopPath%%/templates/default/images/play.gif" alt="Play Audio" />
+                </div>
+                <br />
+            </div>     
+        </div>                            
+             
+		<div class="ProductMain" style="width:380px">
+			<h2>%%GLOBAL_ProductName%%</h2>
+
+			<dl class="ProductDetailsGrid">
+				<dt style="display:%%GLOBAL_HideRRP%%">%%LNG_RRP%%:</dt>
+				<dd style="display:%%GLOBAL_HideRRP%%">%%GLOBAL_RetailPrice%%</dd>
+
+				<dt style="%%GLOBAL_HidePrice%%">%%GLOBAL_PriceLabel%%:</dt>
+				<dd style="%%GLOBAL_HidePrice%%"><em class="ProductPrice VariationProductPrice">%%GLOBAL_ProductPrice%%
+                <br />
+                %%GLOBAL_DiscountPrice%%
+                </em> %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%    <br />
+                %%GLOBAL_ShowOnSaleImage%%
+                <noscript>SDDSDS</noscript>
+                </dd>
+                 
+				<dt style="display: %%GLOBAL_HideSKU%%" class="ProductSKU">%%LNG_SKU%%:</dt>
+				<dd style="display: %%GLOBAL_HideSKU%%" class="ProductSKU"><span class="VariationProductSKU">%%GLOBAL_SKU%%</span></dd>
+
+				<dt style="%%GLOBAL_HideVendorDetails%%">%%LNG_Vendor%%:</dt>
+				<dd style="%%GLOBAL_HideVendorDetails%%">%%GLOBAL_VendorName%%</dd>
+
+				<dt style="display: %%GLOBAL_HideBrandLink%%">%%LNG_Brand%%:</dt>
+                <dd><img src="%%GLOBAL_ImageUrl%%" alt="Brand Image"/></dd>  <!-- Baskaran Added-->               
+				<dd style="display: %%GLOBAL_HideBrandLink%%"><a href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></dd>
+
+				<dt style="display: %%GLOBAL_HideWeight%%">%%LNG_Weight%%:</dt>
+				<dd style="display: %%GLOBAL_HideWeight%%"><span class="VariationProductWeight">%%GLOBAL_ProductWeight%%</span></dd>
+
+				<dt style="display: %%GLOBAL_HideRating%%">%%LNG_Rating%%:</dt>
+				<dd style="display: %%GLOBAL_HideRating%%">
+					<img width="64" height="12" src="%%GLOBAL_TPL_PATH%%/images/IcoRating%%GLOBAL_Rating%%.gif" alt="" />
+					<span style="display:%%GLOBAL_HideReviewLink%%">(<a href="#reviews">%%GLOBAL_ReviewLinkText%%</a>)</span>
+				</dd>
+
+				<dt style="display: %%GLOBAL_HideAvailability%%">%%LNG_Availability%%:</dt>
+				<dd style="display: %%GLOBAL_HideAvailability%%">%%GLOBAL_Availability%%</dd>
+				<!--Commented by Simha-->
+				<!--
+				<dt style="display: %%GLOBAL_HideShipping%%">%%LNG_Shipping%%:</dt>
+				<dd style="display: %%GLOBAL_HideShipping%%">%%GLOBAL_ShippingPrice%%</dd>
+				-->
+				<dt style="%%GLOBAL_HideCurrentStock%%" class="InventoryLevel">%%LNG_CurrentStock%%:</dt>
+				<dd style="%%GLOBAL_HideCurrentStock%%" class="InventoryLevel"><span class="VariationProductInventory">%%GLOBAL_InventoryList%%</span></dd>
+
+				<dt style="%%GLOBAL_HideGiftWrapMessage%%">%%LNG_GiftWrapping%%:</dt>
+				<dd style="%%GLOBAL_HideGiftWrapMessage%%">%%GLOBAL_GiftWrappingAvailable%%</dd>
+			</dl>
+			%%SNIPPET_ProductAddToCart%%  
+            <span class="ProductPrice" style="display: %%GLOBAL_DisplayNotForSaleMsg%%;">
+                %%LNG_ProductNotForSale%%
+            </span>
+		</div>
+		<br class="ClearLeft" />
+		
+	</div>
+</div>

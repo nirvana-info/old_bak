@@ -1,0 +1,22 @@
+		<div class="mmy">
+                <div id="MyVehicleArea" class="Block CategoryList Moveable">
+                    <h2>%%GLOBAL_arrowimage%%</h2>
+                    <div class='BlockContent'>%%GLOBAL_MyVehicleArea%%</div>
+               </div>
+        </div>
+		<script type="text/javascript">
+		function deleteMMYcookies(redirect_url)
+		{
+			document.cookie = 'last_search_selection[year]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+			document.cookie = 'last_search_selection[make]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+			document.cookie = 'last_search_selection[model]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+			location.href=redirect_url; // redirecting the page
+		}
+		function clearOtherFilters()
+		{
+			document.cookie = 'last_search_selection[clearotherfilters]=1; expires=; path=/;';
+			return true;
+		}
+		%%GLOBAL_RemoveBackgroundImage%%
+		%%GLOBAL_QualiferValue%%
+		</script>

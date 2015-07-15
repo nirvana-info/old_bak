@@ -1,0 +1,1 @@
+<input class="Text" style="width:170px" type="button" value="%%LNG_ViewCompleteOrderDetails%%" onclick="document.location.href='index.php?ToDo=viewOrders&customerId=%%GLOBAL_CustomerId%%'" />

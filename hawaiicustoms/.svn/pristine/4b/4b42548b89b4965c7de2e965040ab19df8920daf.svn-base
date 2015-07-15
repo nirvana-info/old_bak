@@ -1,0 +1,135 @@
+<form method="post" action="%%GLOBAL_ShopPath%%/offer.php?product=sendmail" onsubmit="return isValidEmail();">
+    <div style="width:100%;margin-top:5px;">
+        <div style="padding-top:10px;padding-left:10px;">
+            %%GLOBAL_OfferTitle%%
+        </div>
+        <div style="padding-top:10px;padding-left:10px;width:98%">
+            %%GLOBAL_OfferHeader%%
+        </div>
+        <div style="padding-left:25px;width:95%">
+        <hr />
+            <!--<dl class="ProductDetailsGrid">-->
+            <table border=0 cellspacing=0 cellpadding=0>
+                <tr>
+                    <td>%%LNG_BrandPart%%</td>
+                    <td>%%GLOBAL_prodbrand%%</td>
+                </tr>
+                <tr>
+                    <td>%%LNG_ProductTitle%%</td>
+                    <td>%%GLOBAL_prodtitle%%</td>
+                </tr>
+                <tr>
+                    <td>%%LNG_ListedPrice%%</td>
+                    <td>%%GLOBAL_prodprice%%</td>
+                </tr>
+                <tr>
+                    <td>%%LNG_States%%</td>
+                    <td><select name="state" id="state">
+                            %%GLOBAL_states%%
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>%%LNG_Zipcode%%</td>
+                    <td><input type="text" name="zipcode" id="zipcode"></td>
+                </tr>
+                <tr>
+                    <td>%%LNG_Comments%%</td>
+                    <td><textarea cols="25" rows="5" name="comments" id="comments"></textarea></td>
+                </tr>
+                <tr>
+                    <td><span class="Required FormFieldRequired">*</span>%%LNG_EmailAddress%%</td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><span class="Required FormFieldRequired">*</span>%%LNG_MakeanOffer%%</td>
+                    <td><input type="text" name="offer" id="offer"></td>
+                </tr>
+                <!--zcs=>-->
+                <tr>
+                    <td><span class="Required FormFieldRequired">*</span>%%LNG_CaptchaCode%%</td>
+                    <td><input type="text" name="captcha" id="captcha"><br />%%GLOBAL_CaptchaImage%%</td>
+                </tr>
+                <!--<=zcs-->
+                <tr><td colspan="2"><hr /></td></tr>
+                <tr>
+                    <td><input type="reset" value="Start Over"></td>
+                    <td><input type="submit" value="Make an Offer"></td>
+                </tr>
+                <tr><td colspan="2"><hr /></td></tr>
+            </table>
+            <br>
+            <input type="hidden" id="productid" name="productid" value="%%GLOBAL_productid%%"><!--zcs=-->
+            <input type="hidden" id="price" name="price" value="%%GLOBAL_formatprice%%">
+            <input type="hidden" id="prodtitle" name="prodtitle" value="%%GLOBAL_prodtitle%%">
+        </div>
+        <div id="Container" style="width:400px;">
+            %%GLOBAL_OfferFooter%%
+        </div>
+        <br class="Clear" />
+    </div>
+</form>
+<script>
+function isValidEmail()
+{
+        var field = document.getElementById('zipcode').value;
+
+        var valid = "0123456789-";
+        var hyphencount = 0;
+
+        if (field.length!=5 && field.length!=10) {
+        alert("Please enter your 5 digit or 5 digit+4 zip code.");
+        return false;
+        }
+        for (var i=0; i < field.length; i++) {
+        temp = "" + field.substring(i, i+1);
+        if (temp == "-") hyphencount++;
+        if (valid.indexOf(temp) == "-1") {
+        alert("Invalid characters in your zip code.  Please try again.");
+        return false;
+        }
+        if ((hyphencount > 1) || ((field.length==10) && ""+field.charAt(5)!="-")) {
+        alert("The hyphen character should be used with a properly formatted 5 digit+four zip code, like '12345-6789'.   Please try again.");
+        return false;
+           }
+        }
+        
+     var inputString = document.getElementById('email').value;
+     if($('#email').val()) {
+         var expression = /^([-a-zA-Z0-9_\.]*)@([-a-zA-Z0-9]+)([\.][a-zA-Z]+)+$/;//zcs=
+         if(matchExpression(expression,inputString) == false) {
+            alert('%%LNG_OfferEmailValid%%');
+            $('#email').focus();
+            return false;
+         }
+     }
+     else {
+        alert('%%LNG_EnterEmail%%');
+        $('#email').focus();
+        return false;
+     }
+     if(!$('#offer').val()) {
+        alert('%%LNG_EnterOffer%%');
+        $('#offer').focus();
+        return false;
+     }
+     //zcs=>
+     if(!$('#captcha').val()) {
+        alert('%%LNG_CaptchaCodeRequired%%');
+        $('#captcha').focus();
+        return false;
+     }
+     //<=zcs
+}
+function matchExpression(expression,inputString)
+{
+    if(inputString.search(expression)==-1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+</script>

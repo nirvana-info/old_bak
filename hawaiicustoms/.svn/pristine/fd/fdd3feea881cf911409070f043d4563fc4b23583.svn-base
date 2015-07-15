@@ -1,0 +1,12 @@
+<div id="compborder">
+	<div>
+	<table cellpadding=0 cellspacing=0 border=0>
+		<tr><td><img src="%%GLOBAL_ShopPath%%/templates/default/images/plus.gif"></td>
+		<td><img src="%%GLOBAL_ShopPath%%/templates/default/images/cart.gif"></td>
+		<td><span onmouseout="hideTip();" onmouseover="loadHoverImage(event, '', '');" onclick="checkanimate('complementary')">
+		<a href='Compl' onclick='return false;' class="">%%LNG_ComplementaryItems%%</a><span class="Required FormFieldRequired">&nbsp;(%%LNG_PleaseChoose%%)</span> <span id="complementaryimage"><img src="%%GLOBAL_ShopPath%%/templates/default/images/imgHdrDropDownIcon.gif"></span></span></td></tr></table>
+	</div>
+	<div id="complementary" > 
+	%%GLOBAL_complementaryproducts%%
+	</div>
+</div>

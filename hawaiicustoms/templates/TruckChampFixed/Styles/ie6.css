@@ -1,0 +1,276 @@
+
+#MyVehicleArea h2 {
+	/*position: relative;*/
+	color: #990000;
+}
+
+#LeftCol {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#RightCol {
+	margin: 0;
+	padding: 0;
+}
+
+#Container	{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#Wrapper {
+	width: 960px;
+	margin: 0;
+	padding: 0;
+}
+
+/* Reset old values for Top Menu */
+
+#TopMenu {
+	width: auto;
+	height: auto;
+	overflow: visible;
+	float: none;
+}
+
+#TopMenu li {
+	float: none;
+	height: auto;
+	margin-left: 0;
+}
+
+#TopMenu li a, #TopMenu li div {
+	float: none;
+	display: inline; /* test this */
+	height: auto;
+	padding-right: 0;
+	margin: 0;
+	background: none;
+}
+
+#TopMenu li a span {
+	background: none;
+	display: inline;
+	height: auto;
+	padding-left: 0;
+}
+
+#TopMenu li div a {
+	display: inline;
+}
+
+#TopMenu li a:hover {
+	border-bottom: none;
+}
+
+/* Enter new values for TopMenu */
+
+#TopMenu ul {
+	float: right;
+	list-style-type: none;
+	margin: 0 10px 0 0;
+}
+
+#TopMenu ul li {
+	float: left;
+	height: auto;
+	margin-top: 3px;
+	padding: 0 5px 0 5px;
+}
+
+#TopMenu ul li span {
+	padding: 0 2px 5px 7px;
+	vertical-align: top;
+}
+
+/* End Top Menu */
+
+#chatnow {
+	margin-right: 15px;
+}
+
+#tc-welcome {
+	float: right;
+}
+
+#SearchForm-Outer {
+	
+}
+
+.Content {
+	float: left;
+	margin: 0;
+}
+
+#tc-static-featured-cats {
+	width: 100%;
+}
+
+#tc-static-featured-brands {
+	width: 100%;
+}
+
+#tc-static-featured-brands h2 {
+	margin-top: 10px;
+}
+
+.Content .CategoryList li {
+	width: 134px;
+}
+
+#Wrapper {
+	width: 960px;
+	margin: 0;
+	padding: 0;
+}
+
+.Content .SubcatList li { 
+    width: 344px;
+}
+
+#cart-content {
+	width: 540px;
+}
+
+table.CartContents, table.General {
+	width: 540px;
+}
+
+.Right {
+	width: 182px;
+	margin: 5px 0 0 0;
+	padding: 2px 0 10px 0;
+	top: 40px;
+}
+
+#product-content {
+	width: 540px;
+}
+
+.PrimaryProductDetails .ProductMain {
+	width: 280px; /* setting this to anything doesn't change anything */
+	float: none;
+	margin: 0px;
+}
+
+.ProductAddToCart dd.AddCartButton div.BulkDiscount {
+	clear: left;
+	float: left;
+}
+
+#account-right {
+	margin: 0;
+	padding: 0;
+}
+
+#SideAccountMenu {
+	margin: 0;
+	padding: 0;
+}
+
+#SidePopularProducts {
+	margin: 0;
+	padding: 0;
+}
+
+.SharePublicWishList {
+	word-wrap: break-word;
+}
+
+li.titleheader {
+	height: 20px;
+}
+
+.mmy_title {
+	margin:0px; 
+	padding:0px;
+	margin-bottom:0px;
+	float:none;
+	width:100%;
+	border: 0;
+}
+
+.mmy_title li {
+	font-size: 1.1em;
+	margin-bottom: 0px;
+	display:auto;
+	float:left;
+	cursor: pointer;
+	font-weight: bold;
+	color: #000;
+	clear:none;
+	padding:0px;
+}
+
+
+.Left .mmy_title li#mmy_year, .Left .mmy_title li#mmy_make, .Left .mmy_title li#mmy_model{
+	width: 55px;
+	margin: 0px;
+	border: none;
+}
+
+.mmy_title li img {
+	border-width:0px;
+	padding-top:0px;
+	padding-right:0px;
+}
+
+#prod_year {
+	display:auto;
+}
+
+#prod_make {
+	display:auto;
+}
+
+#prod_model {
+	display:auto;
+	margin-right: 0px;
+}
+
+#prod_yearimage, #prod_makeimage, #prod_modelimage {
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+#subcatleftcolumn {
+    width: 125px;            
+}
+
+.ExpressCheckout {
+	width: 100%;
+	margin: 0 10px 0 10px;
+}
+
+#PayForOrder {
+	width: 940px;
+	margin: 0 10px 0 10px;
+}
+
+.Left .DepartmentList {
+	background-color: none;
+	position: relative;
+}
+
+.Left #SideCategoryList .DepartmentList li{
+	background-color: none;
+	position: relative;
+}
+.Left #SideCategoryList li.leftmenuitem {
+	background-color: none;
+}
+.Left {
+	width: 200px;
+}
+.TabNav li {
+	display: inline;
+}
+
+.filterheaders li img {
+	border-width:0px;
+	padding-right:7px;
+	margin: 7px 0 0 0;
+	vertical-align: top;
+}

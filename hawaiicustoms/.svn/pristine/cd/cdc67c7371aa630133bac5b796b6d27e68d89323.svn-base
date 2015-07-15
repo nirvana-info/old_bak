@@ -1,0 +1,13 @@
+<div class="Block Moveable" id="SearchPage">
+<div style="display:%%GLOBAL_HideSearchResults%%">
+
+			%%GLOBAL_BreadCrumbs%%
+     	<br />
+
+			%%GLOBAL_SearchResults%%
+
+		<br />
+
+
+</div>
+</div>

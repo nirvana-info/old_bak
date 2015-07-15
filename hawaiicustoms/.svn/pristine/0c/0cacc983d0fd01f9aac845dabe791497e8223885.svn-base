@@ -1,0 +1,5 @@
+<div class="DashboardPanel DashboardPanelFeatured DashboardInfoMessage" id="DashboardVersionCheck" style="%%GLOBAL_HideDashboardVersionCheck%%">
+	<div class="DashboardPanelContent">
+		%%GLOBAL_VersionCheckMessage%%
+	</div>
+</div>

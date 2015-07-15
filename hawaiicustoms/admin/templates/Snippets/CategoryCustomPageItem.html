@@ -1,0 +1,105 @@
+<tr>
+	<td class="FieldLabel">
+		<span class="Required">*</span>&nbsp;&nbsp;%%LNG_ItemTitle%%:
+	</td>
+	<td>
+        <input type="text" class="Field200" name="itemTitle" id="itemTitle" value="%%GLOBAL_ItemTitle%%"/>
+        <img onmouseout="HideHelp('cc0');" onmouseover="ShowHelp('cc0', '%%LNG_ItemTitle%%', '%%LNG_ItemTitleHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc0"></div>
+    </td>
+</tr>
+<tr>
+	<td class="FieldLabel">
+		<span class="Required">*</span>&nbsp;&nbsp;%%LNG_Category%%:
+	</td>
+	<td>
+       <select name="categorybox" id="categorybox" class="Field200">
+           <!-- option value="0">%%LNG_ChooseAnExistingCategory%%</option -->
+           %%GLOBAL_RootCategoryOptions%%
+       </select>
+       <img onmouseout="HideHelp('cc1');" onmouseover="ShowHelp('cc1', '%%LNG_Category%%', '%%LNG_CategoryHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc1"></div>
+    </td>
+</tr>
+<tr>
+      <td class="FieldLabel">
+          &nbsp;&nbsp;&nbsp;&nbsp;%%LNG_SubCategory%%:
+      </td>
+      <td>
+          <select name="subcategorybox" id="subcategorybox" class="Field200">
+              <option value="0">%%LNG_ChooseAnExistingSubcategory%%</option>
+              %%GLOBAL_SubCategoryOptions%%
+          </select>
+          <img onmouseout="HideHelp('cc2');" onmouseover="ShowHelp('cc2', '%%LNG_SubCategory%%', '%%LNG_SubCategoryHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+         <div style="display:none" id="cc2"></div>
+     </td>
+ </tr>
+<tr>
+    <td class="FieldLabel">
+        <span class="Required"></span>&nbsp;&nbsp;&nbsp;&nbsp;%%LNG_BrandName%%:
+    </td>
+    <td>
+        <select name="brandbox" id="brandbox" class="Field200">
+            <option value="0">%%LNG_ChooseAnExistingBrand%%</option>
+            %%GLOBAL_BrandNameOptions%%
+        </select>
+        <img onmouseout="HideHelp('cc3');" onmouseover="ShowHelp('cc3', '%%LNG_BrandName%%', '%%LNG_BrandNameProdHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc3"></div>
+    </td>
+</tr>
+<tr>
+    <td class="FieldLabel">
+        &nbsp;&nbsp;&nbsp;&nbsp;%%LNG_SeriesName%%:
+    </td>
+    <td id="selectseries">
+        <select name="seriesbox" id="seriesbox" class="Field200">
+            <option value="0">%%LNG_ChooseAnExistingSeries%%</option>
+            %%GLOBAL_SeriesNameOptions%%
+        </select>
+        <img onmouseout="HideHelp('cc4');" onmouseover="ShowHelp('cc4', '%%LNG_SeriesName%%', '%%LNG_ProductseriesHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc4"></div>
+    </td>
+</tr>
+<!-- 
+<tr>
+	<td class="FieldLabel">
+		<span class="Required"></span>&nbsp;&nbsp;&nbsp;&nbsp;%%LNG_ProductResults%%:
+	</td>
+	<td>
+		<select size="5" id="productResults" name="productResults" class="Field750 ISSelectReplacement" multiple="multiple" style="height: 140px;">
+			<option value="0">all</option>
+			%%GLOBAL_ProductResults%%
+		</select>
+		<img onmouseout="HideHelp('cc5');" onmouseover="ShowHelp('cc5', '%%LNG_ProductResults%%', '%%LNG_ProductResultsHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+		<div style="display:none" id="cc5"></div>
+	</td>
+</tr>
+-->
+<tr>
+	<td class="FieldLabel">
+		<span class="Required">*</span>&nbsp;%%LNG_VisitURL%%:
+	</td>
+	<td>
+        <input type="text" class="Field750" name="visitURL" id="visitURL" value="%%GLOBAL_VisitURL%%" readonly/>
+        <img onmouseout="HideHelp('cc6');" onmouseover="ShowHelp('cc6', '%%LNG_VisitURL%%', '%%LNG_VisitURLHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc6"></div>
+    </td>
+</tr>
+<tr>
+	<td class="FieldLabel">
+		&nbsp;&nbsp;&nbsp;&nbsp;%%LNG_Enabled%%:
+	</td>
+	<td>
+        <input type="checkbox" class="Field20" name="enabled" id="enabled"/>
+        <img onmouseout="HideHelp('cc7');" onmouseover="ShowHelp('cc7', '%%LNG_Enabled%%', '%%LNG_EnabledHelp%%')" src="images/help.gif" width="24" height="16" border="0">
+        <div style="display:none" id="cc7"></div>
+    </td>
+</tr>
+<tr>
+	<td class="FieldLabel">
+		&nbsp;&nbsp;%%LNG_ItemDesc%%:
+	</td>
+	<td>
+		%%GLOBAL_WYSIWYG%%
+	</td>
+</tr>

@@ -1,0 +1,87 @@
+<div class="Block Moveable" id="EditAccountForm">
+<h1>%%LNG_ShowUploadImage%%&nbsp;&nbsp;<a id="instructions_label" href="#" onclick="return false;" style="font-size:14px; font-weight:normal;">%%LNG_ImageUploaderInstructions%%</a></h1>
+<!--zcs=>-->
+
+<div id="instructions">
+	%%GLOBAL_Instructions%%
+</div>
+<!--<=zcs-->
+&nbsp;&nbsp;<a href="/account/uploadimages">I want to upload image</a>
+	<p class="InfoMessage" style="margin-top:10px;">
+		You can upload another <span id="imagenum">%%GLOBAL_imagenum%%<span> images.
+	</p>
+	<div class="PL20">
+		<ul class="ShippingAddressList">
+			%%SNIPPET_UploadImageList%%
+		</ul>
+	</div>
+</div>
+<!--zcs=>========instructions tip==============-->
+<style type="text/css">
+	#instructions{
+		display:none;
+		position:absolute;
+		border:#C5C5C5 1px solid;
+		background-color:#fff;
+		padding:10px;
+		width:300px;
+		word-wrap:break-word;
+		word-break:break-all;
+	}
+	#imgContaner{height:100px; text-align:center;}
+	.UtilityLinks{ text-align:center;}
+</style>
+<script language="javascript">
+$(document).ready(function(){
+	var instructions = $('#instructions');
+	var label = $('#instructions_label');
+	var label_offset = label.position();
+	instructions.css({
+		left:label_offset.left + label.width(),
+		top:label_offset.top + label.height()
+	});
+	label.hover(
+		function(){instructions.show('fast');},
+		function(){instructions.hide('fast');}
+	);
+	/*
+	$(".ShippingAddressList li div").each(function(){
+		var src = $(this).children("img").attr("src");
+		var img = new Image();
+		img.src = src;
+		if(img.width < 100){
+			$(this).children("img").removeAttr("width");
+			$(this).children("img").css("margin-left", (100-img.width)/2);
+		}
+		if(img.height < 100){
+			$(this).children("img").removeAttr("height");
+			$(this).children("img").css("margin-top", (100-img.height)/2);
+		}
+	});
+	*/
+});
+
+$(".ShippingAddressList li div img").each(function(){
+	$(this).load(function(){
+		var src = $(this).attr("src");
+		var img = new Image();
+		img.src = src;
+		/*alert(img.width +'/'+ img.height);
+		if(img.width < 100){
+			$(this).removeAttr("width");
+			$(this).css("margin-left", (100-img.width)/2);
+		}
+		if(img.height < 100){
+			$(this).removeAttr("height");
+			$(this).css("margin-top", (100-img.height)/2);
+		}*/
+		$(this).removeAttr("width");
+		$(this).removeAttr("height");
+		var original_w = img.width;
+		var original_h = img.height;
+		(original_w > original_h) ? $(this).width(Math.min(100, original_w)) : $(this).height(Math.min(100, original_h));
+		$(this).css("margin-top", (100-$(this).height())/2);
+	});
+});
+</script>
+<!--<=zcs=======================================-->

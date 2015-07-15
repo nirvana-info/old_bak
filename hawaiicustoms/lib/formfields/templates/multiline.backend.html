@@ -1,0 +1,49 @@
+
+<div id="div0" class="FormFieldTabs">
+	<dl>
+		<dt><span class="Required">*</span> %%LNG_FormFieldSetupName%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldName" name="name" value="%%GLOBAL_FormFieldName%%" class="Field200" />
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupDefaultValue%%:</dt>
+		<dd>
+			<textarea id="FormFieldDefaultValue" name="defaultvalue" class="extraInfo Field200" style="width:200px; height: 50px;">%%GLOBAL_FormFieldDefaultValue%%</textarea>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupIsRequired%%:</dt>
+		<dd>
+			<label for="FormFieldIsRequired"><input type="checkbox" id="FormFieldIsRequired" name="isRequired" %%GLOBAL_FormFieldIsRequiredChecked%% %%GLOBAL_FormFieldImmutableFlag%% /> %%LNG_FormFieldSetupIsRequiredYes%%</label>
+		</dd>
+	</dl>
+</div>
+
+<div id="div1" class="FormFieldTabs">
+	<dl>
+		<dt><span class="Required">*</span> %%LNG_FormFieldSetupRows%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldRows" name="rows" value="%%GLOBAL_FormFieldRows%%" class="extraInfo Field200" />
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupSize%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldCols" name="cols" value="%%GLOBAL_FormFieldCols%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dcols');" onmouseover="ShowHelp('dcols', '%%LNG_FormFieldSetupSize%%', '%%LNG_FormFieldSetupSizeHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dcols"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupClass%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldClass" name="class" value="%%GLOBAL_FormFieldClass%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dclass');" onmouseover="ShowHelp('dclass', '%%LNG_FormFieldSetupClass%%', '%%LNG_FormFieldSetupClassHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dclass"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupStyle%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldStyle" name="style" value="%%GLOBAL_FormFieldStyle%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dstyle');" onmouseover="ShowHelp('dstyle', '%%LNG_FormFieldSetupStyle%%', '%%LNG_FormFieldSetupStyleHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dstyle"></div>
+		</dd>
+	</dl>
+</div>

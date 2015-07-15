@@ -1,0 +1,48 @@
+<hr />
+
+%%SNIPPET_SideAddItemSoldOut%%
+
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%)"  enctype="multipart/form-data">
+	<input type="hidden" name="action" value="add" />
+	<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+	<input type="hidden" name="variation_id" class="CartVariationId" value="" />
+	<input type="hidden" name="currency_id" value="" />
+	<dl class="ProductAddToCart">
+		%%SNIPPET_VariationList%%
+		%%SNIPPET_ProductFieldsList%%
+		%%SNIPPET_EventDate%%
+		%%GLOBAL_complementarypaneltoshow%%
+		<dt class="QuantityInput" style="display: %%GLOBAL_DisplayAddQty%%;"> %%LNG_QuantityFull%%:</dt>
+		<dd class="AddCartButton" style="display: %%GLOBAL_DisplayAdd%%">
+			<span class="FloatLeft" style="display: %%GLOBAL_DisplayAddQty%%;">%%GLOBAL_AddToCartQty%%</span>
+			<div class="BulkDiscount">
+				<input type="image" src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/AddCartButton.gif" onclick="return chksubmit()" alt="" />
+                </form>
+				<form method="post" action="/makeaoffer.php" >
+				<input type="hidden" name="action" value="add" />
+				<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+                <span style="display: %%GLOBAL_HideOfferButton%%;"> <!--Baskaran-->
+                   
+					<img src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/MakeAOffer.gif"  alt="" onclick="ShowPopup(%%GLOBAL_ProductId%%);" style = "cursor:pointer;cursor:hand;" />
+                </span>
+				<div class="BulkDiscountLink" style="display: %%GLOBAL_HideBulkDiscountLink%%;"><a href="#" onclick="$.iModal({data: $('#ProductDetailsBulkDiscountThickBox').html(), width: 600}); return false;">%%LNG_BulkDiscountLink%%</a></div>
+			</div>
+		</dd>
+	</dl>
+</form>
+
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script type="text/javascript">
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+
+
+
+</script>
+%%GLOBAL_ProductVariationJavascript%%
+%%GLOBAL_EventDateJavascript%%

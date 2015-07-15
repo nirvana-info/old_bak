@@ -1,0 +1,51 @@
+
+<div id="div0" class="FormFieldTabs">
+	<dl>
+		<dt><span class="Required">*</span> %%LNG_FormFieldSetupName%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldName" name="name" value="%%GLOBAL_FormFieldName%%" class="Field200" />
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupDefaultValue%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldDefaultValue" name="defaultvalue" value="%%GLOBAL_FormFieldDefaultValue%%" class="extraInfo Field200" />
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupIsRequired%%:</dt>
+		<dd>
+			<label for="FormFieldIsRequired"><input type="checkbox" id="FormFieldIsRequired" name="isRequired" %%GLOBAL_FormFieldIsRequiredChecked%% %%GLOBAL_FormFieldImmutableFlag%% /> %%LNG_FormFieldSetupIsRequiredYes%%</label>
+		</dd>
+	</dl>
+</div>
+
+<div id="div1" class="FormFieldTabs">
+	<dl>
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupSize%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldSize" name="size" value="%%GLOBAL_FormFieldSize%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dsize');" onmouseover="ShowHelp('dsize', '%%LNG_FormFieldSetupSize%%', '%%LNG_FormFieldSetupSizeHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dsize"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupMaxLength%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldMaxLength" name="maxlength" value="%%GLOBAL_FormFieldMaxLength%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dmaxlength');" onmouseover="ShowHelp('dmaxlength', '%%LNG_FormFieldSetupMaxLength%%', '%%LNG_FormFieldSetupMaxLengthHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dmaxlength"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupClass%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldClass" name="class" value="%%GLOBAL_FormFieldClass%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dclass');" onmouseover="ShowHelp('dclass', '%%LNG_FormFieldSetupClass%%', '%%LNG_FormFieldSetupClassHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dclass"></div>
+		</dd>
+
+		<dt>&nbsp;&nbsp; %%LNG_FormFieldSetupStyle%%:</dt>
+		<dd>
+			<input type="text" id="FormFieldStyle" name="style" value="%%GLOBAL_FormFieldStyle%%" class="extraInfo Field200" />
+			<img onmouseout="HideHelp('dstyle');" onmouseover="ShowHelp('dstyle', '%%LNG_FormFieldSetupStyle%%', '%%LNG_FormFieldSetupStyleHelp%%')" src="images/help.gif" width="24" height="16" border="0" />
+			<div style="display:none" id="dstyle"></div>
+		</dd>
+	</dl>
+</div>

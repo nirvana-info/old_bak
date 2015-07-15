@@ -1,0 +1,66 @@
+; [Add-on Products]
+
+; zcs=>
+AllAddonProducts = "All Add-on Products"
+; <=zcs
+
+; [Remote]
+AddonProductOrdersUpdated = "The display order of your Add-on Product has been updated successfully."
+
+; zcs=>
+; [List Page]
+NoSortInSearchPage = "You're on the searching page while you will not be able to change the sequence of any order, you may <a href='index.php?ToDo=viewAddonProducts'>Click Here</a> to work smoothly."
+
+ManageAddonProductsIntro = "All Add-on Products are shown below.."
+AddonProductActiveTip = "Activate this Add-on Product"
+AddonProductInactiveTip = "Inactivate this Add-on Product"
+
+AddonProductStatusSuccessfully = "The status of this Add-on Product has been changed successfully."
+ErrAddonProductStatusNotChanged = "An error occurred while trying to change the status of this Add-on Product: %s"
+
+AddonProductSearchResultsBelow1 = "1 Add-on Product matched your search criteria and is shown below."
+AddonProductSearchResultsBelowX = "%d Add-on Products matched your search criteria and are shown below."
+
+NoAddonProductResults = "No Add-on Products matched your search criteria. Please try again."
+NoAddonProducts = "No Add-on Products have been created yet. Once an Add-on Product has been created, they'll be viewable here."
+
+ConfirmDeleteAddonProducts = "WARNING: This will permanently remove the selected Add-on Product(s). Are you sure you wish to do this?"
+ChooseAddonProduct = "Please choose at least one Add-on Product to delete."
+AddonProductsDeletedSuccessfully = "The selected Add-on Products have been deleted successfully."
+AddonProductsDeletedFailed = "Sorry ! Some of the selected Add-on Products have not been deleted."
+ConfirmDeleteAddonProduct = "Are you sure you want to delete this Add-on Product?"
+
+; [Add & Edit Page]
+AddonProductDetails = "Add-on Product Details"
+AddonProductDetailsIntro = ""
+AddonProductProduct = ""
+ConfirmCancelAddonProduct = "Are you sure you want to cancel? Click OK to confirm."
+AddonProductDescriptionExceeded = "WARNING! Your description exceeds the max of 250 characters."
+AddonProductInvalidStatus = "The status must be a integer."
+
+; [Add Page]
+CreateAddonProduct = "Create Add-on Product"
+CreateAddonProductsIntro = "Create a new Add-on Product."
+
+AddonProductProductId = "Product"
+AddonProductPrice = "Price"
+AddonProductDescription = "Description"
+AddonProductStatus = "Status"
+AddonProduct = ""
+AddonProduct = ""
+
+AddonProductProductRequired = "Please select a product."
+AddonProductPriceInvalid = "Please type a positive number or zero format for price item."
+
+AddonProductCreatedSuccessfully = "The selected Add-on Product has been created successfully."
+AddonProductCreatedFailed = "A database error occurred while trying to add the Add-on Product: %s"
+
+; [Edit Page]
+EditAddonProduct = "Edit Add-on Product"
+EditAddonProductsIntro = "Edit an Add-on Product."
+
+AddonProductDoesntExist = "The selected Add-on Product doesn't exist or has been removed."
+AddonProductUpdatedSuccessfully = "The selected Add-on Product has been updated successfully."
+AddonProductUpdatedFailed = "A database error occurred while trying to save the Add-on Product: %s"
+
+; <=zcs

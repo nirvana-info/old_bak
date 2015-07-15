@@ -1,0 +1,47 @@
+.Panel {
+	border-collapse: collapse;
+	font-weight: 400;
+	font-size: 11px;
+	color: #4e4f4f;
+	background-color: #F9F9F9;
+	width: 100%;
+	margin-top: 5px;
+	padding: 4px;
+}
+
+#tabnav, ul.tabnav {
+	height: 25px;
+	padding-left: 10px;
+	background: url(/store/admin/images/tab_bottom.gif) repeat-x bottom;
+	margin: 0;
+}
+
+#tabnav li, ul.tabnav li {
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#tabnav a:link, #tabnav a:visited, ul.tabnav a:link, ul.tabnav a:visited {
+	float: left;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight: 700;
+	margin-right: 4px;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #666;
+	background: url(/store/admin/images/tab_bg.gif) repeat-x;
+	padding: 2px 10px;
+}
+
+#tabnav a:link.active, #tabnav a:visited.active, ul.tabnav a:link.active, ul.tabnav a:visited.active {
+	border-bottom: 1px solid #fff;
+	background: #fff;
+	color: #000;
+}
+
+#tabnav a:hover, ul.tabnav a:hover {
+	background: #fff;
+}

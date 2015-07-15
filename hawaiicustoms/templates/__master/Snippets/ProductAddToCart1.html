@@ -1,0 +1,44 @@
+<hr />
+
+%%SNIPPET_SideAddItemSoldOut%%
+%%GLOBAL_PopupCoupon%%
+	<input type="hidden" name="action" value="add" />
+	<input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+	<input type="hidden" name="variation_id" class="CartVariationId" value="" />
+	<input type="hidden" name="currency_id" value="" />
+	<input type="hidden" name="hidpromotion" class="CartVariationId" value="%%GLOBAL_Promotion%%" />
+	<dl class="ProductAddToCart">
+		%%SNIPPET_VariationList%%
+		%%SNIPPET_ProductFieldsList%%
+		%%SNIPPET_EventDate%%
+		%%GLOBAL_complementarypaneltoshow%%
+		<dt class="QuantityInput" style="display: %%GLOBAL_DisplayAddQty%%;"> %%LNG_QuantityFull%%:</dt>
+		<dd class="AddCartButton" style="display: %%GLOBAL_DisplayAdd%%">
+			<span class="FloatLeft" style="display: %%GLOBAL_DisplayAddQty%%;">%%GLOBAL_AddToCartQty%%</span>
+			<div class="BulkDiscount">
+			<!--alandy_2011-12-29 modify. -->
+			<a href="javascript:void(0)" onclick="check_addToCart(%%GLOBAL_ProductId%%);" class = "add_cart_button"><img src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/addcartcopy.jpg" title="Price may be adjusted. Add to your cart and see the final price." border=0></a>
+			<!--<input type="image" onclick="return chksubmit()" src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/addcartcopy.jpg" alt="Price may be adjusted. Add to your cart and see the final price."   title="Price may be adjusted. Add to your cart and see the final price."/> -->
+			</form>
+                <form method="post" action="/makeaoffer.php" > 
+                    <input type="hidden" name="action" value="add" />
+                     <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+				%%SNIPPET_OfferButton%%<!--zcs=-->
+				<div class="BulkDiscountLink" style="display: %%GLOBAL_HideBulkDiscountLink%%;"><a href="#" onclick="$.iModal({data: $('#ProductDetailsBulkDiscountThickBox').html(), width: 600}); return false;">%%LNG_BulkDiscountLink%%</a></div>
+			</div>
+		</dd>
+	</dl>
+</form>
+
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script type="text/javascript">
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+</script>
+%%GLOBAL_ProductVariationJavascript%%
+%%GLOBAL_EventDateJavascript%%

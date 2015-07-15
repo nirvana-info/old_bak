@@ -1,0 +1,6 @@
+<?php
+include(dirname(__FILE__) . "/init.php");
+$GLOBALS['ISC_CLASS_ADMIN_SETTINGS_ORDER_CRON'] = GetClass('ISC_ADMIN_SETTINGS_ORDER_CRON');
+$Do = $_REQUEST['ToDo'];
+$GLOBALS['ISC_CLASS_ADMIN_SETTINGS_ORDER_CRON']->HandleToDo($Do);
+?>

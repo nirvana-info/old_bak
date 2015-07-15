@@ -1,0 +1,5 @@
+<div class="Block Moveable" id="PageContent">
+	<div class="BlockContent">
+		%%GLOBAL_PageContent%%
+	</div>
+</div>

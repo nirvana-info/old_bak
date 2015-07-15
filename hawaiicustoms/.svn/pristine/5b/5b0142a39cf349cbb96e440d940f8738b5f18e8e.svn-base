@@ -1,0 +1,126 @@
+<div class="Block Moveable" id="ConfirmOrder">
+	<form method="post" action="%%GLOBAL_ShopPath%%/finalizeoffer.php" onsubmit="return confirm_payment_provider()">
+		<input type="hidden" name="action" value="pay_for_order" />
+
+		<h2 style="height:30px">
+			<span style="display:%%GLOBAL_HideTopPaymentButton%%;" class="FloatRight">
+				<input type="image" id="top_payment_button" src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/MakeAOffer.gif" />
+			</span>
+			Step 5: Please Review Your Offer Before Continuing 
+		</h2>
+		<div class="BlockContent">
+			<p class="ErrorMessage" style="display: %%GLOBAL_HideCheckoutError%%">
+				%%GLOBAL_CheckoutErrorMsg%%
+			</p>
+
+			<p class="SuccessMessage" style="display: %%GLOBAL_HideCheckoutSuccess%%">
+				%%GLOBAL_CheckoutSuccessMsg%%
+			</p>
+
+			<div style="display: %%GLOBAL_HideConfirmOrderPage%%">
+				<div class="BillingDetails">
+					<h3>%%LNG_BillingAddress%%</h3>
+					<p class="PL20">
+						%%GLOBAL_BillingAddress%%
+					</p>
+				</div>
+				<div class="ShippingDetails">
+					<h3>%%LNG_ShippingToAddress%%</h3>
+					<p class="PL20">
+						%%GLOBAL_ShippingAddress%%
+					</p>
+				</div>
+
+				<hr class="Clear" />
+
+				<div class="OrderShippedBy" style="%%GLOBAL_HideShippingDetails%%">
+					<h3>%%LNG_YourOrderWillBeShippedBy%%</h3>
+					<p class="PL20">
+						%%GLOBAL_ShippingMethod%%
+					</p>
+					<hr />
+				</div>
+
+				<div class="OrderContents">
+					<h3>%%LNG_YourOrderContainsTheFollowingItems%%</h3>
+
+					<table class="CartContents Stylize General" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<th style="white-space: nowrap;">%%LNG_CartItems%%</th>
+								<th style="white-space: nowrap; text-align: center;">%%LNG_Qty%%</th>
+								<th style="white-space: nowrap; text-align: center;">%%LNG_ItemPrice%%</th>
+								<th style="white-space: nowrap; text-align: right; width: 100px;">%%LNG_ItemTotal%%</th>
+							</tr>
+						</thead>
+						<tbody>
+							%%SNIPPET_CartItems%%
+							
+							
+							<tr class="SubTotal" style="display: %%GLOBAL_HideShoppingCartShippingCost%%">
+								<td colspan="3"><strong>%%LNG_Shipping%%:</strong></td>
+								<td><em class="ProductPrice">%%GLOBAL_ShippingCost%%</em></td>
+							</tr>
+							
+
+							%%SNIPPET_TaxLines%%
+							<tr class="SubTotal">
+								<td colspan="3"><strong>%%LNG_TotalCost%%:</strong></td>
+								<td><em class="ProductPrice">%%GLOBAL_TotalCost%%</em></td>
+							</tr>
+							%%SNIPPET_IncludedTax%%
+
+							
+
+							<tr class="SubTotal" style="%%GLOBAL_HideOrderDiscount%%">
+								<td colspan="3"><strong>%%LNG_OrderDiscount%%</strong></td>
+								<td><em class="ProductPrice">%%GLOBAL_OrderDiscount%%</em></td>
+							</tr>
+
+							<tr class="SubTotal" style="display: %%GLOBAL_HideAdjustedTotal%%">
+								<td colspan="3"><strong>%%LNG_AdjustedTotalCost%%:</strong></td>
+								<td><em class="ProductPrice">%%GLOBAL_AdjustedTotalCost%%</em></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div style="%%GLOBAL_HideOrderTermsAndConditions%%" class="CheckoutHideOrderTermsAndConditions">
+					<hr class="Clear" />
+					<h3>%%LNG_TermsAndConditions%%</h3>
+					<div class="PL20" style="%%GLOBAL_HideTermsAndConditionsTextarea%%">
+						<textarea READONLY rows="6" class="Field400">%%GLOBAL_OrderTermsAndConditions%%</textarea>
+					</div>
+
+					<div class="PL20 MT10">
+						<input type="checkbox" name="AgreeTermsAndConditions" id="AgreeTermsAndConditions" />
+						<label for= "AgreeTermsAndConditions">%%GLOBAL_AgreeTermsAndConditions%%</label> %%GLOBAL_TermsAndConditionsLink%%
+					</div>
+				</div>
+
+					
+					<div class="PL20" id="provider_list" style="display:%%GLOBAL_HidePaymentProviderList%%">
+						%%GLOBAL_PaymentProviders%%
+					</div>
+				</div>
+				
+				
+
+				
+
+				<p class="FloatRight">
+					<input id="bottom_payment_button" style="display:%%GLOBAL_HideButtomPaymentButton%%" type="image" src="%%GLOBAL_TPL_PATH%%/images/%%GLOBAL_SiteColor%%/MakeAOffer.gif" />
+				</p>
+			</div>
+		</div>
+
+		<!-- <BR><a href="checkout.php?action=choose_shipper" >Back</a> -->
+
+	</form>
+	%%Panel.ChooseCheckoutProviderJavaScript%%
+	<script type="text/javascript">
+
+		%%GLOBAL_PaymentButtonSwitch%%
+		lang.TickArgeeTermsAndConditions = '%%LNG_TickArgeeTermsAndConditions%%';
+	</script>
+</div>
+

@@ -1,0 +1,388 @@
+<script src="%%GLOBAL_PATH%%/javascript/jquery.blockUI.js" type="text/javascript"></script>
+<div class="mmy">
+    <div class="Block CategoryList Moveable" id="MyVehicleArea">
+        <h2>%%GLOBAL_MyVehicleAreaHeader2%%</h2>
+		<div class='BlockContent' id="mmyform_container_left">
+		    <div id="mmyform_year_left">
+		        %%GLOBAL_YearOption%%
+		    </div>
+		    <div id="mmyform_make_left">
+		        %%GLOBAL_MakeOption%%
+		    </div>
+		    <div id="mmyform_model_left">
+		        %%GLOBAL_ModelOption%%
+		    </div>
+		    <div id="mmyform_button_left">
+		        %%GLOBAL_YmmButtons%%
+		    </div>
+		</div>
+		%%GLOBAL_DeleteCookie%%
+       </div>
+</div>
+<div class="ymm_loading_style" id="ymm_loading" style="display:none">
+<img src='%%GLOBAL_PATH%%/templates/default/images/Loading.gif' border='0'/>
+</div>
+
+<script type="text/javascript"><!--
+
+	    $(function(){
+		$("#all_category a").click(function(){
+		    var year = $('#searchyear_left').val();
+		    var make = $('#searchmake_left').val();
+		    var model = $('#searchmodel_left').val();
+		    if(year != '' && typeof(year) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/year/" + year);
+		    if(make != '' && typeof(make) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/make/" + make);
+		    if(model != '' && typeof(model) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/model/" + model);
+		});
+		$("#SideProductFilters a").not($("#brand_more")).click(function(){
+		    var year = $('#searchyear_left').val();
+		    var make = $('#searchmake_left').val();
+		    var model = $('#searchmodel_left').val();
+		    if(year != '' && typeof(year) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/year/" + year);
+		    if(make != '' && typeof(make) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/make/" + make);
+		    if(model != '' && typeof(model) != "undefined")
+			    $(this).attr("href", $(this).attr("href") + "/model/" + model);
+		});
+	    });
+
+	    function deleteMMYcookies(redirect_url)
+	    {
+		    document.cookie = 'last_search_selection[year]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+		    document.cookie = 'last_search_selection[make]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+		    document.cookie = 'last_search_selection[model]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+		    var expire = new Date();
+			expire.setTime(expire.getTime()+(3600*24*1000*1000));
+		    document.cookie = 'last_search_selection[changeymm]=1; expires='+expire.toGMTString()+'; path=/;';
+		    //2012-2-27 alandy add remove cookie flag.
+		    document.cookie = 'last_search_selection[removeymm]=1; expires='+expire.toGMTString()+'; path=/;';
+		    
+		    if(redirect_url)
+			location.href=redirect_url;
+		    else
+			location.href='%%GLOBAL_REMOVEURL%%'; // refreshing the same page
+	    }
+	    
+	    function clearOtherFilters()
+	    {
+		    document.cookie = 'last_search_selection[clearotherfilters]=1; expires=; path=/;';
+		    return true;
+	    }
+	    
+	    %%GLOBAL_QualiferValue%%
+	    
+	    function getYmmOptions(searchtype,catuniversal) 
+	    {
+		    var make = $('#searchmake_left').val();
+		    if(searchtype == 'make')
+		    {
+			    $('#searchmodel_left').find('option').remove().end();
+			    $('#searchmodel_left').append('<option value=\'\'>--select model--</option>');
+			    //return false;
+		    }
+		    var model = $('#searchmodel_left').val();
+		    var year = $('#searchyear_left').val();
+		    var universal = catuniversal;
+
+			//alandy_2012-3-2 add.
+		    if(year ==1 || make ==1 || model ==1){
+				return false;
+			}
+
+		    if(make == null || typeof(make) == "undefined")
+		    {
+			    make = $('#hidden_left_make2').val();
+		    }
+		    if(model == null || typeof(model) == "undefined")
+		    {
+			    model = $('#hidden_left_model2').val();
+		    }
+		    if(year == null || typeof(year) == "undefined")
+		    {
+			    year = $('#hidden_left_year2').val();
+		    }
+            var params = 'getymms2=1&make='+make+'&model='+model+'&year='+year+'&universal='+universal+'&ymmtype='+searchtype;
+            params += (typeof(productId) == 'undefined' ? '' : '&productId=' + productId);
+            
+            var products = document.getElementById('product_ids');
+            if (products) {
+                params += "&productId=" + $(products).val();
+            }
+
+            var isProductDetail = $('#isProductDetail');
+            if(isProductDetail){
+				params += "&isProductDetail="+isProductDetail.val();
+            }
+		    
+		    $.ajax({
+			    type: "GET",
+			    url: "%%GLOBAL_ShopPath%%/redefine_filters.php",
+			    data: params,
+			    success: function(msg){
+				    var ymm_array=msg.split("~");
+				    if(searchtype == 'make')
+				    {
+					    $('#searchmodel_left').find('option').remove().end();
+					    $('#searchmodel_left').append(ymm_array[0]);
+					    //2011-05-11 johnny add for left ymm filter
+					    var return_year = ymm_array[1];
+					    
+					    if(return_year.indexOf(year) == -1 && $('#mmyform_year_left .leftYmmItem').size()>0){
+							document.cookie = 'last_search_selection[year]=; expires=; path=/;';
+							//alandy_2012-2-28 modify.
+							if(!isProductDetail){
+								$("#mmyform_year_left").children().remove();
+								$("#mmyform_year_left").append("<select onchange=" + "getYmmOptions('year',0)" + " id='searchyear_left' name='searchyear'></select>");
+								$('#searchyear_left').append(ymm_array[1]);
+								$("#mmyform_button_left").children().remove();
+							}
+						
+							$("#mmyform_button_left").append('<p id="fit">Guaranteed to Fit Your Vehicle!</p><input name="setvehicle" type="image" onclick="setLeftYMM()" value="Set Vehicle" src="/images/left-menu-tc/button-set-vehicle.gif" alt="Submit button" />');
+						/*alandy_2012-3-1 commit.
+						$.blockUI.defaults.applyPlatformOpacityRules = false;
+						var containDiv = '#ymm_loading';
+						var widDis =  $(containDiv).width() +10;
+						var topDis = ((document.body.clientHeight - $(containDiv).height()) / document.body.clientHeight)*40 + "%";
+							var leftDis = ((document.body.clientWidth - widDis) / document.body.clientWidth)*50 + "%";
+							$.blockUI({ 
+							       message: $(containDiv),
+							       overlayCSS : 
+							       {
+								       opacity : '0.75',
+								       backgroundColor : 'Gray'
+							       },
+							       css : 
+							       {
+								       border : 'none',
+								       opacity : '0.75',
+								       cursor : 'default',
+									       top: topDis,
+									       left: leftDis,
+									       width: widDis+'px'
+							       },
+							       baseZ : 10000 
+						});
+						setLeftYMM();
+						*/
+					    }else{
+					    //alandy_2012-2-28 modify.
+						if(!isProductDetail){
+							$('#searchyear_left').find('option').remove().end();
+							$('#searchyear_left').append(ymm_array[1]);
+						}
+					    } 
+				    }
+				    else if(searchtype == 'model')
+				    {
+				    	//alandy_2012-2-28 modify.
+						if(!isProductDetail){
+					    	if(year == '')
+					    	{
+								$('#searchyear_left').find('option').remove().end();
+								$('#searchyear_left').append(ymm_array[0]);
+					    	}
+						}
+				    }
+				    else if(searchtype == 'year')
+				    {
+                $("#searchmake_left").find('option').remove().end().append(ymm_array[0]);
+					    if(make != '')
+					    {
+						    $('#searchmodel_left').find('option').remove().end();
+						    $('#searchmodel_left').append(ymm_array[1]);
+					    }					
+				    }
+				    
+				    var canChangeYMM =false;
+				    if($('.leftYmmItem').size()>0)
+				    {
+					// control YMM must be all checked
+				    	canChangeYMM = false;
+				    }
+				    
+				    /*var make2 = $('#searchmake_left').val();
+				    var model2 = $('#searchmodel_left').val();
+				    var year2 = $('#searchyear_left').val();*/
+				    if(canChangeYMM ||(make != "" && model != "" && year != "" && make !=1 && year !=1 && model !=1))
+			    	{// if all is not empty,need to set ymm.
+				    	$.blockUI.defaults.applyPlatformOpacityRules = false;
+				    	
+				    	 var containDiv = '#ymm_loading';
+				         var widDis =  $(containDiv).width() +10;
+				    	 var topDis = ((document.body.clientHeight - $(containDiv).height()) / document.body.clientHeight)*40 + "%";
+				 		 var leftDis = ((document.body.clientWidth - widDis) / document.body.clientWidth)*50 + "%";
+				 		 $.blockUI({ 
+				     			message: $(containDiv),
+				     			overlayCSS : 
+				     			{
+				     				opacity : '0.75',
+				     				backgroundColor : 'Gray'
+				     			},
+				     			css : 
+				     			{
+				     				border : 'none',
+				     				opacity : '0.75',
+				     				cursor : 'default',
+				 					top: topDis,
+				 					left: leftDis,
+				 					width: widDis+'px'
+				     			},
+				     			baseZ : 10000 
+				         });
+				    	setLeftYMM();
+			    	}
+			    }
+		    });
+	    }
+	    
+	    function setLeftYMM()
+            {
+			var today = new Date();
+			var expire = new Date();
+		
+			var make = $('#searchmake_left').val();
+			var model = $('#searchmodel_left').val();
+			var year = $('#searchyear_left').val();
+			
+			var make_text = $("#searchmake_left").find('option:selected').text(); 
+			var year_text = $("#searchyear_left").find('option:selected').text(); 
+			var model_text = $("#searchmodel_left").find('option:selected').text(); 
+			
+			if(make == null || typeof(make) == "undefined")
+			{
+				make = $('#hidden_left_make').val();
+				make_text = $("#hidden_left_make2").val(); 
+			}
+			if(model == null || typeof(model) == "undefined")
+			{
+				model = $('#hidden_left_model').val();
+				model_text = $("#hidden_left_model2").val(); 
+			}
+			if(year == null || typeof(year) == "undefined")
+			{
+				year = $('#hidden_left_year').val();
+				year_text = $("#hidden_left_year2").val(); 
+			}
+			var expire = new Date();
+			expire.setTime(expire.getTime()+(3600*24*1000*1000));
+			if(year == '')
+			{
+				document.cookie = 'last_search_selection[year]=; expires=; path=/;';
+			}
+			else
+			{
+				document.cookie = 'last_search_selection[year]='+year_text+'; expires='+expire.toGMTString()+'; path=/;';
+			}
+			if(make == '')
+			{
+				document.cookie = 'last_search_selection[make]=; expires=; path=/;';
+			}
+			else
+			{
+				document.cookie = 'last_search_selection[make]='+make_text+'; expires='+expire.toGMTString()+'; path=/;';
+			}
+			if(model == '')
+			{
+				document.cookie = 'last_search_selection[model]=; expires=; path=/;';
+			}
+			else
+			{
+				document.cookie = 'last_search_selection[model]='+model_text+'; expires='+expire.toGMTString()+'; path=/;';
+			}
+		
+			var current_url = location.href;
+			var search_url = location.href;
+			var pos = current_url.indexOf("#");
+			if(pos != -1)
+			{
+				current_url = current_url.substring(0,pos);
+			}
+			//current_url = current_url.replace(new RegExp(/#$/),"");
+			current_url = current_url.replace(new RegExp(/\/$/),"");
+			current_url = current_url.replace(new RegExp(/\/search\//),"/searchtext/");
+			current_url = current_url.replace(new RegExp(/\/model_flag\/0/),"");
+			current_url = current_url.split("/");
+			var new_url = "";
+			var xtraParam = "";
+		
+			for( var i =0; i <current_url.length; i++) 
+			{
+				if(current_url[i] == 'make' || current_url[i] == 'model' || current_url[i] == 'year' || current_url[i] == 'page')
+				{
+					i++;
+				}
+				else if(current_url[i] == 'searchtext')
+				{
+					if( typeof(SearchStringVal) != "undefined" )
+					{
+						new_url += "searchtext/"+SearchStringVal;
+					}
+					else if( search_url.indexOf("/search/") == -1 ) // this condition is added so that when searched and having no result, no need to retain search text.
+					{
+						new_url += "searchtext/"+current_url[eval(i+1)]+"/";
+					}
+						i++;	
+				}
+				else if(current_url[i] == 'orderby' || current_url[i] == 'sortby')
+				{
+						xtraParam += current_url[i]+"/"+current_url[eval(i+1)]+"/";
+						i++;
+				}
+				else
+				{
+					new_url += current_url[i]+"/";
+				}
+			}
+
+			if( typeof(SearchQualVal) != "undefined" )
+			{
+				new_url +=	SearchQualVal;
+			}
+			
+			if(search_url.indexOf(".php") >= 0 || search_url.indexOf("%%GLOBAL_ShopPath%%/cart")>=0
+					|| search_url.indexOf("%%GLOBAL_ShopPath%%/account")>=0	
+					|| search_url.indexOf("%%GLOBAL_ShopPath%%/login")>=0
+					|| search_url.indexOf("%%GLOBAL_ShopPath%%/wishlist/")>=0
+					|| search_url.indexOf("%%GLOBAL_ShopPath%%/giftcertificates")>=0
+			){
+				//alandy_2012-1-6 modify.
+					if(search_url.indexOf("%%GLOBAL_ShopPath%%/cart")>=0){
+						new_url = '%%GLOBAL_ShopPath%%/';
+					}else{
+						new_url = $('#LeftYmmBaseSearchUrl').val();
+						
+						if(new_url == null || new_url == "")
+						{
+						new_url = '%%GLOBAL_ShopPath%%/';
+						}
+					}
+			}
+
+			/*alandy_2012-1-16 commit.
+			if(make != '')
+				new_url += "make/"+make+"/";
+		
+			if(model != '')
+				new_url += "model/"+model+"/";
+		
+			if(year != '')
+				new_url += "year/"+year+"/";
+		
+			if(xtraParam != "")
+				new_url += xtraParam;
+			//new_url += "#focusDiv";
+			*/
+			if(new_url.indexOf('/ymm') >=0 || new_url.indexOf('ymm') >=0){
+				//don't add ymm parma.
+			}else{
+				new_url += "ymm";
+			}
+			document.cookie = 'last_search_selection[setymm]=1; expires='+expire.toGMTString()+'; path=/;';
+			location.href=new_url;
+		
+          }
+--></script>

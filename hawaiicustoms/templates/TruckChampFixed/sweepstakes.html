@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<script>
+var flashvars = {};
+flashvars.galleryURL = "%%GLOBAL_ShopPath%%/flash/sweepstakes/gallery.xml";
+var params = {};
+params.bgcolor = "FFFFFF";
+params.allowfullscreen = true;
+params.allowscriptaccess = "always";
+swfobject.embedSWF("%%GLOBAL_ShopPath%%/flash/sweepstakes/simpleviewer.swf", "flashContent", "350", "450", "9.0.124", false, flashvars, params);
+</script>
+<body>
+<div id="LeftCol">
+<div id="RightCol">
+    <div id="Container">
+    %%Panel.Header%%
+    %%Panel.FreeDelivery%%
+    %%Banner.TopBanner%%
+    <div id="Wrapper">
+        %%Panel.WrapperBanner%%
+        <div class="Left" id="LayoutColumn1">
+            %%Panel.SideCategoryList%%
+            %%Panel.SideNewsletterBox%%
+        </div>
+        <div class="Content Wide WideWithLeft" id="LayoutColumn2">
+            %%Panel.SearchForm%%
+            %%Panel.SweepstakesBreadcrumb%%
+            %%Panel.SweepstakesForm%%
+        </div>
+        <br class="Clear" />
+    </div>
+    %%Panel.Footer%%
+</div>
+</div>
+</div>
+%%Panel.TCFooter%%
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/styles.css" type="text/css" rel="stylesheet" />
+<link href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/blue.css" type="text/css" rel="stylesheet" />
+<link href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/iselector.css" type="text/css" rel="stylesheet" />
+<!--<link href="http://www.congoworld.com/templates/CongoWorld/Styles/tab.css" type="text/css" rel="stylesheet" /> added by vikas-clarion -->
+
+<link href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/rhb_styles.css" type="text/css" rel="stylesheet" />
+<link href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/landing-pages.css" type="text/css" rel="stylesheet" />
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/ie.css" />
+<![endif]-->
+
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="http://www.congoworld.com/templates/CongoWorldFixed/Styles/ie6.css" />
+<![endif]-->
+<SCRIPT LANGUAGE="JavaScript">
+function calc(textstring) {
+if (document.getElementById) {
+var gallon=document.form1.gallon.value;
+var mpg=document.form1.mpg.value;
+var milesdriven=document.form1.milesdriven.value;
+//var cost=document.form1.cost.value;
+
+var gallonsused = milesdriven/mpg;
+var yearlycost1 = gallonsused*gallon;
+var mpg2=(mpg*.11)+Number(mpg);
+var gallonsused2 = milesdriven/mpg2;
+var yearlycost2 = gallonsused2*gallon;
+
+//yearly savings
+var savings=yearlycost1-yearlycost2;
+
+
+//monthly savings
+var savings2=savings/12;
+
+if(document.form1.gallon.value==""){
+alert("Please enter the amount per gallon") 
+return false;}
+if(document.form1.mpg.value==""){
+alert("Please enter your vehicle's mpg") 
+return false;}
+if(document.form1.milesdriven.value==""){
+alert("Please enter the miles driven per year") 
+return false;}
+
+document.getElementById('savings').childNodes[0].nodeValue = "$"+(Math.round(savings*1000)/1000);
+document.getElementById('savings2').childNodes[0].nodeValue = "$"+(Math.round(savings2*100)/100);
+return false;
+
+
+} else { return true;}
+}
+</SCRIPT>
+</head>
+
+<body>
+<DIV id="gascalc">
+ <img id="gas-pump" src="http://www.congoworld.com/images/gas_pump.gif" alt="Save up to 11% in gas mileage with a Tonneau Cover!" />
+ <H3>TONNEAU COVERS SAVE UP TO 11% IN FUEL COSTS - CALCULATE YOURS NOW!</H3>
+
+ <form id="mpgcalc" name="form1" action="" method=post>
+   <label class="cost">Cost Per Gallon </label>
+     <input name="gallon" type="text" id="gallon" size="8" maxlength="4" />
+  <br />
+   <label class="mpg2">Your Truck's mpg</label>
+     <input name="mpg" type="text" id="mpg" size="8" maxlength="2" />
+   <br />
+   <label class="miles">Annual miles drive</label>
+     <input name="milesdriven" type="text" id="milesdriven" size="8" maxlength="8" />
+ <p id="mfs">Monthly Fuel Savings: <span id="savings2">&nbsp;</span></p>
+ <p id="afs">Annual Fuel Savings: <span id="savings">&nbsp;</span></p>
+<p><INPUT onclick="return calc(this);" type="submit" value="Submit" name="Submit"> 
+<INPUT id="Reset" type="reset" value="Reset" name="Reset"></p>
+ </FORM>
+
+ </div>
+</body>
+</html>

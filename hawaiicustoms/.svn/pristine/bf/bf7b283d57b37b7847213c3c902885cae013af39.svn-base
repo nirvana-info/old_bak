@@ -1,0 +1,18 @@
+<div class="Block AccountMenu Moveable" id="SideAccountMenu">
+	<h2>%%LNG_ManageYourAccount%%</h2>
+	<div class="BlockContent">
+		<ul>
+			<li style="display: %%GLOBAL_HideMessagesMenu%%"><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_account_inbox%%">%%LNG_ViewMessages%% <strong>(%%GLOBAL_NumNewMessages%%)</strong></a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_account_order_status%%">%%LNG_ViewYourOrderStatus%%</a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_account_view_orders%%">%%LNG_CompletedOrders%%</a></li>
+			<li style="display: %%GLOBAL_HideReturnRequestsMenu%%"><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_account_view_returns%%">%%LNG_ReturnRequests%%</a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_account_address_book%%">%%LNG_YourAddressBook%%</a></li>
+			<li style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPathNormal%%/%%GLOBAL_wishlist%%/">%%LNG_WishLists%% (%%GLOBAL_NumWishListItems%%)</a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/account/%%GLOBAL_account_account_details%%">%%LNG_YourAccountDetails%%</a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/account/%%GLOBAL_account_recent_items%%">%%LNG_RecentlyViewedItems%%</a></li>
+            <li><a href="%%GLOBAL_ShopPathNormal%%/defectreport/%%GLOBAL_account_reports%%">%%LNG_Defects%%</a></li>
+			<li><a href="%%GLOBAL_ShopPathNormal%%/login/%%GLOBAL_account_logout%%">%%LNG_Logout%%</a></li>
+		</ul>
+	</div>
+</div>
+

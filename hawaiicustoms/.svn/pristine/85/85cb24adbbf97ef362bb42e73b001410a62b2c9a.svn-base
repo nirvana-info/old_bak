@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+%%Panel.HTMLHead%%
+<style type="text/css">
+dl.StarRatingForm dd.RatingCell{ *margin: 5px 0;}
+</style>
+<body style="background:White;">
+<input type="hidden" value="1" id="reviewPopupFlag"/>
+	<input type="hidden" value="%%GLOBAL_ReviewOrder%%" id="reviewOrder"/>
+	<div style="padding:10px 20px;">
+		%%Panel.ProductReviews%%
+	</div>
+	
+	<script>
+		show_product_review_form_wholeStart();
+		$('#ProductReviews .FloatRight').css('display', 'none');
+		
+		$(document).ready(function() {
+			//alert($('#SuccessMessage2').text().trim());
+			if($.trim($('#SuccessMessage2').text().replace(/(^\s*)|(\s*$)/g,""))!=""){
+				$('#rating_box').css('display', 'none');
+				$('.ProductReviewPaging').css('display', 'none');
+				window.opener.setReviewedInfo("%%GLOBAL_ProductName%%");
+			}
+		});
+
+		
+	</script>
+</body>
+</html>

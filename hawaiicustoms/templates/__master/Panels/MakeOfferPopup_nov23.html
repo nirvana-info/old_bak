@@ -1,0 +1,76 @@
+<form method="post" action="%%GLOBAL_ShopPath%%/offer.php?product=sendmail" onsubmit="return isValidEmail();">
+<div style="width:100%;margin-top:5px;">
+    <div style="padding-top:10px;padding-left:10px;">
+        %%GLOBAL_OfferTitle%%
+    </div>
+    <div style="padding-top:10px;padding-left:10px;width:98%">
+        %%GLOBAL_OfferHeader%%
+    </div>
+    <div style="padding-left:25px;width:95%">
+    <hr />
+        <dl class="ProductDetailsGrid">
+            <dt>%%LNG_BrandPart%%</dt>
+            <dd>%%GLOBAL_prodbrand%%</dd>
+            <dt>%%LNG_ProductTitle%%</dt>
+            <dd>%%GLOBAL_prodtitle%%</dd>
+            <dt>%%LNG_ListedPrice%%</dt>
+            <dd>%%GLOBAL_prodprice%%</dd>
+            <dt> 
+                <span class="Required FormFieldRequired">*</span>
+                %%LNG_EmailAddress%%
+            </dt>
+            <dd> <input type="text" name="email" id="email"></dd>
+            <dt>
+                <span class="Required FormFieldRequired">*</span>
+                 %%LNG_MakeanOffer%%
+            </dt>
+            <dd> <input type="text" name="offer" id="offer"></dd>
+            <hr />
+            <dt> <input type="reset" value="Start Over"></dt>
+            <dd><input type="submit" value="Make an Offer"></dd>
+            <hr />
+        </dl>
+        <input type="hidden" id="price" name="price" value="%%GLOBAL_prodprice%%">
+        <input type="hidden" id="prodtitle" name="prodtitle" value="%%GLOBAL_prodtitle%%">
+    </div>
+    <div id="Container" style="width:400px;">
+        %%GLOBAL_OfferFooter%%
+    </div>
+    <br class="Clear" />
+</div>
+</form>
+<script>
+function isValidEmail()
+{
+     var inputString = document.getElementById('email').value;
+     if($('#email').val()) {
+         var expression = /^([a-z]{1}[-a-zA-Z0-9_\.]*)@([-a-zA-Z0-9]+)([\.][a-zA-Z]+)+$/;
+         if(matchExpression(expression,inputString) == false) {
+            alert('%%LNG_OfferEmailValid%%');
+            $('#email').focus();
+            return false;
+         }
+     }
+     else {
+        alert('%%LNG_EnterEmail%%');
+        $('#email').focus();
+        return false;
+     }
+     if(!$('#offer').val()) {
+        alert('%%LNG_EnterOffer%%');
+        $('#offer').focus();
+        return false;
+     }
+}
+function matchExpression(expression,inputString)
+{
+    if(inputString.search(expression)==-1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+</script>

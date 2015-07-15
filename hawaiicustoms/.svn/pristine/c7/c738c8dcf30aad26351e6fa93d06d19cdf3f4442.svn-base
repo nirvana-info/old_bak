@@ -1,0 +1,3 @@
+	<li class="%%GLOBAL_LastChildClass%%">%%GLOBAL_CategoryName%%
+	%%GLOBAL_SubCategoryList%%
+	</li>

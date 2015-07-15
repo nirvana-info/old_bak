@@ -1,0 +1,39 @@
+<div class="mmy">
+		<div class="Block CategoryList Moveable" id="MyVehicleArea">
+		    <h2>%%GLOBAL_arrowimage%%</h2>
+			<div class="BlockContent" id="%%GLOBAL_contentid%%">
+                            <ul class="mmy_title" onclick="%%GLOBAL_YearJS%%checkanimate('prod_year')">
+                               <li id="%%GLOBAL_yearid%%">%%GLOBAL_ProductMMYHeader%%</li>
+                               <li id="%%GLOBAL_id%%image">%%GLOBAL_DynFilterArrow%%</li>
+                               <li>%%GLOBAL_YearName%%</li>
+                            </ul>
+                        <div id="prod_year"></div>
+                            <ul class="mmy_title" onclick="%%GLOBAL_MakeJS%%checkanimate('prod_make')">
+                               <li id="%%GLOBAL_makeid%%">%%GLOBAL_ProductMMYHeader1%%</li>
+                               <li id="%%GLOBAL_id1%%image">%%GLOBAL_DynFilterArrow1%%</li>
+                               <li>%%GLOBAL_MakeName%%</li>
+                           </ul>
+                          <div id="prod_make"></div>
+			      <ul class="mmy_title %%GLOBAL_mousedefaultpointer%%" onclick="%%GLOBAL_ModelJS%%">
+                                 <li id="%%GLOBAL_modelid%%">%%GLOBAL_ProductMMYHeader2%%</li>
+                                 <li id="%%GLOBAL_id2%%image">%%GLOBAL_DynFilterArrow2%%</li>
+                                 <li>%%GLOBAL_ModelName%%</li>
+                             <span class="ie_fix" style="display: none;"><!-- this span fixes IE 6 duplicate characters --></span>
+                             </ul>
+			 <div id="prod_model"></div>
+
+                          <p id="fit">Guaranteed to Fit Your Vehicle!</p>
+						  %%GLOBAL_DeleteCookie%%
+			</div>
+		</div>
+       </div>
+	   <script type="text/javascript">
+				function deleteMMYcookies()
+				{
+					document.cookie = 'last_search_selection[year]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+					document.cookie = 'last_search_selection[make]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+					document.cookie = 'last_search_selection[model]=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/;';
+					location.href=''; // refreshing the same page
+				}
+				%%GLOBAL_RemoveBackgroundImage%%
+	   </script>

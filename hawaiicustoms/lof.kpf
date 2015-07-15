@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="d74be5b2-8f8b-f040-a7ad-b9fa0e17ab3a" kpf_version="4" name="lof.kpf">
+<preference-set idref="d74be5b2-8f8b-f040-a7ad-b9fa0e17ab3a">
+  <string id="import_exclude_matches">*.*~;*.bak;*.tmp;CVS;.#*;*.pyo;*.pyc;.svn;*%*;tmp*.html;.DS_Store;series_images;livevideos;instruction_file;install_images;install_videos;cache;videos;description_images;category_images;audio_clips;article_file;hitch-buying-guide;images;flash;product_images;promotion_images;phpmyadmin;Donstestcategory;comparison-charts;log;kn;ebay;0;ebay;dp;tr</string>
+  <string id="import_include_matches"></string>
+  <boolean id="import_live">1</boolean>
+  <boolean id="import_recursive">1</boolean>
+  <string id="import_type">useFolders</string>
+</preference-set>
+</project>

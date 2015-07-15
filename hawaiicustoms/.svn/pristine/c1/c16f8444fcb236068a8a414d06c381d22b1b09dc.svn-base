@@ -1,0 +1,24 @@
+<div>%%GLOBAL_CatgDescandBrandImage%%</div>
+<div style="position:relative">
+	<div class="focushiddendiv">
+		<a name="focusDiv"></a>
+	</div>
+</div>
+<div><h2>%%GLOBAL_SearchTitle%%</h2></div>
+<div style="float:left">%%GLOBAL_YMMTable%%</div>
+<div id='pagenum_focus'>%%Panel.SearchPagingTop%%</div>
+<div class="ProductList" style="float:left">  
+<table class="SubcatProdItem" cellpadding="0" cellspacing="0">  
+    <tr class="listproductsheader">
+        <td class="twpcwidth">&nbsp;</td>
+        <td class="tenpcwidth">%%GLOBAL_ProductBrand%%</td>
+        <td class="twpcwidth">%%GLOBAL_ProductVQ%%</td>
+        <td class="tenpcwidth">%%GLOBAL_ProductPartNumber%%</td>
+        <td class="twpcwidth">%%GLOBAL_ProductPQ%%</td>
+        <td class="tenpcwidth">%%GLOBAL_ProductPrice%%</td>
+        <td class="tenpcwidth">%%GLOBAL_ProductDetails%%</td>                                         
+    </tr>
+</table>  
+%%GLOBAL_SearchResultList%%
+</div>
+<div>%%GLOBAL_CatgBrandSeriesFooter%%</div>

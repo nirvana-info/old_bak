@@ -1,0 +1,5 @@
+<ul class="DepartmentList">
+<li onclick="checkanimate('%%GLOBAL_deptid%%');">
+%%GLOBAL_deptname%%
+</li>
+</ul>

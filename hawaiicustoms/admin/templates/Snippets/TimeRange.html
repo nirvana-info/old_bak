@@ -1,0 +1,38 @@
+<dd>
+	
+	%%GLOBAL_CalendarItem%%
+	%%LNG_From%%
+	 
+	<select name="%%GLOBAL_Prefix%%_From_Hour%%GLOBAL_ArrayName%%">
+		%%GLOBAL_From_HourOptions%%
+	</select>
+	:
+	<select name="%%GLOBAL_Prefix%%_From_Min%%GLOBAL_ArrayName%%">
+		%%GLOBAL_From_MinOptions%%
+	</select>
+	
+	<select name="%%GLOBAL_Prefix%%_From_APM%%GLOBAL_ArrayName%%">
+		%%GLOBAL_From_APMOptions%%
+	</select>
+	 
+	%%LNG_To%%
+	 
+	<select name="%%GLOBAL_Prefix%%_To_Hour%%GLOBAL_ArrayName%%">
+		%%GLOBAL_To_HourOptions%%
+	</select>
+	:
+	<select name="%%GLOBAL_Prefix%%_To_Min%%GLOBAL_ArrayName%%">
+		%%GLOBAL_To_MinOptions%%
+	</select>
+	
+	<select name="%%GLOBAL_Prefix%%_To_APM%%GLOBAL_ArrayName%%">
+		%%GLOBAL_To_APMOptions%%
+	</select>
+	
+	<a href="#" onclick="AddRow(this); return false;" style="display: %%GLOBAL_ShowAddBtn%%;">
+		<img border="0" src="images/addicon.gif" alt="">
+	</a>
+	<a href="#" onclick="RemoveRow(this); return false;" style="display: %%GLOBAL_ShowAddBtn%%;">
+		<img border="0" src="images/delicon.gif" alt="">
+	</a>
+</dd>

@@ -1,0 +1,8 @@
+<div id="Menu">
+			<ul style="display:">
+				<li><a class="first" href="%%GLOBAL_ShopPath%%/"><span>Home</span></a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/account">My Account</a></li>
+				<li><a href="%%GLOBAL_ShopPath%%/pages/10">Contact Us </a></li>
+			</ul>
+			<br class="Clear" />
+		</div>

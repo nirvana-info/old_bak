@@ -1,0 +1,6 @@
+<ul>
+	<li><a href="javascript:checkanimate('otherbrand')"><b>Other Brands</b></a></li>
+</ul>
+<ul class='hidelist' id='otherbrand'>
+	%%GLOBAL_OtherBrands%%
+</ul>

@@ -1,0 +1,32 @@
+<div class="Block Moveable" id="ApplicationChart">
+    <h3>%%LNG_ApplicationChart%%</h3>
+    <div class="ProductWarrantyContainer">
+        %%GLOBAL_ApplicationChart%%
+    </div>
+    <hr style="%%GLOBAL_HideSectionSeparator%%" />
+</div>
+   
+<script type="text/javascript">
+                           
+function toggle(id) {
+    var e = document.getElementById(id);
+    var f = document.getElementById('sub'+id);
+       if(e.style.display == 'none')  {
+          e.style.display = '';
+          f.style.display = 'none';
+       }
+       else {
+          e.style.display = 'none';
+          f.style.display = '';
+       }
+}
+
+
+$(document).ready(function(){
+    $("#ApplicationChart_Tab a").click(function(event) {
+        ClickApplicationButton("%%GLOBAL_ProductId%%");
+    	
+    	event.preventDefault();
+    });
+});
+</script>

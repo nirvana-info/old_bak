@@ -1,0 +1,10 @@
+				<ul class="mmy_title  %%GLOBAL_mousedefaultpointer%%" onclick="%%GLOBAL_JSfunction%%">
+                    <li id="%%GLOBAL_mmyid%%">%%GLOBAL_Dynmainmenu%%</li>
+                    <li id="%%GLOBAL_dynid%%image">%%GLOBAL_DynFilterArrow%%</li>
+                    <li>%%GLOBAL_BrandName%%</li>
+             <span class="ie_fix" style="display: none;"><!-- this span fixes IE 6 duplicate characters --></span>
+                </ul>
+ 
+                <div id="%%GLOBAL_dynid%%" %%GLOBAL_dynidStyle%%>
+                        %%GLOBAL_DynmenuFilter%%
+                </div>

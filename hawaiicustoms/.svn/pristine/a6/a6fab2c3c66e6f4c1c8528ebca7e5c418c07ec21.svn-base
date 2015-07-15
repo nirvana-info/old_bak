@@ -1,0 +1,9 @@
+			<div class="Block FeaturedProducts Moveable"  id="HomeFeaturedProducts" style="display:%%GLOBAL_HideHomeFeaturedProductsPanel%%">
+					<h2>%%LNG_FeaturedCategories%%</h2>
+					<div class="BlockContent">
+						<ul class="CategoryList">
+							%%SNIPPET_HomeFeaturedCategories%%
+						</ul>
+					</div>
+					<br class="Clear" />
+				</div>
