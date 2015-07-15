@@ -1,0 +1,1358 @@
+<% content_for :head do %>
+    <title>What do you want to advertise?</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/step" %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/info" %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/privacy" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/campaign_add" %>
+    <div class="generic_dialog contextual_dialog ad_create_help_dialog hidden" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_0" style="">
+      <div class="generic_dialog_popup">
+        <div class="contextual_dialog_content">
+          <div class="dialog_content dialog_content_titleless">
+            <div class="dialog_body">
+              <div>
+                <h3>Nirvana Content</h3>
+                <div class="help_body">
+                  Specify the web page or destination page that people should end up on after they click on your Ad or Sponsored Story.
+                </div>
+              </div>
+            </div>
+            <div class="dialog_buttons clearfix">
+              <label class="uiButton uiButtonLarge uiButtonConfirm">
+                <input type="button" name="ok" value="Okay"/>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="arrow" style="margin-left: 25.5px;"></div>
+      </div>
+    </div>
+<% end %>
+
+<div class="ads_create_container clearfix">
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+  <div class="uiHeader uiHeaderWithImage uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div class="uiHeaderActions rfloat"></div>
+      <div>
+        <h2 class="uiHeaderTitle"><i class="uiHeaderImage img sp_5n8y1o sx_a0b517"></i>Advertise on Adsvana</h2>
+      </div>
+    </div>
+  </div>
+
+  <form id="create_ad_form" onsubmit="" name="create_ad_form" method="post" action="/campaigns/create/">
+    <!-- Step 1-->
+    <div class="step clearfix">
+      <div class="uiHeader uiHeaderBottomBorder create_step_header">
+        <div class="clearfix uiHeaderTop">
+          <div class="uiHeaderActions rfloat">
+            <a href="#" rel="dialog">Select Existing Creative</a>
+            <a target="_blank" href="#">Design Your Ad FAQ</a>
+          </div>
+          <div>
+            <h4 class="uiHeaderTitle">1. Design Your Ad</h4>
+          </div>
+        </div>
+      </div>
+      <div class="pal clearfix uiBoxGray noborder">
+        <div id="ad_creative_adspace" class="UIAdCreativeForm">
+          <div class="pam creative_error_box hidden uiBoxRed">
+            <ul class="ad_creative_adspace_generic_errors"></ul>
+          </div>
+          <table class="uiInfoTable">
+            <tbody>
+            <tr class="object_id dataRow">
+              <th class="label">Destination:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <select tabindex="1" name="object_id" class="fbobject_selector">
+                      <option selected="1" value="">External URL</option>
+                    </select>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr/></td></tr>
+            </tbody>
+            <tbody class="category_selection_section hidden">
+            <tr>
+              <th class="label">Type:</th>
+              <td class="data">
+                <div class="category_sponsored_stories hidden">
+                  <label for="u579410_12">
+                    <input type="radio" id="u579410_12" class="creative_category" value="sponsored_stories" name="creative_category" tabindex="2">Sponsored Stories
+                  </label>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+                <div class="category_facebook_ads">
+                  <label for="u579410_13">
+                    <input type="radio" id="u579410_13" checked="1" class="creative_category" value="facebook_ads" name="creative_category" tabindex="2">Facebook Ads
+                  </label>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr></td></tr>
+            </tbody>
+            <tbody class="ad_type_selection_section hidden">
+            <tr class="type dataRow">
+              <th class="label">Story Type:</th>
+              <td class="data">
+                <div class="form_input">
+                  <div class="creative_type_toggle 1">
+                    <label for="u579410_14">
+                      <input type="radio" id="u579410_14" checked="1" value="1" name="type" tabindex="3">Standard
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 2 hidden">
+                    <label for="u579410_15">
+                      <input type="radio" id="u579410_15" value="2" name="type" tabindex="3">Facebook Ads for Pages
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 3 hidden">
+                    <label for="u579410_16">
+                      <input type="radio" id="u579410_16" value="3" name="type" tabindex="3">Event Ad
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 4 hidden">
+                    <label for="u579410_17">
+                      <input type="radio" id="u579410_17" value="4" name="type" tabindex="3">Facebook Ads for Applications
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 16 hidden">
+                    <label for="u579410_18">
+                      <input type="radio" id="u579410_18" value="16" name="type" tabindex="3">App Used Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 8 hidden">
+                    <label for="u579410_19">
+                      <input type="radio" id="u579410_19" value="8" name="type" tabindex="3">App Share Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 9 hidden">
+                    <label for="u579410_20">
+                      <input type="radio" id="u579410_20" value="9" name="type" tabindex="3">Page Like Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 10 hidden">
+                    <label for="u579410_21">
+                      <input type="radio" id="u579410_21" value="10" name="type" tabindex="3">Check-In Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 11 hidden">
+                    <label for="u579410_22">
+                      <input type="radio" id="u579410_22" value="11" name="type" tabindex="3">Page Post Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 17 hidden">
+                    <label for="u579410_23">
+                      <input type="radio" id="u579410_23" value="17" name="type" tabindex="3">Page Post Like Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 18 hidden">
+                    <label for="u579410_24">
+                      <input type="radio" id="u579410_24" value="18" name="type" tabindex="3">Buy with Friends Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                  <div class="creative_type_toggle 19 hidden">
+                    <label for="u579410_25">
+                      <input type="radio" id="u579410_25" value="19" name="type" tabindex="3">Domain Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr></td></tr>
+            </tbody>
+            <tbody class="link_url_section">
+            <tr class="link_url dataRow">
+              <th class="label">URL:</th>
+              <td class="data">
+                <div>
+                  <div class="uiComboInput form_input">
+                    <input class="inputtext link_url" tabindex="4" value="" name="link_url" type="text"/>
+                    <label class="suggest_ad comboButton uiButton" for="u579410_26">
+                      <input value="Suggest an Ad" id="u579410_26" type="submit"/>
+                    </label>
+                  </div>
+                  <a class="contextual_help" href="#" onclick=''><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr></td></tr>
+            </tbody>
+            <tbody class="link_url_page_tab_section hidden">
+            <tr class="link_url_page_tab hidden dataRow">
+              <th class="label">Destination Tab:</th>
+              <td class="data">
+                <div>
+                  <select class="link_url_page_tab_selector" tabindex="5" name="link_url_page_tab"></select>
+                  <a class="contextual_help" href="#" onclick=''><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr></td></tr>
+            </tbody>
+            <tbody class="title_body_image_section">
+            <tr class="title dataRow">
+              <th class="label">Title:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <input maxlength="25" class="inputtext title" tabindex="6" name="title" value="" type="text">
+                    <div class="character_count fss fwn fcg">
+                      <span class="title_msg">25</span>characters left
+                    </div>
+                  </div>
+                  <a class="contextual_help" href="#" onclick=''><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </div>
+              </td>
+            </tr>
+            <tr class="body dataRow">
+              <th class="label">Body:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <textarea class="body" tabindex="6" name="body"></textarea>
+                    <div class="character_count fss fwn fcg">
+                      <span class="body_msg">135</span>characters left
+                    </div>
+                  </div>
+                  <a class="contextual_help" href="#" onclick=''>
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="image_row dataRow">
+              <th class="label">Image:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <div class="AdsCreate" id="c4e265832156f37109704090">
+                      <div class="AdsCreateSectionLabelContent">
+                        <iframe name="UIAdCreativeImage_Frame" src="/upload" style="overflow: hidden;" scrolling="no" frameborder="0" height="30" width="195"></iframe>
+                        <div class="UIAdCreativeImage_UploadProgress hidden">
+                          <img class="img" src="/assets/images/loading_small.gif" alt="" height="11" width="16"/>Uploading photo...
+                        </div>
+                        <div class="UIAdCreativeImage_InvalidMsg UIAdCreative_ErrorBox hidden">Invalid image format</div>
+                        <div>
+                          <input value="" name="UIAdCreativeImage_ImageUrl" type="hidden"/>
+                          <input value="" name="UIAdCreativeImage_ImagePath" type="hidden"/>
+                          <input value="" name="UIAdCreativeImage_ImageVolume" type="hidden"/>
+                          <input value="" name="UIAdCreativeImage_ImageWidth" type="hidden"/>
+                          <input value="" name="UIAdCreativeImage_ImageHeight" type="hidden"/>
+                          <input value="" name="UIAdCreativeImage_ImageMD5Hash" type="hidden"/>
+                          <input value="0" name="UIAdCreativeImage_IsPermanent" type="hidden"/>
+                        </div>
+                        <div class="AdsCreateSection_ThumbSelector"></div>
+                        <a class="AdsCreativeRemoveImageLink clearfix hidden" href="#">Remove uploaded image.</a>
+                        <a class="AdsCreativeUploadOwnImageLink clearfix hidden" href="#">Upload my own</a>
+                        <a class="AdsCreativeGenerateImageLink clearfix hidden">Generate images for me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="contextual_help" href="#" onclick=''>
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer"><td colspan="2"><hr></td></tr>
+            </tbody>
+            <tbody>
+            <tr class="preview ">
+              <th class="label">Preview:</th>
+              <td class="data">
+                <div>
+                  <div class="preview">
+                    <div class="UIAdCreative_Preview">
+                      <div class="UIAdmgrCreativePreview">
+                        <div class="fbEmu fbEmuBlock fbEmuEgo fbEmuPreview" id="id_4e2658346883b2569741938">
+                          <div class="title"><a class="forceLTR fbEmuLink" onclick=''>Example Ad Title</a></div>
+                          <div class="adInfo">
+                            <a class="identity fbEmuLink" onclick=''></a>
+                          </div>
+                          <div class="UIImageBlock clearfix image_body_block">
+                            <a class="fbEmuLink image UIImageBlock_Image UIImageBlock_SMALL_Image" onclick='' tabindex="-1" aria-hidden="true">
+                              <img class="img" src="/assets/images/camera.png" alt=""/>
+                            </a>
+                            <div class="UIImageBlock_Content UIImageBlock_SMALL_Content">
+                              <div class="body"><a class="forceLTR fbEmuLink" onclick=''>Your body text will go here.</a></div>
+                            </div>
+                          </div>
+                          <div class="inline">
+                            <div class="action">
+                              <span class="fbEmuEmptyContext"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="standard_status_element img " src="/assets/images/loading_small.gif" alt="Loading..." id="preview_loading" height="11" width="16"/>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- End Step 1-->
+    <!-- Step 2-->
+    <div id="ad_targeting" class="step clearfix hidden_elem">
+      <div class="uiHeader uiHeaderBottomBorder create_step_header">
+        <div class="clearfix uiHeaderTop">
+          <a target="_blank" href="#" class="uiHeaderActions rfloat">Ad Targeting FAQ</a>
+          <div><h4 class="uiHeaderTitle">2. Targeting</h4></div>
+        </div>
+      </div>
+      <div class="pal clearfix uiBoxGray noborder">
+        <ul style="display: none;" class="error_box error_box_narrow" id="ad_targeting_generic_errors">&nbsp;</ul>
+        <div id="c4e2690b34e27b7953754954" class="UIAdTargeting_Inputs">
+          <div class="UIAdTargeting_Section UIAdTargeting_Location clearfix" id="c4e2690b34e30b4c29587419">
+            <div class="uiHeader uiHeaderBottomBorder mbm">
+              <div class="clearfix uiHeaderTop">
+                  <div><h4 class="uiHeaderTitle">Location</h4></div>
+              </div>
+            </div>
+            <table cellspacing="0" border="0" class="UIAdTargetingTable">
+              <tbody>
+              <tr>
+                <td class="UIAdTargetingTable_Label">Country:
+                  <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </td>
+                <td class="UIAdTargetingTableColumn">
+                  <div>
+                    <div class="UIAdTargeting_CountriesTokenizer tokenizer clearfix" id="UIAdTargeting_CountriesTokenizer_c4e2690b34e30b4c29587419" tabindex="-1">
+                      <span id="c4e2690b35467c4d61196094_tokenizer_placeholder" style="display: none;" class="placeholder"></span>
+                      <span class="tokenizer_stretcher">^_^</span>
+                      <span class="tab_stop">
+                        <input type="text" id="c4e2690b35467c4d61196094_token_input"/>
+                      </span>
+                      <span class="inline_placeholder" style="display: none;">Enter a country</span>
+                      <a class="token" href="#" tabindex="-1">
+                        <span><span><span><span>
+                          <input type="hidden" value="US" name="UIAdTargeting_CountriesTokenizer_c4e2690b34e30b4c29587419[]" class="fb_token_hidden_input"/>
+                          United States<span class="x" onmouseout="" onmouseover="" onclick="">&nbsp;</span>
+                        </span></span></span></span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="UIAdTargetingLocation_LocationOptions">
+                    <div class="UIAdTargetingLocation_LocationOption UIAdTargetingLocation_everywhere">
+                      <input type="radio" class="radioLabel UIAdTargetingLocation_everywhereRadio" id="UIAdTargetingLocation_everywhere_c4e2690b34e30b4c29587419" name="location_type_c4e2690b34e30b4c29587419" value="everywhere" checked="1">
+                      <label for="UIAdTargetingLocation_everywhere_c4e2690b34e30b4c29587419">Everywhere</label>
+                    </div>
+                    <div class="UIAdTargetingLocation_LocationOption UIAdTargetingLocation_region">
+                      <input type="radio" class="radioLabel UIAdTargetingLocation_regionRadio" id="UIAdTargetingLocation_region_c4e2690b34e30b4c29587419" name="location_type_c4e2690b34e30b4c29587419" value="region">
+                      <label for="UIAdTargetingLocation_region_c4e2690b34e30b4c29587419">By State/Province</label>
+                      <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                    </div>
+                    <div class="UIAdTargetingLocation_LocationOption UIAdTargetingLocation_city">
+                      <input type="radio" class="radioLabel UIAdTargetingLocation_cityRadio" id="UIAdTargetingLocation_city_c4e2690b34e30b4c29587419" name="location_type_c4e2690b34e30b4c29587419" value="city">
+                      <label for="UIAdTargetingLocation_city_c4e2690b34e30b4c29587419">By City</label>
+                      <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                    </div>
+                  </div>
+                  <div class="AdsTargetingLocationSubOptions">
+                    <div class="UIAdTargetingLocation_Cities hidden">
+                      <div class="UIAdTargeting_CitiesTokenizer tokenizer clearfix" id="UIAdTargeting_CitiesTokenizer_c4e2690b34e30b4c29587419" tabindex="-1">
+                        <span id="c4e2690b354f579103860963_tokenizer_placeholder" style="" class="placeholder"></span>
+                        <span class="tokenizer_stretcher">^_^</span>
+                        <span class="tab_stop">
+                          <input type="text" id="c4e2690b354f579103860963_token_input"/>
+                        </span>
+                        <span class="inline_placeholder">Enter a city</span>
+                      </div>
+                      <div class="UIAdTargetingLocation_Radius">
+                        <input type="checkbox" checked="1" class="inputcheckbox" name="UIAdTargetingLocation_RadiusInput" value="1"/>
+                        Include cities within
+                        <select name="UIAdTargetingLocation_RadiusSelect">
+                          <option value="10">10</option>
+                          <option value="25">25</option>
+                          <option selected="1" value="50">50</option>
+                        </select> miles.
+                      </div>
+                    </div>
+                    <div class="UIAdTargetingLocation_Regions hidden">
+                      <div class="UIAdTargeting_RegionsTokenizer tokenizer clearfix" id="UIAdTargeting_RegionsTokenizer_c4e2690b34e30b4c29587419" tabindex="-1">
+                        <span id="c4e2690b3550d24829790697_tokenizer_placeholder" style="" class="placeholder"></span>
+                        <span class="tokenizer_stretcher">^_^</span>
+                        <span class="tab_stop">
+                          <input type="text" id="c4e2690b3550d24829790697_token_input"/>
+                        </span>
+                        <span class="inline_placeholder">Enter a state/province</span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="UIAdTargeting_ErrorBox">
+                  <ul class="UIAdTargeting_LocationErrors"></ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="UIAdTargeting_Section UIAdTargeting_Demographics clearfix" id="c4e2690b34e4249095094509">
+            <div class="uiHeader uiHeaderBottomBorder mbm">
+              <div class="clearfix uiHeaderTop">
+                <div><h4 class="uiHeaderTitle">Demographics</h4></div>
+              </div>
+            </div>
+            <table cellspacing="0" border="0" class="UIAdTargetingTable">
+              <tbody>
+              <tr>
+                <td class="UIAdTargetingTable_Label">
+                  Age:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </td>
+                <td class="UIAdTargetingTableColumn">
+                  <div class="UIAdTargeting_AgeSelect">
+                    <select class="UIAdTargetingDemographics_AgeSelectMin" name="UIAdTargetingDemographics_AgeSelectMin">
+                      <option value="0">Any</option>
+                      <% for i in 13..64 %>
+                      <option value="<%=i%>"><%=i%></option>
+                      <% end %>
+                    </select>
+                    <span class="UIAdTargetingDemographics_AgeSpacer">-</span>
+                    <select class="UIAdTargetingDemographics_AgeSelectMax" name="UIAdTargetingDemographics_AgeSelectMax">
+                      <option selected="1" value="0">Any</option>
+                      <% for i in 13..64 %>
+                      <option value="<%=i%>"><%=i%></option>
+                      <% end %>
+                    </select>
+                  </div>
+                  <div class="UIAdTargetingLocation_ExactAgeCheckContainer">
+                    <input type="checkbox" id="UIAdTargetingLocation_ExactAgeCheck_c4e2690b34e4249095094509" class="UIAdTargetingLocation_ExactAgeCheck" name="UIAdTargetingLocation_ExactAgeCheck" value="1">
+                    <label for="UIAdTargetingLocation_ExactAgeCheck_c4e2690b34e4249095094509" class="checkLabel">Require exact age match</label>
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="UIAdTargeting_ErrorBox"><ul class="UIAdTargeting_AgeErrors"></ul></td>
+              </tr>
+              <tr>
+                <td class="UIAdTargetingTable_Label">
+                  Sex:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                </td>
+                <td class="UIAdTargetingTableColumn">
+                  <table>
+                    <tbody>
+                    <tr>
+                      <td class="UITargeting_Option">
+                        <input type="radio" class="inputradio UIAdTargetingSexRadio_all" name="UIAdTargetingSex_Radio_c4e2690b34e4249095094509" id="UIAdTargetingSex_all_c4e2690b34e4249095094509" value="all" checked="1"/>
+                        <label for="UIAdTargetingSex_all_c4e2690b34e4249095094509" class="radioLabel">All</label>
+                      </td>
+                      <td class="UITargeting_Option">
+                        <input type="radio" class="inputradio UIAdTargetingSexRadio_male" name="UIAdTargetingSex_Radio_c4e2690b34e4249095094509" id="UIAdTargetingSex_male_c4e2690b34e4249095094509" value="male"/>
+                        <label for="UIAdTargetingSex_male_c4e2690b34e4249095094509" class="radioLabel">Men</label>
+                      </td>
+                      <td class="UITargeting_Option">
+                        <input type="radio" class="inputradio UIAdTargetingSexRadio_female" name="UIAdTargetingSex_Radio_c4e2690b34e4249095094509" id="UIAdTargetingSex_female_c4e2690b34e4249095094509" value="female"/>
+                        <label for="UIAdTargetingSex_female_c4e2690b34e4249095094509" class="radioLabel">Women</label>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <div class="UIAdTargetingSex_SexError hidden"></div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="UIAdTargeting_Section UIAdTargeting_Categories clearfix" id="c4e2690b34e6d87e97707497">
+            <div class="uiHeader uiHeaderBottomBorder mbm">
+              <div class="clearfix uiHeaderTop">
+                <div>
+                    <h4 class="uiHeaderTitle">Interests</h4>
+                </div>
+              </div>
+            </div>
+            <div class="UIAdTargeting_CategoriesContainer">
+              <table cellspacing="0" border="0" class="UIAdTargetingTable">
+                <tbody>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">
+                    Broad Category:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargetingTableColumn">
+                    <div id="u025935_1">
+                      <div class="selector_container">
+                        <div class="left_container">
+                          <label id="left_label_1" class=" selected_label">
+                            Activities<input type="hidden" value="1" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_1"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_15">
+                            Birthday<input type="hidden" value="15" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_15"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_2">
+                            Business/Technology<input type="hidden" value="2" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_2"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_5">
+                            Family Status<input type="hidden" value="5" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_5"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_7">
+                            Interests<input type="hidden" value="7" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_7"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_164">
+                            Mobile<input type="hidden" value="164" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_164"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_9">
+                            Movie/Film<input type="hidden" value="9" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_9"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_10">
+                            Music<input type="hidden" value="10" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_10"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_13">
+                            Retail/Shopping<input type="hidden" value="13" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_13"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                          <label id="left_label_14">
+                            Sports<input type="hidden" value="14" name="left_id_hidden"/>
+                            <span class="count_arrow_box">
+                              <span id="left_count_14"></span>
+                              <span class="left_arrow"></span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="right_container">
+                          <label for="right_6002714885172">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714885172" name="right_6002714885172"/>Cooking
+                          </label>
+                          <label for="right_6002714885972">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714885972" name="right_6002714885972">Dancing
+                          </label>
+                          <label for="right_6002714885772">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714885772" name="right_6002714885772">DIY/Crafts
+                          </label>
+                          <label for="right_6002714886772">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714886772" name="right_6002714886772">Food &amp; Dining
+                          </label>
+                          <label for="right_6002714884772">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714884772" name="right_6002714884772">Gaming (Console)
+                          </label>
+                          <label for="right_6002714884572">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714884572" name="right_6002714884572">Gaming (Social/Online)
+                          </label>
+                          <label for="right_6002714887172">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714887172" name="right_6002714887172">Gardening
+                          </label>
+                          <label for="right_6002714888172">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714888172" name="right_6002714888172">Literature/Reading
+                          </label>
+                          <label for="right_6002714889172">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714889172" name="right_6002714889172">Outdoor Fitness Activities
+                          </label>
+                          <label for="right_6002714898772">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714898772" name="right_6002714898772">Photography
+                          </label>
+                          <label for="right_6002714895372">
+                            <input type="checkbox" class="inputcheckbox" id="right_6002714895372" name="right_6002714895372">Traveling
+                          </label>
+                        </div>
+                      </div>
+                      <div class="hidden_elem selected_container"></div>
+                      <div class="link_container">
+                        <span class="right_selected_count">0 categories selected</span> ·
+                        <a class="show_selected_link">Show Selected</a>
+                        <a class="hide_selected_link hidden_elem">Hide Selected</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="UIAdTargeting_Likes hidden_elem" id="c4e2690b34e6263476508839">
+              <table cellspacing="0" border="0" class="UIAdTargetingTable">
+                <tbody>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">
+                    Precise Interests:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargeting_Keywords UIAdTargetingTableColumn">
+                    <div class="UIAdTargetingLikes_KeywordTokenizer" id="UIAdTargetingLikes_KeywordTokenizer_c4e2690b34e6263476508839" tabindex="-1">
+                      <table cellspacing="0" cellpadding="0" class="uiGrid">
+                        <tbody>
+                        <tr>
+                          <td class="prs">
+                            <div id="u025937_2" class="adsTypeaheadBox">
+                              <div id="u025937_3" onclick="" class="clearfix uiTokenizer uiInlineTokenizer">
+                                <div id="u025937_6" class="tokenarea hidden_elem"></div>
+                                <div id="u025937_5" class="uiTypeahead">
+                                  <div class="wrap">
+                                    <input type="hidden" class="hiddenInput" autocomplete="off"/>
+                                    <div class="innerWrap">
+                                      <input type="text" title="Enter an interest" value="Enter an interest" spellcheck="false" onfocus="" autocomplete="off" data-placeholder="Enter an interest" size="34" id="u025937_7" placeholder="Enter an interest" class="inputtext textInput DOMControl_placeholder"/>
+                                    </div>
+                                  </div>
+                                  <div id="u025937_4" class="uiTypeaheadView"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td><div></div></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="UIAdTargetingTable_Label"></td>
+                  <td class="UIAdTargetingTableColumn">
+                    <div class="UIAdTargetingLikes_SuggestionsDiv hidden">
+                      <div class="UIAdTargetingLikes_SuggestionsLabel">Suggested Likes &amp; Interests</div>
+                      <table class="UIAdTargetingLikes_CheckboxTable">
+                        <tbody>
+                        <tr>
+                          <td class="UIAdTargetingLikes_LeftCheckbox"></td>
+                          <td class="UIAdTargetingLikes_RightCheckbox"></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <div class="UIAdTargetingLikes_RefreshDiv hidden">
+                        <a href="#" role="button" class="uiButton">
+                          <span class="uiButtonText">Refresh Suggested Interests</span>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="UIAdTargetingTable_CategorySwitchLinks">
+              <span class="UIAdTargetingTable_LikesSwitch">
+                <a class="UIAdTargetingCategory_SwitchLink">Switch to Precise Interest Targeting</a>
+                <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+              </span>
+              <span class="UIAdTargetingTable_CategoriesSwitch hidden_elem">
+                <a class="UIAdTargetingCategory_SwitchLink">Switch to Broad Category Targeting</a>
+                <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+              </span>
+            </div>
+          </div>
+          <div class="UIAdTargetingSimpleB_AdvancedOptions hidden">
+            <div class="UIAdTargeting_Section UIAdTargeting_Demographics clearfix" id="c4e2690b34e4ab9911115724">
+              <div class="uiHeader uiHeaderBottomBorder mbm">
+                <div class="clearfix uiHeaderTop">
+                  <div>
+                    <h4 class="uiHeaderTitle">Advanced Demographics</h4>
+                  </div>
+                </div>
+              </div>
+              <table cellspacing="0" border="0" class="UIAdTargetingTable">
+                <tbody>
+                <tr>
+                  <td class="UIAdTargetingTable_Label UIAdTargetingInterestedInLabel">Interested In:
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargetingTableColumn UIAdTargetingInterestedInColumn">
+                    <table>
+                      <tbody>
+                      <tr>
+                        <td class="UITargeting_Option">
+                          <input type="radio" class="inputradio UIAdTargetingInterestedInRadio_all" name="UIAdTargetingInterestedIn_Radio_c4e2690b34e4ab9911115724" id="UIAdTargetingInterestedIn_all_c4e2690b34e4ab9911115724" value="all" checked="1"/>
+                          <label for="UIAdTargetingInterestedIn_all_c4e2690b34e4ab9911115724" class="radioLabel">All</label>
+                        </td>
+                        <td class="UITargeting_Option">
+                          <input type="radio" class="inputradio UIAdTargetingInterestedInRadio_men" name="UIAdTargetingInterestedIn_Radio_c4e2690b34e4ab9911115724" id="UIAdTargetingInterestedIn_men_c4e2690b34e4ab9911115724" value="men"/>
+                          <label for="UIAdTargetingInterestedIn_men_c4e2690b34e4ab9911115724" class="radioLabel">Men</label>
+                        </td>
+                        <td class="UITargeting_Option">
+                          <input type="radio" class="inputradio UIAdTargetingInterestedInRadio_women" name="UIAdTargetingInterestedIn_Radio_c4e2690b34e4ab9911115724" id="UIAdTargetingInterestedIn_women_c4e2690b34e4ab9911115724" value="women">
+                          <label for="UIAdTargetingInterestedIn_women_c4e2690b34e4ab9911115724" class="radioLabel">Women</label>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="UIAdTargetingInterestedIn_Error hidden"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">
+                    Relationship:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargetingTableColumn">
+                    <table>
+                      <tbody>
+                      <tr>
+                        <td class="UITargeting_Option">
+                          <input type="checkbox" class="UITargeting_Checkbox" name="UIAdTargetingRelationship_Checkbox[]" id="UIAdTargetingRelationship_all_c4e2690b34e4ab9911115724" value="all" checked="1"/>
+                          <label for="UIAdTargetingRelationship_all_c4e2690b34e4ab9911115724" class="checkLabel">All</label>
+                        </td>
+                        <td class="UITargeting_Option">
+                          <input type="checkbox" class="UITargeting_Checkbox" name="UIAdTargetingRelationship_Checkbox[]" id="UIAdTargetingRelationship_single_c4e2690b34e4ab9911115724" value="single"/>
+                          <label for="UIAdTargetingRelationship_single_c4e2690b34e4ab9911115724" class="checkLabel">Single</label>
+                        </td>
+                        <td class="UITargeting_Option">
+                          <input type="checkbox" class="UITargeting_Checkbox" name="UIAdTargetingRelationship_Checkbox[]" id="UIAdTargetingRelationship_engaged_c4e2690b34e4ab9911115724" value="engaged"/>
+                          <label for="UIAdTargetingRelationship_engaged_c4e2690b34e4ab9911115724" class="checkLabel">Engaged</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="UITargeting_Option">
+                          <input type="checkbox" class="UITargeting_Checkbox" name="UIAdTargetingRelationship_Checkbox[]" id="UIAdTargetingRelationship_relationship_c4e2690b34e4ab9911115724" value="relationship"/>
+                          <label for="UIAdTargetingRelationship_relationship_c4e2690b34e4ab9911115724" class="checkLabel">In a relationship</label>
+                        </td>
+                        <td class="UITargeting_Option">
+                          <input type="checkbox" class="UITargeting_Checkbox" name="UIAdTargetingRelationship_Checkbox[]" id="UIAdTargetingRelationship_married_c4e2690b34e4ab9911115724" value="married">
+                          <label for="UIAdTargetingRelationship_married_c4e2690b34e4ab9911115724" class="checkLabel">Married</label>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="UIAdTargetingRelationship_Error hidden"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">
+                    Languages:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargeting_Language UIAdTargetingTableColumn">
+                    <div class="UIAdTargeting_LanguageTokenizer tokenizer clearfix" id="UIAdTargeting_LanguageTokenizer_c4e2690b34e4ab9911115724" tabindex="-1">
+                      <span id="c4e2690b3596ee9875477877_tokenizer_placeholder" style="" class="placeholder"></span>
+                      <span class="tokenizer_stretcher">^_^</span>
+                      <span class="tab_stop">
+                        <input type="text" id="c4e2690b3596ee9875477877_token_input"/>
+                      </span>
+                      <span class="inline_placeholder">Enter language</span>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="UIAdTargeting_Section UIAdTargeting_Education clearfix" id="c4e2690b34e5530214379896">
+              <div class="uiHeader uiHeaderBottomBorder mbm">
+                <div class="clearfix uiHeaderTop"><div>
+                  <h4 class="uiHeaderTitle">Education &amp; Work</h4>
+                </div>
+                </div>
+              </div>
+              <table cellspacing="0" border="0" class="UIAdTargetingTable">
+                <tbody>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">Education:
+                    <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargetingTableColumn">
+                    <table>
+                      <tbody>
+                      <tr>
+                        <td class="UIAdTargetingEduWork_All">
+                          <div>
+                            <input type="radio" class="inputradio AdTargetingEducationRadio_all" id="AdTargetingEducationRadio_all_c4e2690b34e5530214379896" name="AdTargetingEducationRadio" value="all" checked="1"/>
+                            <label for="AdTargetingEducationRadio_all_c4e2690b34e5530214379896" class="checkLabel">All</label>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <input type="radio" class="inputradio AdTargetingEducationRadio_alumni" id="AdTargetingEducationRadio_alumni_c4e2690b34e5530214379896" name="AdTargetingEducationRadio" value="alumni"/>
+                            <label for="AdTargetingEducationRadio_alumni_c4e2690b34e5530214379896" class="checkLabel">College Grad</label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <div class="UIAdTargetingEduWork_AlumniDetails hidden">
+                            <div class="UIAdTargetingEduWork_AlumniCollegeTokenizer tokenizer clearfix" id="UIAdTargetingEduWork_AlumniCollegeTokenizer_c4e2690b34e5530214379896" tabindex="-1">
+                              <span id="c4e2690b359a298994877177_tokenizer_placeholder" style="" class="placeholder"></span>
+                              <span class="tokenizer_stretcher">^_^</span>
+                              <span class="tab_stop">
+                                <input type="text" id="c4e2690b359a298994877177_token_input"/>
+                              </span>
+                              <span class="inline_placeholder">Enter a college</span>
+                            </div>
+                            <div class="UIAdTargetingEduWork_AlumniMajorTokenizer tokenizer clearfix" id="UIAdTargetingEduWork_AlumniMajorTokenizer_c4e2690b34e5530214379896" tabindex="-1">
+                              <span id="c4e2690b359b603733485496_tokenizer_placeholder" style="" class="placeholder"></span>
+                              <span class="tokenizer_stretcher">^_^</span>
+                              <span class="tab_stop">
+                                <input type="text" id="c4e2690b359b603733485496_token_input"/>
+                              </span>
+                              <span class="inline_placeholder">Enter a major</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <div>
+                            <input type="radio" class="inputradio AdTargetingEducationRadio_college" id="AdTargetingEducationRadio_college_c4e2690b34e5530214379896" name="AdTargetingEducationRadio" value="college"/>
+                            <label for="AdTargetingEducationRadio_college_c4e2690b34e5530214379896" class="checkLabel">In College</label>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <div class="UIAdTargetingEduWork_CollegeDetails hidden">
+                            <div class="UIAdTargetingEduWork_CollegeTokenizer tokenizer clearfix" id="UIAdTargetingEduWork_CollegeTokenizer_c4e2690b34e5530214379896" tabindex="-1">
+                              <span id="c4e2690b359c9f1376615189_tokenizer_placeholder" style="" class="placeholder"></span>
+                              <span class="tokenizer_stretcher">^_^</span>
+                              <span class="tab_stop">
+                                <input type="text" id="c4e2690b359c9f1376615189_token_input"/>
+                              </span>
+                              <span class="inline_placeholder">Enter a college</span>
+                            </div>
+                            <div class="UIAdTargetingEduWork_CollegeMajorTokenizer tokenizer clearfix" id="UIAdTargetingEduWork_CollegeMajorTokenizer_c4e2690b34e5530214379896" tabindex="-1">
+                              <span id="c4e2690b359da38652716410_tokenizer_placeholder" style="" class="placeholder"></span>
+                              <span class="tokenizer_stretcher">^_^</span>
+                              <span class="tab_stop">
+                                <input type="text" id="c4e2690b359da38652716410_token_input"/>
+                              </span>
+                              <span class="inline_placeholder">Enter a major</span>
+                            </div>
+                            <div class="UIAdTargetingEduWork_CollegeGraduationYears">
+                              Graduation years:
+                              <div class="UIAdTargetingEduWork_CollegeGraduationYearSelector">
+                                <select class="UIAdTargetingEduWork_CollegeYearsMin" name="UIAdTargetingEduWork_CollegeYearsMin">
+                                  <option selected="1" value="0">Select Year</option>
+                                  <option value="2012">2012</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2015">2015</option>
+                                </select>
+                                to
+                                <select class="UIAdTargetingEduWork_CollegeYearsMax" name="UIAdTargetingEduWork_CollegeYearsMax">
+                                  <option selected="1" value="0">Select Year</option>
+                                  <option value="2012">2012</option>
+                                  <option value="2013">2013</option>
+                                  <option value="2014">2014</option>
+                                  <option value="2015">2015</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <div>
+                            <input type="radio" class="inputradio AdTargetingEducationRadio_hs" id="AdTargetingEducationRadio_hs_c4e2690b34e5530214379896" name="AdTargetingEducationRadio" value="hs"/>
+                            <label for="AdTargetingEducationRadio_hs_c4e2690b34e5530214379896" class="checkLabel">In High School</label>
+                          </div>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                    <div class="UIAdTargetingEduWork_Error hidden"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="UIAdTargetingTable_Label">
+                    Workplaces:<a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                  </td>
+                  <td class="UIAdTargetingTableColumn">
+                    <div class="UIAdTargetingEduWork_WorkTokenizer tokenizer clearfix" id="UIAdTargeting_WorkplaceTokenizer_c4e2690b34e5530214379896" tabindex="-1">
+                      <span id="c4e2690b35a1aa7896937655_tokenizer_placeholder" style="" class="placeholder"></span>
+                      <span class="tokenizer_stretcher">^_^</span>
+                      <span class="tab_stop">
+                        <input type="text" id="c4e2690b35a1aa7896937655_token_input"/>
+                      </span>
+                      <span class="inline_placeholder">Enter a company, organization or other workplace</span>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="ptm UIAdTargetingSimpleB_AdvancedToggle">
+            <a style="padding-left: 18px;" class="uiIconLink">
+              <i style="top: 0px;" class="img sp_7lz9mz sx_e5c0f8"></i>Show Advanced Targeting Options
+            </a>
+            <a style="padding-left: 18px;" class="uiIconLink hidden">
+              <i style="top: 0px;" class="img sp_7lz9mz sx_fca934"></i>Hide Advanced Targeting Options
+            </a>
+          </div>
+          <div class="UIAdTargeting_ReachBlockWrapper">
+            <div class="pam UIAdTargeting_ReachBlock uiBoxLightblue topborder">
+              <div class="UIAdTargeting_ReachBlock_Label">
+                Estimated Reach
+                <a href="#" class="mls uiTooltip uiHelpLink">
+                  <span class="uiTooltipWrap top right righttop">
+                    <span class="uiTooltipText uiTooltipNoWrap">Please keep in mind that this is an estimate of the potential audience for your ads on Facebook and is not exact.</span>
+                  </span>
+                </a>
+              </div>
+              <div class="UIAdTargeting_ReachStatement">
+                <div class="UIAdTargeting_ReachWaiting  hidden">
+                  <img src="http://static.ak.fbcdn.net/images/loaders/indicator_blue_small.gif"/>
+                </div>
+                <div class="UIAdTargeting_ReachSizePhrase">
+                  <input type="hidden" value="1" name="inventory_estimate_on"/>
+                  <div class="UIAdTargeting_ReachAudienceSize ">
+                    <span class="audience_number" id="audience_number">136,937,240</span> people
+                  </div>
+                  <div class="UIAdTargeting_ImpressionEstimate hidden"></div>
+                </div>
+              </div>
+              <div class="UIAdTargeting_ReachStmt ">
+                <ul class="UIAdTargeting_EstimateLines">
+                  <li><span class="UIAdTargeting_TermLine">who live in the <span class="targeting_term">United States</span></span></li>
+                  <li><span class="UIAdTargeting_TermLine">age <span class="targeting_term">18</span> and older</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Step 2-->
+    <!-- Step 3-->
+    <div id="ad_delivery" class="step clearfix hidden_elem">
+      <div class="uiHeader uiHeaderBottomBorder create_step_header">
+        <div class="clearfix uiHeaderTop">
+          <a target="_blank" href="#" class="uiHeaderActions rfloat">Ad Campaigns and Pricing FAQ</a>
+          <div>
+            <h4 class="uiHeaderTitle">3. Campaigns, Pricing and Scheduling</h4>
+          </div>
+        </div>
+      </div>
+      <div class="pal clearfix uiBoxGray noborder">
+        <ul style="display: none;" class="error_box error_box_narrow" id="ad_delivery_generic_errors">&nbsp;</ul>
+        <div id="c4e2690b35c9309677012200" class="UIAdDelivery">
+          <div class="UIAdDelivery_OptionsContainer">
+            <div class="UIAdDelivery_Section">
+              <span class="UIAdDelivery_SectionLabel">Account Currency</span>
+              <span class="UIAdDelivery_SectionSubtext"></span>
+              <div class="UIAdDelivery_SectionContent">
+                <select id="c4e2690b35c9309677012200_currency_code" name="currency_code">
+                  <option value="USD" selected="selected">US Dollar (USD)</option>
+                  <option value="CAD">Canadian Dollar (CAD)</option>
+                  <option value="EUR">Euro (EUR)</option>
+                  <option value="GBP">British Pound (GBP)</option>
+                  <option value="AUD">Australian Dollar (AUD)</option>
+                  <option value="JPY">Japanese Yen (JPY)</option>
+                  <option value="TRY">Turkish Lira (TRY)</option>
+                  <option value="VEF">Venezuelan Bolivar (VEF)</option>
+                  <option value="COP">Colombian Peso (COP)</option>
+                  <option value="NOK">Norwegian Krone (NOK)</option>
+                  <option value="SEK">Swedish Krona (SEK)</option>
+                  <option value="DKK">Danish Krone (DKK)</option>
+                  <option value="CLP">Chilean Peso (CLP)</option>
+                  <option value="HKD">Hong Kong Dollar (HKD)</option>
+                  <option value="CHF">Swiss Franc (CHF)</option>
+                  <option value="NZD">New Zealand Dollar (NZD)</option>
+                  <option value="MXN">Mexican Peso (MXN)</option>
+                  <option value="ZAR">South African Rand (ZAR)</option>
+                  <option value="ILS">Israeli New Shekel (ILS)</option>
+                  <option value="ARS">Argentine Peso (ARS)</option>
+                  <option value="BOB">Bolivian Boliviano (BOB)</option>
+                  <option value="BRL">Brazilian Real (BRL)</option>
+                  <option value="CNY">Chinese Yuan (CNY)</option>
+                  <option value="CRC">Costa Rican Colon (CRC)</option>
+                  <option value="CZK">Czech Koruna (CZK)</option>
+                  <option value="GTQ">Guatemalan Quetza (GTQ)</option>
+                  <option value="HNL">Honduran Lempira (HNL)</option>
+                  <option value="HUF">Hungarian Forint (HUF)</option>
+                  <option value="ISK">Iceland Krona (ISK)</option>
+                  <option value="INR">Indian Rupee (INR)</option>
+                  <option value="MOP">Macau Patacas (MOP)</option>
+                  <option value="MYR">Malaysian Ringgit (MYR)</option>
+                  <option value="NIO">Nicaraguan Cordoba (NIO)</option>
+                  <option value="PYG">Paraguayan Guarani (PYG)</option>
+                  <option value="PEN">Peruvian Nuevo Sol (PEN)</option>
+                  <option value="PLN">Polish Zloty (PLN)</option>
+                  <option value="PHP">Philippine Peso (PHP)</option>
+                  <option value="QAR">Qatari Rials (QAR)</option>
+                  <option value="RON">Romanian Leu (RON)</option>
+                  <option value="RUB">Russian Ruble (RUB)</option>
+                  <option value="SAR">Saudi Arabian Riyal (SAR)</option>
+                  <option value="SGD">Singapore Dollar (SGD)</option>
+                  <option value="KRW">Korean Won (KRW)</option>
+                  <option value="TWD">Taiwan Dollar (TWD)</option>
+                  <option value="THB">Thai Baht (THB)</option>
+                  <option value="AED">UAE Dirham (AED)</option>
+                  <option value="UYU">Uruguay Peso (UYU)</option>
+                </select>
+              </div>
+            </div>
+            <div class="UIAdDelivery_Section">
+              <span class="UIAdDelivery_SectionLabel">Account Time Zone</span>
+              <span class="UIAdDelivery_SectionSubtext"></span>
+              <div class="UIAdDelivery_SectionContent">
+                <table>
+                  <tbody>
+                  <tr>
+                    <td>Country/Territory</td>
+                    <td>
+                      <select name="country_code" id="c4e2690b35c9309677012200_country_code">
+                        <option value="AR">Argentina</option>
+                        <option value="AU">Australia</option>
+                        <option value="AT">Austria</option>
+                        <option value="BH">Bahrain</option>
+                        <option value="BD">Bangladesh</option>
+                        <option value="BE">Belgium</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BA">Bosnia and Herzegovina</option>
+                        <option value="BR">Brazil</option>
+                        <option value="BG">Bulgaria</option>
+                        <option value="CA">Canada</option>
+                        <option value="CL">Chile</option>
+                        <option value="CN">China</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="HR">Croatia</option>
+                        <option value="CY">Cyprus</option>
+                        <option value="CZ">Czech Republic</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DO">Dominican Republic</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="EG">Egypt</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="EE">Estonia</option>
+                        <option value="FI">Finland</option>
+                        <option value="FR">France</option>
+                        <option value="DE">Germany</option>
+                        <option value="GH">Ghana</option>
+                        <option value="GR">Greece</option>
+                        <option value="GT">Guatemala</option>
+                        <option value="HN">Honduras</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="HU">Hungary</option>
+                        <option value="IS">Iceland</option>
+                        <option value="IN">India</option>
+                        <option value="ID">Indonesia</option>
+                        <option value="IQ">Iraq</option>
+                        <option value="IE">Ireland</option>
+                        <option value="IL">Israel</option>
+                        <option value="IT">Italy</option>
+                        <option value="JM">Jamaica</option>
+                        <option value="JP">Japan</option>
+                        <option value="JO">Jordan</option>
+                        <option value="KE">Kenya</option>
+                        <option value="KW">Kuwait</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LB">Lebanon</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="LU">Luxembourg</option>
+                        <option value="MK">Macedonia</option>
+                        <option value="MY">Malaysia</option>
+                        <option value="MV">Maldives</option>
+                        <option value="MT">Malta</option>
+                        <option value="MU">Mauritius</option>
+                        <option value="MX">Mexico</option>
+                        <option value="MA">Morocco</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="NI">Nicaragua</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="NO">Norway</option>
+                        <option value="OM">Oman</option>
+                        <option value="PK">Pakistan</option>
+                        <option value="PS">Palestine</option>
+                        <option value="PA">Panama</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Peru</option>
+                        <option value="PH">Philippines</option>
+                        <option value="PL">Poland</option>
+                        <option value="PT">Portugal</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="QA">Qatar</option>
+                        <option value="RO">Romania</option>
+                        <option value="RU">Russia</option>
+                        <option value="SA">Saudi Arabia</option>
+                        <option value="RS">Serbia</option>
+                        <option value="SG">Singapore</option>
+                        <option value="SK">Slovakia</option>
+                        <option value="SI">Slovenia</option>
+                        <option value="ZA">South Africa</option>
+                        <option value="KR">South Korea</option>
+                        <option value="ES">Spain</option>
+                        <option value="LK">Sri Lanka</option>
+                        <option value="SE">Sweden</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="TW">Taiwan</option>
+                        <option value="TH">Thailand</option>
+                        <option value="BS">The Bahamas</option>
+                        <option value="TT">Trinidad and Tobago</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="TR">Turkey</option>
+                        <option value="UA">Ukraine</option>
+                        <option value="AE">United Arab Emirates</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="US" selected="selected">United States</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Time Zone</td>
+                    <td>
+                      <select name="timezone_id" id="c4e2690b35c9309677012200_timezone_id">
+                        <option value="3">(GMT-10:00) Hawaii Time</option>
+                        <option value="4">(GMT-09:00) Alaska Time</option>
+                        <option value="1" selected="selected">(GMT-08:00) Pacific Time</option>
+                        <option value="2">(GMT-07:00) Mountain Time</option>
+                        <option value="5">(GMT-07:00) Mountain Standard Time (Arizona)</option>
+                        <option value="6">(GMT-06:00) Central Time</option>
+                        <option value="7">(GMT-05:00) Eastern Time</option>
+                      </select>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="c4e2690b3612808d14809714" class="UIAdmgrCampaignDetails UIAdmgrCampaignBudgetEditor">
+              <div class="toggleMainDiv">
+                <div class="uiHeader uiHeaderBottomBorder mbm">
+                  <div class="clearfix uiHeaderTop">
+                    <div>
+                        <h4 class="uiHeaderTitle">Campaign &amp; Budget</h4>
+                    </div>
+                  </div>
+                </div>
+                <table cellspacing="0" cellpadding="0" border="0" class="contentTable">
+                  <tbody>
+                  <tr>
+                    <td class="rowLabel">Campaign Name:</td>
+                    <td class="rowColumn">
+                      <input type="text" value="My Ads" name="campaign_name_c4e2690b3612808d14809714" class="inputtext campaignName"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="rowLabel budgetLabel">Budget (USD):</td>
+                    <td class="rowColumn">
+                      <div class="budget_value">
+                        <input type="text" name="daily_budget_c4e2690b3612808d14809714" value="50.00" class="inputtext impsStr"/>
+                        <input type="text" name="lifetime_budget_c4e2690b3612808d14809714" value="350.00" class="inputtext impsStr hidden"/>
+                      </div>
+                      <select name="budget_type_c4e2690b3612808d14809714" id='budget_type'>
+                        <option selected="1" value="daily">Per day</option>
+                        <option value="lifetime">Lifetime budget</option>
+                      </select>
+                      <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                      <div class="dailySubText">What is the most you want to spend per day? (min 1.00 USD)</div>
+                      <div class="lifetimeSubText hidden">What is the most you want to spend over the campaign's scheduled time period? (min 1.00 USD)</div>
+                    </td>
+                    <td class="rowLabel impsLabel hidden">Impressions:</td>
+                    <td class="rowColumn hidden">
+                      <input type="text" name="daily_imps_c4e2690b3612808d14809714" value="0" class="inputtext impsStr"/>
+                      <input type="text" name="lifetime_imps_c4e2690b3612808d14809714" value="0" class="inputtext impsStr hidden"/>
+                      <div class="dailyImpsSubText">How many impressions are contracted to deliver per day?</div>
+                      <div class="lifetimeImpsSubText hidden">How many impressions are contracted to deliver over the campaign's scheduled time period?</div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+                <div class="uiHeader uiHeaderBottomBorder mbm">
+                  <div class="clearfix uiHeaderTop">
+                    <div><h4 class="uiHeaderTitle">Schedule</h4></div>
+                  </div>
+                </div>
+                <table cellspacing="0" cellpadding="0" border="0" class="contentTable">
+                  <tbody>
+                  <tr>
+                    <td class="rowLabel">Campaign Schedule:</td>
+                    <td class="rowColumn">
+                      <div class="ongoingCheckDiv">
+                        <label>
+                          <input type="checkbox" checked="1" id="continuous_check" name="continuous_check" value="1"/>Run my campaign continuously starting today
+                        </label>
+                      </div>
+                      <div class="dateTimeCombo hidden_elem">
+                        <div>
+                            <div class="dateselectpro clearfix">
+                                <div class="datebox">
+                                  <input type="text" autocomplete="off" size="10" name="schedule_start_date" id="schedule_start_date" value="" class="inputtext"/>
+                                </div>
+                                <div class="timeselect">
+                                  <span class="timedisc">at</span>
+                                  <div id="u025939_9" class="uiTypeahead typeahead_time">
+                                    <div class="wrap selected">
+                                      <input type="hidden" class="hiddenInput" autocomplete="off"/>
+                                      <div class="innerWrap">
+                                        <input type="text" spellcheck="false" onfocus="" autocomplete="off" maxlength="10" size="10" id="schedule_start_time" name="schedule_start_time" value="2:00 am" class="inputtext input_typeahead_time textInput"/>
+                                      </div>
+                                    </div>
+                                    <div id="u025939_8" class="uiTypeaheadView"></div>
+                                  </div>
+                                </div>
+                            </div>
+                          <div class="timezoneStr">Pacific Time</div>
+                        </div>
+                        <div>
+                          <div class="dateselectpro clearfix">
+                            <div class="datebox">
+                              <input type="text" autocomplete="off" size="10" name="schedule_end_date" id="schedule_end_date" value="" class="inputtext" />
+                            </div>
+                            <div class="timeselect">
+                              <span class="timedisc">at</span>
+                              <div id="u025940_11" class="uiTypeahead typeahead_time">
+                                <div class="wrap selected">
+                                  <input type="hidden" class="hiddenInput" autocomplete="off"/>
+                                  <div class="innerWrap">
+                                    <input type="text" spellcheck="false" onfocus="" autocomplete="off" maxlength="10" size="10" id="schedule_end_time" name="schedule_end_time" value="2:00 am" class="inputtext input_typeahead_time textInput" />
+                                  </div>
+                                </div>
+                                <div id="u025940_10" class="uiTypeaheadView"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="timezoneStr">Pacific Time</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="uiHeader uiHeaderBottomBorder mbm">
+              <div class="clearfix uiHeaderTop">
+                <div><h4 class="uiHeaderTitle">Pricing</h4></div>
+              </div>
+            </div>
+            <div class="UIAdDelivery_SimplePricing">
+              <div class="UIAdDelivery_SimplePricingDesc">
+                Based on your targeting options, Facebook suggests a bid of
+                <span class="UIAdDelivery_SimpleSuggestedBid">$1.12</span>
+                per click. You may pay up to this much per click, but you will likely pay less.
+              </div>
+              <div>Note: Tax is not included in the bids, budgets and other amounts shown.</div>
+              <div class="UIAdDelivery_SimplePricingOptOut">
+                <a class="UIAdDelivery_ToggleSimplePricingLink" href="#">Set a Different Bid (Advanced Mode)</a>
+              </div>
+              <input type="hidden" value="1.12" name="simple_pricing_bid_value_cpc" id="c4e2690b35c9309677012200_simple_pricing_bid_value_cpc"/>
+            </div>
+            <div class="UIAdDelivery_DeliveryPricing hidden">
+              <div class="UIAdDelivery_PricingOptions">
+                <div class="UIAdDelivery_PricingOption">
+                  <input type="radio" id="c4e2690b35c9309677012200_cpm_radio" value="cpm" name="c4e2690b35c9309677012200_bid_type" class="inputradio bid_type"/>
+                  <label for="c4e2690b35c9309677012200_cpm_radio">Pay for Impressions (CPM)</label>
+                </div>
+                <div class="UIAdDelivery_PricingOption">
+                  <input type="radio" checked="1" id="c4e2690b35c9309677012200_cpc_radio" value="cpc" name="c4e2690b35c9309677012200_bid_type" class="inputradio bid_type"/>
+                  <label for="c4e2690b35c9309677012200_cpc_radio">Pay for Clicks (CPC)</label>
+                </div>
+              </div>
+              <div class="UIAdDelivery_PricingInfo UIAdDelivery_CPCInfo UIAdDelivery_Section">
+                <span class="UIAdDelivery_SectionLabel">Max Bid (<span class="UIAdDelivery_UpdatableCurrencyCode">USD</span>).</span>
+                <span class="UIAdDelivery_SectionSubtext">How much are you willing to pay per click? (min <span id="c4e2690b35c9309677012200_cpc_min_bid">0.01</span> <span class="UIAdDelivery_UpdatableCurrencyCode">USD</span>)</span>
+                <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                <div class="UIAdDelivery_SectionContent">
+                  <input type="text" value="" id="c4e2690b35c9309677012200_cpc_bid_value" name="cpc_bid_value" class="inputtext cpc_bid_value"/>
+                  <span class="UIAdDelivery_BidEstimate">Suggested Bid:
+                    <img width="16" height="11" alt="" src="http://static.ak.fbcdn.net/rsrc.php/v1/yb/r/GsNJNwuI-UM.gif" class="UIAdDelivery_BidEstimateProgress img hidden"/>
+                    <span id="c4e2690b35c9309677012200_cpc_bid_estimate" style="">0.89 - 1.40 USD</span>
+                  </span>
+                  <div class="UIAdDelivery_InventoryEstimate hidden" id="c4e2690b35c9309677012200_cpc_inventory_estimate"></div>
+                </div>
+              </div>
+              <div class="UIAdDelivery_PricingInfo UIAdDelivery_CPMInfo hidden UIAdDelivery_Section">
+                <span class="UIAdDelivery_SectionLabel">Max Bid (<span class="UIAdDelivery_UpdatableCurrencyCode">USD</span>).</span>
+                <span class="UIAdDelivery_SectionSubtext">How much are you willing to pay per 1000 impressions? (min <span id="c4e2690b35c9309677012200_cpm_min_bid">0.02</span> <span class="UIAdDelivery_UpdatableCurrencyCode">USD</span>)</span>
+                <a onclick="" href="#" class="contextual_help"><i class="img sp_1479mr sx_6ec03a"></i></a>
+                <div class="UIAdDelivery_SectionContent">
+                  <input type="text" name="cpm_bid_value" id="c4e2690b35c9309677012200_cpm_bid_value" value="" class="inputtext cpm_bid_value"/>
+                  <span class="UIAdDelivery_BidEstimate">Suggested Bid:
+                    <img width="16" height="11" alt="" src="http://static.ak.fbcdn.net/rsrc.php/v1/yb/r/GsNJNwuI-UM.gif" class="UIAdDelivery_BidEstimateProgress img hidden"/>
+                    <span id="c4e2690b35c9309677012200_cpm_bid_estimate_right_side" style="">0.38 - 0.60 USD</span></span>
+                  <div class="UIAdDelivery_InventoryEstimate hidden" id="c4e2690b35c9309677012200_cpm_inventory_estimate"></div>
+                </div>
+              </div>
+              <div>Note: Tax is not included in the bids, budgets and other amounts shown.</div>
+              <div class="UIAdDelivery_SimplePricingOptIn">
+                <a href="#" class="UIAdDelivery_ToggleSimplePricingLink">Use Suggested Bid (Simple Mode)</a>
+              </div>
+              <div class="UIAdDelivery_BidWarningDiv hidden">We strongly recommend bidding within the
+                <a target="_blank" href="/help/?faq=17149">suggested bid range</a>to increase your ad's likelihood of receiving impressions.
+                <a target="_blank" href="/help/?faq=17076">Click here</a> to learn more about the Facebook ad auction.
+              </div>
+              <ul style="display: none;" class="UIAdDelivery_ErrorBox UIAdDelivery_ErrorBox_BidErrors"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="step_help"></div>
+      </div>
+    </div>
+    <!-- End Step 3-->
+  </form>
+
+  <div class="bottom_bar">
+    <div class="buttons">
+      <label for="u579410_27" id="ads_create_submit" class="uiButton uiButtonConfirm uiButtonLarge">
+        <input type="submit" id="u579410_27" onclick="" name="ads_create_submit" value="Continue">
+      </label>
+    </div>
+    <div id="new_advertiser_help_link" class="hidden">
+      <div class="UIImageBlock clearfix">
+        <img width="16" height="16" alt="" src="/assets/images/envelope.gif" class="UIImageBlock_Image UIImageBlock_ICON_Image img">
+        <a target="_blank" href="#" class="UIImageBlock_Content UIImageBlock_ICON_Content">Questions about creating your ads?</a>
+      </div>
+    </div>
+    <img width="16" height="11" id="ads_create_validate_progress" alt="" src="/assets/images/loading_small.gif" class="hidden img"/>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html id='adMaster'>
+<head>
+  <%= yield :head %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "/assets/stylesheets/jquery-ui-lightness" %>
+  <%= stylesheet_link_tag    "/assets/stylesheets/global" %>
+  <%= yield :stylesheet %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "/assets/javascripts/jquery-ui" %>
+  <%= javascript_include_tag "/assets/javascripts/global" %>
+  <%= yield :javascript_head %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="liquid UIAdmgrPage adgroups_v3 hasLeftCol fbx">
+  <div id="blueBar" class=""></div>
+  <div id="globalContainer" class="">
+    <div id="pageHead" class="ptm clearfix">
+      <%= render "shared/header" %>
+    </div>
+    <div id="dropmenu_container"></div>
+    <div id="content" class="fb_content clearfix">
+      <div id="mainContainer">
+        <div id="leftColContainer">
+          <div id="leftCol">
+            <div id='sideNav'>
+               <ul class="uiSideNav">
+                  <% menus.each do |menu| %>
+                  <li id='navItem_<%= menu[:name].downcase %>' class="<%= menu[:class] %>">
+                    <a class="item" href="<%= menu[:href] %>">
+                      <span class="imgWrap"><i class="img <%= menu[:icon_class] %>"></i></span>
+                      <span class="linkWrap"><%= menu[:name] %></span>
+                    </a>
+                  </li>
+                  <% end %>
+               </ul>
+            </div>
+            <div id='sideHelp'>
+                <fieldset>
+                  <legend>Quick Help</legend>
+                  <input type="text" id="ad_search_box" value="Search your ads" class="inputtext DOMControl_placeholder UIAdmgrSearch" maxlength="100" autocomplete="off" size="20"/>
+                  <ul class="uiList pam">
+                      <li class="uiListItem uiListVerticalItemBorder">
+                        <a href="#">How can I create a campaign?</a>
+                      </li>
+                      <li class="ptm uiListItem uiListVerticalItemBorder">
+                        <a href="#">How can I check all my creatives?</a>
+                      </li>
+                      <li class="ptm uiListItem uiListVerticalItemBorder">
+                        <a href="#">Bla bla bla ...</a>
+                      </li>
+                  </ul>
+                </fieldset>
+            </div>
+          </div>
+        </div>
+        <div id="contentCol" class="clearfix">
+          <div id="contentArea">
+            <%= yield %>
+          </div>
+          <div id="bottomContent"></div>
+        </div>
+      </div>
+    </div>
+    <div id="pageFooter">
+      <%= render "shared/footer" %>
+    </div>
+  </div>
+  <div id="input_message" class="typeahead_list typeahead_list_absolute" style="display:none; height: auto; overflow-y: hidden; width: 155px;">
+    <div>
+      <div class="typeahead_message">Start typing the name of an ad or campaign</div>
+    </div>
+  </div>
+  <%= yield :javascript %>
+</body>
+</html>

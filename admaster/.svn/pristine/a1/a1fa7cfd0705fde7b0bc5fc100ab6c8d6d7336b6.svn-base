@@ -1,0 +1,16 @@
+<div id="contentCurve"></div>
+<div class="clearfix" id="footerContainer">
+    <div class="mrl lfloat">
+      <div class="fsm fwn fcg">
+        <span title="nirvana"> Nirvana © 2011</span> ·
+        <a rel="dialog" href="#" title="Use Facebook in another language.">China (zh_CN)</a>
+      </div>
+    </div>
+    <div class="navigation fsm fwn fcg">
+      <a href="#" accesskey="8" title="About">About</a> |
+      <a href="#" title="Company">Company</a> |
+      <a href="#" title="Privacy">Privacy</a> |
+      <a href="#" accesskey="9" title="Review our terms of service.">Terms</a> |
+      <a href="#" accesskey="0" title="Visit our Help Center.">Help</a>
+    </div>
+</div>

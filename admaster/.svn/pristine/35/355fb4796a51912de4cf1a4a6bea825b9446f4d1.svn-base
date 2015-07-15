@@ -1,0 +1,529 @@
+<% content_for :head do %>
+    <title>Creatives</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/creative" %>
+    <div class="generic_dialog contextual_dialog ad_create_help_dialog hidden" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_0" style="">
+      <div class="generic_dialog_popup">
+        <div class="contextual_dialog_content">
+          <div class="dialog_content dialog_content_titleless">
+            <div class="dialog_body">
+              <div>
+                <h3>Nirvana Content</h3>
+                <div class="help_body">
+                  Specify the web page or destination page that people should end up on after they click on your Ad or Sponsored Story.
+                </div>
+              </div>
+            </div>
+            <div class="dialog_buttons clearfix">
+              <label class="uiButton uiButtonLarge uiButtonConfirm">
+                <input type="button" name="ok" value="Okay"/>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="arrow" style="margin-left: 25.5px;"></div>
+      </div>
+    </div>
+    <div class="generic_dialog pop_dialog profileBrowserDialog full_bleed" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_1" style="display:none;">
+      <div class="generic_dialog_popup" style="top: 40px; width: 577px;">
+        <div class="pop_container_advanced">
+            <div id="pop_content" class="pop_content">
+              <h2 class="dialog_title" id="title_dialog_1"><span>Creatives for Account #132159193536921</span></h2>
+              <div class="dialog_content">
+                <div class="dialog_body">
+                  <div id="u511297_4" class="fbProfileBrowser">
+                    <div class="standardLayout">
+                      <div class="pam filterBox hasSelector uiBoxGray topborder">
+                        <table>
+                          <tbody>
+                          <tr>
+                            <td>
+                              <div id="u511297_7" class="uiSelector inlineBlock selector uiSelectorNormal uiSelectorDynamicLabel">
+                                <div class="wrap">
+                                  <a rel="toggle" data-length="30" aria-haspopup="1" href="#" role="button" class="uiSelectorButton uiButton">
+                                    <span class="uiButtonText">All Campaigns</span>
+                                  </a>
+                                  <div class="uiSelectorMenuWrapper uiToggleFlyout">
+                                    <div class="uiMenu uiSelectorMenu" role="menu">
+                                      <ul class="uiMenuInner">
+                                        <li data-label="All Campaigns" class="uiMenuItem uiMenuItemRadio uiSelectorOption checked">
+                                          <a data-typeahead="1" href="#" aria-checked="true" tabindex="0" role="menuitemradio" class="itemAnchor">
+                                            <span class="itemLabel fsm">All Campaigns</span>
+                                          </a>
+                                        </li>
+                                        <li class="uiMenuSeparator"></li>
+                                        <li data-label="Selected" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                                          <a href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                                            <span class="itemLabel fsm">Selected</span>
+                                          </a>
+                                        </li>
+                                        <li class="uiMenuSeparator"></li>
+                                        <li data-label="My Ads" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                                          <a data-listendpoint="#" href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                                            <span class="itemLabel fsm">My Ads</span>
+                                          </a>
+                                        </li>
+                                        <li class="uiMenuSeparator"></li>
+                                        <li data-label="without ads yet" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                                          <a data-listendpoint="#" href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                                            <span class="itemLabel fsm">without ads yet</span>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <select>
+                                  <option value=""></option>
+                                  <option selected="1" value="default">All Campaigns</option>
+                                  <option value="selected">Selected</option>
+                                  <option value="u511297_5">My Ads</option>
+                                  <option value="u511297_6">without ads yet</option>
+                                </select>
+                              </div>
+                            </td>
+                            <td class="fullWidth">
+                              <div id="u511297_2" class="uiTypeahead uiClearableTypeahead fbProfileBrowserTypeahead">
+                                <div class="wrap">
+                                  <label for="u511297_8" class="clear uiCloseButton">
+                                    <input type="button" id="u511297_8" onclick="" title="Remove"/>
+                                  </label>
+                                  <input type="hidden" name="profileChooserItems" class="hiddenInput" autocomplete="off" value="{}"/>
+                                  <div class="innerWrap">
+                                    <input type="text" title="Search all creatives" value="Search all creatives" spellcheck="false" onfocus="" autocomplete="off" placeholder="Search all creatives" class="inputtext textInput  DOMControl_placeholder"/>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div id="u511297_9" class="listView ">
+                        <img width="32" height="32" alt="" src="/assets/images/loading.gif" class="throbber img hidden"/>
+                        <div class="lists">
+                          <div id="u511297_3" class="fbProfileBrowserResult hideSummary hidden_elem">
+                            <div class="pvm phs fbProfileBrowserSummaryBox uiBoxWhite bottomborder"></div>
+                            <div class="fbProfileBrowserNullstate fbProfileBrowserListContainer fsxl fcg">No results found.</div>
+                          </div>
+                          <div id="u511297_1" class="fbProfileBrowserResult  hideSummary">
+                            <div class="fbProfileBrowserListContainer">
+                              <ul>
+                                <li class="multiColumnCheckable checkableListItem ">
+                                  <input type="checkbox" value="6003220256150" name="checkableitems[]" class="checkbox"/>
+                                  <a tabindex="-1" href="#" class="anchor">
+                                    <div class="UIImageBlock clearfix UIImageBlock_Entity">
+                                      <img class="photo UIImageBlock_Image img UIImageBlock_ENT_Image" src="/assets/images/nirvana.jpg"/>
+                                      <div class="content UIImageBlock_Content">
+                                        <div class="fcb fwb text long">ITO for tech startups</div>
+                                        <div class="fcg text subtitle">ITO for tech startups: innnovation made in china</div>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialog_buttons clearfix">
+                  <div class="dialog_buttons_msg">
+                    <span id="u511297_10" class="limitNotReached">
+                      Selected
+                      <span id="u511297_11" class="fwb">0</span>
+                      of
+                      <span class="fwb">1</span>
+                      maximum
+                      <i class="checkmark img sp_8xa1z4 sx_3e8a34"></i>
+                    </span>
+                  </div>
+                  <label class="uiButton uiButtonLarge uiButtonConfirm">
+                    <input type="button" name="Submit" value="Submit"/>
+                  </label>
+                  <label class="uiButton uiButtonLarge ">
+                    <input type="button" name="cancel" value="Cancel"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+
+<div>
+    <div class="UIAdmgrPageHeader">
+      <div class="breadcrumb">
+        <a href="#">All Creatives</a>
+        <span class="phs fsm fwn fcg"> » </span>
+      </div>
+      <div class="uiHeader uiHeaderPage">
+        <div class="clearfix uiHeaderTop">
+          <div class="uiHeaderActions rfloat">
+            <a href="#" rel="dialog" role="button" class="uiButton selectCreativeButton">
+              <span class="uiButtonText">Select Creative</span>
+            </a>
+          </div>
+          <div>
+            <h2 class="uiHeaderTitle">Add New Creative</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form onsubmit="" method="post" action="#">
+      <input type="hidden" value="6825c2f1871ec8ecd0ef30398dd3f356" name="post_form_id" autocomplete="off"/>
+      <input type="hidden" autocomplete="off" value="AQApzUUa" name="fb_dtsg"/>
+      <div class="pam uiBoxGray">
+        <input type="hidden" value="132159193536921" name="act" autocomplete="off"/>
+        <div id="u504884_1" class="UIAdCreativeForm">
+          <div class="pam creative_error_box hidden uiBoxRed">
+            <ul class="ad_creative_adspace_generic_errors"></ul>
+          </div>
+          <table class="uiInfoTable">
+            <tbody>
+            <tr class="object_id dataRow">
+              <th class="label">Destination:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <select tabindex="1" name="object_id" class="fbobject_selector">
+                      <option selected="1" value="">External URL</option>
+                    </select>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody class="category_selection_section hidden">
+            <tr>
+              <th class="label">Type:</th>
+              <td class="data">
+                <div class="category_sponsored_stories hidden">
+                  <label for="u504885_2">
+                    <input type="radio" id="u504885_2" class="creative_category" value="sponsored_stories" name="creative_category" tabindex="2"/>
+                    Sponsored Stories
+                  </label>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+                <div class="category_facebook_ads">
+                  <label for="u504885_3">
+                    <input type="radio" id="u504885_3" checked="1" class="creative_category" value="facebook_ads" name="creative_category" tabindex="2">
+                    Facebook Ads
+                  </label>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody class="ad_type_selection_section hidden">
+            <tr class="type dataRow">
+              <th class="label">Story Type:</th>
+              <td class="data">
+                <div class="form_input">
+                  <div class="creative_type_toggle 1">
+                    <label for="u504886_4">
+                      <input type="radio" id="u504886_4" checked="1" value="1" name="type" tabindex="3">
+                      Standard
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 2 hidden">
+                    <label for="u504886_5">
+                      <input type="radio" id="u504886_5" value="2" name="type" tabindex="3"/>
+                      Nirvana-info Ads for Pages
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 3 hidden">
+                    <label for="u504886_6">
+                      <input type="radio" id="u504886_6" value="3" name="type" tabindex="3"/>
+                      Event Ad
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 4 hidden">
+                    <label for="u504886_7">
+                      <input type="radio" id="u504886_7" value="4" name="type" tabindex="3"/>
+                      Nirvana-info Ads for Applications
+                    </label>
+                  </div>
+                  <div class="creative_type_toggle 16 hidden">
+                    <label for="u504886_8">
+                      <input type="radio" id="u504886_8" value="16" name="type" tabindex="3"/>
+                      App Used Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 8 hidden">
+                    <label for="u504886_9">
+                      <input type="radio" id="u504886_9" value="8" name="type" tabindex="3"/>
+                      App Share Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 9 hidden">
+                    <label for="u504886_10">
+                      <input type="radio" id="u504886_10" value="9" name="type" tabindex="3"/>
+                      Page Like Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 10 hidden">
+                    <label for="u504886_11">
+                      <input type="radio" id="u504886_11" value="10" name="type" tabindex="3"/>
+                      Check-In Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 11 hidden">
+                    <label for="u504886_12">
+                      <input type="radio" id="u504886_12" value="11" name="type" tabindex="3"/>
+                      Page Post Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 17 hidden">
+                    <label for="u504886_13">
+                      <input type="radio" id="u504886_13" value="17" name="type" tabindex="3"/>
+                      Page Post Like Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 18 hidden">
+                    <label for="u504886_14">
+                      <input type="radio" id="u504886_14" value="18" name="type" tabindex="3"/>
+                      Buy with Friends Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                  <div class="creative_type_toggle 19 hidden">
+                    <label for="u504886_15">
+                      <input type="radio" id="u504886_15" value="19" name="type" tabindex="3"/>
+                      Domain Story
+                    </label>
+                    <a onclick="" href="#" class="contextual_help">
+                      <i class="img sp_1479mr sx_6ec03a"></i>
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody class="link_url_section">
+            <tr class="link_url dataRow">
+              <th class="label">URL:</th>
+              <td class="data">
+                <div>
+                  <div class="uiComboInput form_input">
+                    <input type="text" name="link_url" tabindex="4" class="inputtext link_url"/>
+                    <label for="u504886_16" class="suggest_ad comboButton uiButton">
+                      <input type="submit" id="u504886_16" value="Suggest an Ad"/>
+                    </label>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody class="link_url_page_tab_section hidden">
+            <tr class="link_url_page_tab hidden dataRow">
+              <th class="label">Destination Tab:</th>
+              <td class="data">
+                <div>
+                  <select name="link_url_page_tab" tabindex="5" class="link_url_page_tab_selector"></select>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody class="title_body_image_section">
+            <tr class="title dataRow">
+              <th class="label">Title:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <input type="text" name="title" tabindex="6" class="inputtext title" maxlength="25"/>
+                    <div class="character_count fss fwn fcg">
+                      <span class="title_msg">25</span>
+                      characters left
+                    </div>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="body dataRow">
+              <th class="label">Body:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <textarea name="body" tabindex="6" class="body"></textarea>
+                    <div class="character_count fss fwn fcg">
+                      <span class="body_msg">135</span>
+                      characters left
+                    </div>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="image_row dataRow">
+              <th class="label">Image:</th>
+              <td class="data">
+                <div>
+                  <div class="form_input">
+                    <div id="c4e30dc98cfdc96f90128678" class="AdsCreate">
+                      <div class="AdsCreateSectionLabelContent">
+                        <iframe width="195" height="30" frameborder="0" scrolling="no" style="overflow: hidden;" src="/upload" name="UIAdCreativeImage_Frame"></iframe>
+                        <div class="UIAdCreativeImage_UploadProgress hidden">
+                          <img width="16" height="11" alt="" src="/assets/images/loading_small.gif" class="img">Uploading photo...
+                        </div>
+                        <div class="UIAdCreativeImage_InvalidMsg UIAdCreative_ErrorBox hidden">Invalid image format</div>
+                        <div>
+                          <input type="hidden" name="UIAdCreativeImage_ImageUrl" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_ImagePath" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_ImageVolume" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_ImageWidth" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_ImageHeight" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_ImageMD5Hash" value=""/>
+                          <input type="hidden" name="UIAdCreativeImage_IsPermanent" value="0"/>
+                        </div>
+                        <div class="AdsCreateSection_ThumbSelector"></div>
+                        <a href="#" class="AdsCreativeRemoveImageLink clearfix hidden">Remove uploaded image.</a>
+                        <a href="#" class="AdsCreativeUploadOwnImageLink clearfix hidden">Upload my own</a>
+                        <a class="AdsCreativeGenerateImageLink clearfix hidden">Generate images for me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a onclick="" href="#" class="contextual_help">
+                    <i class="img sp_1479mr sx_6ec03a"></i>
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr class="preview ">
+              <th class="label">Preview:</th>
+              <td class="data">
+                <div id="preview_loading" class="">
+                  <div class="preview">
+                    <div class="UIAdCreative_Preview">
+                      <div class="UIAdmgrCreativePreview">
+                        <div id="id_4e30dc9f5a9700558226473" class="fbEmu fbEmuBlock fbEmuEgo fbEmuPreview">
+                          <div class="title"><a onclick="" class="forceLTR fbEmuLink">Example Ad Title</a></div>
+                          <div class="adInfo">
+                            <a onclick="" class="identity fbEmuLink"></a>
+                          </div>
+                          <div class="UIImageBlock clearfix image_body_block">
+                            <a aria-hidden="true" tabindex="-1" onclick="" class="fbEmuLink image UIImageBlock_Image UIImageBlock_SMALL_Image">
+                              <img alt="" src="http://static.ak.fbcdn.net/rsrc.php/v1/yt/r/r_KdvgavlXW.png" class="img"/>
+                            </a>
+                            <div class="UIImageBlock_Content UIImageBlock_SMALL_Content">
+                              <div class="body"><a onclick="" class="forceLTR fbEmuLink">Your body text will go here.</a></div>
+                            </div>
+                          </div>
+                          <div class="inline">
+                            <div class="action">
+                              <span class="fbEmuEmptyContext"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <img width="16" height="11" alt="" src="http://static.ak.fbcdn.net/rsrc.php/v1/yb/r/GsNJNwuI-UM.gif" class="mls uiLoadingIndicatorAsync img"/>
+                </div>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr class="name dataRow">
+              <th class="label">Name this creative:</th>
+              <td class="data">
+                <input type="text" value="" name="creative_name" class="inputtext"/>
+              </td>
+            </tr>
+            <tr class="spacer">
+              <td colspan="2"><hr></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+              <th class="label"></th>
+              <td class="data">
+                <label for="u504886_17" class="uiButton uiButtonConfirm">
+                  <input type="submit" id="u504886_17" value="Create New Creative"/>
+                </label>
+              </td>
+            </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </form>
+</div>

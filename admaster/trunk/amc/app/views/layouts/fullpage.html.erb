@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id='adMaster'>
+<head>
+  <%= yield :head %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "/assets/stylesheets/jquery-ui-lightness" %>
+  <%= stylesheet_link_tag    "/assets/stylesheets/global" %>
+  <%= yield :stylesheet %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "/assets/javascripts/jquery-ui" %>
+  <%= javascript_include_tag "/assets/javascripts/global" %>
+  <%= yield :javascript_head %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="ads_create">
+  <div id="blueBar" class=""></div>
+  <div id="globalContainer" class="">
+    <div id="pageHead" class="ptm clearfix">
+        <%= render "shared/header" %>
+    </div>
+    <div id="dropmenu_container"></div>
+    <div id="content" class="fb_content clearfix">
+      <div class="UIFullPage_Container">
+            <%= yield %>
+      </div>
+    </div>
+    <div id="pageFooter">
+        <%= render "shared/footer" %>
+    </div>
+  </div>
+  <%= yield :javascript %>
+</body>
+</html>

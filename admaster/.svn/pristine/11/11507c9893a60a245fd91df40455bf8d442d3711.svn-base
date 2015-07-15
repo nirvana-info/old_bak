@@ -1,0 +1,54 @@
+<% content_for :head do %>
+    <title>Login</title>
+<% end %>
+
+<%= stylesheet_link_tag    "/assets/stylesheets/main" %>
+<div class="login_page UIFullPage_Container">
+    <div class="mvl ptm uiInterstitial login_page_interstitial uiInterstitialLarge uiBoxWhite">
+      <div class="uiHeader uiHeaderBottomBorder mhl mts uiHeaderPage interstitialHeader">
+        <div class="clearfix uiHeaderTop"><div class="uiHeaderActions rfloat"></div>
+        <div>
+          <h2 class="uiHeaderTitle">Login</h2>
+        </div>
+      </div>
+      </div>
+      <div class="phl ptm uiInterstitialContent">
+        <div class="login_form_container">
+          <form onsubmit="" id="login_form" action="/" method="GET">
+            <div style="" id="loginform">
+              <div class="form_row clearfix ">
+                <label class="login_form_label" id="label_email" for="email">Email:</label>
+                <input type="text" onkeypress="formchange()" value="" name="email" id="email" class="inputtext">
+              </div>
+              <div class="form_row clearfix ">
+                <label class="login_form_label" id="label_pass" for="pass">Password:</label>
+                <input type="password" value="" name="pass" id="pass" class="inputpassword">
+              </div>
+              <div class="form_row clearfix" id="buttons">
+                <label class="login_form_label"></label>
+                <div id="login_button_inline">
+                  <label for="u466777_1" class="uiButton uiButtonConfirm uiButtonLarge">
+                    <input type="submit" id="u466777_1" onclick="" name="login" value="Sign In">
+                  </label>
+                </div>
+              </div>
+              <p class="reset_password form_row">
+                <a tabindex="-1" target="" href="#">Forgot your password?</a>
+              </p>
+              <p class="reset_password form_row">
+                <a tabindex="-1" target="" href="#">Need Help?</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mhl mvm clearfix">
+        <div class="lfloat">© Nirvana</div>
+         <div class="navigation fsm fwn fcg rfloat">
+          <a href="#" accesskey="8" title="About">About</a> |
+          <a href="#" title="Feedback">Feedback</a> |
+          <a href="#" title="Contact">Contact</a>
+        </div>
+      </div>
+    </div>
+</div>

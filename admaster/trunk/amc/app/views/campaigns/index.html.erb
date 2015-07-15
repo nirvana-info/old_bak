@@ -1,0 +1,447 @@
+<% content_for :head do %>
+    <title>Campaigns</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/campaign" %>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="#">All Campaigns</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div class="uiHeaderActions rfloat">
+        <a href="/campaigns/add" class="uiButton uiButtonSpecial">
+          <span class="uiButtonText">Create an Ad</span>
+        </a>
+      </div>
+      <div>
+        <h2 class="uiHeaderTitle">All Campaigns</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="c4e27f64ca41328760729725" class="UIAdmgrCampaignsPage">
+  <div class="admgr_dashboard clearfix">
+    <div class="admgr_notifications UIAdmgrTitledContentSection">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div>
+              <h3 class="uiHeaderTitle">Notifications</h3>
+          </div>
+        </div>
+      </div>
+      <div class="phs UIAdmgrTitledContentSection_content">
+        <ul id="notifications_list">
+          <li>
+            <div class="datetime">Today</div>
+            <ul>
+              <li>The ad <a style="color: rgb(59, 89, 152); text-decoration: none;" href="#">ITO for tech startups</a> was approved.</li>
+              <li>The ad <a style="color: rgb(59, 89, 152); text-decoration: none;" href="#">ITO for tech startups</a> was created.</li>
+              <li>Welcome to Facebook Ads!  For tips on advertising with Facebook Ads, check out our Facebook Ads.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="admgr_daily_spend UIAdmgrTitledContentSection">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div>
+              <h3 class="uiHeaderTitle">Daily Spend</h3>
+          </div>
+        </div>
+      </div>
+      <div class="phs UIAdmgrTitledContentSection_content">
+        <table id="daily_stats_table">
+          <tbody>
+          <tr>
+            <td class="datetime">Today</td>
+            <td class="spend">$0.00 USD</td>
+          </tr>
+          <tr>
+            <td class="datetime">7/20</td>
+            <td class="spend">$0.00 USD</td>
+          </tr>
+          <tr>
+            <td class="datetime">7/19</td>
+            <td class="spend">$0.00 USD</td>
+          </tr>
+          <tr>
+            <td class="datetime">7/18</td>
+            <td class="spend">$0.00 USD</td>
+          </tr>
+          <tr>
+            <td class="datetime">7/17</td>
+            <td class="spend">$0.00 USD</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="actionbar_top" class="mbm UIAdmgrPage_actionbar clearfix">
+    <div id="c4e27f64ca42e51a12364551" class="UIAdmgrDatePicker">
+       <div class="UIAdmgrDatePicker_selector">
+         <div bindpoint="root" class="UIActionMenu">
+            <a rel="toggle" href="#" bindpoint="wrap" class="UIActionMenu_Wrap">
+                <span bindpoint="icon" class="UIActionMenu_Icon"></span>
+                <span bindpoint="text" class="UIActionMenu_Text">Lifetime stats</span>
+                <span class="UIActionMenu_Chevron"></span>
+            </a>
+            <div bindpoint="menu" class="UIActionMenu_Menu">
+              <div class="UISelectList clearfix">
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label UISelectList_radio_Checked" href="#">Lifetime stats</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="#">Today</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="#">Yesterday</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="#">Last week</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="#">Custom</a>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+       <div class="UIAdmgrDatePicker_text hidden_elem"></div>
+       <div id="c4e27f64ca439c6d32102389" class="UIEditableElement UIEditableDateRange UIAdmgrDatePicker_customDateRangeSelector hidden_elem">
+         <div class="wrapper no_edit_button">
+           <a href="#" class="text">7/14/2011 &ndash; 7/21/2011</a>
+           <div class="editor">
+             <div class="range_selector">
+                 <div class="lfloat">
+                   <div class="dateselectpro clearfix">
+                     <div class="datebox">
+                       <input type="text" autocomplete="off" size="10" name="c4e27f64ca439c6d32102389_start_intl_field" id="c4e27f64ca439c6d32102389_start_intl_field" value="" class="inputtext"/>
+                       <input type="hidden" value="7/14/2011" name="c4e27f64ca439c6d32102389_start_text_field" id="c4e27f64ca439c6d32102389_start_text_field" autocomplete="off"/>
+                       <div class="calendar_picker_container" id="c4e27f64ca439c6d32102389_start_calendar" style="display: none;"></div>
+                     </div>
+                   </div>
+                 </div>
+                 <span class="pas lfloat">to</span>
+                 <div style="clear: both;">
+                   <div class="dateselectpro clearfix">
+                     <div class="datebox">
+                       <input type="text" autocomplete="off" size="10" name="c4e27f64ca439c6d32102389_end_intl_field" id="c4e27f64ca439c6d32102389_end_intl_field" value="" class="inputtext"/>
+                       <input type="hidden" value="7/21/2011" name="c4e27f64ca439c6d32102389_end_text_field" id="c4e27f64ca439c6d32102389_end_text_field" autocomplete="off"/>
+                       <div class="calendar_picker_container" id="c4e27f64ca439c6d32102389_end_calendar" style="display: none;"></div>
+                     </div>
+                   </div>
+                 </div>
+             </div>
+             <div class="ongoing_container">
+               <label>
+                 <input type="checkbox" value="ongoing" name="c4e27f64ca439c6d32102389_ongoing" class="continuous_checkbox"/>No end date
+               </label>
+             </div>
+             <label for="u180467_1" class="save_button uiButton uiButtonConfirm">
+               <input type="submit" id="u180467_1" value="Save"/>
+             </label>
+             <label for="u180467_2" class="cancel_button uiButton">
+               <input type="submit" id="u180467_2" value="Cancel"/>
+             </label>
+           </div>
+         </div>
+       </div>
+    </div>
+    <div id="c4e27f64ca440a5762030192" class="UIAdmgrStatusPicker">
+      <div class="UIAdmgrStatusPicker_selector">
+        <div bindpoint="root" class="UIActionMenu">
+            <a rel="toggle" href="#" bindpoint="wrap" class="UIActionMenu_Wrap">
+                <span bindpoint="icon" class="UIActionMenu_Icon"></span>
+                <span bindpoint="text" class="UIActionMenu_Text">All Except Deleted</span>
+                <span class="UIActionMenu_Chevron"></span>
+            </a>
+            <div bindpoint="menu" class="UIActionMenu_Menu">
+              <div class="UISelectList clearfix">
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429" checked="">
+                  <a class="UISelectList_Label UISelectList_radio_Checked" href="#">All Except Deleted</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="#">Active</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="#">Scheduled</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="#">Paused</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="#">Completed or Deleted</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="uiButton uiButtonDefault uiButtonDisabled" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Select rows to edit</span>
+    </a>
+    <a href="#" class="uiButton uiButtonDefault hidden_elem" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Save</span>
+    </a>
+    <a href="#" class="uiButton uiButtonDefault hidden_elem" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Cancel</span>
+    </a>
+    <span id="view_report">
+      <a href="/reports" class="uiButton uiButtonDefault" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Full Report</span>
+      </a>
+    </span>
+    <span id="async_spinner" class="standard_status_element">
+      <img src="/images/loaders/indicator_blue_small.gif"/>
+    </span>
+    <span bindpoint="root" class="UIPager">
+        <span bindpoint="pageNumber" class="UIPager_PageNum">1 result</span>
+        <span bindpoint="backWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="#" bindpoint="backRoot" class="UIPager_Button UIPager_ButtonBack"></a>
+        </span>
+        <span bindpoint="forwardWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="#" bindpoint="forwardRoot" class="UIPager_Button UIPager_ButtonForward"></a>
+        </span>
+    </span>
+  </div>
+  <div id="c4e27f64ca42320536782116" class="UIAdmgrPage_UITable UITable">
+    <table cellspacing="0" class="root_table">
+      <tbody>
+      <tr>
+        <th class="th_checkbox">
+          <input type="checkbox" id="toggle_checkboxes"/>
+        </th>
+        <th class="th_name_html clickable">
+          <span class="hdr_text">Campaign
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ"><sup>?</sup>
+                <span class="tip">
+                  <span class="tipTitle">Campaign</span>
+                  <span class="tipBody">A campaign is a group of ads that you've created in this account.</span>
+                  <span class="tipArrow"></span>
+                </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_campaign_ui_status_html clickable">
+          <span class="hdr_text">Status
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Status</span>
+                <span class="tipBody">Each campaign may be running, paused, completed or deleted.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_time_start_html clickable">
+          <span class="hdr_text">Start Date
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Start Date</span>
+                <span class="tipBody">The date a campaign is eligible to start running. Campaigns can run continuously or be limited with specific dates.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_time_stop_html clickable">
+          <span class="hdr_text">End Date
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">End Date</span>
+                <span class="tipBody">The date a campaign is scheduled to stop. Campaigns can run continuously or be limited with specific dates.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_budgetntype_string clickable">
+          <span class="hdr_text">Budget
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Budget</span>
+                <span class="tipBody">The maximum amount you're willing to spend on each campaign, per day or in the lifetime of the campaign.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_budget_remaining_string clickable">
+          <span class="hdr_text">Remaining
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Remaining</span>
+                <span class="tipBody">The amount still available in this campaign's daily or lifetime budget.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_spent_string last_column clickable">
+          <span class="hdr_text">Spent
+            <a href="#" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ"><sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Spent</span>
+                <span class="tipBody">The amount you've spent on your campaign during the dates selected.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+      </tr>
+      <tr class="odd" id="6003220255550">
+        <td class="td_checkbox first_column">
+          <input type="checkbox" class="checkbox"/>
+        </td>
+        <td class="td_name_html">
+          <div bindpoint="root" class="UIEditableElement UIEditableText">
+            <div bindpoint="wrapper" class="wrapper  align_right show_edit_button">
+                <a bindpoint="textElement" class="text" href="/ads">My Ads</a>
+                <a href="#" class="edit_link adsEditButton"></a>
+                <div class="editor">
+                    <div class="inputfield">
+                        <input type="text" bindpoint="input" value="My Ads" class="inputtext">
+                    </div>
+                    <div bindpoint="helpTextNode" class="help_text"></div>
+                    <div class="buttons">
+                        <label class="save_button uiButton uiButtonConfirm">
+                            <input type="submit" value="Save">
+                        </label>
+                        <label class="cancel_button uiButton">
+                            <input type="submit" value="Cancel">
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </td>
+        <td class="td_campaign_ui_status_html">
+          <div bindpoint="root" class="uiSelector uiAdmgrSelector uiSelectorNormal">
+            <div bindpoint="wrapper" class="wrap">
+                <a bindpoint="button" rel="toggle" data-length="30" aria-hashpopup="1" role="button" href="#" class="uiSelectorButton uiButton uiButtonNoText uiButtonSuppressed uiTooltip">
+                    <img bindpoint="icon" title="Active" src="/assets/images/running.gif" class="icon"/>
+                    <span class="uiTooltipWrap">
+                        <span bindpoint="tooltip_text" class="uiTooltipText">Active</span>
+                    </span>
+                </a>
+                <div class="uiSelectorMenuWrapper uiToggleFlyout">
+                    <div class="uiMenu uiSelectorMenu" role="menu">
+                        <ul bindpoint="menu" class="uiMenuInner">
+                          <li data-label="Active" class="uiMenuItem uiMenuItemRadio uiSelectorOption  checked">
+                            <a rel="ignore" href="#" aria-checked="true" tabindex="0" role="menuitemradio" class="itemAnchor">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap"><img src="/assets/images/running.gif" class="selector icon"></span>
+                                Active
+                              </span>
+                            </a>
+                          </li>
+                          <li data-label="Paused" class="uiMenuItem uiMenuItemRadio uiSelectorOption ">
+                            <a rel="ignore" href="#" aria-checked="true" tabindex="1" role="menuitemradio" class="itemAnchor">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap"><img src="/assets/images/paused.gif" class="selector icon"></span>
+                                Paused
+                              </span>
+                            </a>
+                          </li>
+                          <li data-label="Deleted" class="uiMenuItem uiMenuItemRadio uiSelectorOption ">
+                            <a rel="ignore" href="#" aria-checked="true" tabindex="2" role="menuitemradio" class="itemAnchor">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap">
+                                  <img src="/assets/images/deleted.gif" class="selector icon"/>
+                                </span>
+                                Deleted
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <span bindpoint="copy_link_wrapper"><a href="#" class="copy_link"></a></span>
+            </div>
+            <select bindpoint="select">
+              <option value=""></option>
+              <option selected="" value="1">Active</option>
+              <option value="2">Paused</option>
+              <option value="99">Deleted</option>
+            </select>
+          </div>
+        </td>
+        <td class="td_time_start_html">
+          <div>07/21/2011</div>
+          <div class="subtext ads_hour_string">1:44am</div>
+        </td>
+        <td class="td_time_stop_html">Ongoing</td>
+        <td class="td_budgetntype_string divider">
+          <div class="budget_string">
+            <div bindpoint="root" class="UIEditableElement UIEditableText">
+                <div bindpoint="wrapper" class="wrapper  align_left show_edit_button">
+                    <a href="#" class="edit_link adsEditButton"></a>
+                    <a bindpoint="textElement" class="text" href="#">$50.00</a>
+                    <div class="editor">
+                        <div class="inputfield">
+                            <input type="text" bindpoint="input" value="$50.00" class="inputtext"/>
+                            <a href="#" class="copy_link"></a>
+                        </div>
+                        <div bindpoint="helpTextNode" class="help_text"></div>
+                        <div class="buttons">
+                            <label class="save_button uiButton uiButtonConfirm">
+                                <input type="submit" value="Save">
+                            </label>
+                            <label class="cancel_button uiButton">
+                                <input type="submit" value="Cancel">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="subtext">Daily</div>
+        </td>
+        <td class="td_budget_remaining_string">
+          <div>$50.00</div>
+          <div class="subtext ads_hour_string">Today</div>
+        </td>
+        <td class="td_spent_string last_column divider">$0.00</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="actionbar_bottom" class="UIAdmgrPage_actionbar clearfix">
+    <span bindpoint="root" class="UIPager">
+        <span bindpoint="pageNumber" class="UIPager_PageNum">1 result</span>
+        <span bindpoint="backWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="#" bindpoint="backRoot" class="UIPager_Button UIPager_ButtonBack"></a>
+        </span>
+        <span bindpoint="forwardWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="#" bindpoint="forwardRoot" class="UIPager_Button UIPager_ButtonForward"></a>
+        </span>
+    </span>
+  </div>
+</div>

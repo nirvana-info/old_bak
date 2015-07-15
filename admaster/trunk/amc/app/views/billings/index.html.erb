@@ -1,0 +1,132 @@
+<% content_for :head do %>
+    <title>Billing</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/billing" %>
+    <div class="generic_dialog contextual_dialog hidden" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_2" style="">
+      <div class="generic_dialog_popup">
+        <div class="contextual_dialog_content">
+          <div class="dialog_content dialog_content_titleless">
+            <div class="dialog_body">
+              Your outstanding balance is the total of all invoices that have not yet been billed to your credit card.
+              It does not include any charges for ads that have not yet been invoiced.
+              All ads that you have been invoiced for will appear on this page.
+            </div>
+            <div class="dialog_buttons clearfix">
+              <label class="uiButton uiButtonLarge uiButtonConfirm">
+                <input type="button" name="ok" value="Okay"/>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="arrow" style="margin-left: 25.5px;"></div>
+      </div>
+    </div>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="#">Billing</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div>
+        <h2 class="uiHeaderTitle">Billing Summary</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui_admgr_page_billing ads_manager">
+  <div class="UIAdmgrDetailsModule clearfix detailsBorderBottom">
+    <div class="detail_section">
+      <div class="detail_label">Outstanding Balance
+        <a onclick=" " href="#" class="contextualHelp"><i class="img sp_1479mr sx_6ec03a"></i></a>
+      </div>
+      <div class="detail_value">$0.00 USD</div>
+    </div>
+    <div class="detail_section">
+      <div class="detail_label">Daily Spend Limit
+        <a onclick="" href="#" class="contextualHelp"><i class="img sp_1479mr sx_6ec03a"></i></a>
+      </div>
+      <div class="detail_value"><span>$50.00 USD</span></div>
+    </div>
+    <div class="detail_section">
+      <div class="detail_label">Account Spend
+        <a onclick="" href="#" class="contextualHelp"><i class="img sp_1479mr sx_6ec03a"></i></a>
+      </div>
+      <div class="detail_value">
+        <div id="u546428_1" class="adsAccountSpendCap">
+          <div class="editData invisible_elem">
+            <div>
+                <a href="#" title="" class="uiTooltip clearSpendButton uiCloseButton">
+                  <span class="uiTooltipWrap top left lefttop">
+                    <span class="uiTooltipText uiTooltipNoWrap">Reset</span>
+                  </span>
+                </a>
+                <input type="text" disabled="1" readonly="1" value="$0.00" name="amount_spent" class="inputtext"/>
+                of
+                <input type="text" value="Unlimited" name="account_spend_cap" class="inputtext aero"/>
+                <label for="u546428_2" class="inputButton saveButton uiButton uiButtonConfirm uiButtonDisabled">
+                  <input type="submit" id="u546428_2" name="account_spend_save" value="Save"/>
+                </label>
+                <label for="u546429_3" class="inputButton cancelButton uiButton">
+                  <input type="submit" id="u546429_3" value="Cancel"/>
+                </label>
+            </div>
+            <div class="removeLimitDiv">
+              <label for="u546429_4" class="uiCheckbox">
+                <input type="checkbox" id="u546429_4" class="removeSpendLimit" name=""/>
+                No Spend Limit
+              </label>
+            </div>
+            <input type="hidden" value="$0.00" name="reset_amount" autocomplete="off"/>
+            <input type="hidden" value="Unlimited" name="unlimited_amount" autocomplete="off"/>
+          </div>
+          <div class="viewData">
+            <span class="noSpendCapViewContainer">$0.00<label> </label>of Unlimited</span>
+            <span class="spendCapViewContainer hidden_elem">
+              <span class="viewString">$0.00 of $0.00</span>
+              <span class="mls">USD</span>
+            </span>
+            <a class="mlm editLink">edit</a>
+            <img width="16" height="11" alt="" src="/assets/images/loading_small.gif" class="invisible_elem asyncImage img"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="account_billing"><div class="billing_filters clearfix">
+    <div class="billing_currency">All currency amounts are in USD.</div>
+  </div>
+    <div id="transaction_table">
+      <table cellspacing="0" class="datakit_table">
+        <tbody>
+        <tr>
+          <th class="th_transaction_date">Transaction Date</th>
+          <th class="th_transaction_id">Transaction</th>
+          <th class="th_transaction_description">Description</th>
+          <th class="th_transaction_payment_option">Payment Option</th>
+          <th class="th_transaction_amount right last">Total Amount</th>
+        </tr>
+        <tr>
+          <td class="no_data last first" colspan="6">No billings this month.</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<% content_for :head do %>
+    <title>Dashboard</title>
+<% end %>
+
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="#">Dashboard</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div class="uiHeaderActions rfloat">
+        <a href="/campaigns/add" class="uiButton uiButtonSpecial">
+          <span class="uiButtonText">Create an Ad</span>
+        </a>
+      </div>
+      <div>
+        <h2 class="uiHeaderTitle">Welcome to AMC!</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ads_manager_vat_notice">
+  <div class="pam uiBoxGray">
+    <p>
+      Ensure your tax information is correct in order to properly determine the application of Irish Value Added Tax ("VAT")
+    </p>
+  </div>
+</div>

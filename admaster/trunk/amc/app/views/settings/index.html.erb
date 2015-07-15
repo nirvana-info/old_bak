@@ -1,0 +1,602 @@
+<% content_for :head do %>
+    <title>Settings</title>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="#">Settings</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div>
+        <h2 class="uiHeaderTitle">Ad Account Settings</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="setting_form_div">
+  <form onsubmit="" id="ads_settings" name="ads_settings" action="" method="post">
+    <input type="hidden" value="€,´,€,´,水,Д,Є" name="charset_test">
+    <input type="hidden" autocomplete="off" value="AQAlb4Dg" name="fb_dtsg">
+    <input type="hidden" value="66cd154843dfc2102cb7ce92a5739f05" name="post_form_id" id="post_form_id" autocomplete="off">
+    <input type="hidden" value="1" name="updated_settings" id="updated_settings" autocomplete="off">
+    <div class="admgr_account_settings UIAdmgrTitledContentSection">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div><h3 class="uiHeaderTitle">Account Information</h3></div>
+        </div>
+      </div>
+      <div class="phs UIAdmgrTitledContentSection_content">
+        <table class="uiInfoTable noBorder">
+          <tbody>
+          <tr>
+            <th class="label">Account ID:</th>
+            <td class="data">
+              <div>
+                <div>132159193536921</div>
+                <div>
+                  <a class="disable_account" href="#">Close Ads Account</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="dataRow">
+            <th class="label">Account Name:</th>
+            <td class="data">
+              <div><input type="text" value="" name="friendly_name" class="inputtext"></div>
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Currency:</th>
+            <td class="data">US Dollar (USD) </td>
+          </tr>
+          <tr>
+            <th class="label">Time Zone:</th>
+            <td class="data">(GMT-08:00) Pacific Time </td>
+          </tr>
+          <tr class="dataRow">
+            <th class="label">Industry:</th>
+            <td class="data">
+              <select name="account_vertical_type" id="account_vertical_type" class="">
+                <option value="0" selected="selected">Choose one...</option>
+                <option value="1">Affiliate</option>
+                <option value="2">Automotive</option>
+                <option value="3">Beauty/Personal Care</option>
+                <option value="4">Careers/Recruiting</option>
+                <option value="5">Consumer Electronics</option>
+                <option value="6">Consumer Packages Goods (CPG)</option>
+                <option value="7">Dating</option>
+                <option value="8">Education/Training</option>
+                <option value="9">Entertainment/Events/Tickets</option>
+                <option value="10">Financial Services</option>
+                <option value="11">Food/Beverage</option>
+                <option value="12">Games/Gaming</option>
+                <option value="13">Health/Fitness/Diet</option>
+                <option value="14">Healthcare</option>
+                <option value="15">Home/Garden</option>
+                <option value="16">Music/Movies/Media/TV</option>
+                <option value="17">Other Services</option>
+                <option value="18">Public Services</option>
+                <option value="19">Publishing</option>
+                <option value="20">Real Estate</option>
+                <option value="21">Recruiting/HR</option>
+                <option value="22">Restaurant</option>
+                <option value="23">Retail</option>
+                <option value="24">Technology</option>
+                <option value="25">Telecommunications/ISP</option>
+                <option value="26">Travel</option>
+                <option value="27">Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr class="spacer">
+            <td colspan="2"><hr></td>
+          </tr>
+          </tbody>
+          <tbody>
+          <tr class="dataRow">
+            <th class="label">Are you buying Nirvana-info Ads for a business purpose?</th>
+            <td class="data">
+              <div>
+                <label><input type="radio" checked="1" value="1" class="ads_settings_business_yes" name="account_business_purpose">Yes</label>
+              </div>
+              <div>
+                <label><input type="radio" value="0" class="ads_settings_business_no" name="account_business_purpose">No</label>
+                <input type="hidden" value="0" name="account_confirm_not_business" class="ads_settings_confirm_not_business" autocomplete="off"/>
+              </div>
+            </td>
+          </tr>
+          <tr class="spacer">
+            <td colspan="2"><hr></td>
+          </tr>
+          </tbody>
+          <tbody>
+          <tr class="ads_settings_business_address  dataRow">
+            <th class="label">Business Name:</th>
+            <td class="data">
+              <input type="text" value="" name="business_name" class="inputtext"><br/>Enter your own name if you do not have a business name.
+            </td>
+          </tr>
+          <tr class="ads_settings_business_address  dataRow">
+            <th class="label">Business Address:</th>
+            <td class="data">
+              <div class="ads_settings_note">You are representing that this business address is a primary location where you are conducting business.</div>
+            </td>
+          </tr>
+          <tr class="dataRow">
+            <th class="label"></th>
+            <td class="data">
+              <table class="uiInfoTable noBorder">
+                <tbody>
+                <tr class="ads_settings_billing ads_settings_business_address  dataRow">
+                  <th class="label">Street Address 1:</th>
+                  <td class="data"><input type="text" value="356 goodwin drive" name="street1" class="inputtext"></td>
+                </tr>
+                <tr class="ads_settings_billing ads_settings_business_address  dataRow">
+                  <th class="label">Street Address 2:</th>
+                  <td class="data"><input type="text" value="" name="street2" class="inputtext"></td>
+                </tr>
+                <tr class="ads_settings_billing ads_settings_business_address  dataRow">
+                  <th class="label">City / Town:</th>
+                  <td class="data"><input type="text" value="san bruno" name="city" class="inputtext"></td>
+                </tr>
+                <tr class="ads_settings_billing ads_settings_business_address  dataRow">
+                  <th class="label">State / Province / Region:</th>
+                  <td class="data"><input type="text" value="ca" name="region" class="inputtext"></td>
+                </tr>
+                <tr class="ads_settings_billing ads_settings_business_address  dataRow">
+                  <th class="label">Postal Code:</th>
+                  <td class="data"><input type="text" value="94066" name="postal_code" class="inputtext"></td>
+                </tr>
+                <tr class="ads_business_address_country dataRow">
+                  <th class="label">Country:</th>
+                  <td class="data">
+                    <select name="ads_settings_alt_business_country" id="ads_settings_alt_business_country" class="">
+                      <option value="US" selected="selected">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="GB">United Kingdom</option>
+                      <option value="AF">Afghanistan</option>
+                      <option value="AX">Aland Islands</option>
+                      <option value="AL">Albania</option>
+                      <option value="DZ">Algeria</option>
+                      <option value="AS">American Samoa</option>
+                      <option value="AD">Andorra</option>
+                      <option value="AO">Angola</option>
+                      <option value="AI">Anguilla</option>
+                      <option value="AQ">Antarctica</option>
+                      <option value="AG">Antigua</option>
+                      <option value="AR">Argentina</option>
+                      <option value="AM">Armenia</option>
+                      <option value="AW">Aruba</option>
+                      <option value="AU">Australia</option>
+                      <option value="AT">Austria</option>
+                      <option value="AZ">Azerbaijan</option>
+                      <option value="BH">Bahrain</option>
+                      <option value="BD">Bangladesh</option>
+                      <option value="BB">Barbados</option>
+                      <option value="BY">Belarus</option>
+                      <option value="BE">Belgium</option>
+                      <option value="BZ">Belize</option>
+                      <option value="BJ">Benin</option>
+                      <option value="BM">Bermuda</option>
+                      <option value="BT">Bhutan</option>
+                      <option value="BO">Bolivia</option>
+                      <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
+                      <option value="BA">Bosnia and Herzegovina</option>
+                      <option value="BW">Botswana</option>
+                      <option value="BV">Bouvet Island</option>
+                      <option value="BR">Brazil</option>
+                      <option value="IO">British Indian Ocean Territory</option>
+                      <option value="VG">British Virgin Islands</option>
+                      <option value="BN">Brunei</option>
+                      <option value="BG">Bulgaria</option>
+                      <option value="BF">Burkina Faso</option>
+                      <option value="BI">Burundi</option>
+                      <option value="KH">Cambodia</option>
+                      <option value="CM">Cameroon</option>
+                      <option value="CV">Cape Verde</option>
+                      <option value="KY">Cayman Islands</option>
+                      <option value="CF">Central African Republic</option>
+                      <option value="TD">Chad</option>
+                      <option value="CL">Chile</option>
+                      <option value="CN">China</option>
+                      <option value="CX">Christmas Island</option>
+                      <option value="CC">Cocos (Keeling) Islands</option>
+                      <option value="CO">Colombia</option>
+                      <option value="KM">Comoros</option>
+                      <option value="CK">Cook Islands</option>
+                      <option value="CR">Costa Rica</option>
+                      <option value="CI">Côte d'Ivoire</option>
+                      <option value="HR">Croatia</option>
+                      <option value="CW">Curaçao</option>
+                      <option value="CY">Cyprus</option>
+                      <option value="CZ">Czech Republic</option>
+                      <option value="CD">Democratic Republic Congo</option>
+                      <option value="DK">Denmark</option>
+                      <option value="DJ">Djibouti</option>
+                      <option value="DM">Dominica</option>
+                      <option value="DO">Dominican Republic</option>
+                      <option value="EC">Ecuador</option>
+                      <option value="EG">Egypt</option>
+                      <option value="SV">El Salvador</option>
+                      <option value="GQ">Equatorial Guinea</option>
+                      <option value="ER">Eritrea</option>
+                      <option value="EE">Estonia</option>
+                      <option value="ET">Ethiopia</option
+                      ><option value="FK">Falkland Islands</option>
+                      <option value="FO">Faroe Islands</option>
+                      <option value="FM">Federated States of Micronesia</option>
+                      <option value="FJ">Fiji</option>
+                      <option value="FI">Finland</option>
+                      <option value="FR">France</option>
+                      <option value="GF">French Guiana</option>
+                      <option value="PF">French Polynesia</option>
+                      <option value="TF">French Southern Territories</option>
+                      <option value="GA">Gabon</option>
+                      <option value="GE">Georgia</option>
+                      <option value="DE">Germany</option>
+                      <option value="GH">Ghana</option>
+                      <option value="GI">Gibraltar</option>
+                      <option value="GR">Greece</option>
+                      <option value="GL">Greenland</option>
+                      <option value="GD">Grenada</option>
+                      <option value="GP">Guadeloupe</option>
+                      <option value="GU">Guam</option>
+                      <option value="GT">Guatemala</option>
+                      <option value="GG">Guernsey</option>
+                      <option value="GN">Guinea</option>
+                      <option value="GW">Guinea-Bissau</option>
+                      <option value="GY">Guyana</option>
+                      <option value="HT">Haiti</option>
+                      <option value="HM">Heard Island and McDonald Islands</option>
+                      <option value="HN">Honduras</option>
+                      <option value="HK">Hong Kong</option>
+                      <option value="HU">Hungary</option>
+                      <option value="IS">Iceland</option>
+                      <option value="IN">India</option>
+                      <option value="ID">Indonesia</option>
+                      <option value="IQ">Iraq</option>
+                      <option value="IE">Ireland</option>
+                      <option value="IM">Isle Of Man</option>
+                      <option value="IL">Israel</option>
+                      <option value="IT">Italy</option>
+                      <option value="JM">Jamaica</option>
+                      <option value="JP">Japan</option>
+                      <option value="JE">Jersey</option>
+                      <option value="JO">Jordan</option>
+                      <option value="KZ">Kazakhstan</option>
+                      <option value="KE">Kenya</option>
+                      <option value="KI">Kiribati</option>
+                      <option value="KW">Kuwait</option>
+                      <option value="KG">Kyrgyzstan</option>
+                      <option value="LA">Laos</option>
+                      <option value="LV">Latvia</option>
+                      <option value="LB">Lebanon</option>
+                      <option value="LS">Lesotho</option>
+                      <option value="LR">Liberia</option>
+                      <option value="LI">Liechtenstein</option>
+                      <option value="LT">Lithuania</option>
+                      <option value="LU">Luxembourg</option>
+                      <option value="MO">Macau</option>
+                      <option value="MK">Macedonia</option>
+                      <option value="MG">Madagascar</option>
+                      <option value="MW">Malawi</option>
+                      <option value="MY">Malaysia</option>
+                      <option value="MV">Maldives</option>
+                      <option value="ML">Mali</option>
+                      <option value="MT">Malta</option>
+                      <option value="MH">Marshall Islands</option>
+                      <option value="MQ">Martinique</option>
+                      <option value="MR">Mauritania</option>
+                      <option value="MU">Mauritius</option>
+                      <option value="YT">Mayotte</option>
+                      <option value="MX">Mexico</option>
+                      <option value="MD">Moldova</option>
+                      <option value="MC">Monaco</option>
+                      <option value="MN">Mongolia</option>
+                      <option value="ME">Montenegro</option>
+                      <option value="MS">Montserrat</option>
+                      <option value="MA">Morocco</option>
+                      <option value="MZ">Mozambique</option>
+                      <option value="NA">Namibia</option>
+                      <option value="NR">Nauru</option>
+                      <option value="NP">Nepal</option>
+                      <option value="NL">Netherlands</option>
+                      <option value="NC">New Caledonia</option>
+                      <option value="NZ">New Zealand</option>
+                      <option value="NI">Nicaragua</option>
+                      <option value="NE">Niger</option>
+                      <option value="NG">Nigeria</option>
+                      <option value="NU">Niue</option>
+                      <option value="NF">Norfolk Island</option>
+                      <option value="MP">Northern Mariana Islands</option>
+                      <option value="NO">Norway</option>
+                      <option value="OM">Oman</option>
+                      <option value="PK">Pakistan</option>
+                      <option value="PW">Palau</option>
+                      <option value="PS">Palestine</option>
+                      <option value="PA">Panama</option>
+                      <option value="PG">Papua New Guinea</option>
+                      <option value="PY">Paraguay</option>
+                      <option value="PE">Peru</option>
+                      <option value="PH">Philippines</option>
+                      <option value="PN">Pitcairn</option>
+                      <option value="PL">Poland</option>
+                      <option value="PT">Portugal</option>
+                      <option value="PR">Puerto Rico</option>
+                      <option value="QA">Qatar</option>
+                      <option value="CG">Republic of the Congo</option>
+                      <option value="RE">Réunion</option>
+                      <option value="RO">Romania</option>
+                      <option value="RU">Russia</option>
+                      <option value="RW">Rwanda</option>
+                      <option value="BL">Saint Barthélemy</option>
+                      <option value="SH">Saint Helena</option>
+                      <option value="KN">Saint Kitts and Nevis</option>
+                      <option value="MF">Saint Martin</option>
+                      <option value="PM">Saint Pierre and Miquelon</option>
+                      <option value="VC">Saint Vincent and the Grenadines</option>
+                      <option value="WS">Samoa</option>
+                      <option value="SM">San Marino</option>
+                      <option value="ST">Sao Tome and Principe</option>
+                      <option value="SA">Saudi Arabia</option>
+                      <option value="SN">Senegal</option>
+                      <option value="RS">Serbia</option>
+                      <option value="SC">Seychelles</option>
+                      <option value="SL">Sierra Leone</option>
+                      <option value="SG">Singapore</option>
+                      <option value="SX">Sint Maarten</option>
+                      <option value="SK">Slovakia</option>
+                      <option value="SI">Slovenia</option>
+                      <option value="SB">Solomon Islands</option>
+                      <option value="SO">Somalia</option>
+                      <option value="ZA">South Africa</option>
+                      <option value="GS">South Georgia and the South Sandwich Islands</option>
+                      <option value="KR">South Korea</option>
+                      <option value="ES">Spain</option>
+                      <option value="LK">Sri Lanka</option>
+                      <option value="LC">St. Lucia</option>
+                      <option value="SR">Suriname</option>
+                      <option value="SJ">Svalbard and Jan Mayen</option>
+                      <option value="SZ">Swaziland</option>
+                      <option value="SE">Sweden</option>
+                      <option value="CH">Switzerland</option>
+                      <option value="TW">Taiwan</option>
+                      <option value="TJ">Tajikistan</option>
+                      <option value="TZ">Tanzania</option>
+                      <option value="TH">Thailand</option>
+                      <option value="BS">The Bahamas</option>
+                      <option value="GM">The Gambia</option>
+                      <option value="TL">Timor-Leste</option>
+                      <option value="TG">Togo</option>
+                      <option value="TK">Tokelau</option>
+                      <option value="TO">Tonga</option>
+                      <option value="TT">Trinidad and Tobago</option>
+                      <option value="TN">Tunisia</option>
+                      <option value="TR">Turkey</option>
+                      <option value="TM">Turkmenistan</option>
+                      <option value="TC">Turks and Caicos Islands</option>
+                      <option value="TV">Tuvalu</option>
+                      <option value="UG">Uganda</option>
+                      <option value="UA">Ukraine</option>
+                      <option value="AE">United Arab Emirates</option>
+                      <option value="UM">United States Minor Outlying Islands</option>
+                      <option value="UY">Uruguay</option>
+                      <option value="VI">US Virgin Islands</option>
+                      <option value="UZ">Uzbekistan</option>
+                      <option value="VU">Vanuatu</option>
+                      <option value="VA">Vatican City</option>
+                      <option value="VE">Venezuela</option>
+                      <option value="VN">Vietnam</option>
+                      <option value="WF">Wallis and Futuna</option>
+                      <option value="EH">Western Sahara</option>
+                      <option value="YE">Yemen</option>
+                      <option value="ZM">Zambia</option>
+                      <option value="ZW">Zimbabwe</option>
+                    </select>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr class="spacer">
+            <td colspan="2"><hr></td>
+          </tr>
+          </tbody>
+          <tbody class="ads_settings_vat ">
+          <tr class="dataRow">
+            <th class="label">EU VAT Number:</th>
+            <td class="data">
+              <div>
+                <div>
+                  <select id="account_vat_country" class="ads_settings_vat_country" name="account_vat_country">
+                    <option value=""></option>
+                    <option value="AT">AT</option>
+                    <option value="BE">BE</option>
+                    <option value="BG">BG</option>
+                    <option value="CY">CY</option>
+                    <option value="CZ">CZ</option>
+                    <option value="DE">DE</option>
+                    <option value="DK">DK</option>
+                    <option value="EE">EE</option>
+                    <option value="ES">ES</option>
+                    <option value="FI">FI</option>
+                    <option value="FR">FR</option>
+                    <option value="GB">GB</option>
+                    <option value="EL">EL</option>
+                    <option value="HU">HU</option>
+                    <option value="IE">IE</option>
+                    <option value="IT">IT</option>
+                    <option value="LT">LT</option>
+                    <option value="LU">LU</option>
+                    <option value="LV">LV</option>
+                    <option value="MT">MT</option>
+                    <option value="NL">NL</option>
+                    <option value="PL">PL</option>
+                    <option value="PT">PT</option>
+                    <option value="RO">RO</option>
+                    <option value="SE">SE</option>
+                    <option value="SI">SI</option>
+                    <option value="SK">SK</option>
+                  </select>
+                  <input type="text" value="" name="account_vat_code" size="13" class="inputtext ads_settings_vat_code"/>
+                </div>
+                <div class="ads_settings_note">
+                  Please enter your VAT number if your business address is within the European Union (EU). Leave blank if you do not have an EU VAT number.<br/>
+                  Please ensure that you are correctly inputting zero (naught) or the letter "O" for your VAT number.
+                </div>
+                <input type="hidden" value="1" name="account_ask_business" autocomplete="off"/>
+              </div>
+            </td>
+          </tr>
+          <tr class="spacer">
+            <td colspan="2"><hr></td>
+          </tr>
+          </tbody>
+          <tbody>
+          <tr>
+            <th class="label"></th>
+            <td class="data">
+              <label for="u051816_1" class="save_ads_settings uiButton uiButtonConfirm">
+                <input type="submit" id="u051816_1" value="Save Changes"/>
+              </label>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="admgr_account_settings UIAdmgrTitledContentSection">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div><h3 class="uiHeaderTitle">Permissions</h3></div>
+        </div>
+      </div>
+      <div class="phs UIAdmgrTitledContentSection_content">
+        <p class="ads_permission_header">
+          <span class="ads_permission_description">
+            You are the administrator of this account.  You can manage all aspects of campaigns, reporting, billing, and user permissions.
+          </span>
+          <a rel="dialog" href="#" id="ads_permission_button" role="button" class="ads_permission_button uiButton ">
+            <i class="mrs img sp_yeww8o sx_5adae8"></i>
+            <span class="uiButtonText">Add a User</span>
+          </a>
+        </p>
+        <ul class="uiList">
+          <li id="user_permission_100002285232239" class="objectListItem uiListItem uiListLight uiListVerticalItemBorder">
+            <div class="UIImageBlock clearfix UIImageBlock_Entity">
+              <a aria-hidden="true" tabindex="-1" href="#" class="UIImageBlock_Image UIImageBlock_ENT_Image">
+                <img alt="" src="/assets/images/profile.gif" class="img"/>
+              </a>
+              <div class="auxiliary ads_user_remove_button UIImageBlock_Ext">
+                <span class="ads_permission_type_label">Administrator</span>
+                <label for="u051816_2" class="ads_hidden_space_filler uiCloseButton">
+                  <input type="button" id="u051816_2" title="Remove"/>
+                </label>
+              </div>
+              <div class="UIImageBlock_Content UIImageBlock_ENT_Content fsl fwb fcb">
+                <a href="#">尹传文</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="admgr_account_settings UIAdmgrTitledContentSection">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div><h3 class="uiHeaderTitle">Ads Email Notifications</h3></div>
+        </div>
+      </div>
+      <div class="phs UIAdmgrTitledContentSection_content">
+        <p>
+          The Nirvana-info Ads Team notifies you by email when the following actions happen regarding your ads account.
+          You can control which email notifications you receive. Even if you turn off all notifications,
+          we may sometimes need to email you important notices about your account.
+        </p>
+        <p>Email me at <strong>wirror800@hotmail.com</strong> regarding the following issues:</p>
+        <div class="ads_notification_checkboxes">
+          <ul class="ads_notification_list">
+            <li>
+              <input type="checkbox" value="1" name="account_budget_changed" id="account_budget_changed" checked="checked" class="inputcheckbox "/>
+              <label id="label_account_budget_changed" for="account_budget_changed">Daily Budget Change </label>
+              <div class="li_description">A confirmation email when you change the daily budget of one of your campaigns.</div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="adgroup_disapproved" id="adgroup_disapproved" checked="checked" class="inputcheckbox "/>
+              <label id="label_adgroup_disapproved" for="adgroup_disapproved">Ad Disapproved </label>
+              <div class="li_description">An email notification when an ad you submit is not approved to run.</div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="adgroup_preapproved" id="adgroup_preapproved" checked="checked" class="inputcheckbox "/>
+              <label id="label_adgroup_preapproved" for="adgroup_preapproved">Ad Requires Editing </label>
+              <div class="li_description">An email notification when you need to approve the suggested edits to your ad in order for your ad to begin running.</div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="adgroup_approved" id="adgroup_approved" checked="checked" class="inputcheckbox "/>
+              <label id="label_adgroup_approved" for="adgroup_approved">Ad Approved </label>
+              <div class="li_description">An email notification when an ad you submit is approved to run.</div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="coupon_expiring" id="coupon_expiring" checked="checked" class="inputcheckbox "/>
+              <label id="label_coupon_expiring" for="coupon_expiring">Coupon Expiring </label>
+              <div class="li_description">
+                An email notification when your coupon is near its expiration date and we will soon begin charging your card for any campaigns that are still running.
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="account_charged" id="account_charged" disabled="disabled" checked="checked" class="inputcheckbox "/>
+              <label id="label_account_charged" for="account_charged">Payment Completed </label>
+              <div class="li_description">
+                An email notification any time your credit card is charged. This notification cannot be turned off from this page.
+                To turn off this notification, you will need to click the unsubscribe link at the bottom of any "Account Charged" email you receive.
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="account_newsletter" id="account_newsletter" checked="checked" class="inputcheckbox "/>
+              <label id="label_account_newsletter" for="account_newsletter">Newsletters and Product Updates </label>
+              <div class="li_description">
+                Periodic emails from Nirvana-info with useful information about new advertising features, optimization tips, policy updates, and other news.
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="account_weekly_summary" id="account_weekly_summary" checked="checked" class="inputcheckbox "/>
+              <label id="label_account_weekly_summary" for="account_weekly_summary">Account Summary Email (Frequency:
+                <select name="account_weekly_summary_select" id="account_weekly_summary_select" class="">
+                  <option value="1" selected="selected">Weekly</option>
+                  <option value="2">Monthly</option>
+                </select>)
+              </label>
+              <div class="li_description">
+                Periodic emails from Nirvana-info with a summary of the performance of your ads. This email also includes helpful tips and tricks.
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" value="1" name="reports_finished" id="reports_finished" checked="checked" class="inputcheckbox "/>
+              <label id="label_reports_finished" for="reports_finished">Scheduled Reports </label>
+              <div class="li_description">
+                An email notification when an scheduled report you subscribe to finishes. If this is not turned on,
+                you will never get emails from scheduled reports, even if you are subscribed.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="submission">
+      <label for="u051816_3" class="save_ads_settings uiButton uiButtonConfirm">
+        <input type="submit" id="u051816_3" value="Save Changes"/>
+      </label>
+    </div>
+  </form>
+</div>

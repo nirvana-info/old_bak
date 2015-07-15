@@ -1,0 +1,338 @@
+/*** Campaign page ***/
+.UIFullPage_Container{width:940px;padding:0 12px;margin:20px auto 0}
+.ads_create .ads_create_container{width:760px;padding-bottom:15px}
+.ads_create .step{margin-bottom:25px}
+.ads_create .step_header{background-color:#e6e6e6;font-size: 11px;padding:5px 7px}
+.ads_create .step_content{float:left;width:510px}
+.ads_create .step_help{float:right;width:190px}
+.ads_create .ads_create_section,
+.UIAdDelivery_Section{padding:0 0 15px 0}
+.ads_create .ads_create_section .section_label,
+.UIAdDelivery_SectionLabel{font-weight:bold;margin-right:.4em}
+.UIAdDelivery_SectionOption{margin-right:.5em}
+.ads_create .ads_create_section .section_subtext,
+.UIAdDelivery_SectionSubtext{color:#777}
+.ads_create .ads_create_section .section_content,
+.UIADDelivery_SectionContent{padding:2px 0 0 0}
+#ad_creative_adspace .creative_inputs{float:left;width:338px}
+#ad_creative_adspace .ads_create_section .content{padding:2px 0 0 0}
+#ad_creative_adspace .ads_create_section .inputtext,
+#ad_creative_adspace .ads_create_section textarea{width:328px}
+#ad_creative_adspace #website_url{margin-left:5px;width:247px}
+#ad_creative_adspace #cap_warning_box{background-color:#fff9d7;border:1px solid #e2c822;padding:10px;margin:5px 0}
+#ad_creative_adspace .content_selector_show,
+#ad_creative_adspace .content_selector_hide{display:block;padding:5px 0 0 0}
+#ad_creative_adspace .fbid_selector{width:338px}
+.ad_image_upload{background-color:#f7f7f7}
+.ad_invalid_img_msg{color:#f00}
+#ad_creative_adspace .remove_image_link{display:block}
+#image_upload_progress{padding:5px 0 0 0}
+#image_upload_progress img{margin-right:.4em}
+#ad_creative_adspace .creative_column{float:left;margin:0 0 0 10px;width:162px}
+#ad_creative_adspace .creative_preview{background-color:#fff;margin-top:16px}
+#ad_creative_adspace .creative_preview_loading{margin-top:5px;text-align:center}
+#targeting_editor{float:left;width:500px}
+#targeting_editor .targeting_table tr{vertical-align:top}
+#targeting_editor td.label{color:#000;padding:7px 10px 1px 0;width:95px}
+#targeting_editor .sub_options{padding-left:19px}
+#targeting_editor .standard_tokenizer .tokenizer{border:1px solid #bdc7d8;width:310px}
+#targeting_editor .sub_options .standard_tokenizer .tokenizer{width:291px}
+#targeting_editor .checkbox_set .checkbox{float:left;padding:0 10px 0 0}
+#targeting_editor #radius_targeting{padding:5px 0 0 0}
+#targeting_editor .location_options{padding:5px 0 0 0}
+#targeting_editor .education_options{padding:3px 0 0 0}
+#targeting_editor .location_option,
+#targeting_editor .education_option{padding:0 0 5px 0}
+#targeting_editor #college_table_row .standard_tokenizer{padding:0 0 5px 0}
+#targeting_editor #keyword_expansion{padding:5px 0 5px 0}
+#targeting_editor #keyword_expansion .label{font-weight:bold;padding:0 0 2px 0}
+#targeting_editor #keyword_expansion .checkbox{padding:0 0 5px 0}
+#targeting_editor .targeting_connections,
+#targeting_editor .targeting_connections_negative,
+#targeting_editor .targeting_friends_of_connections{padding:4px 0}
+#college_years_row .college_years_description,
+#college_years_row .college_years_selectors{padding:0 0 5px}
+#targeting_editor .checkbox_set{padding-bottom:1px}
+#targeting_editor #keywords,
+#targeting_editor #workplace{margin-top:-2px}
+#targeting_editor ul.ads_estimate_lines{list-style-type:square;margin-top:0;padding-left:1.25em;padding-top:0}
+.reach_statement{padding:5px 0 10px 0}
+.reach_statement #audience_size{padding:0 0 5px 0}
+.reach_statement .audience_number{font-size: 16px;font-weight:bold}
+ul.ads_estimate_lines li span.targeting_term_line{color:#777}
+span.targeting_term{color:#333;font-weight:bold}
+.help_section{padding:0 0 10px 0}
+.help_section h3{font-size: 11px}
+.help_section .help_body{color:#777}
+.help_section .help_body a{color:#8d9ccf;display:block}
+.social_actions_dialog img{float:left;margin-right:10px}
+.ads_create .bottom_bar{padding:0 0 0 22px}
+.ads_create .bottom_bar #ads_create_validate_progress{margin:0 0 0 5px}
+.ads_create .bottom_bar .buttons{float:left}
+.ads_create .bottom_bar #new_advertiser_help_link{display:inline-block;padding:5px 0 0 15px}
+.ads_create .bottom_bar #new_advertiser_help_link .UIImageBlock_Content{display:inline;width:auto}
+.ads_create .bottom_bar .ads_terms_and_conditions{clear:both}
+.ads_create #ad_delivery{margin-bottom:15px}
+#adMaster .ads_create .hidden{display:none}
+.ads_create label{color:#000;font-weight:normal}
+.ads_create label.adcreate_account_selector{margin-right:5px}
+.ads_create .inputcheckbox{margin:0 5px 0 0}
+.ie6 .ads_create .inputradio,
+.ie7 .ads_create .inputradio{height:14px;width:14px}
+.ads_create .status{margin-bottom:20px}
+.ads_create .contextual_help{margin-left:5px}
+.UIAdTargeting_Keywords .contextual_help,
+.UIAdTargeting_Connections .UIAdTargetingTableColumn .contextual_help{display:block;float:left}
+.ads_create .ad_create_help_dialog .generic_dialog_popup{width:250px}
+.ads_create .contextual_dialog h3{font-size: 11px;margin-bottom:5px}
+.ads_create .error_border{border:1px solid #dd3c10}
+.ads_create ul.error_box,
+ul.UIAdDelivery_ErrorBox{margin:5px 3px 5px 20px;padding:0;color:#dd3c10;list-style:square}
+.ads_create .step_header_error{background-color:#ffebe8;border-bottom:1px solid #dd3c10;padding:5px 7px}
+.ads_create ul.error_box li,
+ul.UIAdDelivery_ErrorBox li{padding-bottom:3px}
+.ads_create .uiHeaderActions a{margin-left:10px}
+.ui_admgr_page_billing div.account_heading{padding-top:0}
+.ui_admgr_page_billing div.whats_this{display:inline}
+.billing_currency{float:right;font-size: 11px;padding-top:3px}
+.billing_filters{padding-bottom:10px}
+.account_billing_panels{padding-top:15px}
+.account_billing_panels h2{margin-bottom:6px;font-size: 11px;color:#666}
+.account_billing_panels span{font-weight:bold}
+.outstanding_balance,.max_daily_spend{float:left;width:290px;margin-right:15px}
+.details_header,.invoice_header{padding:0 0 5px 0}
+.details_header .title,.invoice_header .title{float:left;font-size: 14px;font-weight:bold}
+.invoice_header .desc{float:right;color:#666}
+.transaction_component{padding-top:25px}
+.print_invoice_header{color:#777;margin-bottom:20px}
+.print_invoice_header #fbLogo{float:left;margin-right:10px}
+.print_invoice_header .fb_address{float:left;line-height:1.3em}
+.print_invoice_header .business_info{float:right;line-height:1.3em;text-align:right}
+.ui_admgr_page_billing table.transaction_details{border-top:2px solid #bbb;width:100%}
+.ui_admgr_page_billing table.transaction_details td{border-bottom:1px solid #e9e9e9;padding:13px 0 11px}
+.ui_admgr_page_billing table.transaction_details .td_details_label{color:#999;font-weight:bold;padding-right:10px;vertical-align:top;width:105px}
+.ui_admgr_page_billing .datakit_table .totals_alternate{font-weight:bold}
+.ui_admgr_page_billing .fund_src_content{color:#000}
+.ui_admgr_page_billing .fund_src_expired{color:#808080}
+.ui_admgr_page_billing .fundsource .fund_src_groups{border-top:1px solid #eee}
+.ui_admgr_page_billing .no_fund_srcs_txt{font-size: 13px;text-align:center;padding:20px}
+.ui_admgr_spend_cap{margin:30px}
+.adsAccountSpendCap{position:relative}
+.adsAccountSpendCap .editData{background-color:#dadfe9;border:1px solid #919ccd;left:-19px;padding:10px;position:absolute;top:-15px;width:350px}
+.adsAccountSpendCap .inputtext{margin:0 3px;width:100px}
+.adsAccountSpendCap .clearSpendButton{left:103px;position:absolute;top:13px}
+.adsAccountSpendCap .removeLimitDiv{margin-top:3px}
+.adsAccountSpendCap .removeLimitDiv label{color:#333;font-weight:normal}
+.adsAccountSpendCap .saveButton,
+.adsAccountSpendCap .cancelButton{margin:0 3px}
+.datakit_table{background-color:#fff;width:100%;border-bottom:solid 1px #a6a6a6;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05)}
+.datakit_table th{background:#eee url(../images/lock_icon.png) repeat 0 0;border:solid 1px #999;border-bottom-color:#888;border-right:none;line-height:normal !important;padding:3px 6px 4px;vertical-align:middle;white-space:nowrap}
+.datakit_table th.last{border-right:solid 1px #999}
+.datakit_table th{padding:3px 6px}
+.datakit_table td{padding:6px 7px}
+.datakit_table .even td{background-color:#f2f2f2;border-left:solid 1px #fbfbfb}
+.datakit_table td.first{border-left:solid 1px #bbb !important}
+.datakit_table td.last{border-right:solid 1px #bbb}
+.datakit_table tr.totals td{background-color:#fff;border-top:1px solid #dfdfdf;font-weight:bold}
+.datakit_table .right{text-align:right}
+.datakit_table .no_data{padding:30px 0;text-align:center}
+
+.adgroup_schedule th,
+.adgroup_schedule td{padding:5px 4px 5px 0;white-space:nowrap;border-bottom:1px solid #bdc7d8;text-align:center}
+.adgroup_schedule{border-collapse:collapse;margin-bottom:5px}
+.UIAdCreativeForm .inputtext,
+.UIAdCreativeForm textarea{width:350px}
+.UIAdCreativeForm select{width:359px}
+.UIAdCreativeForm .form_input{float:left}
+.UIAdCreativeForm .character_count{padding-top:3px;text-align:right}
+.UIAdCreativeForm .character_count span{padding-right:2px}
+.UIAdCreativeForm .suggest_ad.hidden{display:none}
+.UIAdCreativeForm .uiBoxRed.hidden{display:none}
+.UIAdCreativeForm table.uiInfoTable{width:auto}
+.ads_create .direct_sales{background-color:#fff9d7;border:1px solid #e2c822;padding:10px;margin:15px 0;width:450px}
+#ad_creative_adspace #label_website_url_is_internal{font-weight:normal}
+#ad_creative_adspace #corp_pixel_src{width:280px}
+#ad_creative_iframe .inputtext,
+#ad_creative_iframe textarea{width:332px}
+#ad_creative_iframe .flash_js_link{display:block;margin:0 0 5px 0}
+#targeting_editor table.direct_sales tr{vertical-align:top}
+.AdsCreateSection_ThumbSelector .UIThumbPager{float:left;width:100px}
+.AdsCreateSection_ThumbSelector .UIThumbPager .UIThumbPager_Thumbs{width:100px}
+.AdsCreateSection_ThumbSelector .UIThumbPagerControl{width:300px;left:10px}
+.AdsCreateSection_ThumbSelector .UIThumbPagerControl
+.UIThumbPagerControl_PageNumber{margin-left:5px}
+.UIAdDelivery{float:left;width:100%}
+.UIAdDelivery_CampaignOption,
+.UIAdDelivery_PricingOption{padding:0 0 5px 0}
+.UIAdDelivery_CampaignInfo,
+.UIAdDelivery_CampaignTimespan,
+.UIAdDelivery_ExistingInfo,
+.UIAdDelivery_DayPartInfo,
+.UIAdDelivery_PricingInfo{padding:5px 0 10px 19px}
+.UIAdelivery_NewAdvertiserCampaignInfo{padding:0}
+.UIAdDelivery_ExistingInfo .UIAdDelivery_Section{clear:left;overflow:hidden;padding-bottom:3px}
+.UIAdDelivery_ExistingInfo .UIAdDelivery_SectionLabel{display:block;float:left;font-weight:normal;width:95px}
+.UIAdDelivery_ExistingInfo .UIAdDelivery_SectionContent{float:left;width:300px}
+.UIAdDelivery_ExistingInfo .UIAdDelivery_CampaignSchedule{padding-top:4px}
+.UIAdmgrCampaignBudgetEditor .budget_value{display:inline-block;margin-right:5px}
+.UIAdDelivery_AccountTimezoneDisplayName{padding-left:4px}
+.UIAdDelivery_ExistingInfo .UIAdDelivery_CampaignName
+span.UIAdDelivery_SectionLabel{padding-top:4px}
+.UIAdDelivery_NewInfo .UIAdDelivery_ScheduleOptions{padding:5px 0 0 0}
+.UIAdDelivery_NewInfo .UIAdDelivery_ScheduleOption,
+.UIAdDelivery_BudgetOption{padding:0 0 5px 0}
+.UIAdDelivery_NewInfo .UIAdDelivery_CampaignTimespan{padding:0 0 0 19px}
+.UIAdDelivery_NewInfo .UIAdDelivery_CampaignTimespan
+.UIAdDelivery_DateSelector{margin:0 0 5px 0}
+.UIAdDelivery_CampaignTimespan .UIAdDelivery_DateSelectorPostLabel{margin-left:.4em}
+.UIAdDelivery_PricingInfo .UIAdDelivery_BidEstimate{margin:0 0 0 .4em}
+.UIAdDelivery_InventoryEstimate{padding-top:8px}
+.UIAdDelivery_SimplePricing{width:500px}
+.UIAdDelivery_SimplePricingOptIn{padding-top:5px}
+.UIAdDelivery_SimplePricingOptOut{padding-top:4px}
+.UIAdDelivery_SimpleSuggestedBid{font-weight:bold}
+.UIAdDelivery_BannerOptions{padding-top:15px}
+.UIAdDelivery_DirectSales label{color:#000;font-weight:normal}
+.UIAdDelivery_PlacementOption,.UIAdDelivery_ImpControlOption,.UIAdDelivery_BannerOption{padding:5px 0 0 0}
+.UIAdDelivery_FreqCapValueSelect,.UIAdDelivery_ReachBlockValueSelect{padding:0 0 5px 0}
+.UIAdDelivery_DirectSales,.UIAdDelivery_LifetimeBudget{background-color:#fff9d7;border:1px solid #e2c822;margin-top:15px;padding:10px}
+.UIAdDelivery_DirectSales,.UIAdDelivery_CampaignImps{background-color:#fff9d7;border:1px solid #e2c822;margin-top:15px;padding:10px}
+.UIAdDelivery_DirectSales,.UIAdDelivery_LifetimeImps{background-color:#fff9d7;border:1px solid #e2c822;margin-top:15px;padding:10px}
+.UIAdTargetingTable_CategorySwitchLinks{width:300px}
+.UIAdmgrCampaignDetails{width:100%}
+.UIAdmgrCampaignDetails .dateselectpro{float:left}
+.UIAdmgrCampaignDetails .datebox{float:left;padding-right:5px}
+.UIAdmgrCampaignDetails .timeselect{float:left}
+.UIAdmgrCampaignDetails .budgetStr{margin-right:5px;width:100px}
+.UIAdmgrCampaignDetails .campaignName{width:250px}
+.UIAdmgrCampaignDetails h3{font-size: 11px}
+.UIAdmgrCampaignDetails .budgetLabel{padding-top:0}
+.UIAdmgrCampaignDetails .sectionLabel{padding-top:25px}
+.UIAdmgrCampaignDetails .rowLabel{color:#666;font-weight:bold;padding:3px 10px 1px 0;text-align:right;vertical-align:top;width:130px}
+.UIAdmgrCampaignDetails .rowColumn{color:#333;padding:0 0 10px 0;vertical-align:top}
+.UIAdmgrCampaignDetails .timezoneStr{float:left;margin-top:3px;padding-left:5px}
+.UIAdDelivery_DeliveryScheduling{padding:10px 0}
+
+.dailySubText, .lifetimeSubText, .dailyImpsSubText, .lifetimeImpsSubText{color:#777;padding:2px 0 5px 0}
+.budgetToggleWarning{background-color:#fff9d7;border:1px solid #e2c822;margin:10px;padding:15px}
+.budgetToggleDynamicWarning{padding:0 0 10px 0}
+.lifetimeMsgDiv{margin:0 0 15px;width:350px}
+.contextual_help{margin-left:5px}
+.ongoingCheckDiv{clear:both}
+.UIAdmgrCampaignDetails label{color:#000;font-weight:normal}
+.UIAdmgrCampaignDetails .toggleLink{margin-bottom:10px}
+.left_container,.right_container{background:none repeat scroll 0 0 #fff;border:1px solid #ccc;float:left;height:170px;overflow-x:hidden;overflow-y:scroll;padding:2px 0 2px 0;width:190px}
+.left_container label{display:block;margin:1px 0;padding:4px 0 4px 10px;vertical-align:middle}
+.left_container .count_arrow_box{float:right}
+.left_container .count_box{background:#d8dfea;-moz-border-radius:2px;color:#3b5998;font-size: 9px;font-weight:bold;margin:0 3px;padding:2px 4px}
+.left_container .left_arrow{background:transparent url(../images/right_arrow.gif) no-repeat;float:right;margin:3px;padding:5px}
+.left_container .selected_label,.right_container .selected_label,.selected_container .selected_label{background:#d8dfea}
+.left_container .selected_label .left_arrow{background:transparent url(../images/right_arrow_deep.gif) no-repeat}
+.left_container .selected_label:hover,.right_container .selected_label:hover,.selected_container .selected_label:hover{background:#d8dfea}
+.left_container label:hover,.right_container label:hover,.selected_container label:hover{background:#eff2f7}
+.search_container{margin:0 0 5px 0}
+.search_container input{width:308px}
+.selected_container{background:none repeat scroll 0 0 #fff;border:1px solid #ccc;float:left;height:170px;overflow-x:hidden;overflow-y:scroll;padding:2px 0 2px 0;width:392px}
+.right_container label,.selected_container label{display:block;margin:1px 0;padding:2px 5px 2px 10px;vertical-align:middle}
+.link_container{float:left;margin:10px 0;width:392px}
+.link_container span{font-weight:bold;margin:0 5px 0 0}
+.link_container a{margin:0 0 0 5px}
+
+.tokenizer{min-height:5px;padding:0 0 3px 3px;width:100%;background:#fff;font-size: 11px}
+.tokenizer_locked{background:#f4f4f4}
+.tokenizer,.tokenizer *{cursor:text}
+.tokenizer .placeholder{color:#777;float:left;margin-top:5px}
+.tokenizer input{width:100%}
+.tokenizer .tokenizer_input,.tokenizer .token{float:left;margin-right:3px;margin-top:3px}
+.tokenizer .tab_stop,.tokenizer .tokenizer_stretcher{display:block;float:left;overflow:hidden}
+.tokenizer .tab_stop{height:1px;width:1px}
+.tokenizer .tokenizer_stretcher{width:0;padding-top:7px}
+#adMaster .tokenizer .tab_stop input{border:0 solid black;display:inline;position:relative;left:-500px}
+.tokenizer_input_borderless div{left:4px;margin-left:-1px;overflow:hidden;position:relative}
+.tokenizer_input_borderless div input{border:3px solid white!important;border-left:none;display:block;margin:-2px 0 -2px -2px;padding:0!important}
+.tokenizer div:-moz-first-node{padding-top:1px!important}
+.tokenizer_input{max-width:450px;overflow:hidden;padding:1px 0}
+#adMaster .tokenizer_input input,.tokenizer_input_shadow{border:0 solid black;font-family:'lucida grande', tahoma, verdana, arial, sans-serif;font-size: 11px;padding:0 5px;white-space:pre}
+.tokenizer_input_shadow{display:inline;left:-10000px;position:absolute;top:-10000px}
+.tokenizer .tokenizer_input_shadow{height:0;display:block;left:0;overflow:hidden;position:relative;top:0}
+div.tokenizer .inline_placeholder{color:#777;display:block;float:left;padding:5px 0 0 2px}
+div.tokenizer .token{background-image:url(../images/gray_box.gif);background-repeat:no-repeat;color:#000;white-space:nowrap}
+div.tokenizer .token span{background-image:url(../images/gray_box.gif);background-position:top right;background-repeat:no-repeat;display:block}
+div.tokenizer .token span span{background-position:bottom right}
+div.tokenizer .token span span span{background-position:bottom left}
+div.tokenizer .token span span span span{background-image:none;padding:2px 3px 2px 5px}
+div.tokenizer.tokenizer_locked .token span span span span{padding-right:5px}
+html div.tokenizer_locked .token:hover,html div.tokenizer_locked .token:hover span{background-image:url(../images/gray_box.gif)}
+div.tokenizer .token:hover,div.tokenizer .token:hover span{background-image:url(../images/gray_box_deep.gif);text-decoration:none}
+div.tokenizer .token_selected,div.tokenizer .token_selected span,div.tokenizer .token_selected:hover,div.tokenizer .token_selected:hover span{background-image:url(../images/blue_box.gif);color:#fff;text-decoration:none}
+div.tokenizer .token span.x,div.tokenizer .token span.x_hover,div.tokenizer .token:hover span.x,div.tokenizer .token:hover span.x_hover{background:url(../images/main.png) no-repeat -842px -64px;cursor:pointer;display:inline;padding:0 6px 0 5px}
+div.tokenizer.tokenizer_locked .token span.x,div.tokenizer.tokenizer_locked .token span.x_hover{display:none}
+div.standard_tokenizer div.tokenizer{border:solid 1px #8f96bd}
+
+.UIAdTargetingLocation_LocationOptions{clear:both;padding:5px 0 0 0}
+.AdsTargetingLocationSubOptions{padding-left:20px}
+.UIAdTargetingLocation_Radius{clear:both;padding:5px 0 0 0}
+.UIAdTargetingLocation_Radius .inputcheckbox{margin:0 5px 0 0}
+.UIAdTargeting_ConnectionsWarningDiv,
+.UIAdTargeting_ReviewWarningDiv,
+.UIAdDelivery_BidWarningDiv{background-color:#fff9d7;border:1px solid #e2c822;margin:5px 0;padding:10px}
+.UIAdTargeting_ConnectionsWarningDiv,
+.UIAdTargeting_ReviewWarningDiv{width:340px}
+.UIAdTargeting_Inputs{position:relative}
+.UIAdTargeting_Section{padding-top:25px}
+.step .UIAdTargeting_Location{padding-top:0}
+.UIAdTargeting_SocialOnlyDescription{padding-top:4px;float:left}
+.UIAdTargeting_CheckBoxLine{float:left}
+.UIAdTargetingTable{float:left;width:600px}
+.UIAdTargetingTable_Label{color:#666;font-weight:bold;padding:3px 10px 1px 0;text-align:right;width:130px;vertical-align:top}
+.UIAdTargetingLocation_ExactAgeCheckContainer,
+.UIAdTargetingLocation_BdayCheckContainer,
+.UIAdTargetingLocation_FriendsBdayCheckContainer{padding-top:5px}
+.UIAdTargetingLocation_ExactAgeCheck,
+.UIAdTargetingLocation_BdayCheck,
+.UIAdTargetingLocation_FriendsBdayCheck{margin:0 5px 0 0}
+.UITargeting_Checkbox{margin:0 5px 0 0;vertical-align:middle}
+.UIAdTargetingTableColumn .tokenizer{float:left;width:350px}
+.UIAdTargetingTableColumn .adsTypeaheadBox{float:left;width:350px}
+.UITargeting_Option{padding:0 30px 0 0}
+.UIAdTargetingEduWork_AlumniDetails, .UIAdTargetingEduWork_CollegeDetails{padding:0 0 3px 20px}
+.UIAdTargetingEduWork_All{width:60px}
+.UIAdTargetingEduWork_AlumniDetails .tokenizer,
+.UIAdTargetingEduWork_CollegeDetails .tokenizer{margin:0 0 5px 0;width:260px}
+.UIAdTargetingEduWork_CollegeGraduationYears{clear:both}
+.UIAdTargetingEduWork_CollegeGraduationYearSelector{padding-top:3px}
+.UIAdTargetingTable .inputcheckbox{margin-left:0}
+.UIAdTargetingTable label{color:#000;font-weight:normal}
+.UIAdTargetingLikes_SuggestionsLabel{font-weight:bold;padding:0 0 2px}
+.UIAdTargetingLikes_CheckboxTable{width:100%}
+.UIAdTargetingLikes_CheckboxTable .inputcheckbox{margin-bottom:5px}
+.UIAdTargetingConnections_SubText{padding:4px 0}
+.UIAdTargetingLocation_Cities .tokenizer,
+.UIAdTargetingLocation_Regions .tokenizer{width:330px}
+.UIAdTargetingDemographics_AgeSpacer{padding:0 2px}
+.UIAdTargeting_ReachBlockWrapper{position:absolute;right:-223px;top:0;width:188px}
+.UIAdTargeting_ReachBlock{width:168px}
+.UITargeting_reachBlockFloat{position:fixed;top:10px}
+.UIAdTargeting_ReachBlock_Label{color:#777;padding-bottom:3px}
+.UIAdTargeting_ReachAudienceSize .audience_number{font-size: 18px;font-weight:bold}
+.UIAdTargeting_ReachAudienceSize{padding:0 0 5px 0}
+.UIAdTargeting_ImpressionEstimate .impressions_estimate{padding-bottom:6px}
+.UIAdTargeting_EstimateLines{list-style-type:square;padding-left:15px}
+.UIAdTargeting_TermLine{color:#777}
+.UIAdTargeting_TermLine .targeting_term{color:#333;font-weight:bold}
+.step .UIAdTargeting_AdvType{padding:0 0 25px 0}
+.UIAdTargetingSimple_HideableSection{margin-bottom:5px}
+.UIAdTargetingSimple_HideableSection .UIAdTargeting_Demographics{padding-top:0}
+
+.dateselectpro .datebox .inputtext{width:75px;background-image:url(../images/calendar.gif);background-position:4px 50%;background-repeat:no-repeat;padding-left:26px}
+.dateselectpro{position:relative}
+.dateselectpro .datebox{float:left;padding-bottom:4px}
+.dateselectpro .timeselect{float:left;text-align:right;width:90px}
+.dateselectpro .timeselect .timedisc{color:#555;display:block;float:left;font-weight:bold;padding:4px 5px}
+.dateselectpro .timeselect .typeahead_time{float:left;width:68px}
+.dateselectpro .typeahead_found{background-color:#fff}
+
+
+
+
+

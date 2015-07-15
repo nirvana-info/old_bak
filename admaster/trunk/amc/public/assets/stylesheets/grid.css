@@ -1,0 +1,468 @@
+.admgr_dashboard{margin-bottom:20px}
+.admgr_notifications{float:left;width:50%}
+.admgr_daily_spend{float:right;width:49%}
+.empty_notifications{color:#777;font-size: 12px}
+ul#notifications_list li{margin-bottom:10px}
+ul#notifications_list .datetime{color:#888;font-size: 9px;margin-bottom:2px}
+ul#notifications_list ul{list-style:square;margin:0 0 5px 15px;padding:0}
+ul#notifications_list li li{font-size: 12px;margin-bottom:2px}
+#daily_stats_table .datetime{color:#888;font-size: 12px;padding-bottom:3px;width:52px}
+#daily_stats_table .spend{color:#000;font-size: 12px;padding:0;text-align:right}
+.UIAdmgrDatePicker{float:left;margin-right:5px}
+.UIAdmgrDatePicker_text{color:#777;float:left;padding-left:7px;padding-top:4px}
+.UIAdmgrDatePicker_selector{float:left}
+.UIAdmgrDatePicker_customDateRangeSelector{margin-left:5px;float:left}
+.UIAdmgrDatePicker_customDateRangeSelector a.text{border:1px solid #bdc7d8;background-image:url(../images/calendar.gif);background-position:4px 50%;background-repeat:no-repeat;padding:3px 7px 3px 26px;display:block}
+.UIAdmgrDatePicker_customDateRangeSelector a.text:hover{cursor:text}
+
+.UIActionButtonIcon i.img{background-image:url(../images/lock_icon.png);display:inline-block;height:13px;margin:0;width:8px}
+.UIActionMenu{cursor:pointer;font-size: 11px;position:relative;border-bottom:1px solid #ebebeb;margin-bottom:-1px}
+.UIActionMenu a:hover{text-decoration:none}
+.UIActionMenu_Wrap{position:relative;background-position:left top;border:1px solid #999;border-bottom:1px solid #888;cursor:pointer;display:block;height:20px;padding:0 18px 0 6px;zoom:1}
+.UIActionMenu_Chevron,.UIActionMenu_Text,.UIActionMenu_Icon{line-height:20px}
+.UIActionMenu_Chevron{background:no-repeat left -193px;height:20px;position:absolute;right:0;top:-1px;width:20px}
+.UIActionMenu_Text{color:#333;font-weight:bold;padding:0 3px 0 2px;white-space:nowrap}
+.UIActionMenu_Icon{height:20px;left:2px;position:absolute;top:0}
+.UIActionMenu_Lock{background-position:left -217px;width:16px}
+.UIActionMenu_People{background-position:left -475px;width:16px}
+.UIActionMenu_IconIncluded .UIActionMenu_Wrap{padding-left:18px}
+.UIActionMenu_Menu{border:1px solid #444;left:0;position:absolute;visibility:hidden;top:21px}
+.UIActionMenu_Upward .UIActionMenu .UIActionMenu_Menu{bottom:24px;left:auto;right:0;top:auto}
+.UIActionMenu_AlignRight .UIActionMenu_Menu{left:auto;right:0}
+.UIActionMenu_Wrap,.UIActionMenu_Icon,.UIActionMenu_Chevron,.UIActionMenu_SuppressButton .UIActionMenu_Wrap:hover{background-image:url(../images/lock_icon.png)}
+.UIActionMenu_SuppressButton{border-color:transparent}
+.UIActionMenu_SuppressButton .UIActionMenu_Wrap{background-image:none;border-color:transparent}
+.UIActionMenu_SuppressButton .UIActionMenu_Wrap:hover{border-color:#999;border-bottom-color:#888;-moz-box-shadow:0 1px 0 rgba(0,0,0,.1)}
+.openToggler .UIActionMenu_SuppressButton .UIActionMenu_Wrap{border-color:#444}
+.UIActionMenu_SuppressText .UIActionMenu_Text{display:none}
+.UIActionMenu_Blue .UIActionMenu_Text{color:#3b5998}
+.UIActionMenu_Blue .UIActionMenu_Lock{background-position:left -265px}
+
+.UIAdmgrPageHeader h2 span{font-weight:normal}
+.UIAdmgrPage .hasBox{border-top:1px solid #ccc;background-color:#f2f2f2;margin-left:-7px;margin-right:-7px;padding:6px 7px}
+.UIAdmgrPage_actionbar .uiButton{float:left}
+.UIAdmgrPage_actionbar #async_spinner{float:left;margin:6px 0 0 3px}
+.UIAdmgrPage_actionbar #view_report{float:left;margin:0 0 0 6px}
+.UIAdmgrPage_actionbar .UIPager{float:right}
+.adgroup_info_wrap{padding:0 266px}
+.adgroup_inline_edit .preview{float:left;margin-left:-266px;width:256px}
+.adgroup_inline_edit .targeting{float:left;width:100%}
+.adgroup_inline_edit .performance{float:left;margin:0 -266px 0 10px;width:256px}
+.UIAdmgrPage tr.clickable:hover{cursor:pointer}
+.UIAdmgrPage .UITable tr.inline_edit:hover td{background-color:#fff}
+.UIAdmgrPage tr.hidden{display:none}
+.UIAdmgrPage tr.inline_edit td.inline_edit_wrapper{border-style:solid;border-color:#bbb}
+.UIAdmgrPage tr.inline_edit td{padding:0;border-width:0 1px 1px;height:0;text-align:left}
+.UIAdmgrPage tr.inline_edit .inline_edit_wrapper{overflow-y:hidden;height:0}
+.inline_edit_wrapper #targeting_sentence{padding:0 5px}
+.inline_edit_wrapper .close_button{clear:both;text-align:center}
+.preview_links{padding-top:5px}
+.miniGraphSelectorPlaceholder{margin-bottom:5px}
+.admgrJSMiniGraph{height:131px;width:256px;text-align:center}
+.UIAdmgrPage_UITable{margin-bottom:10px}
+.UIAdmgrPage_UITable th,.UIAdmgrPage_UITable td{text-align:right}
+.UIAdmgrPage_UITable th sup,.UIDataTableLegacy th sup,.uiHeader sup{color:#808080;padding-left:3px;vertical-align:top}
+.UIAdmgrPage_UITable .root_table .th_checkbox{padding:0 5px;width:20px}
+.UIAdmgrPage_UITable .td_campaign_name,.UIAdmgrPage_UITable .th_campaign_name,.UIAdmgrPage_UITable .td_campaign_name_html,.UIAdmgrPage_UITable .th_campaign_name_html{text-align:left}
+.UIAdmgrPage_UITable .th_name_html,.UIAdmgrPage_UITable .td_name_html{text-align:left}
+.UIAdmgrPage_UITable .th_id_html,.UIAdmgrPage_UITable .td_id_html{text-align:left}
+.UIAdmgrPage_UITable .td_time_updated_string,.UIAdmgrPage_UITable .th_time_updated_string{text-align:left}
+.td_name_html .UIEditableText .text:hover{cursor:pointer;text-decoration:underline}
+.UIAdmgrPage_UITable .th_budget_type,.UIAdmgrPage_UITable .td_budget_type{text-align:center}
+.UIAdmgrPage_UITable .th_account_ui_status_html,.UIAdmgrPage_UITable .td_account_ui_status_html{text-align:center;width:10px}
+.UIAdmgrPage_UITable .th_adgroup_ui_status_html,.UIAdmgrPage_UITable .td_adgroup_ui_status_html,.UIAdmgrPage_UITable .th_campaign_ui_status_html,.UIAdmgrPage_UITable .td_campaign_ui_status_html{text-align:left;width:45px}
+.th_social_reach_string,.td_social_reach_string,.th_connections_string,.td_connections_string,.th_bid_and_type_string,.td_bid_and_type_string{width:9%}
+.uiAdmgrSelector .edit_mode_without_buttons{white-space:nowrap}
+.UIAdmgrPage_UITable .th_ad_space_string,.UIAdmgrPage_UITable .td_ad_space_string{text-align:center}
+.UIAdmgrPage_UITable .th_preview_link,.UIAdmgrPage_UITable .td_preview_link{width:10px}
+.UIAdmgrPage_UITable .th_social_imp_percent_string .uiTooltipText{white-space:normal;width:180px}
+.UIAdmgrPage_UITable a.uiHelpLink{display:inline-block;padding:0 !important;margin-right:0}
+.UIAdmgrPage .edit_mode_with_buttons .copy_link{display:none}
+.UIAdmgrPage .edit_mode_without_buttons .copy_link{background:url(../images/expand.png) no-repeat top left;display:inline-block;margin:0;vertical-align:middle;visibility:hidden;height:16px;width:15px}
+.UIAdmgrPage .show_copy .copy_link,.UIAdmgrPage .wrapper:hover .copy_link,.UIAdmgrPage .UIAdmgrPage_UITable tr:hover .copy_link{visibility:visible}
+.UIAdmgrPage .editor{text-align:left}
+.UIAdmgrPage_UITable .edit_mode_without_buttons .inputtext,.UIAdmgrPage_UITable .edit_mode_without_buttons select{display:inline-block;vertical-align:middle}
+.UIAdmgrPage_UITable .edit_mode_without_buttons select{width:95px}
+.UIAdmgrPage_UITable .UIEditableText .editor .inputtext{width:50px}
+.UIAdmgrPage_UITable .td_name_html .UIEditableText .editor .inputtext{width:150px}
+.UIAdmgrPage_UITable .UIEditableText .show_edit_button{float:left}
+.UIAdmgrPage_UITable .editor td{border:none !important}
+.td_name_html .UIEditableText .text{color:#3b5998}
+.UIAdmgrPage .td_name_html .UIEditableText .edit_mode_without_buttons .inputtext{width:100px}
+.td_bid_and_type_string{min-width:55px}
+.td_bid_and_type_string .UIEditableText .edit_mode_with_buttons .editor,.td_budgetntype_string .UIEditableText .edit_mode_with_buttons .editor{top:-8px}
+.td_bid_and_type_string .bid_string,.td_budgetntype_string .budget_string{float:right}
+.td_daily_budget_string .UIEditableText .editor .inputtext,.td_bid_string .UIEditableText .editor .inputtext{text-align:right}
+.td_freq_cap_html .UIEditableText,.td_priority_string .UIEditableText,.td_reach_block_length_string .UIEditableText{float:right}
+.UIAdmgrPage_UITable .edit_link{display:none;position:absolute;right:0;top:-2px}
+.UIAdmgrPage_UITable .UIEditableText .align_left .edit_link{top:4px;left:-24px}
+.UIAdmgrPage_UITable .UIEditableElement .wrapper:hover .edit_link,.UIAdmgrPage tr:hover .edit_link{display:inline}
+.UIAdmgrPage_UITable tr:hover .uiButtonSuppressed{border:1px solid #999;border-bottom-color:#888;background-image:url(../images/dropdown.png);background-repeat:no-repeat;background-position:right -196px;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1)}
+.td_priority_string .UIEditableText .edit_link,.td_reach_block_length_string .UIEditableText .edit_link{top:0 !important}
+.td_freq_cap_html .UIEditableText .edit_link{left:-30px !important}
+.UIAdmgrPage .account_analytics{border:1px solid #ccc;margin-bottom:10px}
+.UIAdmgrPage .demo_graph{padding-top:15px;border:1px solid #ccc;width:769px}
+.UIAdmgrPage .ads_footer{float:left}
+.UIAdmgrPage .ads_footer .footer_links_area{padding:0 10px}
+a.preview_link{background-image:url(../images/search.gif);width:16px;display:block;height:16px}
+.UIAdmgrPage .sideNav{margin-bottom:20px}
+.UIAdmgrPage_UITable .UIEditableChoice .icon_container{float:none;text-align:center}
+.UIAdmgrPage_UITable .UIEditableChoice .text_container{display:none}
+.UIAdmgrPage_UITable .UIEditableChoice .editor td,.UIAdmgrPage_UITable .UIEditableText .editor td{background:none;padding:0;text-align:left;white-space:nowrap}
+.UIAdmgrPage .ads_manager_vat_notice{margin-bottom:20px}
+.UIAdmgrPage .ads_manager_vat_notice h1{margin-bottom:5px}
+.UIAdmgrPage .ads_manager_vat_notice p{margin-bottom:5px}
+.UIAdmgrPage .subtext{clear:both;color:#888;font-size: 9px}
+.UIAdmgrPage .fbGlossaryTip{display:inline-block}
+
+.UIAdmgrDetailsModule{border-top:1px solid #d7d7d7;margin-bottom:20px;padding-top:10px}
+.detailsBorderBottom{border-bottom:1px solid #d7d7d7;padding-bottom:10px}
+.UIAdmgrDetailsModule .detail_section{float:left;padding-right:40px}
+.UIAdmgrDetailsModule .detail_label{color:#888;margin-bottom:2px}
+.UIAdmgrDetailsModule .detail_value .show_edit_button .text_container{white-space:nowrap}
+.UIAdmgrDetailsModule .edit_link{margin:-2px 0 0 3px}
+.UIAdmgrDetailsModule .UIEditableElement .edit_link{margin:0;position:absolute;right:0;top:-2px}
+.UIAdmgrDetailsModule .help{color:#888;padding-top:1px}
+.UIAdmgrDetailsModule ul.targeting_lines,
+.UIAdmgrDetailsModule ul.delivery_lines{margin:0 0 0 15px;padding:0}
+
+.UIAdmgrAdgroupsPage .budget_string,.UIAdmgrAdgroupsPage .date_range{float:left}
+.admgrJSGraphArea{padding-left:360px;margin-bottom:20px}
+.admgrJSGraph{float:left}
+.admgrJSGraph .img{padding-top:80px}
+.fbInsightsTooltip{background:url(http://static.ak.fbcdn.net/rsrc.php/v1/z1/r/uVR6w3wRHEJ.gif) right bottom no-repeat;display:block;left:auto;padding:0 0 4px}
+.fbInsightsTooltipText{background-color:#282828;color:#fff !important;display:block;font-size: 11px;line-height:14px;padding:4px 8px;text-align:left;white-space:nowrap}
+.admgrJSGraphCanvasWrapper{position:relative;padding:0 5px;text-align:center}
+.admgrMinigraphsWrapper{position:relative}
+.admgrJSGraphCanvas{height:200px}
+#admgrJSAudienceGraph{margin-left:-360px;width:350px}
+#admgrJSResponseGraph{width:100%}
+.admgrJSGraphError{font-weight:bold;top:65px;padding:10px 15px;position:relative;z-index:2}
+.shadowAudienceGraph{position:relative;width:340px;height:200px;background:url(http://static.ak.fbcdn.net/rsrc.php/v1/zA/r/SNQTpzUCuDq.png);top:-48px;opacity:.4}
+.UIAdmgrAdgroupsPage .topline_summary_bar .fbInsightsStatisticList{color:#808080;margin-left:0}
+
+.fbGlossaryTip{position:relative}
+.fbGlossaryTip:hover{text-decoration:none}
+.fbGlossaryTip sup{padding-left:1px;font-weight:bold}
+.fbGlossaryTipFixedWidth .tipTitle,.fbGlossaryTipFixedWidth .tipBody{width:250px;white-space:normal !important}
+.fbGlossaryTip .tip{text-align:left;position:absolute;z-index:10;display:none;bottom:100%;padding:0 0 7px}
+.fbGlossaryTipQ .tip{left:-10px}
+.fbGlossaryTip:hover .tip{display:block}
+.fbGlossaryTip .noTitle{border-top:solid 1px #888}
+.fbGlossaryTip .tipTitle{background-color:#5f78ab;border:solid 1px #28447e;border-bottom:none;color:#fff !important;font-weight:bold;display:block;left:0;padding:3px 8px 4px;white-space:nowrap}
+.fbGlossaryTip .tipBody{background-color:#fff;border:solid 1px #999;border-top:none;border-bottom:solid 1px #888;color:#666 !important;font-weight:normal;display:block;left:0;padding:4px 8px 6px;white-space:nowrap;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .1)}
+.fbGlossaryTip .tipArrow{position:absolute;bottom:3px;left:10px;width:7px;height:5px;background-image:url(../images/down_triangle.png);background-repeat:no-repeat}
+.fbGlossaryTip .bottom{bottom:auto;top:100%;padding:4px 0 0}
+.fbGlossaryTip .bottom .tipArrow{bottom:auto;top:0;background-image:url(../images/up_arrow_blue.png)}
+.fbGlossaryTip .right{left:auto;right:0}
+.fbGlossaryTipQ .right{right:-11px}
+.fbGlossaryTip .right .tipArrow{left:auto;right:10px}
+.fbInsightsTableList td{height:18px;vertical-align:top}
+.fbInsightsTableList .subtle{color:#999}
+.fbInsightsTableListDigit{padding-right:6px;font-weight:bold;text-align:right;white-space:nowrap}
+.fbInsightsTableList .fbInsightsTableListRule{padding:0;vertical-align:middle}
+.fbInsightsTableListRule hr{border-bottom:solid 1px #eee;height:0}
+.fbInsightsTableListHidden{display:none}
+.expandedMode .fbInsightsTableListHidden{display:table-row}
+.showLess,
+.expandedMode .showMore{display:none}
+.showMore,
+.expandedMode .showLess{display:inline}
+.PagesDashboard .uiListItem:first-child{border-top-width:1px}
+.pageAdminListItemNotifs{line-height:1em;padding:3px 0 4px}
+
+.fbInsightsSelectorSuboption{margin-left:32px;color:#666}
+.fbInsightsOverviewHeader div{display:inline}
+.fbInsightsStatisticList{margin-left:60px}
+.fbInsightsStatisticListFloatRight{float:right}
+.fbInsightsStatisticFigure{font-weight:bold;vertical-align:baseline}
+.fbInsightsStatisticNumber{font-family:helvetica, arial;color:#333;font-size: 23px;line-height:32px}
+.fbInsightsStatistic .better{color:#7ea65a}
+.fbInsightsStatistic .worse{color:#d44f30}
+.fbInsightsStatistic .steady{color:#3b5998}
+.fbInsightsStatisticFigure .img{margin-left:4px;margin-right:2px}
+.fbInsightsTinyStatistic{vertical-align:baseline}
+.fbInsightsTinyStatistic .uiTooltip{padding-left:2px}
+.fbInsightsTinyStatistic .uiTooltipWrap{left:-5px}
+.fbInsightsTinyStatistic .right{left:auto;right:-6px}
+
+.UIAdmgrStatusPicker{float:left;margin-right:5px}
+.UIAdmgrStatusPicker_selector{float:left}
+.adsEditButton{background:url(../images/pencil.png) no-repeat -18px 0;display:inline-block;height:18px;outline:none;width:18px;text-indent:-9999px}
+.adsEditButton:hover{background-position:0 0;opacity:.7}
+.adsEditButton:active{opacity:1}
+.UITable .UIEditableChoice .edit_mode_without_buttons .editor{margin:-4px -5px}
+.UIEditableChoice .icon_container{cursor:default;display:block;float:left;margin:0 5px -2px 0}
+.UIEditableChoice .icon{margin-bottom:-1px}
+.UIEditableChoice .icon_container:hover{cursor:default}
+.UIEditableChoice .no_edit_button .icon_container:hover{cursor:pointer}
+.UIEditableChoice .edit_mode_with_buttons .icon_container{visibility:hidden}
+.UIEditableChoice .edit_mode_without_buttons .icon_container{display:none}
+.UIEditableChoice .text_container{display:table-cell;float:left}
+.UIEditableDatePeriods .uiInfoTable .label{text-align:left}
+.UIEditableDateRange .editor{left:-9px;top:-9px;white-space:nowrap}
+.UIEditableDateRange .editor td{padding:0}
+.UIEditableDateRange .edit_link{margin:0;position:absolute;right:0;top:-2px}
+.UIEditableDateRange .hover .edit_link{display:inline-block}
+.UIEditableDateRange .edit_mode .edit_link{display:none}
+.UIEditableDateRange .dateselectpro,.UIEditableDateRange .datebox,.UIEditableDateRange .timeselect{float:left}
+.UIEditableDateRange .dateselectpro .timeselect .timedisc{font-weight:normal}
+.UIEditableDateRange .ongoing_container{clear:both;padding:0 0 10px 0}
+.UIEditableDateRange .continuous_checkbox{margin:0 7px 0 0}
+.UIEditableDateRange .editor .save_button{margin:0;position:static}
+.UIEditableDateRange .cancel_button{position:static}
+.UIEditableElement .wrapper{position:relative}
+.UIEditableElement .show_edit_button{float:left;padding-right:21px}
+.UIEditableElement .edit_mode .edit_link{visibility:hidden}
+.UIEditableElement .edit_mode{z-index:10}
+.UIEditableElement .editor{display:none;margin:0}
+.UIEditableElement .edit_mode .editor{display:block;white-space:nowrap;z-index:10}
+.UIEditableElement .edit_mode_with_buttons .editor{background-color:#dadfe9;border:1px solid #919ccd;padding:7px 8px;position:absolute;left:-14px;top:-13px}
+.UIEditableElement .text{color:#000;cursor:default;outline:none;text-decoration:none}
+.UIEditableChoice .no_edit_button .text:hover,tr:hover .UIEditableText .no_edit_button .text,.UIEditableText .no_edit_button:hover .text,.UIEditableText .no_edit_button .text:hover{border-bottom:1px dotted #3b5998;color:#3b5998;cursor:pointer}
+.UIEditableElement .edit_mode_without_buttons,.UIEditableElement .align_left{padding:0}
+.UIEditableElement .edit_mode_without_buttons .save_button,.UIEditableElement .edit_mode_without_buttons .cancel_button{display:none}
+.UIEditableElement .cancel_button{margin-left:4px}
+.uiAdmgrSelector .uiSelectorButton img{margin:2px -1px 0 -1px}
+.uiAdmgrSelector .selector.icon{margin-right:3px 5px 0 5px;display:inline}
+.uiAdmgrSelector .icon_wrap{display:inline-block;margin-right:5px;text-align:center;width:14px}
+.uiAdmgrSelector .uiButtonSuppressed{background-image:url(../images/dropdown.png);background-repeat:no-repeat;background-position:right -50px}
+.UIAdmgrPage_UITable tr:hover .uiSelectorNormal .uiButtonSuppressed{max-width:169px;padding-right:23px}
+.UIAdmgrPage_UITable tr:hover .uiSelectorNormal .openToggler .uiButtonSuppressed{background-image:url(../images/dropdown.png);background-repeat:no-repeat;background-position:right -98px}
+.UIEditableText .edit_mode{display:block}
+.UIEditableText .edit_mode_with_buttons .text{visibility:hidden}
+.UIEditableText .edit_mode_without_buttons .text{display:none}
+.UIEditableText .editor .inputtext{width:120px}
+.UIEditableText .edit_mode_without_buttons .inputbutton{display:none}
+.UIEditableText .buttons{padding-top:5px}
+.UIEditableText .help_text{color:#808080;padding-top:3px}
+.UITable .root_table{background-color:#fff;border-bottom:solid 1px #a6a6a6;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);padding:0;width:100%}
+.UITable .root_table th{background:#eee url(../images/lock_icon.png) repeat 0 0;border:solid 1px #999;border-bottom-color:#888;border-right:none;line-height:normal !important;padding:3px 5px 4px;vertical-align:middle;white-space:nowrap}
+.UITable th{padding:3px 5px}
+.UITable .root_table th.clickable{cursor:pointer;user-select:none;-moz-user-select:none}
+.UITable th.clickable:active{background:#ddd;border-bottom:solid 1px #999;margin-bottom:-1px}
+.UITable th span.hdr_text{font-weight:bold;display:block;text-decoration:none}
+.UITable th a{color:#333}
+.UITable .root_table th span.hdr_text,.UITable .root_table th span.dir_arrow{display:inline-block}
+.UITable .root_table th .dir_arrow{background-position:left top;background-repeat:no-repeat;margin-left:4px;overflow:hidden;height:6px;width:9px}
+.UITable .root_table th.asc .dir_arrow{background-image:url(../images/up_arrow_small.png)}
+.UITable .root_table th.desc .dir_arrow{background-image:url(../images/down_arrow_small.png)}
+.UITable .root_table > tbody > tr > td{border-left:solid 1px #fbfbfb;height:24px;padding:4px 5px;vertical-align:middle}
+.UITable .root_table tr:hover td{background-color:#d8dfea}
+.UITable tr.even td{background-color:#f2f2f2}
+.UITable input.checkbox,.UITable th input{float:left;margin:0 0 0 5px}
+.UITable #totals td{background-color:#fff;border-top:1px solid #dfdfdf;font-weight:bold}
+.UITable #empty_message td{border-top:0;font-weight:normal;padding-left:10px;text-align:left}
+.UITable .root_table .first_column{border-left:solid 1px #bbb}
+.UITable .root_table .last_column{border-right:solid 1px #bbb}
+.UITable .loading_div{text-align:center}
+
+.UIPager_Button{background-image:url(../images/silver_arrow.png);background-repeat:no-repeat;float:left;height:23px;position:relative;width:43px;z-index:2}
+.UIPager_ButtonBack{margin-right:-1px}
+.UIPager_ButtonBack:active{background-position:0 -23px}
+.UIPager_ButtonForward{background-position:-43px 0}
+.UIPager_ButtonForward:active{background-position:-43px -23px}
+.UIPager_ButtonDisabled .UIPager_ButtonBack,
+.UIPager_ButtonDisabled .UIPager_ButtonBack:active{background-position:0 -46px;cursor:default;z-index:1}
+.UIPager_ButtonDisabled .UIPager_ButtonForward,
+.UIPager_ButtonDisabled .UIPager_ButtonForward:active{background-position:-43px -46px;cursor:default;z-index:1}
+.UIPager_Vertical .UIPager_ButtonBack{background-position:-86px 0}
+.UIPager_Vertical .UIPager_ButtonBack:active{background-position:-86px -23px}
+.UIPager_Vertical .UIPager_ButtonForward{background-position:-129px 0}
+.UIPager_Vertical .UIPager_ButtonForward:active{background-position:-129px -23px}
+.UIPager_Vertical .UIPager_ButtonDisabled .UIPager_ButtonBack,
+.UIPager_Vertical .UIPager_ButtonDisabled .UIPager_ButtonBack:active{background-position:-86px -46px}
+.UIPager_Vertical .UIPager_ButtonDisabled .UIPager_ButtonForward,
+.UIPager_Vertical .UIPager_ButtonDisabled .UIPager_ButtonForward:active{background-position:-129px -46px}
+.UIPager .UIPager_PageNum{color:#000;float:left;font-size: 10px;line-height:22px;padding-right:10px}
+.uiPager .summary{;line-height:23px}
+.uiPager .next{margin-left:-1px}
+.uiPagerTopBorder{border-top:1px solid #eee;padding:15px 0 0}
+.UISelectList{background-color:#fff;margin:0;padding:3px 0;width:100%}
+.UISelectList_Item{margin:0;padding:0;text-align:left}
+.UISelectList_Item input{visibility:hidden;position:absolute;left:-20px}
+.UISelectList_Label{color:#111;background-color:#fff;display:block;font-weight:normal;min-width:100px;max-width:300px;overflow:hidden;white-space:nowrap;padding:2px 4px 3px 19px}
+.UISelectList_Label:focus,
+.UISelectList_Label:hover,
+.UISelectList_Label:active{outline:none;background-color:#333;color:#eee}
+.UISelectList_check_Checked,
+.UISelectList_radio_Checked{background:white no-repeat left 4px;cursor:pointer;font-weight:bold}
+.UISelectList_check_Checked{background-image:url(../images/tick.gif)}
+.UISelectList_radio_Checked{background-image:url(../images/dot.gif)}
+.UISelectList_check_Checked:focus,
+.UISelectList_check_Checked:active{background-position:left -56px}
+.UISelectList_radio_Checked:focus,
+.UISelectList_radio_Checked:active{background-position:left -16px}
+.UIToolbarWell_Content{overflow:hidden;padding:0 6px}
+.UIToolbarWell_MainContent{height:23px;padding:6px 0}
+.UIToolbarWell_Left{text-align:left;float:left}
+.UIToolbarWell_Right{float:right;text-align:right}
+.UIToolbarWell_Left .UIToolbarWell_Button .uiButton{margin-right:6px}
+.UIToolbarWell_SecondaryContent{border-top:1px solid #d7d7d7;padding:5px 0}
+.UIWell{background:#f2f2f2;border-top:1px solid #ccc;zoom:1}
+
+.UIAdmgrDetailsModule{border-top:1px solid #d7d7d7;margin-bottom:20px;padding-top:10px}
+.detailsBorderBottom{border-bottom:1px solid #d7d7d7;padding-bottom:10px}
+.UIAdmgrDetailsModule .detail_section{float:left;padding-right:40px}
+.UIAdmgrDetailsModule .detail_label{color:#888;margin-bottom:2px}
+.UIAdmgrDetailsModule .detail_value .show_edit_button .text_container{white-space:nowrap}
+.UIAdmgrDetailsModule .edit_link{margin:-2px 0 0 3px}
+.UIAdmgrDetailsModule .UIEditableElement .edit_link{margin:0;position:absolute;right:0;top:-2px}
+.UIAdmgrDetailsModule .help{color:#888;padding-top:1px}
+.UIAdmgrDetailsModule ul.targeting_lines,
+.UIAdmgrDetailsModule ul.delivery_lines{margin:0 0 0 15px;padding:0}
+
+.ui_admgr_page_billing div.account_heading{padding-top:0}
+.ui_admgr_page_billing div.whats_this{display:inline}
+.billing_currency{float:right;font-size: 11px;padding-top:3px}
+.billing_filters{padding-bottom:10px}
+.account_billing_panels{padding-top:15px}
+.account_billing_panels h2{margin-bottom:6px;font-size: 11px;color:#666}
+.account_billing_panels span{font-weight:bold}
+.outstanding_balance,.max_daily_spend{float:left;width:290px;margin-right:15px}
+.details_header,.invoice_header{padding:0 0 5px 0}
+.details_header .title,.invoice_header .title{float:left;font-size: 14px;font-weight:bold}
+.invoice_header .desc{float:right;color:#666}
+.transaction_component{padding-top:25px}
+.print_invoice_header{color:#777;margin-bottom:20px}
+.print_invoice_header #fbLogo{float:left;margin-right:10px}
+.print_invoice_header .fb_address{float:left;line-height:1.3em}
+.print_invoice_header .business_info{float:right;line-height:1.3em;text-align:right}
+.ui_admgr_page_billing table.transaction_details{border-top:2px solid #bbb;width:100%}
+.ui_admgr_page_billing table.transaction_details td{border-bottom:1px solid #e9e9e9;padding:13px 0 11px}
+.ui_admgr_page_billing table.transaction_details .td_details_label{color:#999;font-weight:bold;padding-right:10px;vertical-align:top;width:105px}
+.ui_admgr_page_billing .datakit_table .totals_alternate{font-weight:bold}
+.ui_admgr_page_billing .fund_src_content{color:#000}
+.ui_admgr_page_billing .fund_src_expired{color:#808080}
+.ui_admgr_page_billing .fundsource .fund_src_groups{border-top:1px solid #eee}
+.ui_admgr_page_billing .no_fund_srcs_txt{font-size: 13px;text-align:center;padding:20px}
+.ui_admgr_spend_cap{margin:30px}
+.adsAccountSpendCap{position:relative}
+.adsAccountSpendCap .editData{background-color:#dadfe9;border:1px solid #919ccd;left:-19px;padding:10px;position:absolute;top:-15px;width:355px}
+.adsAccountSpendCap .inputtext{margin:0 3px;width:100px}
+.adsAccountSpendCap .clearSpendButton{left:103px;position:absolute;top:13px}
+.adsAccountSpendCap .removeLimitDiv{margin-top:3px}
+.adsAccountSpendCap .removeLimitDiv label{color:#333;font-weight:normal}
+.adsAccountSpendCap .saveButton,
+.adsAccountSpendCap .cancelButton{margin:0 3px}
+.datakit_table{background-color:#fff;width:100%;border-bottom:solid 1px #a6a6a6;-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05);-moz-box-shadow:0 1px 0 rgba(0, 0, 0, .05)}
+.datakit_table th{background:#eee url(../images/lock_icon.png) repeat 0 0;border:solid 1px #999;border-bottom-color:#888;border-right:none;line-height:normal !important;padding:3px 6px 4px;vertical-align:middle;white-space:nowrap}
+.datakit_table th.last{border-right:solid 1px #999}
+.datakit_table th{padding:3px 6px}
+.datakit_table td{padding:6px 7px}
+.datakit_table .even td{background-color:#f2f2f2;border-left:solid 1px #fbfbfb}
+.datakit_table td.first{border-left:solid 1px #bbb !important}
+.datakit_table td.last{border-right:solid 1px #bbb}
+.datakit_table tr.totals td{background-color:#fff;border-top:1px solid #dfdfdf;font-weight:bold}
+.datakit_table .right{text-align:right}
+.datakit_table .no_data{padding:30px 0;text-align:center}
+
+
+.ui_admgr_page_reports{padding-bottom:120px}
+.ui_admgr_page_reports .header_text{color:#666;font-size: 12px;line-height:1.4em;margin-bottom:25px}
+.ui_admgr_page_reports .reports_form{padding:10px 11px}
+.ui_admgr_page_reports .content{float:left;margin-right:20px;width:450px}
+.ui_admgr_page_reports .help{float:left;padding-bottom:15px;width:210px}
+.ui_admgr_page_reports .content td.label{padding:10px 10px 1px 0;text-align:right;vertical-align:top;width:120px}
+.ui_admgr_page_reports .help h3{font-size: 11px;padding-top:5px}
+.ui_admgr_page_reports .help .help_body{color:#777}
+.ui_admgr_page_reports .to_string{padding:0 5px}
+.ui_admgr_page_reports .filter_multiselect{padding-top:5px}
+.ui_admgr_page_reports table.calendar_picker td{padding:0 1px}
+.ui_admgr_page_reports .tips{padding-bottom:10px}
+.ui_admgr_page_reports label{color:#000;font-weight:normal;margin-left:5px}
+.ui_admgr_page_reports .checkbox_multiselect{border-top:1px solid #d7d7d7;border-bottom:1px solid #d7d7d7;margin-top:5px;max-height:210px;overflow-y:auto}
+.ui_admgr_page_reports .checkbox_link{font-weight:bold;padding-left:5px}
+.ad_reports_html_export .adreports_summary_bar{padding:0 0 10px 0}
+.ad_reports_html_export .UIFullPage_Container{margin:0;padding:5px 15px}
+.ad_reports_html_export .UIBigNumber{padding-right:15px}
+.ad_reports_html_export .adreports_links{padding:10px 0}
+.adreports_links form{display:inline;padding-left:5px}
+.ad_reports_html_export .report_header_label{font-weight:bold;vertical-align:top}
+.ad_reports_html_export .report_header_value{padding-left:10px}
+.ad_reports_html_export .filter_list{overflow-x:hidden;overflow-y:auto;max-height:110px}
+.ad_reports_html_export .report_header{background-color:#eee;border-bottom:solid 1px #ccc;padding:10px;width:450px}
+.ad_reports_html_export .UIDataTableLegacy{margin:0}
+.ad_reports_html_export .UIDataTableLegacy th{white-space:normal}
+.ad_reports_html_export .UIDataTableLegacy th span.oneline{white-space:nowrap}
+.ad_reports_html_export .bottom_button{padding-top:15px}
+#adreports_table_loading{margin:5px 3px}
+.adreports_data .UIDataTableLegacy a.fbGlossaryTipQ{display:inline;padding:0 1px}
+.UIBigNumber{float:left;display:block}
+.UIBigNumber_Right{float:right}
+.UIBigNumber_SmallTitle,
+.UIBigNumber_MediumTitle,
+.UIBigNumber_LargeTitle{display:block;float:left;font-family:Helvetica,Arial,default}
+.UIBigNumber_SmallTitle{font-weight:bold;font-size: 18px}
+.UIBigNumber_MediumTitle{font-weight:bold;font-size: 24px}
+.UIBigNumber_LargeTitle{font-weight:bold;font-size: 33px}
+.UIBigNumber_SmallSide,
+.UIBigNumber_MediumSide,
+.UIBigNumber_LargeSide{display:block;float:left;margin:0 0 0 2px}
+.UIBigNumber_Label{color:#777;font-size: 9px;font-weight:bold;line-height:11px;position:relative}
+.UIBigNumber_SmallLabel{margin:8px 0 0 0}
+.UIBigNumber_MediumLabel{margin:13px 0 0 0}
+.UIBigNumber_LargeLabel{margin:22px 0 0 0}
+.UIBigNumber_LargeExtra{margin:6px 0 0 0}
+.UIBigNumber_SmallHelp,
+.UIBigNumber_MediumHelp,
+.UIBigNumber_LargeHelp{color:#3b5998;cursor:default;padding:3px 2px 3px 2px}
+
+.page_creative_library img.creative_library_image_thumb.img{width:82px;height:60px}
+label.uiCloseButton{margin-top:4px;margin-left:4px}
+label.uiCloseButton.hidden{visibility:hidden}
+div.creative_row{padding-bottom:5px;margin-bottom:5px;border-bottom:1px solid #ccc}
+form.creative_restore{display:inline;margin-left:4px}
+.UIAdCreativeForm .inputtext,
+.UIAdCreativeForm textarea{width:350px}
+.UIAdCreativeForm select{width:359px}
+.UIAdCreativeForm .form_input{float:left}
+.UIAdCreativeForm .character_count{padding-top:3px;text-align:right}
+.UIAdCreativeForm .character_count span{padding-right:2px}
+.UIAdCreativeForm .suggest_ad.hidden{display:none}
+.UIAdCreativeForm .uiBoxRed.hidden{display:none}
+.UIAdCreativeForm table.uiInfoTable{width:auto}
+.UIAdCreative_Inputs{float:left;margin-right:15px;width:336px}
+.UIAdCreative_Inputs .copy_existing_ad{margin-top:3px;width:328px}
+.UIAdCreative_Preview{float:left;width:254px}
+.UIAdCreative_PreviewLoading{margin-top:5px;text-align:center}
+.UIAdCreative_Preview .fbEmuPreview{padding:10px 10px 10px 10px}
+.UIAdCreative_Preview .fbEmuPreview .title,
+.UIAdCreative_Preview .fbEmuPreview .body{white-space:pre-wrap;word-wrap:break-word}
+
+div.fbEmuEgo .image .img{max-height:72px;max-width:100px;padding-top:3px}
+.fbEmuEgo .action{margin-top:5px}
+.fbEmuEgo{line-height:13px}
+.fbEmuEgo .fbEmuHide{margin-top:0 !important}
+.fbEmuEgo .title{font-weight:bold;margin-bottom:0 !important}
+.fbEmuEgo .image{width:100px;display:block;text-align:center}
+.fbEmuEgo .image_body_block{padding-top:3px}
+.fbEmuEgo .action{color:#777}
+.fbEmuEgo .action .fbEmuContext .fbEmuLink{color:#777}
+.fbEmuEgo .action div.UIImageBlock_Content{padding-top:1px}
+
+.profileBrowserDialog .fbProfileBrowserListContainer li:first-child{border-top:none}
+.profileBrowserDialog .listView{height:353px}
+.profileBrowserDialog .fbProfileBrowserResult{height:353px;overflow-y:auto;position:relative}
+.profileBrowserDialog .filterBox{border-bottom:1px solid #ccc;border-top:none}
+.profileBrowserDialog .fbProfileBrowserSummaryBox{margin:0 4px}
+.profileBrowserDialog .limitNotReached .checkmark{display:none}
+.profileBrowserDialog .checkmark{position:relative;top:2px;left:7px}
+.profileBrowserDialog .fbProfileBrowserList li{padding:4px}
+.fbProfileBrowserNullstate{padding-top:40px;text-align:center}
+.fbProfileBrowserListContainer .expandedList li:first-child{border-top:1px solid #e9e9e9}
+.fbProfileBrowserSummaryBox{border-bottom:1px solid #ccc}
+.hideSummary .fbProfileBrowserSummaryBox{display:none}
+.fbProfileBrowserTypeahead .nameTypeaheadThrobber{display:none;position:absolute;right:6px;top:5px}
+div.fbProfileBrowserTypeahead .clear,
+.fbProfileBrowser .loading .nameTypeaheadThrobber{display:block}
+.fbProfileBrowser .loading .clear{display:none}
+.fbProfileBrowserViewButtons{white-space:nowrap}
+.fbProfileBrowserViewButtons .profileBrowserViewButton{margin-left:0}
+.fbProfileBrowserViewButtons .normal{border-right:0}
+.fbProfileBrowserViewButtons .profileBrowserViewButton .customimg{margin-top:2px}
+
+.uiClearableTypeahead .selected .clear{display:block}
+.uiClearableTypeahead .clear,.uiTypeaheadDisabled .selected .clear{display:none;position:absolute;margin-top:-7px;right:3px;top:50%}
+.uiClearableTypeahead .selected{padding-right:16px}
+.uiTypeaheadDisabled .selected{padding-right:0}

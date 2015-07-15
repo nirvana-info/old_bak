@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html id='adMaster'>
+<head>
+  <%= yield :head %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "/assets/stylesheets/global" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <%= yield %>
+</body>
+</html>

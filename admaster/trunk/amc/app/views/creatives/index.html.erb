@@ -1,0 +1,189 @@
+<% content_for :head do %>
+    <title>Creatives</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag    "/assets/javascripts/creative" %>
+    <div class="generic_dialog pop_dialog" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_0" style="display: none;">
+      <div class="generic_dialog_popup" style="top: 54px; width: 467px;">
+        <div class="pop_container_advanced">
+          <div id="pop_content" class="pop_content">
+            <h2 class="dialog_title" id="title_dialog_0"><span>Edit Creative</span></h2>
+            <div class="dialog_content">
+              <div class="dialog_body">
+                <input type="hidden" value="6003220256150" name="creative_id" autocomplete="off"/>
+                <table class="uiInfoTable noBorder">
+                  <tbody>
+                  <tr class="dataRow">
+                    <th class="label">Creative Id:</th>
+                    <td class="data">6003220256150</td>
+                  </tr>
+                  <tr class="dataRow">
+                    <th class="label">Name:</th>
+                    <td class="data">
+                      <input type="text" value="ITO for tech startups" name="name" class="inputtext"/>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="dialog_buttons clearfix">
+                <label class="uiButton uiButtonLarge uiButtonConfirm">
+                  <input type="button" name="save" value="Save"/>
+                </label>
+                <label class="uiButton uiButtonLarge ">
+                  <input type="button" name="cancel" value="Cancel"/>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+
+<div id="u777616_1" class="page_creative_library">
+    <div class="UIAdmgrPageHeader">
+      <div class="breadcrumb">
+        <a href="#">All Creatives</a>
+        <span class="phs fsm fwn fcg"> » </span>
+      </div>
+      <div class="uiHeader uiHeaderPage">
+        <div class="clearfix uiHeaderTop">
+          <div class="uiHeaderActions rfloat">
+            <a href="/creatives/add" role="button" class="uiButton">
+              <span class="uiButtonText">+ New Creative</span>
+            </a>
+          </div>
+          <div>
+            <h2 class="uiHeaderTitle">Creative Library</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form onsubmit="" method="post" action="#" class="form_creative_filter">
+      <input type="hidden" value="6825c2f1871ec8ecd0ef30398dd3f356" name="post_form_id" autocomplete="off"/>
+      <input type="hidden" autocomplete="off" value="AQApzUUa" name="fb_dtsg"/>
+      <input type="hidden" value="50" name="limit" autocomplete="off"/>
+      <input type="hidden" value="0" name="offset" autocomplete="off"/>
+      <div class="uiToolbar uiToolbarBordered uiBoxGray topborder">
+        <div class="clearfix uiToolbarContent">
+          <div class="rfloat">
+            <div class="clearfix uiPager uiToolbarItem">
+              <div class="summary lfloat fsm fcg">
+                <div class="prm">1 Result</div>
+              </div>
+              <div class="rfloat">
+                <a data-href="#" role="button" class="prev uiButtonDisabled uiButton uiButtonNoText">
+                  <i class="mrs customimg img sp_dpshkw sx_925ff2"></i>
+                  <span class="uiButtonText"></span>
+                </a>
+                <a data-href="#" role="button" class="next uiButtonDisabled uiButton uiButtonNoText">
+                  <i class="mrs customimg img sp_dpshkw sx_b9f782"></i>
+                  <span class="uiButtonText"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-name="campaign_id" class="uiSelector inlineBlock campaign_selector uiToolbarItem uiSelectorNormal uiSelectorDynamicLabel">
+              <div class="wrap">
+                <a rel="toggle" data-length="30" data-label="All Campaigns" aria-haspopup="1" href="#" role="button" class="uiSelectorButton uiButton">
+                  <span class="uiButtonText">All Campaigns</span>
+                </a>
+                <div class="uiSelectorMenuWrapper uiToggleFlyout">
+                  <div class="uiMenu uiSelectorMenu" role="menu">
+                    <ul class="uiMenuInner">
+                      <li data-label="All campaigns" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                        <a rel="ignore" href="#" aria-checked="false" tabindex="0" role="menuitemradio" class="itemAnchor">
+                          <span class="itemLabel fsm">All campaigns</span>
+                        </a>
+                      </li>
+                      <li class="uiMenuSeparator"></li>
+                      <li data-label="My Ads" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                        <a rel="ignore" href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                          <span class="itemLabel fsm">My Ads</span>
+                        </a>
+                      </li>
+                      <li class="uiMenuSeparator"></li>
+                      <li data-label="Without ads yet" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                        <a rel="ignore" href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                          <span class="itemLabel fsm">Without ads yet</span>
+                        </a>
+                      </li>
+                      <li data-label="Deleted" class="uiMenuItem uiMenuItemRadio uiSelectorOption">
+                        <a rel="ignore" href="#" aria-checked="false" tabindex="-1" role="menuitemradio" class="itemAnchor">
+                          <span class="itemLabel fsm">Deleted</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <select name="campaign_id">
+                <option value="">All Campaigns</option>
+                <option value="">All campaigns</option>
+                <option value="6003220255550">My Ads</option>
+                <option value="-1">Without ads yet</option>
+                <option value="-2">Deleted</option>
+              </select>
+            </div>
+            <span class="uiSearchInput uiToolbarItem">
+              <span>
+                <input type="text" title="Search by keyword" placeholder="Search by keyword" value="Search by keyword" name="q" class="inputtext DOMControl_placeholder"/>
+                <button title="Search by keyword" type="submit">
+                    <span class="hidden_elem">Search by keyword</span>
+                </button>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="creative_row creative_row_6003220256150">
+      <div class="UIImageBlock clearfix UIImageBlock_Entity">
+        <a aria-hidden="true" tabindex="-1" class="UIImageBlock_Image UIImageBlock_ENT_Image">
+          <img alt="" src="/assets/images/nirvana.jpg" class="creative_library_image_thumb img"/>
+        </a>
+        <div class="UIImageBlock_Ext">
+          <a href="#" rel="async" role="button" class="uiButton editButton">
+            <i class="mrs img sp_7v3cpf sx_b2d66b"></i>
+            <span class="uiButtonText">edit</span>
+          </a>
+          <a href="#" target="_blank" role="button" class="uiButton">
+            <i class="mrs img sp_daf9ln sx_5ae9af"></i>
+            <span class="uiButtonText">preview</span>
+          </a>
+          <a href="#" role="button" class="uiButton">
+            <i class="mrs img sp_yeww8o sx_5adae8"></i>
+            <span class="uiButtonText">use</span>
+          </a>
+          <label for="u777616_2" class="hidden uiCloseButton">
+            <input type="button" id="u777616_2" title="Remove"/>
+          </label>
+        </div>
+        <div class="UIImageBlock_Content UIImageBlock_ENT_Content">
+          <strong>
+            <div class="hidden creative_friendly_name_6003220256150"> "ITO for tech startups"</div>
+            <div class="creative_title_6003220256150">ITO for tech startups</div>
+          </strong>
+          <div class="fsm fwn fcg">innnovation made in china</div>
+          <div class="fsm fwn fcg">Standard</div>
+          <div class="fsm fwn fcg">http://www.nirvana-info.com</div>
+        </div>
+      </div>
+    </div>
+</div>

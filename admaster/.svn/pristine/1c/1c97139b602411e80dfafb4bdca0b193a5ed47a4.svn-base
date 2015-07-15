@@ -1,0 +1,303 @@
+<% content_for :head do %>
+    <title>Reporting</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/reporting" %>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="#">Reporting</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div>
+        <h2 class="uiHeaderTitle">Reports</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui_admgr_page_reports clearfix">
+  <div class="header_text">
+    These reports provide the insights you need to optimize and manage your advertising on Nirvana-info.
+    In addition to providing all the data about your account, campaign or ad performance,
+    Nirvana-info Ad Reports help you learn much more about who is engaging with your ads.
+    <a target="_blank" href="#">Questions about Nirvana-info Ads reporting?</a>
+  </div>
+  <div class="content">
+    <form onsubmit="" id="reports_form" name="reports_form" action="" method="get">
+      <input type="hidden" value="132159193536921" name="act" id="act" autocomplete="off">
+      <table cellspacing="0" border="0" class="formtable">
+        <tbody>
+        <tr id="row_report_type">
+          <td class="label">Report Type:</td>
+          <td>
+            <select onchange="" name="report_type" id="report_type" class="">
+              <option value="perf" selected="selected">Advertising Performance</option>
+              <option value="demo">Responder Demographics</option>
+              <option value="conversion">Conversions by Impression Time</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row_report_summarize_by" style="">
+          <td class="label">Summarize By:</td>
+          <td>
+            <select onchange="" id="summarize_by" name="summarize_by">
+              <option value="account">Account</option>
+              <option value="campaign">Campaign</option>
+              <option value="ad">Ad</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row_report_filter" style="">
+          <td class="label">Filter By:</td><td>
+              <select onchange="" name="filter" id="filter" class="">
+                <option value="nofilter">No Filter</option>
+                <option value="ad">Ad</option>
+                <option value="campaign">Campaign</option>
+              </select>
+              <div style="display: none;" class="filter_multiselect" id="campaign_filter_select">
+                <div class="checkbox_multiselect" id="campaign_filter">
+                  <div class="checkbox_row">
+                    <input type="checkbox" value="6003220255550" name="campaigns[]" id="campaigns_6003220255550" class="inputcheckbox "/>
+                    <label id="label_campaigns_6003220255550" for="campaigns_6003220255550">My Ads</label>
+                  </div>
+                </div>
+              </div>
+              <div style="display: none;" class="filter_multiselect" id="adgroup_filter_select">
+                <div class="checkbox_multiselect" id="adgroup_filter">
+                  <div class="checkbox_row">
+                    <input type="checkbox" value="6003220256550" name="adgroups[]" id="adgroups_6003220256550" class="inputcheckbox "/>
+                    <label id="label_adgroups_6003220256550" for="adgroups_6003220256550">ITO for tech startups (My Ads)</label>
+                  </div>
+                </div>
+              </div>
+           </td>
+        </tr>
+        <tr id="row_report_agg_time">
+          <td class="label">Time Summary:</td>
+          <td>
+            <select onchange="" name="agg_time" id="agg_time" class="">
+              <option value="monthly">Monthly</option>
+              <option value="weekly">Weekly</option>
+              <option value="daily">Daily</option>
+              <option value="custom">Custom</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row_report_date" style="">
+          <td class="label">Date Range:</td>
+          <td>
+            <div style="" class="range_selector" id="day_range">
+              <table cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                  <td>
+                    <div id="u099930_1" class="uiDatepicker clearfix">
+                      <div class="dateBox">
+                        <input type="text" title="Date. Expected format is month number/day number/year number." autocomplete="off" size="10" name="day_start_text_fieldIntlDisplay" value="7/19/2011" class="inputtext textField"/>
+                        <input type="hidden" value="7/19/2011" name="day_start_text_field" class="hiddenField" autocomplete="off"/>
+                        <div class="calendarWrapper"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="to_string">to</span>
+                  </td>
+                  <td>
+                    <div id="u099930_2" class="uiDatepicker clearfix">
+                      <div class="dateBox">
+                        <input type="text" title="Date. Expected format is month number/day number/year number." autocomplete="off" size="10" name="day_end_text_fieldIntlDisplay" value="7/27/2011" class="inputtext textField"/>
+                        <input type="hidden" value="7/27/2011" name="day_end_text_field" class="hiddenField" autocomplete="off"/>
+                        <div class="calendarWrapper"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="range_selector" id="week_range" style="display: none;">
+              <table cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                  <td>
+                    <div id="u099930_3" class="uiDatepicker clearfix">
+                      <div class="dateBox">
+                        <input type="text" title="Date. Expected format is month number/day number/year number." autocomplete="off" size="10" name="week_start_text_fieldIntlDisplay" value="7/3/2011" class="inputtext textField"/>
+                        <input type="hidden" value="7/3/2011" name="week_start_text_field" class="hiddenField" autocomplete="off"/>
+                        <div class="calendarWrapper"></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="to_string">to</span>
+                  </td>
+                  <td>
+                    <div id="u099930_4" class="uiDatepicker clearfix">
+                      <div class="dateBox">
+                        <input type="text" title="Date. Expected format is month number/day number/year number." autocomplete="off" size="10" name="week_end_text_fieldIntlDisplay" value="7/22/2011" class="inputtext textField"/>
+                        <input type="hidden" value="7/22/2011" name="week_end_text_field" class="hiddenField" autocomplete="off"/>
+                        <div class="calendarWrapper"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="display: none;" class="range_selector" id="month_range">
+              <table cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                  <td>
+                    <select onchange="" name="month_start_month" id="month_start_month" class="">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option selected="selected" value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select autocomplete="off" onchange="" id="month_start_year" name="month_start_year">
+                        <option value="-1">Year:</option>
+                        <option selected="selected" value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                    </select>
+                  </td>
+                  <td>
+                    <span class="to_string">to</span>
+                  </td>
+                  <td>
+                    <select onchange="" name="month_end_month" id="month_end_month" class="">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option selected="selected" value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select autocomplete="off" onchange="" id="month_end_year" name="month_end_year">
+                        <option value="-1">Year:</option>
+                        <option selected="selected" value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                    </select>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Format:</td>
+          <td>
+            <select name="format" id="format" class="">
+              <option value="html" selected="selected">Webpage (.html)</option>
+              <option value="csv">Excel (.csv)</option>
+              <option value="tsv">Multilanguage Excel (.csv)</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row_report_deleted">
+          <td class="label"></td>
+          <td>
+              <input type="checkbox" value="1" name="include_deleted" id="include_deleted" class="inputcheckbox "/>
+              <label id="label_include_deleted" for="include_deleted">Include Deleted Ads/Campaigns</label>
+          </td>
+        </tr>
+        <tr>
+          <td class="label"></td>
+          <td>
+            <label for="u099930_5" class="uiButton uiButtonConfirm">
+              <input type="submit" id="u099930_5" value="Generate Report"/>
+            </label>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <div class="help">
+    <div id="perf_help" class="adreport_help_message" style="">
+      <h3>Advertising Performance</h3>
+      <div class="help_body">
+        This report includes statistics like impressions, clicks, click through rate (CTR),
+        and spend. Although this information is available in your Ads Manager,
+        you may find this a useful way to export and manage your Nirvana-info performance.
+      </div>
+    </div>
+    <div style="display: none;" id="demo_help" class="adreport_help_message">
+      <h3>Responder Demographics</h3><div class="help_body">
+      This report provides valuable demographic information about users who are seeing and clicking on your ads - key for optimizing your targeting filters.
+    </div>
+    </div>
+    <div style="display: none;" id="organic_help" class="adreport_help_message">
+      <h3>Organic</h3>
+      <div class="help_body">
+        This report provides information on engagement  with your content on Nirvana-info from all channels.
+      </div>
+    </div>
+    <div style="display: none;" id="conversion_help" class="adreport_help_message">
+      <h3>Conversions by Impression Time</h3>
+      <div class="help_body">
+        This report shows the number of conversions organized by the impression
+        time of the Nirvana-info Ad a conversion is attributed to, categorized by
+        the length of time between a user's view or click on the ad and the
+        conversion (i.e., 0-24 hours, 1-7 days, 8-28 days).
+      </div>
+    </div>
+    <div style="display: none;" id="tracking_help" class="adreport_help_message">
+      <h3>Conversions by Conversion Time</h3>
+      <div class="help_body">
+        This report shows the number of conversions organized by the time of
+        the conversion event (e.g., purchase time), categorized by the length of
+        time between a user's view or click on a Nirvana-info Ad and the conversion
+        (i.e., 0-24 hours, 1-7 days, 8-28 days).
+      </div>
+    </div>
+    <div style="display: none;" id="quick_help" class="adreport_help_message">
+      <h3>Advertising Performance (Basic)</h3>
+      <div class="help_body">This report shows a subset of columns from the Advertiser Performance report</div>
+    </div>
+    <div style="display: none;" id="engagement_help" class="adreport_help_message">
+      <h3>Engagement</h3>
+      <div class="help_body">
+        This report highlights the engagement and reach of your ads.
+        It includes statistics like impressions, clicks, and engagement specific to your Engagement Ads.
+      </div>
+    </div>
+  </div>
+</div>

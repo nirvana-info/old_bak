@@ -1,0 +1,37 @@
+.fbEmuPreview{padding:10px;border:1px solid #e5e5e5;background-color:#fff;width:234px}
+.privacy_page div.ads_privacy_page_content{text-align:left}
+.ads_clarification_list{list-style-type:square;margin:5px 0 10px 20px}
+#asu_section{float:left}
+#ads_privacy_examples{background-color:#f7f7f7;border:1px solid #d7d7d7;margin-bottom:20px;padding:20px}
+.ad_example{font-size: 13px;text-align:center}
+.ad_example h3{padding-bottom:3px}
+.ad_example .img{display:block}
+.ad_example_iwrap{background-color:#f7f7f7;display:block;margin-top:5px;padding:1px}
+.privacy_page .narrow_wrap{width:626px;margin:0 auto}
+.privacy_page .dashboard_header .dh_titlebar{padding:0 10px 12px 3px;margin-top:-5px}
+.privacy_page .privacy_notification{padding:0 65px 5px 65px}
+.privacy_page .page_content label{font-weight:normal;color:#000;padding:2px}
+.privacy_page .page_content{padding:10px 20px 20px 27px;text-align:center}
+.privacy_page .padding_divider{padding-top:10px}
+.privacy_page .page_content h4{font-size: 11px;font-weight:bold;padding-top:10px;color:#000;font-size: 12px;padding-bottom:3px}
+.privacy_page .page_content h4.first_title{padding-top:0}
+.privacy_page .page_content p{margin:3px 0 11px}
+.privacy_page .column{float:left}
+.search_privacy .page_content .public_search_control{text-align:left;padding:10px 0 0 45px}
+.search_privacy .page_content .public_search_subcontrol{text-align:left;padding:0 0 0 20px}
+.search_privacy .page_content .search_listing_settings,
+.search_privacy .page_content .search_network_controls{padding-left:45px;padding-top:0;text-align:left}
+.search_privacy .page_content .formbuttons{padding-top:20px}
+.privacy_page .page_content h1, .privacy_page .page_content h2, .privacy_page .page_content h3, .privacy_page .page_content h4{text-align:left}
+.privacy_page .privacy_control_table{margin:0;padding:20px 0 0 0;border-bottom:1px solid #f0f0f0;width:500px;margin:0 auto}
+.privacy_page .privacy_control_table tr{margin:0;padding:0}
+.privacy_page .privacy_control_table td{margin:0;border-top:1px solid #f0f0f0;padding:6px 0 6px 0;width:250px}
+.privacy_page .privacy_control_table .last_row td{border-bottom:none}
+.privacy_page .privacy_control_table .privacy_page_field{color:#444;vertical-align:top;margin:0;padding:10px 10px 10px 0;white-space:normal;font-weight:bold}
+.privacy_page .privacy_profile_wall_setting{padding:2px 0 6px}
+.privacy_page .wall_setting_disabled label{color:#808080}
+.privacy_page .privacy_control_table .privacy_page_custom_links{width:auto;text-align:left;padding:10px 10px 0 5px;vertical-align:top}
+.privacy_page .privacy_control_table .privacy_page_field select{margin:0;width:100%}
+.privacy_page .privacy_buttons{padding:40px 0 20px;text-align:center}
+.privacy_page .privacy_buttons input{margin:0 4px}
+.privacy_page.photos_privacy .privacy_album_border{border:1px solid #ccc;padding:5px;background:#f7f7f7}

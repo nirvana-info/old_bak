@@ -1,0 +1,53 @@
+# Additional translations at http://github.com/plataformatec/devise/wiki/I18n
+
+en:
+  errors:
+    messages:
+      expired: "已过期, 请重新请求"
+      not_found: "未找到"
+      already_confirmed: "已确认, 请尝试登录"
+      not_locked: "未锁定"
+      not_saved:
+        one: "发生1个错误，禁止 %{resource} 被保存:"
+        other: "发生 %{count} 个错误，禁止 %{resource} 被保存:"
+
+  devise:
+    failure:
+      already_authenticated: '您已处于登录状态。'
+      unauthenticated: '您需要登录或注册才能继续。'
+      unconfirmed: '您必须确认您的账号信息才能继续。'
+      locked: '您的账号已锁定。'
+      invalid: '用户名或密码不对。'
+      invalid_token: '无效的认证口令。'
+      timeout: '您的会话已过期，请重新登录。'
+      inactive: '您的账号还未激活。'
+    sessions:
+      signed_in: '登录成功。'
+      signed_out: '注销成功。'
+    passwords:
+      send_instructions: '几分钟后，您将收到一封邮件，告诉您怎样重置您的密码。'
+      updated: '您的密码已修改成功。您现在处于登录状态。'
+      send_paranoid_instructions: "如果您的邮箱已存在我们的系统中，您将可以通过该邮箱接收到密码恢复的链接。"
+    confirmations:
+      send_instructions: '几分钟后，您将受到一封邮件，告诉您怎样确认您的账号。'
+      send_paranoid_instructions: '如果您的邮箱已存在我们的系统中，几分钟内，您将收到一封关于怎样确认您的账号邮件。'
+      confirmed: '您的密码已修改确认。您现在处于登录状态。'
+    registrations:
+      signed_up: '欢迎，您已登录成功。'
+      inactive_signed_up: '您已注册成功。但是您不能使用该账号进行登录，因为%{reason}。'
+      updated: '您的账号已更新成功。'
+      destroyed: '再见! 您的账号已成功撤销。希望您能再次光顾。'
+    unlocks:
+      send_instructions: '几分钟内，您将收到一封关于怎样解锁您的账号邮。'
+      unlocked: '您的账号已成功解锁。您现在处于登录状态。'
+      send_paranoid_instructions: '如果您的账号已存在，几分钟内，您将收到一封关于怎样解锁您的账号邮。'
+    omniauth_callbacks:
+      success: '账号 %{kind} 验证通过。'
+      failure: '由于"%{reason}"，%{kind} 未能验证通过。'
+    mailer:
+      confirmation_instructions:
+        subject: '确认方法简介'
+      reset_password_instructions:
+        subject: '重置密码方法简介'
+      unlock_instructions:
+        subject: '解锁方法简介'

@@ -1,0 +1,971 @@
+<% content_for :head do %>
+    <title>Ads</title>
+<% end %>
+
+<% content_for :stylesheet do %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/step" %>
+    <%= stylesheet_link_tag    "/assets/stylesheets/grid" %>
+<% end %>
+
+<% content_for :javascript_head do %>
+    <!--[if lte IE 8]>
+    <%= javascript_include_tag "/assets/javascripts/excanvas" %>
+    <![endif]-->
+    <%= javascript_include_tag "/assets/javascripts/jquery.flot" %>
+    <%= javascript_include_tag "/assets/javascripts/jquery.flot.pie" %>
+    <%= javascript_include_tag "/assets/javascripts/jquery.flot.circles" %>
+<% end %>
+
+<% content_for :javascript do %>
+    <%= javascript_include_tag "/assets/javascripts/campaign" %>
+    <div class="generic_dialog pop_dialog" tabindex="0" role="alertdialog" aria-labelledby="title_dialog_11" style="display:none;">
+      <div class="generic_dialog_popup" style="top: 142px; width: 582px;">
+        <div class="pop_container_advanced">
+          <div id="pop_content" class="pop_content">
+            <h2 class="dialog_title" id="title_dialog_11">
+              <span>Edit Budget &amp; Schedule</span>
+            </h2>
+            <div class="dialog_content">
+              <div class="dialog_body">
+                <form onsubmit="return Event.__inlineSubmit(this,event)">
+                  <div id="c4e2d2cea314754861450283" class="UIAdmgrCampaignDetails UIAdmgrCampaignBudgetEditor">
+                    <div class="toggleMainDiv">
+                      <div class="lifetimeMsgDiv">Campaigns with lifetime budgets must also have finite schedules. To continue, please edit your schedule along with your budget.</div>
+                      <table cellspacing="0" cellpadding="0" border="0" class="">
+                        <tbody>
+                        <tr>
+                          <td class="rowLabel budgetLabel">Budget (USD):</td>
+                          <td class="rowColumn">
+                            <div class="budget_value">
+                              <input type="text" name="daily_budget_c4e2d2cea314754861450283" value="50.00" class="inputtext impsStr"/>
+                              <input type="text" name="lifetime_budget_c4e2d2cea314754861450283" value="350.00" class="inputtext impsStr hidden"/>
+                            </div>
+                            <select id='budget_type' name="budget_type_c4e2d2cea314754861450283">
+                              <option selected="1" value="daily">Per day</option>
+                              <option value="lifetime">Lifetime budget</option>
+                            </select>
+                            <div class="dailySubText">What is the most you want to spend per day? (min 1.00 USD)</div>
+                            <div class="lifetimeSubText hidden">What is the most you want to spend over the campaign's scheduled time period? (min 1.00 USD)</div>
+                          </td>
+                          <td class="rowLabel impsLabel hidden">Impressions:</td>
+                          <td class="rowColumn hidden">
+                            <input type="text" name="daily_imps_c4e2d2cea314754861450283" value="0" class="inputtext impsStr"/>
+                            <input type="text" name="lifetime_imps_c4e2d2cea314754861450283" value="0" class="inputtext impsStr hidden"/>
+                            <div class="dailyImpsSubText">How many impressions are contracted to deliver per day?</div>
+                            <div class="lifetimeImpsSubText hidden">How many impressions are contracted to deliver over the campaign's scheduled time period?</div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <table cellspacing="0" cellpadding="0" border="0" class="">
+                        <tbody>
+                        <tr>
+                          <td class="rowLabel">Campaign Schedule:</td>
+                          <td class="rowColumn">
+                            <div class="ongoingCheckDiv">
+                              <label>
+                                <input type="checkbox" checked="1" id="continuous_check" name="continuous_check_c4e2d2cea314754861450283" value="1"/>
+                                Run my campaign continuously starting today
+                              </label>
+                            </div>
+                            <div class="dateTimeCombo hidden_elem">
+                              <div>
+                                <div class="dateselectpro clearfix">
+                                  <div class="datebox">
+                                    <input type="text" autocomplete="off" size="10" name="c4e2d2cea314754861450283_start_intl_field" id="schedule_start_date" value="" class="inputtext"/>
+                                  </div>
+                                  <div class="timeselect">
+                                    <span class="timedisc">at</span>
+                                    <div id="u346620_2" class="uiTypeahead typeahead_time">
+                                      <div class="wrap selected">
+                                        <input type="hidden" class="hiddenInput" autocomplete="off">
+                                        <div class="innerWrap">
+                                          <input type="text" spellcheck="false" onfocus="" autocomplete="off" maxlength="10" size="10" id="c4e2d2cea314754861450283_start_time" name="c4e2d2cea314754861450283_start_time" value="1:44 am" class="inputtext input_typeahead_time textInput" disabled=""/>
+                                        </div>
+                                      </div>
+                                      <div id="u346620_1" class="uiTypeaheadView"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="timezoneStr">Pacific Time</div>
+                              </div>
+                              <div>
+                                <div class="dateselectpro clearfix">
+                                  <div class="datebox">
+                                    <input type="text" autocomplete="off" size="10" name="c4e2d2cea314754861450283_end_intl_field" id="schedule_end_date" value="" class="inputtext"/>
+                                  </div>
+                                  <div class="timeselect">
+                                    <span class="timedisc">at</span>
+                                    <div id="u346620_4" class="uiTypeahead typeahead_time">
+                                      <div class="wrap selected"><input type="hidden" class="hiddenInput" autocomplete="off">
+                                        <div class="innerWrap"><input type="text" spellcheck="false" onfocus="" autocomplete="off" maxlength="10" size="10" id="c4e2d2cea314754861450283_end_time" name="c4e2d2cea314754861450283_end_time" value="1:44 am" class="inputtext input_typeahead_time textInput" disabled=""/>
+                                        </div>
+                                      </div>
+                                      <div id="u346620_3" class="uiTypeaheadView"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="timezoneStr">Pacific Time</div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="budgetToggleWarning hidden">
+                      <div class="budgetToggleDynamicWarning"></div>
+                      <div>Your new budget will begin spending from zero. If you have already spent money on this campaign today, it will not be counted towards your new budget. As a result, you may be charged up to the sum of your old spend, plus any new spend that occurs within this campaign.</div>
+                    </div>
+                  </div>
+                  <input type="hidden" value="132159193536921" name="account_id"/>
+                </form>
+              </div>
+              <div class="dialog_buttons clearfix">
+                <label class="uiButton uiButtonLarge uiButtonConfirm">
+                  <input type="button" name="save" value="Save"/>
+                </label>
+                <label class="uiButton uiButtonLarge ">
+                  <input type="button" name="cancel" value="Cancel"/>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<div id="c4e27f64ca36cb0831837769">
+  <div style="display: none;" class="UIMessageBox UIMessageBoxStatus" id="standard_status">
+    <h2 class="main_message"></h2>
+  </div>
+  <div style="display: none;" id="global_error_div" class="global_errors"></div>
+</div>
+<div class="UIAdmgrPageHeader">
+  <div class="breadcrumb">
+    <a href="javascript:void(0);">All Campaigns</a>
+    <span class="phs fsm fwn fcg"> » </span>
+  </div>
+  <div class="uiHeader uiHeaderPage">
+    <div class="clearfix uiHeaderTop">
+      <div class="uiHeaderActions rfloat">
+        <a href="/campaigns/add" class="uiButton uiButtonSpecial">
+          <span class="uiButtonText">Create an Ad</span>
+        </a>
+      </div>
+      <div>
+        <h2 class="uiHeaderTitle"><span>Campaign: </span>My Ads</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="c4e27f64ca41328760729725" class="UIAdmgrAdgroupsPage">
+  <div class="UIAdmgrDetailsModule clearfix">
+    <div class="detail_section">
+      <div class="detail_label">Campaign Name</div>
+      <div id="campaign_name" class="detail_value">
+        <div bindpoint="root" class="UIEditableElement UIEditableText">
+            <div bindpoint="wrapper" class="wrapper  align_right show_edit_button ">
+                <a bindpoint="textElement" class="text" href="javascript:void(0);">My Ads</a><a href="javascript:void(0);" class="edit_link adsEditButton">edit</a>
+                <div class="editor">
+                    <div class="inputfield">
+                        <input type="text" bindpoint="input" value="My Ads" class="inputtext">
+                    </div>
+                    <div bindpoint="helpTextNode" class="help_text hidden_elem"></div>
+                    <div class="buttons">
+                        <label class="save_button uiButton uiButtonConfirm">
+                          <input type="submit" value="Save">
+                        </label>
+                        <label class="cancel_button uiButton">
+                          <input type="submit" value="Cancel">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="detail_section">
+      <div class="detail_label">Status</div>
+      <div id="campaign_ui_status" class="detail_value">
+        <div bindpoint="root" class="UIEditableElement UIEditableChoice">
+        <div bindpoint="wrapper" class="wrapper clearfix  show_edit_button">
+            <a bindpoint="iconContainerElement" class="icon_container hidden">
+              <img bindpoint="iconElement" class="icon" src="/assets/images/running.gif" title="Active">
+            </a>
+            <div class="text_container">
+              <a bindpoint="textElement" class="text">Active</a>
+            </div>
+            <div class="editor">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                    <tr>
+                      <td class="inputfield">
+                        <select bindpoint="input" class="inputselect">
+                          <option selected="" value="1">Active</option>
+                          <option value="2">Paused</option>
+                          <option value="99">Deleted</option>
+                        </select>
+                      </td>
+                      <td>
+                        <label class="save_button uiButton uiButtonConfirm">
+                          <input type="submit" value="Save">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="cancel_button uiButton">
+                          <input type="submit" value="Cancel">
+                        </label>
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a class="adsEditButton edit_link" href="javascript:void(0);">edit</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="detail_section">
+      <div class="detail_label">Budget</div>
+      <div id="budgetntype_string" class="detail_value">
+        <div class="budget_string">
+          <div class="budget_string">$50.00</div>
+          <div class="subtext">Daily</div>
+        </div>
+        <a href="javascript:void(0);" class="adsEditButton edit_link"></a>
+      </div>
+    </div>
+    <div class="detail_section">
+      <div class="detail_label">Duration (Pacific Time)</div>
+      <div id="campaign_duration" class="detail_value">
+        <div class="date_range">
+          <span>
+            <span>07/21/2011 1:44am</span>
+            <span> &ndash; </span>
+            <span>Ongoing</span>
+          </span>
+        </div>
+        <a href="javascript:void(0);" class="adsEditButton edit_link"></a>
+      </div>
+    </div>
+  </div>
+  <div class="admgrJSGraphArea clearfix">
+    <div id="admgrJSAudienceGraph" class="admgrJSGraph">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div class="uiHeaderActions rfloat fsm fwn fcg">
+            <a href="javascript:void(0);" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Audience (28 Days)</span>
+                <span class="tipBody">See the difference between how many people your campaign could reach, and how many you are reaching. If you aren't reaching your entire targeted audience, try raising your bid and budget to increase delivery.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div>
+            <h3 class="uiHeaderTitle">Audience</h3>
+          </div>
+        </div>
+      </div>
+      <div class="admgrJSGraphLegend"></div>
+      <div class="admgrJSGraphCanvasWrapper">
+        <div class="admgrJSGraphCanvas" style="position: relative;">
+        </div>
+      </div>
+    </div>
+    <div id="admgrJSResponseGraph" class="admgrJSGraph">
+      <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+        <div class="clearfix uiHeaderTop">
+          <div class="uiHeaderActions rfloat fsm fwn fcg">
+            <a href="javascript:void(0);" class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Response</span>
+                <span class="tipBody">Track trends in how many people have clicked or connected with your campaign in the last 28 days. For ads, if your response is decreasing, try using new ad text or images to reengage your audience.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div>
+            <h3 class="uiHeaderTitle">Response</h3>
+          </div>
+        </div>
+      </div>
+      <div class="admgrJSGraphLegend"></div>
+      <div class="admgrJSGraphCanvasWrapper">
+        <div class="admgrJSGraphCanvas" style="position: relative;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="actionbar_top" class="mbm UIAdmgrPage_actionbar clearfix hasBox">
+    <div id="c4e27f64ca42e51a12364551" class="UIAdmgrDatePicker">
+       <div class="UIAdmgrDatePicker_selector">
+         <div bindpoint="root" class="UIActionMenu">
+            <a rel="toggle" href="javascript:void(0);" bindpoint="wrap" class="UIActionMenu_Wrap">
+                <span bindpoint="icon" class="UIActionMenu_Icon"></span>
+                <span bindpoint="text" class="UIActionMenu_Text">Lifetime stats</span>
+                <span class="UIActionMenu_Chevron"></span>
+            </a>
+            <div bindpoint="menu" class="UIActionMenu_Menu">
+              <div class="UISelectList clearfix">
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label UISelectList_radio_Checked" href="javascript:void(0);">Lifetime stats</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Today</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Yesterday</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Last week</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110424">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Custom</a>
+                </div>
+              </div>
+            </div>
+         </div>
+       </div>
+       <div class="UIAdmgrDatePicker_text hidden_elem"></div>
+       <div id="c4e27f64ca439c6d32102389" class="UIEditableElement UIEditableDateRange UIAdmgrDatePicker_customDateRangeSelector hidden_elem">
+         <div class="wrapper no_edit_button">
+           <a href="javascript:void(0);" class="text">7/14/2011 &ndash; 7/21/2011</a>
+           <div class="editor">
+             <div class="range_selector">
+                 <div class="lfloat">
+                   <div class="dateselectpro clearfix">
+                     <div class="datebox">
+                       <input type="text" autocomplete="off" size="10" name="c4e27f64ca439c6d32102389_start_intl_field" id="c4e27f64ca439c6d32102389_start_intl_field" value="" class="inputtext"/>
+                       <input type="hidden" value="7/14/2011" name="c4e27f64ca439c6d32102389_start_text_field" id="c4e27f64ca439c6d32102389_start_text_field" autocomplete="off"/>
+                       <div class="calendar_picker_container" id="c4e27f64ca439c6d32102389_start_calendar" style="display: none;"></div>
+                     </div>
+                   </div>
+                 </div>
+                 <span class="pas lfloat">to</span>
+                 <div style="clear: both;">
+                   <div class="dateselectpro clearfix">
+                     <div class="datebox">
+                       <input type="text" autocomplete="off" size="10" name="c4e27f64ca439c6d32102389_end_intl_field" id="c4e27f64ca439c6d32102389_end_intl_field" value="" class="inputtext"/>
+                       <input type="hidden" value="7/21/2011" name="c4e27f64ca439c6d32102389_end_text_field" id="c4e27f64ca439c6d32102389_end_text_field" autocomplete="off"/>
+                       <div class="calendar_picker_container" id="c4e27f64ca439c6d32102389_end_calendar" style="display: none;"></div>
+                     </div>
+                   </div>
+                 </div>
+             </div>
+             <div class="ongoing_container">
+               <label>
+                 <input type="checkbox" value="ongoing" name="c4e27f64ca439c6d32102389_ongoing" class="continuous_checkbox"/>No end date
+               </label>
+             </div>
+             <label for="u180467_1" class="save_button uiButton uiButtonConfirm">
+               <input type="submit" id="u180467_1" value="Save"/>
+             </label>
+             <label for="u180467_2" class="cancel_button uiButton">
+               <input type="submit" id="u180467_2" value="Cancel"/>
+             </label>
+           </div>
+         </div>
+       </div>
+    </div>
+    <div id="c4e27f64ca440a5762030192" class="UIAdmgrStatusPicker">
+      <div class="UIAdmgrStatusPicker_selector">
+        <div bindpoint="root" class="UIActionMenu">
+            <a rel="toggle" href="javascript:void(0);" bindpoint="wrap" class="UIActionMenu_Wrap">
+                <span bindpoint="icon" class="UIActionMenu_Icon"></span>
+                <span bindpoint="text" class="UIActionMenu_Text">All Except Deleted</span>
+                <span class="UIActionMenu_Chevron"></span>
+            </a>
+            <div bindpoint="menu" class="UIActionMenu_Menu">
+              <div class="UISelectList clearfix">
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429" checked="">
+                  <a class="UISelectList_Label UISelectList_radio_Checked" href="javascript:void(0);">All Except Deleted</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Active</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Scheduled</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Paused</a>
+                </div>
+                <div class="UISelectList_Item">
+                  <input type="radio" name="UISelectList_name_1311305110429">
+                  <a class="UISelectList_Label" href="javascript:void(0);">Completed or Deleted</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="uiButton uiButtonDefault uiButtonDisabled" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Select rows to edit</span>
+    </a>
+    <a href="javascript:void(0);" class="uiButton uiButtonDefault hidden_elem" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Save</span>
+    </a>
+    <a href="javascript:void(0);" class="uiButton uiButtonDefault hidden_elem" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Cancel</span>
+    </a>
+    <span id="view_report">
+      <a href="/reports" class="uiButton uiButtonDefault" bindpoint="root">
+        <span bindpoint="text" class="uiButtonText">Full Report</span>
+      </a>
+    </span>
+    <span id="async_spinner" class="standard_status_element">
+      <img src="/images/loaders/indicator_blue_small.gif"/>
+    </span>
+    <span bindpoint="root" class="UIPager">
+        <span bindpoint="pageNumber" class="UIPager_PageNum">1 result</span>
+        <span bindpoint="backWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="javascript:void(0);" bindpoint="backRoot" class="UIPager_Button UIPager_ButtonBack"></a>
+        </span>
+        <span bindpoint="forwardWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="javascript:void(0);" bindpoint="forwardRoot" class="UIPager_Button UIPager_ButtonForward"></a>
+        </span>
+    </span>
+  </div>
+  <div id="old_unique_stats_warning" class="pam hidden_elem uiBoxYellow">'--' indicates data is unavailable for this time period.</div>
+  <div class="mbm topline_summary_bar clearfix">
+    <ul class="uiList uiListHorizontal clearfix mts fbInsightsStatisticList">
+      <li class="uiListItem uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            Campaign Reach
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">Campaign Reach</span>
+                <span class="tipBody">The number of individual people who saw Sponsored Stories or ads in this campaign during the dates selected. This is different than impressions, which includes people seeing them multiple times.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">60</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem  uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+              Frequency
+              <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+                <sup>?</sup>
+                <span class="tip">
+                  <span class="tipTitle">Frequency</span>
+                  <span class="tipBody">The average number of times each person saw your campaign's Sponsored Stories or ads.</span>
+                  <span class="tipArrow"></span>
+                </span>
+              </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+              <span class="fbInsightsStatisticNumber">8.5</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem  uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            Social Reach
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">Social Reach</span>
+                <span class="tipBody">People who saw your Sponsored Stories or ads with the names of their friends who liked your Page, RSVPed to your event, or used your app. If you're not using Sponsored Stories or advertising a Page, event, or app, you won't have social reach.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            Connections
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">Connections</span>
+                <span class="tipBody">The number of people who liked your Facebook Page, RSVPed to your event, or installed your app within 24 hours of seeing a Sponsored Story or ad in this campaign. If you're not promoting a Page, event, or app, you won't see Connections data.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            Clicks
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">Clicks</span>
+                <span class="tipBody">The number of clicks this campaign's Sponsored Stories or ads have received. If you're promoting a Page, Event, or app, clicks also include Page likes, event RSVPs, or app installs directly from the Sponsored Story or ad.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">0</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem  uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            CTR
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">CTR</span>
+                <span class="tipBody">Click-through rate, or the number of clicks this campaign's Sponsored Stories or ads received divided by the number of times they were shown on the site during the dates selected.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">0.000%</span>
+          </div>
+        </div>
+      </li>
+      <li class="pll uiListItem uiListHorizontalItemBorder uiListHorizontalItem">
+        <div class="fbInsightsStatistic">
+          <div>
+            Spent
+            <a href="javascript:void(0);" class="fbGlossaryTip fbGlossaryTipQ">
+              <sup>?</sup>
+              <span class="tip">
+                <span class="tipTitle">Spent</span>
+                <span class="tipBody">The amount you've spent on your campaign during the dates selected.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </div>
+          <div class="fbInsightsStatisticFigure">
+            <span class="fbInsightsStatisticNumber">$0.00</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="c4e27f64ca42320536782116" class="UIAdmgrPage_UITable UITable">
+    <table class="root_table" cellspacing="0">
+      <tbody>
+      <tr>
+        <th class="th_checkbox">
+          <input id="toggle_checkboxes" type="checkbox"/>
+        </th>
+        <th class="th_name_html clickable">
+          <span class="hdr_text">Name</span>
+        </th>
+        <th class="th_adgroup_ui_delivery_diagnostic_html">&nbsp;</th>
+        <th class="th_adgroup_ui_status_html clickable">
+          <span class="hdr_text">
+            Status
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Status</span>
+                <span class="tipBody">Click to set your Sponsored Story or ad to active, paused, or deleted. Note that if the campaign is paused you'll need to unpause it before the Sponsored Story or ad can run.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_unique_impressions_string clickable">
+          <span class="hdr_text">
+            Reach
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Reach</span>
+                <span class="tipBody">The number of individual people who saw this Sponsored Story or ad during the dates selected. This is different than impressions, which includes people seeing them multiple times.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_frequency_string clickable">
+          <span class="hdr_text">
+            Freq.
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Frequency</span>
+                <span class="tipBody">The average number of times each person saw your Sponsored Story or ad.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_social_reach_string clickable">
+          <span class="hdr_text">
+            Social Reach
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Social Reach</span>
+                <span class="tipBody">People who saw your Sponsored Story or ad with the names of their friends who liked your Page, RSVPed to your event, or used your app. If you're not using Sponsored Stories or advertising a Page, event, or app, you won't have social reach.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_connections_string clickable">
+          <span class="hdr_text">
+            Connections
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Connections</span>
+                <span class="tipBody">The number of people who liked your Facebook Page, RSVPed to your event, or installed your app within 24 hours of seeing this Sponsored Story or ad. If you're not promoting a Page, event, or app, you won't see Connections data.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_clicks_string clickable">
+          <span class="hdr_text">
+            Clicks
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Clicks</span>
+                <span class="tipBody">The number of clicks your Sponsored Story or ad has received. If you're promoting a Page, Event, or app, Clicks also include Page likes, event RSVPs, or app installs directly from the Sponsored Story or ad.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_ctr_string clickable">
+          <span class="hdr_text">
+            CTR
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Click-Through Rate</span>
+                <span class="tipBody">Click-through rate, or the number of clicks your Sponsored Story or ad received divided by the number of times it was shown on the site.</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_bid_and_type_string clickable">
+          <span class="hdr_text">
+            Bid
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipFixedWidth fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Bid</span>
+                <span class="tipBody">Click to change the maximum amount you're willing to pay for each click (CPC) or per 1000 impressions (CPM).</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+        <th class="th_price_string last_column clickable">
+          <span class="hdr_text">
+            Price
+            <a class="fbGlossaryTip admgrGlossaryTip fbGlossaryTipQ" href="javascript:void(0);">
+              <sup>?</sup>
+              <span class="tip right">
+                <span class="tipTitle">Price</span>
+                <span class="tipBody">The average amount you're paying per click (CPC) or 1000 impressions (CPM).</span>
+                <span class="tipArrow"></span>
+              </span>
+            </a>
+          </span>
+        </th>
+      </tr>
+      <tr id="6003220256550" class="odd first_row clickable">
+        <td class="td_checkbox first_column">
+          <input class="checkbox" type="checkbox"/>
+        </td>
+        <td class="td_name_html">
+          <div class="UIEditableElement UIEditableText" bindpoint="root">
+            <div class="wrapper  align_right show_edit_button  " bindpoint="wrapper">
+                <a href="javascript:void(0);" class="text" bindpoint="textElement">ITO for tech startups</a>
+                <a class="edit_link adsEditButton" href="javascript:void(0);"></a>
+                <div class="editor">
+                    <div class="inputfield">
+                        <input class="inputtext" value="ITO for tech startups" bindpoint="input" type="text">
+                    </div>
+                    <div class="help_text hidden_elem" bindpoint="helpTextNode"></div>
+                    <div class="buttons">
+                        <label class="save_button uiButton uiButtonConfirm">
+                            <input value="Save" type="submit">
+                        </label>
+                        <label class="cancel_button uiButton">
+                            <input value="Cancel" type="submit">
+                        </label>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </td>
+        <td class="td_adgroup_ui_delivery_diagnostic_html">&nbsp;</td>
+        <td class="td_adgroup_ui_status_html">
+          <div class="uiSelector uiAdmgrSelector uiSelectorNormal" bindpoint="root">
+            <div class="wrap" bindpoint="wrapper">
+                <a class="uiSelectorButton uiButton uiButtonNoText uiButtonSuppressed uiTooltip" href="javascript:void(0);" role="button" aria-hashpopup="1" data-length="30" rel="toggle" bindpoint="button">
+                    <img class="icon" src="/assets/images/running.gif" title="Active" bindpoint="icon">
+                    <span class="uiTooltipWrap">
+                        <span class="uiTooltipText" bindpoint="tooltip_text">Active</span>
+                    </span>
+                </a>
+                <div class="uiSelectorMenuWrapper uiToggleFlyout">
+                    <div role="menu" class="uiMenu uiSelectorMenu">
+                        <ul class="uiMenuInner" bindpoint="menu">
+                          <li class="uiMenuItem uiMenuItemRadio uiSelectorOption  checked" data-label="Active">
+                            <a class="itemAnchor" role="menuitemradio" tabindex="0" aria-checked="true" href="javascript:void(0);" rel="ignore">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap">
+                                  <img class="selector icon" src="/assets/images/running.gif"/>
+                                </span>
+                                Active
+                              </span>
+                            </a>
+                          </li>
+                          <li class="uiMenuItem uiMenuItemRadio uiSelectorOption " data-label="Paused">
+                            <a class="itemAnchor" role="menuitemradio" tabindex="1" aria-checked="true" href="javascript:void(0);" rel="ignore">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap">
+                                  <img class="selector icon" src="/assets/images/paused.gif"/>
+                                </span>
+                                Paused
+                              </span>
+                            </a>
+                          </li>
+                          <li class="uiMenuItem uiMenuItemRadio uiSelectorOption " data-label="Deleted">
+                            <a class="itemAnchor" role="menuitemradio" tabindex="2" aria-checked="true" href="javascript:void(0);" rel="ignore">
+                              <span class="itemLabel fsm">
+                                <span class="icon_wrap">
+                                  <img class="selector icon" src="/assets/images/deleted.gif"/>
+                                </span>
+                                Deleted
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <span bindpoint="copy_link_wrapper"><a class="copy_link" href="javascript:void(0);"></a></span>
+            </div>
+            <select bindpoint="select">
+              <option value=""></option>
+              <option value="1" selected="selected">Active</option>
+              <option value="4">Paused</option>
+              <option value="99">Deleted</option>
+            </select>
+          </div>
+        </td>
+        <td class="td_unique_impressions_string">61</td>
+        <td class="td_frequency_string">8.4</td>
+        <td class="td_social_reach_string">0</td>
+        <td class="td_connections_string divider">0</td>
+        <td class="td_clicks_string">0</td>
+        <td class="td_ctr_string">0.000%</td>
+        <td class="td_bid_and_type_string divider">
+          <div class="bid_string">
+            <div class="UIEditableElement UIEditableText" bindpoint="root">
+                <div class="wrapper  align_left show_edit_button" bindpoint="wrapper">
+                    <a class="edit_link adsEditButton" href="javascript:void(0);"></a><a href="javascript:void(0);" class="text" bindpoint="textElement">$0.88</a>
+                    <div class="editor">
+                        <div class="inputfield">
+                            <input class="inputtext" value="$0.88" bindpoint="input" type="text"/>
+                            <a class="copy_link" href="javascript:void(0);"></a>
+                        </div>
+                        <div class="help_text" bindpoint="helpTextNode"></div>
+                        <div class="buttons">
+                            <label class="save_button uiButton uiButtonConfirm">
+                                <input value="Save" type="submit">
+                            </label>
+                            <label class="cancel_button uiButton">
+                                <input value="Cancel" type="submit">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="subtext">CPC</div>
+        </td>
+        <td class="td_price_string last_column">
+          <div class="price_string">$0.00</div>
+          <div class="subtext">CPC</div>
+        </td>
+      </tr>
+      <tr class=" hidden inline_edit first_row" id="inline_edit_6003220256550">
+        <td class=" inline_edit_wrapper" colspan="100">
+          <div class=" inline_edit_wrapper">
+            <div class="pam adgroup_inline_edit clearfix uiBoxWhite noborder">
+              <div class="adgroup_info_wrap">
+                <div class="preview">
+                  <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+                    <div class="clearfix uiHeaderTop">
+                      <div class="uiHeaderActions rfloat fsm fwn fcg">
+                        <a class="uiIconLink" style="padding-left: 15px;" href="javascript:void(0);" onclick='return false;' target="_blank"><i class="img sp_2dwm9a sx_05ef8d" style="top: 2px;"></i>Edit</a>
+                      </div>
+                      <div>
+                        <h3 class="uiHeaderTitle">Ad Preview</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="UIAdmgrCreativePreview">
+                    <div class="fbEmu fbEmuBlock fbEmuEgo fbEmuPreview" id="id_4e2d0c04b03385957987131">
+                      <div class="title">
+                        <a class="forceLTR fbEmuLink" onclick=''>ITO for tech startups</a>
+                      </div>
+                      <div class="adInfo">
+                        <a class="identity fbEmuLink" onclick=''>nirvana-info.com</a>
+                      </div>
+                      <div class="UIImageBlock clearfix image_body_block">
+                        <a class="fbEmuLink image UIImageBlock_Image UIImageBlock_SMALL_Image" onclick='' tabindex="-1" aria-hidden="true">
+                          <img class="img" src="/assets/images/nirvana.jpg" alt=""/>
+                        </a>
+                        <div class="UIImageBlock_Content UIImageBlock_SMALL_Content">
+                          <div class="body">
+                            <a class="forceLTR fbEmuLink" onclick=''>innnovation made in china</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="inline">
+                        <div class="action">
+                          <span class="fbEmuEmptyContext"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview_links fsm fwn fcg">
+                    <a href="javascript:void(0);" target="_blank">View on Profile</a> ·
+                    <a href="javascript:void(0);" target="_blank">Create a Similar Ad</a>
+                  </div>
+                </div>
+                <div class="targeting">
+                  <div class="clearfix">
+                    <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+                      <div class="clearfix uiHeaderTop">
+                        <div class="uiHeaderActions rfloat fsm fwn fcg">
+                          <a class="uiIconLink" style="padding-left: 15px;" href="javascript:void(0);" onclick='return false;' target="_blank"><i class="img sp_2dwm9a sx_05ef8d" style="top: 2px;"></i>Edit</a>
+                        </div>
+                        <div>
+                          <h3 class="uiHeaderTitle">Targeting</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="targeting_sentence">
+                      <span class="fwb">
+                        This ad targets
+                        <img class="audience_placeholder img" src="/assets/images/loading_small.gif" alt="" height="11" width="16"/>
+                        users:
+                      </span>
+                      <ul class="targeting_lines">
+                        <li>who live in the United States</li>
+                        <li>between the ages of 29 and 64 inclusive</li>
+                        <li>who like outsourcing</li>
+                      </ul>
+                    </div>
+                    <span class="pls estimate_placeholder">
+                      Calculating suggested bid
+                      <img class="img" src="/assets/images/loading_small.gif" alt="" height="11" width="16"/>
+                    </span>
+                  </div>
+                </div>
+                <div class="performance">
+                  <div class="uiHeader uiHeaderTopAndBottomBorder mbm uiHeaderSection">
+                    <div class="clearfix uiHeaderTop">
+                      <div>
+                          <h3 class="uiHeaderTitle">Performance</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="uiSelector miniGraphSelectorPlaceholder uiSelectorNormal uiSelectorDynamicLabel">
+                      <div class="wrap">
+                        <a class="uiSelectorButton uiButton" role="button" href="javascript:void(0);" aria-haspopup="1" data-length="30" rel="toggle">
+                          <span class="uiButtonText">CTR</span>
+                        </a>
+                        <div class="uiSelectorMenuWrapper uiToggleFlyout">
+                          <div role="menu" class="uiMenu uiSelectorMenu">
+                            <ul class="uiMenuInner">
+                              <li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="Clicks">
+                                <a class="itemAnchor" role="menuitemradio" tabindex="0" aria-checked="false" href="javascript:void(0);" rel="ignore">
+                                  <span class="itemLabel fsm">Clicks</span>
+                                </a>
+                              </li>
+                              <li class="uiMenuItem uiMenuItemRadio uiSelectorOption checked" data-label="CTR">
+                                <a class="itemAnchor" role="menuitemradio" tabindex="-1" aria-checked="true" href="javascript:void(0);" rel="ignore">
+                                  <span class="itemLabel fsm">CTR</span>
+                                </a>
+                              </li>
+                              <li class="uiMenuItem uiMenuItemRadio uiSelectorOption" data-label="Impressions">
+                                <a class="itemAnchor" role="menuitemradio" tabindex="-1" aria-checked="false" href="javascript:void(0);" rel="ignore">
+                                  <span class="itemLabel fsm">Impressions</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <select>
+                        <option value=""></option>
+                        <option value="clicks">Clicks</option>
+                        <option value="ctr" selected="1">CTR</option>
+                        <option value="impressions">Impressions</option>
+                      </select>
+                    </div>
+                    <div class="admgrMinigraphsWrapper">
+                      <div id="ctr_minigraph" class="admgrJSMiniGraph hidden_elem" style="position: relative;"></div>
+                      <div id="clicks_minigraph" class="admgrJSMiniGraph" style="position: relative;"></div>
+                      <div id="impressions_minigraph" class="admgrJSMiniGraph hidden_elem" style="position: relative;"></div>
+                      <img class="img hidden_elem" src="/assets/images/loading_small.gif" alt="" height="11" width="16"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ptm close_button">
+                <label class="uiButton" for="u504472_1">
+                  <input value="Close" onclick='' id="u504472_1" type="submit"/>
+                </label>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="actionbar_bottom" class="UIAdmgrPage_actionbar clearfix">
+    <span bindpoint="root" class="UIPager">
+        <span bindpoint="pageNumber" class="UIPager_PageNum">1 result</span>
+        <span bindpoint="backWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="javascript:void(0);" bindpoint="backRoot" class="UIPager_Button UIPager_ButtonBack"></a>
+        </span>
+        <span bindpoint="forwardWrapper" class="UIPager_ButtonWrapper UIPager_ButtonDisabled">
+            <a href="javascript:void(0);" bindpoint="forwardRoot" class="UIPager_Button UIPager_ButtonForward"></a>
+        </span>
+    </span>
+  </div>
+</div>
